@@ -287,7 +287,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
             </a>
             
@@ -295,7 +295,7 @@
                 <div class="nav-item">
                     <span class="font-medium"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></span>
                     <div class="nav-dropdown">
-                        <a href="platform.html" class="dropdown-item flex items-center">
+                        <a href="/platform" class="dropdown-item flex items-center">
                             <i class="fas fa-brain mr-3 text-indigo-600"></i>
                             <div>
                                 <p class="font-medium">Cultural Brain</p>
@@ -305,9 +305,9 @@
                     </div>
                 </div>
                 
-                <a href="insights.html" class="nav-item font-medium"><span data-lang="en">Insights</span><span data-lang="es">Insights</span></a>
-                <a href="resources.html" class="nav-item font-medium text-indigo-600"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
-                <a href="about.html" class="nav-item font-medium"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+                <a href="/insights" class="nav-item font-medium"><span data-lang="en">Insights</span><span data-lang="es">Insights</span></a>
+                <a href="/resources" class="nav-item font-medium text-indigo-600"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+                <a href="/about" class="nav-item font-medium"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
                 <a href="#contact" class="nav-item font-medium"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
             </div>
             <div class="flex items-center space-x-4">
@@ -328,7 +328,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="platform.html" class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></a>
+                <a href="/platform" class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></a>
             </div>
         </div>
     </nav>
@@ -421,7 +421,7 @@
                                     <span data-lang="es">28 páginas • PDF</span>
                                 </div>
                             </div>
-                            <button class="btn-primary" onclick="showLeadCapture('url-curation-challenge')">
+                            <button class="btn-primary" onclick="downloadResourcePDF('url-curation-challenge')">
                                 <span data-lang="en">Download Research Paper</span>
                                 <span data-lang="es">Descargar Documento de Investigación</span>
                             </button>
@@ -536,7 +536,7 @@
                                 <span data-lang="es">35 páginas</span>
                             </div>
                         </div>
-                        <button class="btn-primary w-full" onclick="showLeadCapture('cultural-metrics-explained')">
+                        <button class="btn-primary w-full" onclick="downloadResourcePDF('cultural-metrics-explained')">
                             <span data-lang="en">Download Methodology</span>
                             <span data-lang="es">Descargar Metodología</span>
                         </button>
@@ -572,7 +572,7 @@
                                 <span data-lang="es">24 páginas</span>
                             </div>
                         </div>
-                        <button class="btn-primary w-full" onclick="showLeadCapture('beyond-demographics')">
+                        <button class="btn-primary w-full" onclick="downloadResourcePDF('beyond-demographics')">
                             <span data-lang="en">Download Paper</span>
                             <span data-lang="es">Descargar Documento</span>
                         </button>
@@ -608,7 +608,7 @@
                                 <span data-lang="es">31 páginas</span>
                             </div>
                         </div>
-                        <button class="btn-primary w-full" onclick="showLeadCapture('digital-curation-evolution')">
+                        <button class="btn-primary w-full" onclick="downloadResourcePDF('digital-curation-evolution')">
                             <span data-lang="en">Download Paper</span>
                             <span data-lang="es">Descargar Documento</span>
                         </button>
@@ -752,7 +752,7 @@
                         <span data-lang="en">Get the full 47-page story: from agency frustrations to cultural awakening to building the world's first Cultural Intelligence Platform.</span>
                         <span data-lang="es">Obtén la historia completa de 47 páginas: desde frustraciones de agencia hasta despertar cultural hasta construir la primera Plataforma de Inteligencia Cultural del mundo.</span>
                     </p>
-                    <button class="btn-primary bg-white text-purple-600 hover:bg-gray-100" onclick="showLeadCapture('founder-complete-story')">
+                    <button class="btn-primary bg-white text-purple-600 hover:bg-gray-100" onclick="downloadResourcePDF('founder-complete-story')">
                         <span data-lang="en">Download Full Story</span>
                         <span data-lang="es">Descargar Historia Completa</span>
                     </button>
@@ -808,7 +808,7 @@
                                 <div class="text-xs text-gray-600">Gender</div>
                             </div>
                         </div>
-                        <button class="btn-primary w-full" onclick="showLeadCapture('hispanic-latino-terminology')">
+                        <button class="btn-primary w-full" onclick="downloadResourcePDF('hispanic-latino-terminology')">
                             <span data-lang="en">Download Essay</span>
                             <span data-lang="es">Descargar Ensayo</span>
                         </button>
@@ -843,7 +843,7 @@
                                 <div class="text-sm text-gray-600"><span data-lang="en">Cultural Nuances</span><span data-lang="es">Matices Culturales</span></div>
                             </div>
                         </div>
-                        <button class="btn-primary w-full" onclick="showLeadCapture('miami-experience-essay')">
+                        <button class="btn-primary w-full" onclick="downloadResourcePDF('miami-experience-essay')">
                             <span data-lang="en">Download Essay</span>
                             <span data-lang="es">Descargar Ensayo</span>
                         </button>
@@ -882,7 +882,7 @@
                                 <div class="text-xs text-gray-600">Pacific patterns</div>
                             </div>
                         </div>
-                        <button class="btn-primary w-full" onclick="showLeadCapture('geographic-variations-study')">
+                        <button class="btn-primary w-full" onclick="downloadResourcePDF('geographic-variations-study')">
                             <span data-lang="en">Download Study</span>
                             <span data-lang="es">Descargar Estudio</span>
                         </button>
@@ -917,7 +917,7 @@
                                 <div class="text-sm text-gray-600"><span data-lang="en">Buying Power</span><span data-lang="es">Poder Adquisitivo</span></div>
                             </div>
                         </div>
-                        <button class="btn-primary w-full" onclick="showLeadCapture('hispanic-majority-projection')">
+                        <button class="btn-primary w-full" onclick="downloadResourcePDF('hispanic-majority-projection')">
                             <span data-lang="en">Download Analysis</span>
                             <span data-lang="es">Descargar Análisis</span>
                         </button>
@@ -1004,7 +1004,7 @@
                                 <div class="text-sm text-gray-600"><span data-lang="en">Predictive</span><span data-lang="es">Predictivo</span></div>
                             </div>
                         </div>
-                        <button class="btn-secondary w-full" onclick="showLeadCapture('research-center-roadmap')">
+                        <button class="btn-secondary w-full" onclick="downloadResourcePDF('research-center-roadmap')">
                             <span data-lang="en">Early Access List</span>
                             <span data-lang="es">Lista de Acceso Temprano</span>
                         </button>
@@ -1048,7 +1048,7 @@
                                 <span data-lang="es">Automatización de estrategia de campaña</span>
                             </div>
                         </div>
-                        <button class="btn-secondary w-full" onclick="showLeadCapture('mace-beta-signup')">
+                        <button class="btn-secondary w-full" onclick="downloadResourcePDF('mace-beta-signup')">
                             <span data-lang="en">Beta Signup</span>
                             <span data-lang="es">Registro Beta</span>
                         </button>
@@ -1067,7 +1067,7 @@
                         <span data-lang="es">"Cultural Brain está evolucionando de una herramienta de análisis de sitios a una plataforma integral de inteligencia cultural que entiende, predice y crea contenido culturalmente resonante para el demográfico de más rápido crecimiento en América."</span>
                     </p>
                     <div class="text-center">
-                        <button class="btn-primary" onclick="showLeadCapture('complete-roadmap')">
+                        <button class="btn-primary" onclick="downloadResourcePDF('complete-roadmap')">
                             <span data-lang="en">Download Complete Roadmap</span>
                             <span data-lang="es">Descargar Hoja de Ruta Completa</span>
                         </button>
@@ -1141,17 +1141,17 @@
                 <div>
                     <h3 class="text-lg font-bold mb-6"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></h3>
                     <ul class="space-y-3">
-                        <li><a href="platform.html" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
-                        <li><a href="platform.html#metrics" class="opacity-70 hover:opacity-100">CRS/CAI/CCS</a></li>
-                        <li><a href="platform.html#api" class="opacity-70 hover:opacity-100">API Access</a></li>
-                        <li><a href="about.html" class="opacity-70 hover:opacity-100">HICE Engine</a></li>
+                        <li><a href="/platform" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
+                        <li><a href="/platform#metrics" class="opacity-70 hover:opacity-100">CRS/CAI/CCS</a></li>
+                        <li><a href="/platform#api" class="opacity-70 hover:opacity-100">API Access</a></li>
+                        <li><a href="/about" class="opacity-70 hover:opacity-100">HICE Engine</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-6"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></h3>
                     <ul class="space-y-3">
-                        <li><a href="insights.html" class="opacity-70 hover:opacity-100">Industry Analysis</a></li>
-                        <li><a href="resources.html" class="opacity-70 hover:opacity-100">Research Papers</a></li>
+                        <li><a href="/insights" class="opacity-70 hover:opacity-100">Industry Analysis</a></li>
+                        <li><a href="/resources" class="opacity-70 hover:opacity-100">Research Papers</a></li>
                         <li><a href="#founder-story" class="opacity-70 hover:opacity-100">Founder Story</a></li>
                         <li><a href="#roadmap" class="opacity-70 hover:opacity-100">Future Roadmap</a></li>
                     </ul>
@@ -1159,8 +1159,8 @@
                 <div>
                     <h3 class="text-lg font-bold mb-6"><span data-lang="en">Company</span><span data-lang="es">Empresa</span></h3>
                     <ul class="space-y-3">
-                        <li><a href="about.html" class="opacity-70 hover:opacity-100"><span data-lang="en">About Us</span><span data-lang="es">Nosotros</span></a></li>
-                        <li><a href="about.html#leadership" class="opacity-70 hover:opacity-100"><span data-lang="en">Leadership</span><span data-lang="es">Liderazgo</span></a></li>
+                        <li><a href="/about" class="opacity-70 hover:opacity-100"><span data-lang="en">About Us</span><span data-lang="es">Nosotros</span></a></li>
+                        <li><a href="/about#leadership" class="opacity-70 hover:opacity-100"><span data-lang="en">Leadership</span><span data-lang="es">Liderazgo</span></a></li>
                         <li><a href="#contact" class="opacity-70 hover:opacity-100"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
                         <li><a href="#" class="opacity-70 hover:opacity-100"><span data-lang="en">Careers</span><span data-lang="es">Carreras</span></a></li>
                     </ul>
@@ -1180,6 +1180,114 @@
     </footer>
 
     <script>
+        // Mapeo de recursos a PDFs por idioma
+        const resourcePDFMap = {
+            'url-curation-challenge': {
+                en: '/resources/Hispano Beyond Demographics Why Cultural Intelligence Matters.pdf',
+                es: '/resources/hispano_Mas_Alla_ DemografíaPDF.pdf'
+            },
+            'cultural-metrics-explained': {
+                en: '/resources/hispano_9.3_ AdvantagePDF.pdf', 
+                es: '/resources/hispano_Ventaja_ 9.3PDF.pdf'
+            },
+            'beyond-demographics': {
+                en: '/resources/Hispano Beyond Demographics Why Cultural Intelligence Matters.pdf',
+                es: '/resources/hispano_Mas_Alla_ DemografíaPDF.pdf'
+            },
+            'digital-curation-evolution': {
+                en: '/resources/hispano_9.3_ AdvantagePDF.pdf',
+                es: '/resources/hispano_Ventaja_ 9.3PDF.pdf'
+            },
+            'founder-complete-story': {
+                en: '/resources/hispano_120B_ Hispanic_ Investment_ GapPDF.pdf',
+                es: '/resources/hispano_BrechaInversionHispanaPDF.pdf'
+            },
+            'hispanic-latino-terminology': {
+                en: '/resources/hispano_HispanicLatinoLatinxRevelationPDF.pdf',
+                es: '/resources/hispano_HispanicLatinoLatinxRevelacionDPF.pdf'
+            },
+            'miami-experience-essay': {
+                en: '/resources/hispano_Geographic_Cultural_VariationsPDF.pdf',
+                es: '/resources/hispano_Variaciones_Culturales_GeograficasPDF.pdf'
+            },
+            'geographic-variations-study': {
+                en: '/resources/hispano_Geographic_Cultural_VariationsPDF.pdf',
+                es: '/resources/hispano_Variaciones_Culturales_GeograficasPDF.pdf'
+            },
+            'hispanic-majority-projection': {
+                en: '/resources/hispano_35_Year_Hispanic_Majority_ProjectionPDF.pdf',
+                es: '/resources/hispano_ProyeccionMayoríaHispanaPDF.pdf'
+            },
+            'research-center-roadmap': {
+                en: '/resources/hispano_120B_ Hispanic_ Investment_ GapPDF.pdf',
+                es: '/resources/hispano_BrechaInversionHispanaPDF.pdf'
+            },
+            'mace-beta-signup': {
+                en: '/resources/hispano_120B_ Hispanic_ Investment_ GapPDF.pdf',
+                es: '/resources/hispano_BrechaInversionHispanaPDF.pdf'
+            },
+            'complete-roadmap': {
+                en: '/resources/hispano_120B_ Hispanic_ Investment_ GapPDF.pdf',
+                es: '/resources/hispano_BrechaInversionHispanaPDF.pdf'
+            }
+        };
+
+        // Función para obtener idioma actual
+        function getCurrentLanguage() {
+            return document.body.classList.contains('lang-es') ? 'es' : 'en';
+        }
+
+        // Función para descargar PDF según idioma
+        function downloadResourcePDF(resourceId) {
+            const currentLang = getCurrentLanguage();
+            const pdfPath = resourcePDFMap[resourceId];
+            
+            if (pdfPath && pdfPath[currentLang]) {
+                // Crear enlace temporal para descarga
+                const link = document.createElement('a');
+                link.href = pdfPath[currentLang];
+                link.download = pdfPath[currentLang].split('/').pop(); // Nombre del archivo
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Mostrar modal de confirmación
+                showDownloadConfirmation(resourceId, currentLang);
+            } else {
+                console.error('PDF no encontrado para:', resourceId, currentLang);
+                // Fallback al modal de lead capture
+                showLeadCapture(resourceId);
+            }
+        }
+
+        // Función para mostrar confirmación de descarga
+        function showDownloadConfirmation(resourceId, language) {
+            const messages = {
+                en: 'Download started! Check your downloads folder.',
+                es: '¡Descarga iniciada! Revisa tu carpeta de descargas.'
+            };
+            
+            // Crear notificación temporal
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <i class="fas fa-check mr-2"></i>
+                    <span>${messages[language]}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remover después de 3 segundos
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize AOS
             AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
