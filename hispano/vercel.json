@@ -5,15 +5,26 @@
   ],
   "routes": [
     { "src": "^/$", "dest": "/public/hispano_index.html" },
+    
     { "src": "^/about/?$", "dest": "/public/hispano_about.html" },
+    { "src": "^/about\\.html$", "dest": "/public/hispano_about.html" },
+    
     { "src": "^/platform/?$", "dest": "/public/hispano_platform.html" },
+    { "src": "^/platform\\.html$", "dest": "/public/hispano_platform.html" },
+    
     { "src": "^/insights/?$", "dest": "/public/hispano_insights.html" },
+    { "src": "^/insights\\.html$", "dest": "/public/hispano_insights.html" },
+    
+    { "src": "^/resources/?$", "dest": "/public/hispano_resources_authentic.html" },
+    { "src": "^/resources\\.html$", "dest": "/public/hispano_resources_authentic.html" },
+    
     { "src": "^/insights-analysis/?$", "dest": "/public/hispano_insights_analysis.html" },
     { "src": "^/hispanic-latino-latinx/?$", "dest": "/public/hispano_hispanic_latino_latinx.html" },
     { "src": "^/miami-awakening/?$", "dest": "/public/hispano_Miami_Awakening.html" },
     { "src": "^/reporte-insights/?$", "dest": "/public/hispano_reporte_insights.html" },
     { "src": "^/resources-authentic/?$", "dest": "/public/hispano_resources_authentic.html" },
     { "src": "^/whitepaper/?$", "dest": "/public/hispano_whitepaper.html" },
+    
     { "src": "^/resources/(.*)$", "dest": "/public/resources/$1" },
     { "src": "^/app/(.*)$", "status": 301, "headers": { "Location": "https://culturalbrain.app/$1" } }
   ]
