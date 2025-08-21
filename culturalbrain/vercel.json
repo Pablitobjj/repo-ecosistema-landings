@@ -3,11 +3,12 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
-    { "src": "^/$",                 "dest": "/landings/cultural_brain_index.html" },
-    { "src": "^/about/?$",          "dest": "/landings/cultural_brain_nosotros.html" },
-    { "src": "^/pricing/?$",        "dest": "/landings/cultural_brain_precios.html" },
-    { "src": "^/resources/?$",      "dest": "/landings/cultural_brain_resources.html" },
-    { "src": "^/resources/(.*)$",   "dest": "/public/resources/$1" }
+    { "src": "^/$",               "dest": "/landings/cultural_brain_index.html" },
+    { "src": "^/about/?$",        "dest": "/landings/cultural_brain_nosotros.html" },
+    { "src": "^/pricing/?$",      "dest": "/landings/cultural_brain_precios.html" },
+    { "src": "^/resources/?$",    "dest": "/landings/cultural_brain_resources.html" },
+
+    { "src": "^/resources/(.*)$", "dest": "/public/resources/$1" }
   ],
   "redirects": [
     { "source": "/app/:path*", "destination": "https://culturalbrain.app/:path*", "permanent": true }

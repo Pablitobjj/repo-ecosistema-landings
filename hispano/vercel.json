@@ -14,10 +14,8 @@
     { "src": "^/hispanic-latino-latinx/?$",   "dest": "/landings/hispano_hispanic_latino_latinx.html" },
     { "src": "^/reporte-insights/?$",         "dest": "/landings/hispano_reporte_insights.html" },
 
-    /* PDFs de Hispano (sirve lo de /public/resources) */
     { "src": "^/resources/(.*)$",             "dest": "/public/resources/$1" },
 
-    /* Subdominios */
     { "src": "^/(.*)$", "has": [{ "type": "host", "value": "pixel.hispan.io" }],   "dest": "/landings/landing_cb_pixel.html" },
     { "src": "^/(.*)$", "has": [{ "type": "host", "value": "network.hispan.io" }], "dest": "/landings/landing_cb_app.html" }
   ]
