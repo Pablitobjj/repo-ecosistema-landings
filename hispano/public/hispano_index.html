@@ -646,7 +646,10 @@
                             <option value="other" data-text-en="Other" data-text-es="Otro">Other</option>
                         </select>
                         <input type="hidden" name="form_source" value="lead_magnet_analysis">
-                        <input type="hidden" name="page_url" value="hispano_index.html">
+                        <input type="hidden" name="page_url" value="hispano_index.html">                        
+                        <input type="hidden" name="_redirect" value="https://hispan.io/thanks?source=lead_magnet">
+                        <input type="hidden" name="_append" value="false">
+                        <input type="hidden" name="language" id="leadFormLang" value="en">
                         <button type="submit" class="w-full btn-primary py-3 text-lg">
                             <span data-lang="en">Download Analysis - Immediate Access</span>
                             <span data-lang="es">Descargar Análisis - Acceso Inmediato</span>
@@ -722,6 +725,9 @@
                             <textarea name="message" rows="4" placeholder="Message" data-placeholder-en="Tell us about your needs..." data-placeholder-es="Cuéntanos sobre tus necesidades..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required></textarea>
                             <input type="hidden" name="form_source" value="contact_form">
                             <input type="hidden" name="page_url" value="hispano_index.html">
+                            <input type="hidden" name="_redirect" value="https://hispan.io/thanks?source=contact">
+                            <input type="hidden" name="_append" value="false">
+                            <input type="hidden" name="language" id="contactFormLang" value="en">
                             <button type="submit" class="w-full btn-primary py-3 text-lg">
                                 <span data-lang="en">Send Message</span>
                                 <span data-lang="es">Enviar Mensaje</span>
@@ -905,6 +911,12 @@
                     const text = lang === 'es' ? option.getAttribute('data-text-es') : option.getAttribute('data-text-en');
                     if (text) option.textContent = text;
                 });
+                
+                // Update hidden language fields
+                const leadFormLang = document.getElementById('leadFormLang');
+                const contactFormLang = document.getElementById('contactFormLang');
+                if (leadFormLang) leadFormLang.value = lang;
+                if (contactFormLang) contactFormLang.value = lang;
             }
 
             const savedLang = localStorage.getItem('hispano-lang') || 'en';

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - HISPAÑO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #173c67;
+            --secondary: #6D1B8F;
+            --accent: #2DD4BF;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(23, 60, 103, 0.1);
+            transform: scale(1.05);
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        [data-lang]:not([data-lang="en"]) { display: none; }
+        body.lang-es [data-lang="en"] { display: none; }
+        body.lang-es [data-lang="es"] { display: initial; }
+
+        .download-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="hispano_index.html" class="flex items-center">
+                <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
+            </a>
+            <a href="hispano_index.html" class="text-gray-600 hover:text-gray-800">
+                <span data-lang="en">← Back to Home</span>
+                <span data-lang="es">← Volver al Inicio</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="min-h-screen flex items-center justify-center gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="download-card">
+                    <!-- Success Icon -->
+                    <div class="text-center mb-8">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
+                            <i class="fas fa-check text-green-600 text-2xl"></i>
+                        </div>
+                        <h1 class="text-3xl font-bold mb-4">
+                            <span data-lang="en">Thank You!</span>
+                            <span data-lang="es">¡Gracias!</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            <span data-lang="en">Your analysis is ready for download</span>
+                            <span data-lang="es">Tu análisis está listo para descargar</span>
+                        </p>
+                    </div>
+
+                    <!-- Download Section -->
+                    <div id="downloadSection" class="bg-gray-50 rounded-lg p-6 mb-8">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-file-pdf text-red-600 text-4xl mr-4"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">
+                                    <span data-lang="en">Hispanic Investment Gap Analysis</span>
+                                    <span data-lang="es">Análisis de Brecha de Inversión Hispana</span>
+                                </h3>
+                                <p class="text-gray-600 text-sm">
+                                    <span data-lang="en">Complete market analysis with actionable insights</span>
+                                    <span data-lang="es">Análisis completo del mercado con insights accionables</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a id="downloadBtn" href="#" class="btn-primary mr-4" download>
+                                <i class="fas fa-download mr-2"></i>
+                                <span data-lang="en">Download PDF</span>
+                                <span data-lang="es">Descargar PDF</span>
+                            </a>
+                            <p class="text-xs text-gray-500 mt-3">
+                                <span data-lang="en">Download will start automatically in <span id="countdown">5</span> seconds</span>
+                                <span data-lang="es">La descarga comenzará automáticamente en <span id="countdown">5</span> segundos</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="border-t pt-6">
+                        <h3 class="font-bold text-lg mb-4">
+                            <span data-lang="en">What's Next?</span>
+                            <span data-lang="es">¿Qué Sigue?</span>
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="https://calendly.com/hello-hispan/30min" target="_blank" class="btn-secondary text-center block">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span data-lang="en">Book Strategy Session</span>
+                                <span data-lang="es">Agendar Sesión de Estrategia</span>
+                            </a>
+                            <a href="hispano_platform.html" class="btn-secondary text-center block">
+                                <i class="fas fa-brain mr-2"></i>
+                                <span data-lang="en">Try Cultural Brain</span>
+                                <span data-lang="es">Probar Cultural Brain</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="text-center mt-8 pt-6 border-t">
+                        <p class="text-gray-600 mb-2">
+                            <span data-lang="en">Questions? We're here to help.</span>
+                            <span data-lang="es">¿Preguntas? Estamos aquí para ayudarte.</span>
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <i class="fas fa-envelope mr-2"></i>hello@hispan.io
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Detect language from URL parameter or localStorage
+            const urlParams = new URLSearchParams(window.location.search);
+            const langFromUrl = urlParams.get('lang');
+            const savedLang = localStorage.getItem('hispano-lang');
+            const currentLang = langFromUrl || savedLang || 'en';
+            
+            // Set language
+            if (currentLang === 'es') {
+                document.body.classList.add('lang-es');
+                document.documentElement.lang = 'es';
+            }
+            
+            // Set up download link based on language
+            const downloadBtn = document.getElementById('downloadBtn');
+            const isSpanish = currentLang === 'es';
+            const pdfPath = isSpanish ? 
+                'resources/hispano_BrechaInversionHispanaPDF.pdf' : 
+                'resources/hispano_120B_Hispanic_Investment_GapPDF.pdf';
+            
+            downloadBtn.href = pdfPath;
+            
+            // Auto-download countdown
+            let countdown = 5;
+            const countdownEl = document.getElementById('countdown');
+            
+            const timer = setInterval(() => {
+                countdown--;
+                countdownEl.textContent = countdown;
+                
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    // Trigger download
+                    downloadBtn.click();
+                    countdownEl.parentElement.innerHTML = isSpanish ? 
+                        'Descarga iniciada' : 'Download started';
+                }
+            }, 1000);
+            
+            // Manual download tracking
+            downloadBtn.addEventListener('click', function() {
+                clearInterval(timer);
+                countdownEl.parentElement.innerHTML = isSpanish ? 
+                    'Descarga iniciada' : 'Download started';
+            });
+        });
+    </script>
+</body>
+</html>

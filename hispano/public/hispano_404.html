@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - HISPAÑO</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Explore HISPAÑO's Cultural Intelligence Platform.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #173c67;
+            --secondary: #6D1B8F;
+            --accent: #2DD4BF;
+            --orange: #F27044;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(23, 60, 103, 0.1);
+            transform: scale(1.05);
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .language-switcher { position: relative; display: inline-block; }
+        .language-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 500; }
+        .language-btn:hover { border-color: var(--secondary); background: rgba(109, 27, 143, 0.05); color: var(--secondary); }
+        .language-flag { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; margin-top: 0.5rem; background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; min-width: 150px; }
+        .language-switcher:hover .language-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .language-option { padding: 0.75rem 1.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease; color: #333; }
+        .language-option:hover { background: rgba(23, 60, 103, 0.05); }
+        .language-option.active { background: rgba(23, 60, 103, 0.1); color: var(--primary); font-weight: bold; }
+
+        [data-lang]:not([data-lang="en"]) { display: none; }
+        body.lang-es [data-lang="en"] { display: none; }
+        body.lang-es [data-lang="es"] { display: initial; }
+
+        .error-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .popular-link {
+            display: block;
+            padding: 16px;
+            border-radius: 8px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popular-link:hover {
+            border-color: var(--accent);
+            background: rgba(45, 212, 191, 0.05);
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: #333;
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(45, 212, 191, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-elements::before {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-elements::after {
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .error-number {
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 1;
+            opacity: 0.1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="bg-white shadow-md relative z-10">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="hispano_index.html" class="flex items-center">
+                <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
+            </a>
+            
+            <div class="flex items-center space-x-4">
+                <div class="language-switcher">
+                    <button class="language-btn" id="currentLangBtn">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag" id="currentLangFlag">
+                        <span id="currentLangText">EN</span>
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option active" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="language-flag">
+                            <span>Español</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="hispano_index.html" class="btn-secondary">
+                    <span data-lang="en">Back to Home</span>
+                    <span data-lang="es">Volver al Inicio</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Section -->
+    <section class="min-h-screen bg-gray-50 relative">
+        <div class="floating-elements"></div>
+        
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-4xl mx-auto">
+                <div class="error-card text-center relative">
+                    <div class="error-number gradient-text">404</div>
+                    
+                    <!-- Error Icon -->
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-100 mb-8">
+                            <i class="fas fa-exclamation-triangle text-red-600 text-3xl"></i>
+                        </div>
+                        
+                        <h1 class="text-4xl font-bold mb-4">
+                            <span data-lang="en">Page Not Found</span>
+                            <span data-lang="es">Página No Encontrada</span>
+                        </h1>
+                        
+                        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                            <span data-lang="en">We couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.</span>
+                            <span data-lang="es">No pudimos encontrar la página que buscas. Podría haber sido movida, eliminada, o ingresaste una URL incorrecta.</span>
+                        </p>
+
+                        <!-- Quick Actions -->
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                            <a href="hispano_index.html" class="btn-primary">
+                                <i class="fas fa-home mr-2"></i>
+                                <span data-lang="en">Go to Homepage</span>
+                                <span data-lang="es">Ir al Inicio</span>
+                            </a>
+                            <button onclick="window.history.back()" class="btn-secondary">
+                                <i class="fas fa-arrow-left mr-2"></i>
+                                <span data-lang="en">Go Back</span>
+                                <span data-lang="es">Volver Atrás</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Pages -->
+                <div class="mt-16">
+                    <h2 class="text-2xl font-bold text-center mb-8">
+                        <span data-lang="en">Popular Pages</span>
+                        <span data-lang="es">Páginas Populares</span>
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="hispano_platform.html" class="popular-link">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-indigo-100 rounded-full p-2 mr-3">
+                                    <i class="fas fa-brain text-indigo-600"></i>
+                                </div>
+                                <h3 class="font-bold">Cultural Brain</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Explore our Cultural Intelligence Platform</span>
+                                <span data-lang="es">Explora nuestra Plataforma de Inteligencia Cultural</span>
+                            </p>
+                        </a>
+                        
+                        <a href="hispano_insights.html" class="popular-link">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-green-100 rounded-full p-2 mr-3">
+                                    <i class="fas fa-chart-line text-green-600"></i>
+                                </div>
+                                <h3 class="font-bold">
+                                    <span data-lang="en">Market Insights</span>
+                                    <span data-lang="es">Insights de Mercado</span>
+                                </h3>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Deep analysis of the Hispanic market</span>
+                                <span data-lang="es">Análisis profundo del mercado hispano</span>
+                            </p>
+                        </a>
+                        
+                        <a href="hispano_resources_authentic.html" class="popular-link">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-purple-100 rounded-full p-2 mr-3">
+                                    <i class="fas fa-book text-purple-600"></i>
+                                </div>
+                                <h3 class="font-bold">
+                                    <span data-lang="en">Resources</span>
+                                    <span data-lang="es">Recursos</span>
+                                </h3>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Whitepapers, case studies, and more</span>
+                                <span data-lang="es">Whitepapers, casos de estudio y más</span>
+                            </p>
+                        </a>
+                        
+                        <a href="hispano_about.html" class="popular-link">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-orange-100 rounded-full p-2 mr-3">
+                                    <i class="fas fa-users text-orange-600"></i>
+                                </div>
+                                <h3 class="font-bold">
+                                    <span data-lang="en">About Us</span>
+                                    <span data-lang="es">Nosotros</span>
+                                </h3>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Learn about our team and mission</span>
+                                <span data-lang="es">Conoce nuestro equipo y misión</span>
+                            </p>
+                        </a>
+                        
+                        <a href="hispano_index.html#contact" class="popular-link">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-teal-100 rounded-full p-2 mr-3">
+                                    <i class="fas fa-envelope text-teal-600"></i>
+                                </div>
+                                <h3 class="font-bold">
+                                    <span data-lang="en">Contact</span>
+                                    <span data-lang="es">Contacto</span>
+                                </h3>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Get in touch with our team</span>
+                                <span data-lang="es">Ponte en contacto con nuestro equipo</span>
+                            </p>
+                        </a>
+                        
+                        <a href="https://calendly.com/hello-hispan/30min" target="_blank" class="popular-link">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 rounded-full p-2 mr-3">
+                                    <i class="fas fa-calendar-alt text-blue-600"></i>
+                                </div>
+                                <h3 class="font-bold">
+                                    <span data-lang="en">Book a Demo</span>
+                                    <span data-lang="es">Agendar Demo</span>
+                                </h3>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Schedule a strategy session</span>
+                                <span data-lang="es">Programa una sesión de estrategia</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search or Help -->
+                <div class="mt-16 text-center">
+                    <div class="error-card max-w-2xl mx-auto">
+                        <h3 class="text-xl font-bold mb-4">
+                            <span data-lang="en">Still can't find what you're looking for?</span>
+                            <span data-lang="es">¿Aún no encuentras lo que buscas?</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span data-lang="en">Let us help you find the right information or get you connected with our team.</span>
+                            <span data-lang="es">Permítenos ayudarte a encontrar la información correcta o ponerte en contacto con nuestro equipo.</span>
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="hispano_index.html#contact" class="btn-primary">
+                                <i class="fas fa-comment mr-2"></i>
+                                <span data-lang="en">Contact Support</span>
+                                <span data-lang="es">Contactar Soporte</span>
+                            </a>
+                            <a href="mailto:hello@hispan.io" class="btn-secondary">
+                                <i class="fas fa-envelope mr-2"></i>
+                                <span data-lang="en">Email Us</span>
+                                <span data-lang="es">Enviar Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language switcher
+            window.changeLanguage = function(lang) {
+                document.body.className = lang === 'es' ? 'lang-es' : '';
+                
+                const currentLangBtn = document.getElementById('currentLangBtn');
+                const currentLangFlag = document.getElementById('currentLangFlag');
+                const currentLangText = document.getElementById('currentLangText');
+                
+                if (lang === 'es') {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'ES';
+                    if (currentLangText) currentLangText.textContent = 'ES';
+                    document.title = 'Página No Encontrada - HISPAÑO';
+                } else {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'EN';
+                    if (currentLangText) currentLangText.textContent = 'EN';
+                    document.title = 'Page Not Found - HISPAÑO';
+                }
+                
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('onclick') && option.getAttribute('onclick').includes(`changeLanguage('${lang}')`)) {
+                        option.classList.add('active');
+                    }
+                });
+                
+                localStorage.setItem('hispano-lang', lang);
+                document.documentElement.lang = lang;
+            };
+
+            // Load saved language
+            const savedLang = localStorage.getItem('hispano-lang') || 'en';
+            window.changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
