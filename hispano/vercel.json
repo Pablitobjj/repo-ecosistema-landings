@@ -14,9 +14,7 @@
     { "src": "^/reporte-insights/?$", "dest": "/public/hispano_reporte_insights.html" },
     { "src": "^/resources-authentic/?$", "dest": "/public/hispano_resources_authentic.html" },
     { "src": "^/whitepaper/?$", "dest": "/public/hispano_whitepaper.html" },
-    { "src": "^/resources/(.*)$", "dest": "/public/resources/$1" }
-  ],
-  "redirects": [
-    { "source": "/app/:path*", "destination": "https://culturalbrain.app/:path*", "permanent": true }
+    { "src": "^/resources/(.*)$", "dest": "/public/resources/$1" },
+    { "src": "^/app/(.*)$", "status": 301, "headers": { "Location": "https://culturalbrain.app/$1" } }
   ]
 }
