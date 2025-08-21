@@ -1,19 +1,24 @@
 {
   "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
-    { "src": "^/$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_index.html" },
-    { "src": "^/about/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_about.html" },
-    { "src": "^/platform/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_platform.html" },
-    { "src": "^/insights/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_insights.html" },
-    { "src": "^/insights-analysis/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_insights_analysis.html" },
-    { "src": "^/miami-awakening/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_Miami_Awakening.html" },
-    { "src": "^/whitepaper/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_whitepaper.html" },
-    { "src": "^/resources-authentic/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_resources_authentic.html" },
-    { "src": "^/hispanic-latino-latinx/?$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/landings/hispano_hispanic_latino_latinx.html" },
+    { "src": "^/$",                           "dest": "/landings/hispano_index.html" },
+    { "src": "^/about/?$",                    "dest": "/landings/hispano_about.html" },
+    { "src": "^/platform/?$",                 "dest": "/landings/hispano_platform.html" },
+    { "src": "^/insights/?$",                 "dest": "/landings/hispano_insights.html" },
+    { "src": "^/insights/analysis/?$",        "dest": "/landings/hispano_insights_analysis.html" },
+    { "src": "^/miami-awakening/?$",          "dest": "/landings/hispano_Miami_Awakening.html" },
+    { "src": "^/whitepaper/?$",               "dest": "/landings/hispano_whitepaper.html" },
+    { "src": "^/resources/?$",                "dest": "/landings/hispano_resources_authentic.html" },
+    { "src": "^/hispanic-latino-latinx/?$",   "dest": "/landings/hispano_hispanic_latino_latinx.html" },
+    { "src": "^/reporte-insights/?$",         "dest": "/landings/hispano_reporte_insights.html" },
 
-    { "src": "^/resources/(.*)$", "has": [{ "type": "host", "value": "hispan.io" }], "dest": "/public/resources/$1" },
+    /* PDFs de Hispano (sirve lo de /public/resources) */
+    { "src": "^/resources/(.*)$",             "dest": "/public/resources/$1" },
 
-    { "src": "^/$", "has": [{ "type": "host", "value": "pixel.hispan.io" }], "dest": "/landings/landing_cb_pixel.html" },
-    { "src": "^/$", "has": [{ "type": "host", "value": "network.hispan.io" }], "dest": "/landings/landing_cb_app.html" }
+    /* Subdominios */
+    { "src": "^/(.*)$", "has": [{ "type": "host", "value": "pixel.hispan.io" }],   "dest": "/landings/landing_cb_pixel.html" },
+    { "src": "^/(.*)$", "has": [{ "type": "host", "value": "network.hispan.io" }], "dest": "/landings/landing_cb_app.html" }
   ]
 }
