@@ -2,10 +2,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
-    { "src": "^/$", "dest": "/landings/cultural_brain_index.html" },
-    { "src": "^/about/?$", "dest": "/landings/cultural_brain_nosotros.html" },
-    { "src": "^/pricing/?$", "dest": "/landings/cultural_brain_precios.html" },
-    { "src": "^/resources/?$", "dest": "/landings/cultural_brain_resources.html" },
+    { "src": "^/$", "dest": "/public/cultural_brain_index.html" },
+    { "src": "^/about/?$", "dest": "/public/cultural_brain_nosotros.html" },
+    { "src": "^/pricing/?$", "dest": "/public/cultural_brain_precios.html" },
+    { "src": "^/resources/?$", "dest": "/public/cultural_brain_resources.html" },
     { "src": "^/resources/(.*)$", "dest": "/public/resources/$1" }
   ]
 }
