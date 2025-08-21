@@ -2,17 +2,16 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
-    { "src": "^/$",                      "dest": "/landings/hispano_index.html" },
-    { "src": "^/about/?$",               "dest": "/landings/hispano_about.html" },
-    { "src": "^/platform/?$",            "dest": "/landings/hispano_platform.html" },
-    { "src": "^/insights/?$",            "dest": "/landings/hispano_insights.html" },
-    { "src": "^/insights-analysis/?$",   "dest": "/landings/hispano_insights_analysis.html" },
+    { "src": "^/$", "dest": "/landings/hispano_index.html" },
+    { "src": "^/about/?$", "dest": "/landings/hispano_about.html" },
+    { "src": "^/platform/?$", "dest": "/landings/hispano_platform.html" },
+    { "src": "^/insights/?$", "dest": "/landings/hispano_insights.html" },
+    { "src": "^/insights-analysis/?$", "dest": "/landings/hispano_insights_analysis.html" },
     { "src": "^/hispanic-latino-latinx/?$", "dest": "/landings/hispano_hispanic_latino_latinx.html" },
-    { "src": "^/miami-awakening/?$",     "dest": "/landings/hispano_Miami_Awakening.html" },
-    { "src": "^/reporte-insights/?$",    "dest": "/landings/hispano_reporte_insights.html" },
+    { "src": "^/miami-awakening/?$", "dest": "/landings/hispano_Miami_Awakening.html" },
+    { "src": "^/reporte-insights/?$", "dest": "/landings/hispano_reporte_insights.html" },
     { "src": "^/resources-authentic/?$", "dest": "/landings/hispano_resources_authentic.html" },
-    { "src": "^/whitepaper/?$",          "dest": "/landings/hispano_whitepaper.html" },
-
+    { "src": "^/whitepaper/?$", "dest": "/landings/hispano_whitepaper.html" },
     { "src": "^/resources/(.*)$", "dest": "/public/resources/$1" }
   ],
   "redirects": [
