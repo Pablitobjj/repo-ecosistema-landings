@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "^/$", "has": [{ "type": "host", "value": "culturalbrain.net" }], "dest": "/landings/cultural_brain_index.html" },
+    { "src": "^/about/?$", "has": [{ "type": "host", "value": "culturalbrain.net" }], "dest": "/landings/cultural_brain_nosotros.html" },
+    { "src": "^/pricing/?$", "has": [{ "type": "host", "value": "culturalbrain.net" }], "dest": "/landings/cultural_brain_precios.html" },
+    { "src": "^/resources/?$", "has": [{ "type": "host", "value": "culturalbrain.net" }], "dest": "/landings/cultural_brain_resources.html" },
+    { "src": "^/resources/(.*)$", "has": [{ "type": "host", "value": "culturalbrain.net" }], "dest": "/public/resources/$1" }
+  ]
+}
