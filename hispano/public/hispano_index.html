@@ -633,18 +633,20 @@
                         <span data-lang="en">Get Instant Access</span>
                         <span data-lang="es">Obtén Acceso Instantáneo</span>
                     </h3>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
-                        <input type="email" placeholder="Business Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
-                        <input type="text" placeholder="Company" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
-                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
-                            <option>Job Title</option>
-                            <option>Marketing Director</option>
-                            <option>Media Buyer</option>
-                            <option>Agency Executive</option>
-                            <option>Brand Manager</option>
-                            <option>Other</option>
+                    <form action="https://submit-form.com/VSyNalmgO" method="POST" class="space-y-4">
+                        <input type="text" name="full_name" placeholder="Full Name" data-placeholder-en="Full Name" data-placeholder-es="Nombre Completo" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required>
+                        <input type="email" name="email" placeholder="Business Email" data-placeholder-en="Business Email" data-placeholder-es="Email Empresarial" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required>
+                        <input type="text" name="company" placeholder="Company" data-placeholder-en="Company" data-placeholder-es="Empresa" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required>
+                        <select name="job_title" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required>
+                            <option value="" data-text-en="Job Title" data-text-es="Cargo">Job Title</option>
+                            <option value="marketing_director" data-text-en="Marketing Director" data-text-es="Director de Marketing">Marketing Director</option>
+                            <option value="media_buyer" data-text-en="Media Buyer" data-text-es="Comprador de Medios">Media Buyer</option>
+                            <option value="agency_executive" data-text-en="Agency Executive" data-text-es="Ejecutivo de Agencia">Agency Executive</option>
+                            <option value="brand_manager" data-text-en="Brand Manager" data-text-es="Gerente de Marca">Brand Manager</option>
+                            <option value="other" data-text-en="Other" data-text-es="Otro">Other</option>
                         </select>
+                        <input type="hidden" name="form_source" value="lead_magnet_analysis">
+                        <input type="hidden" name="page_url" value="hispano_index.html">
                         <button type="submit" class="w-full btn-primary py-3 text-lg">
                             <span data-lang="en">Download Analysis - Immediate Access</span>
                             <span data-lang="es">Descargar Análisis - Acceso Inmediato</span>
@@ -676,10 +678,114 @@
                         <span data-lang="en">Start with Cultural Brain</span>
                         <span data-lang="es">Comenzar con Cultural Brain</span>
                     </a>
-                    <a href="#contact" class="btn-secondary">
+                    <a href="https://calendly.com/hello-hispan/30min" target="_blank" class="btn-secondary">
                         <span data-lang="en">Schedule Strategy Session</span>
                         <span data-lang="es">Agendar Sesión de Estrategia</span>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-6">
+                    <span data-lang="en">Get in Touch</span>
+                    <span data-lang="es">Ponte en Contacto</span>
+                </h2>
+                <p class="text-xl text-gray-600 mb-10">
+                    <span data-lang="en">Ready to transform your programmatic strategy with cultural intelligence? Let's discuss your specific needs.</span>
+                    <span data-lang="es">¿Listo para transformar tu estrategia programática con inteligencia cultural? Hablemos de tus necesidades específicas.</span>
+                </p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-lg p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">
+                            <span data-lang="en">Send us a Message</span>
+                            <span data-lang="es">Envíanos un Mensaje</span>
+                        </h3>
+                        <form action="https://submit-form.com/X1HimpPDC" method="POST" class="space-y-4">
+                            <input type="text" name="name" placeholder="Name" data-placeholder-en="Name" data-placeholder-es="Nombre" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required>
+                            <input type="email" name="email" placeholder="Email" data-placeholder-en="Email" data-placeholder-es="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required>
+                            <input type="text" name="company" placeholder="Company" data-placeholder-en="Company" data-placeholder-es="Empresa" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                            <select name="inquiry_type" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required>
+                                <option value="" data-text-en="Type of Inquiry" data-text-es="Tipo de Consulta">Type of Inquiry</option>
+                                <option value="platform_demo" data-text-en="Platform Demo" data-text-es="Demo de Plataforma">Platform Demo</option>
+                                <option value="partnership" data-text-en="Partnership" data-text-es="Sociedad">Partnership</option>
+                                <option value="consulting" data-text-en="Consulting" data-text-es="Consultoría">Consulting</option>
+                                <option value="media" data-text-en="Media/Press" data-text-es="Medios/Prensa">Media/Press</option>
+                                <option value="other" data-text-en="Other" data-text-es="Otro">Other</option>
+                            </select>
+                            <textarea name="message" rows="4" placeholder="Message" data-placeholder-en="Tell us about your needs..." data-placeholder-es="Cuéntanos sobre tus necesidades..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" required></textarea>
+                            <input type="hidden" name="form_source" value="contact_form">
+                            <input type="hidden" name="page_url" value="hispano_index.html">
+                            <button type="submit" class="w-full btn-primary py-3 text-lg">
+                                <span data-lang="en">Send Message</span>
+                                <span data-lang="es">Enviar Mensaje</span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-indigo-100 rounded-full p-3 mr-4">
+                                    <i class="fas fa-calendar-alt text-indigo-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">
+                                        <span data-lang="en">Book a Strategy Session</span>
+                                        <span data-lang="es">Agenda una Sesión de Estrategia</span>
+                                    </h4>
+                                    <p class="text-gray-600">
+                                        <span data-lang="en">30-minute focused discussion</span>
+                                        <span data-lang="es">Discusión enfocada de 30 minutos</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="https://calendly.com/hello-hispan/30min" target="_blank" class="btn-primary w-full text-center block">
+                                <span data-lang="en">Schedule Now</span>
+                                <span data-lang="es">Agendar Ahora</span>
+                            </a>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-100 rounded-full p-3 mr-4">
+                                    <i class="fas fa-brain text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">
+                                        <span data-lang="en">Try Cultural Brain</span>
+                                        <span data-lang="es">Prueba Cultural Brain</span>
+                                    </h4>
+                                    <p class="text-gray-600">
+                                        <span data-lang="en">Live platform demonstration</span>
+                                        <span data-lang="es">Demostración en vivo de la plataforma</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="platform.html" class="btn-secondary w-full text-center block">
+                                <span data-lang="en">Start Demo</span>
+                                <span data-lang="es">Iniciar Demo</span>
+                            </a>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-lg">
+                            <h4 class="font-bold text-lg mb-3">
+                                <span data-lang="en">Direct Contact</span>
+                                <span data-lang="es">Contacto Directo</span>
+                            </h4>
+                            <div class="space-y-2 text-gray-600">
+                                <p><i class="fas fa-envelope mr-2"></i> hello@hispan.io</p>                                
+                                <p><i class="fas fa-map-marker-alt mr-2"></i> Miami, FL</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -776,7 +882,30 @@
                 
                 localStorage.setItem('hispano-lang', lang);
                 document.documentElement.lang = lang;
+                
+                // Update form placeholders and options
+                updateFormLanguage(lang);
             };
+
+            function updateFormLanguage(lang) {
+                // Update input placeholders
+                document.querySelectorAll('input[data-placeholder-en]').forEach(input => {
+                    const placeholder = lang === 'es' ? input.getAttribute('data-placeholder-es') : input.getAttribute('data-placeholder-en');
+                    if (placeholder) input.placeholder = placeholder;
+                });
+                
+                // Update textarea placeholders
+                document.querySelectorAll('textarea[data-placeholder-en]').forEach(textarea => {
+                    const placeholder = lang === 'es' ? textarea.getAttribute('data-placeholder-es') : textarea.getAttribute('data-placeholder-en');
+                    if (placeholder) textarea.placeholder = placeholder;
+                });
+                
+                // Update select options
+                document.querySelectorAll('option[data-text-en]').forEach(option => {
+                    const text = lang === 'es' ? option.getAttribute('data-text-es') : option.getAttribute('data-text-en');
+                    if (text) option.textContent = text;
+                });
+            }
 
             const savedLang = localStorage.getItem('hispano-lang') || 'en';
             window.changeLanguage(savedLang);
