@@ -83,6 +83,30 @@
             text-decoration: none;
         }
         
+        .btn-download {
+            background: linear-gradient(135deg, var(--accent), #0ea5e9);
+            color: white;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .btn-download:hover {
+            background: linear-gradient(135deg, #0ea5e9, var(--accent));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px -3px rgba(45, 212, 191, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+        
         .metric-card {
             background: white;
             border-radius: 12px;
@@ -214,13 +238,35 @@
             display: flex;
             align-items: center;
         }
+
+        .download-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent), #0ea5e9);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            animation: slideInRight 0.3s ease;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
     </style>
 </head>
 <body class="cultural-pattern">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center">
+            <a href="hispano_index.html" class="flex items-center">
                 <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
             </a>
             
@@ -228,7 +274,7 @@
                 <div class="nav-item">
                     <span class="font-medium"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></span>
                     <div class="nav-dropdown">
-                        <a href="platform.html" class="dropdown-item flex items-center">
+                        <a href="hispano_platform.html" class="dropdown-item flex items-center">
                             <i class="fas fa-brain mr-3 text-indigo-600"></i>
                             <div>
                                 <p class="font-medium">Cultural Brain</p>
@@ -238,9 +284,9 @@
                     </div>
                 </div>
                 
-                <a href="insights.html" class="nav-item font-medium text-indigo-600"><span data-lang="en">Insights</span><span data-lang="es">Insights</span></a>
-                <a href="resources.html" class="nav-item font-medium"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
-                <a href="about.html" class="nav-item font-medium"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+                <a href="hispano_insights.html" class="nav-item font-medium text-indigo-600"><span data-lang="en">Insights</span><span data-lang="es">Insights</span></a>
+                <a href="hispano_resources_authentic.html" class="nav-item font-medium"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+                <a href="hispano_about.html" class="nav-item font-medium"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
                 <a href="#contact" class="nav-item font-medium"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
             </div>
             <div class="flex items-center space-x-4">
@@ -261,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="platform.html" class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></a>
+                <a href="hispano_platform.html" class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></a>
             </div>
         </div>
     </nav>
@@ -345,10 +391,17 @@
                                     <span data-lang="en">12 min read</span>
                                     <span data-lang="es">12 min lectura</span>
                                 </div>
-                                <a href="#" class="btn-primary">
-                                    <span data-lang="en">Read Full Analysis</span>
-                                    <span data-lang="es">Leer Análisis Completo</span>
-                                </a>
+                                <div class="flex items-center space-x-3">
+                                    <button class="btn-download" onclick="downloadResourcePDF('advantage-9-3')">
+                                        <i class="fas fa-download"></i>
+                                        <span data-lang="en">Download Report</span>
+                                        <span data-lang="es">Descargar Reporte</span>
+                                    </button>
+                                    <a href="#" class="btn-primary">
+                                        <span data-lang="en">Read Full Analysis</span>
+                                        <span data-lang="es">Leer Análisis Completo</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="bg-gradient-to-br from-indigo-600 to-purple-600 p-8 lg:p-12 text-white">
@@ -425,10 +478,17 @@
                                 <span data-lang="en">8 min read</span>
                                 <span data-lang="es">8 min lectura</span>
                             </div>
-                            <div class="trend-indicator trend-up">
-                                <i class="fas fa-arrow-up mr-1"></i>
-                                <span data-lang="en">Trending</span>
-                                <span data-lang="es">Tendencia</span>
+                            <div class="flex items-center space-x-2">
+                                <button class="btn-download" onclick="downloadResourcePDF('advantage-9-3')">
+                                    <i class="fas fa-download"></i>
+                                    <span data-lang="en">Download</span>
+                                    <span data-lang="es">Descargar</span>
+                                </button>
+                                <div class="trend-indicator trend-up">
+                                    <i class="fas fa-arrow-up mr-1"></i>
+                                    <span data-lang="en">Trending</span>
+                                    <span data-lang="es">Tendencia</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -458,10 +518,17 @@
                                 <span data-lang="en">15 min read</span>
                                 <span data-lang="es">15 min lectura</span>
                             </div>
-                            <div class="trend-indicator trend-up">
-                                <i class="fas fa-chart-line mr-1"></i>
-                                <span data-lang="en">Research</span>
-                                <span data-lang="es">Investigación</span>
+                            <div class="flex items-center space-x-2">
+                                <button class="btn-download" onclick="downloadResourcePDF('investment-gap-120b')">
+                                    <i class="fas fa-download"></i>
+                                    <span data-lang="en">Download</span>
+                                    <span data-lang="es">Descargar</span>
+                                </button>
+                                <div class="trend-indicator trend-up">
+                                    <i class="fas fa-chart-line mr-1"></i>
+                                    <span data-lang="en">Research</span>
+                                    <span data-lang="es">Investigación</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -491,10 +558,17 @@
                                 <span data-lang="en">10 min read</span>
                                 <span data-lang="es">10 min lectura</span>
                             </div>
-                            <div class="trend-indicator trend-up">
-                                <i class="fas fa-globe mr-1"></i>
-                                <span data-lang="en">Global</span>
-                                <span data-lang="es">Global</span>
+                            <div class="flex items-center space-x-2">
+                                <button class="btn-download" onclick="downloadResourcePDF('geographic-variations')">
+                                    <i class="fas fa-download"></i>
+                                    <span data-lang="en">Download</span>
+                                    <span data-lang="es">Descargar</span>
+                                </button>
+                                <div class="trend-indicator trend-up">
+                                    <i class="fas fa-globe mr-1"></i>
+                                    <span data-lang="en">Global</span>
+                                    <span data-lang="es">Global</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -524,10 +598,17 @@
                                 <span data-lang="en">6 min read</span>
                                 <span data-lang="es">6 min lectura</span>
                             </div>
-                            <div class="trend-indicator trend-up">
-                                <i class="fas fa-users mr-1"></i>
-                                <span data-lang="en">Behavioral</span>
-                                <span data-lang="es">Conductual</span>
+                            <div class="flex items-center space-x-2">
+                                <button class="btn-download" onclick="downloadResourcePDF('cultural-intelligence-matters')">
+                                    <i class="fas fa-download"></i>
+                                    <span data-lang="en">Download</span>
+                                    <span data-lang="es">Descargar</span>
+                                </button>
+                                <div class="trend-indicator trend-up">
+                                    <i class="fas fa-users mr-1"></i>
+                                    <span data-lang="en">Behavioral</span>
+                                    <span data-lang="es">Conductual</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -557,10 +638,17 @@
                                 <span data-lang="en">18 min read</span>
                                 <span data-lang="es">18 min lectura</span>
                             </div>
-                            <div class="trend-indicator trend-up">
-                                <i class="fas fa-microscope mr-1"></i>
-                                <span data-lang="en">Deep Dive</span>
-                                <span data-lang="es">Análisis Profundo</span>
+                            <div class="flex items-center space-x-2">
+                                <button class="btn-download" onclick="downloadResourcePDF('cultural-intelligence-matters')">
+                                    <i class="fas fa-download"></i>
+                                    <span data-lang="en">Download</span>
+                                    <span data-lang="es">Descargar</span>
+                                </button>
+                                <div class="trend-indicator trend-up">
+                                    <i class="fas fa-microscope mr-1"></i>
+                                    <span data-lang="en">Deep Dive</span>
+                                    <span data-lang="es">Análisis Profundo</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -590,10 +678,17 @@
                                 <span data-lang="en">7 min read</span>
                                 <span data-lang="es">7 min lectura</span>
                             </div>
-                            <div class="trend-indicator trend-up">
-                                <i class="fas fa-dollar-sign mr-1"></i>
-                                <span data-lang="en">Economics</span>
-                                <span data-lang="es">Economía</span>
+                            <div class="flex items-center space-x-2">
+                                <button class="btn-download" onclick="downloadResourcePDF('advantage-9-3')">
+                                    <i class="fas fa-download"></i>
+                                    <span data-lang="en">Download</span>
+                                    <span data-lang="es">Descargar</span>
+                                </button>
+                                <div class="trend-indicator trend-up">
+                                    <i class="fas fa-dollar-sign mr-1"></i>
+                                    <span data-lang="en">Economics</span>
+                                    <span data-lang="es">Economía</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -615,7 +710,7 @@
                     <span data-lang="es">Todos los hallazgos basados en análisis de 41,745 sitios usando nuestras métricas patentadas Cultural Relevance Score (CRS), Cultural Affinity Index (CAI) y Cultural Cohesion Score (CCS).</span>
                 </p>
                 
-                <div class="metric-card">
+                <div class="metric-card mb-8">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div class="text-center">
                             <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -659,6 +754,14 @@
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn-download text-lg px-8 py-4" onclick="downloadResourcePDF('hispanic-majority-projection')">
+                        <i class="fas fa-download"></i>
+                        <span data-lang="en">Download Complete Methodology Guide</span>
+                        <span data-lang="es">Descargar Guía Completa de Metodología</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -726,25 +829,25 @@
                 <div>
                     <h3 class="text-lg font-bold mb-6"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></h3>
                     <ul class="space-y-3">
-                        <li><a href="platform.html" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
-                        <li><a href="platform.html#metrics" class="opacity-70 hover:opacity-100">CRS/CAI/CCS</a></li>
-                        <li><a href="platform.html#api" class="opacity-70 hover:opacity-100">API Access</a></li>
-                        <li><a href="about.html" class="opacity-70 hover:opacity-100">HICE Engine</a></li>
+                        <li><a href="hispano_platform.html" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
+                        <li><a href="hispano_platform.html#metrics" class="opacity-70 hover:opacity-100">CRS/CAI/CCS</a></li>
+                        <li><a href="hispano_platform.html#api" class="opacity-70 hover:opacity-100">API Access</a></li>
+                        <li><a href="hispano_about.html" class="opacity-70 hover:opacity-100">HICE Engine</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-6"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></h3>
                     <ul class="space-y-3">
-                        <li><a href="insights.html" class="opacity-70 hover:opacity-100">Industry Analysis</a></li>
-                        <li><a href="resources.html" class="opacity-70 hover:opacity-100">Research Reports</a></li>
-                        <li><a href="resources.html#whitepapers" class="opacity-70 hover:opacity-100">White Papers</a></li>
-                        <li><a href="resources.html#methodology" class="opacity-70 hover:opacity-100">Methodology</a></li>
+                        <li><a href="hispano_insights.html" class="opacity-70 hover:opacity-100">Industry Analysis</a></li>
+                        <li><a href="hispano_resources_authentic.html" class="opacity-70 hover:opacity-100">Research Reports</a></li>
+                        <li><a href="hispano_resources_authentic.html#whitepapers" class="opacity-70 hover:opacity-100">White Papers</a></li>
+                        <li><a href="hispano_resources_authentic.html#methodology" class="opacity-70 hover:opacity-100">Methodology</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-6"><span data-lang="en">Company</span><span data-lang="es">Empresa</span></h3>
                     <ul class="space-y-3">
-                        <li><a href="about.html" class="opacity-70 hover:opacity-100"><span data-lang="en">About Us</span><span data-lang="es">Nosotros</span></a></li>
+                        <li><a href="hispano_about.html" class="opacity-70 hover:opacity-100"><span data-lang="en">About Us</span><span data-lang="es">Nosotros</span></a></li>
                         <li><a href="#contact" class="opacity-70 hover:opacity-100"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
                     </ul>
                 </div>
@@ -763,6 +866,115 @@
     </footer>
 
     <script>
+        // ===== PDF DOWNLOAD SYSTEM =====
+        
+        // Resource mapping for PDFs (English and Spanish versions)
+        const resourcePDFMap = {
+            'cultural-intelligence-matters': {
+                en: '/resources/Hispano Beyond Demographics Why Cultural Intelligence Matters.pdf',
+                es: '/resources/hispano_Mas_Alla_ DemografíaPDF.pdf'
+            },
+            'advantage-9-3': {
+                en: '/resources/hispano_9.3_ AdvantagePDF.pdf',
+                es: '/resources/hispano_Ventaja_ 9.3PDF.pdf'
+            },
+            'investment-gap-120b': {
+                en: '/resources/hispano_120B_ Hispanic_ Investment_ GapPDF.pdf',
+                es: '/resources/hispano_BrechaInversionHispanaPDF.pdf'
+            },
+            'hispanic-majority-projection': {
+                en: '/resources/hispano_35_Year_Hispanic_Majority_ProjectionPDF.pdf',
+                es: '/resources/hispano_ProyeccionMayoríaHispanaPDF.pdf'
+            },
+            'geographic-variations': {
+                en: '/resources/hispano_Geographic_Cultural_VariationsPDF.pdf',
+                es: '/resources/hispano_Variaciones_Culturales_GeograficasPDF.pdf'
+            },
+            'hispanic-latino-latinx': {
+                en: '/resources/hispano_HispanicLatinoLatinxRevelationPDF.pdf',
+                es: '/resources/hispano_HispanicLatinoLatinxRevelacionDPF.pdf'
+            }
+        };
+
+        // Get current language from body class
+        function getCurrentLanguage() {
+            return document.body.classList.contains('lang-es') ? 'es' : 'en';
+        }
+
+        // Download resource PDF based on current language
+        function downloadResourcePDF(resourceId) {
+            const currentLang = getCurrentLanguage();
+            const pdfPath = resourcePDFMap[resourceId];
+            
+            if (pdfPath && pdfPath[currentLang]) {
+                // Create temporary link element and trigger download
+                const link = document.createElement('a');
+                link.href = pdfPath[currentLang];
+                link.download = pdfPath[currentLang].split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Show download confirmation
+                showDownloadConfirmation(resourceId, currentLang);
+            } else {
+                console.error('PDF not found for:', resourceId, currentLang);
+                // Fallback: show notification that PDF is not available
+                showDownloadError(resourceId, currentLang);
+            }
+        }
+
+        // Show download confirmation notification
+        function showDownloadConfirmation(resourceId, language) {
+            const messages = {
+                en: 'Download started! Check your downloads folder.',
+                es: '¡Descarga iniciada! Revisa tu carpeta de descargas.'
+            };
+
+            const notification = document.createElement('div');
+            notification.className = 'download-notification';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle text-xl"></i>
+                <span>${messages[language]}</span>
+            `;
+
+            document.body.appendChild(notification);
+
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+
+        // Show download error notification
+        function showDownloadError(resourceId, language) {
+            const messages = {
+                en: 'PDF not available. Please try again later.',
+                es: 'PDF no disponible. Por favor intenta más tarde.'
+            };
+
+            const notification = document.createElement('div');
+            notification.className = 'download-notification';
+            notification.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            notification.innerHTML = `
+                <i class="fas fa-exclamation-triangle text-xl"></i>
+                <span>${messages[language]}</span>
+            `;
+
+            document.body.appendChild(notification);
+
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+
+        // ===== EXISTING FUNCTIONALITY =====
+        
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize AOS
             AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
