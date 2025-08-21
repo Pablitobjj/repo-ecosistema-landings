@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISPAÑO - Transforming the $3.2 Trillion Hispanic Market</title>
+    <meta name="description" content="The world's first Cultural Intelligence Platform for programmatic advertising. 41,745 sites analyzed. 9.3% cost advantage proven. $120B opportunity identified.">
+    <meta property="og:image" content="/images/og-hispano-authority.jpg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <style>
+        :root {
+            --primary: #173c67;
+            --secondary: #6D1B8F;
+            --accent: #2DD4BF;
+            --orange: #F27044;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .accent-text { color: var(--accent); }
+        .orange-text { color: var(--orange); }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(23, 60, 103, 0.1);
+            transform: scale(1.05);
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .cultural-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236D1B8F' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        /* Language Switcher */
+        .language-switcher { position: relative; display: inline-block; }
+        .language-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 500; }
+        .language-btn:hover { border-color: var(--secondary); background: rgba(109, 27, 143, 0.05); color: var(--secondary); }
+        .language-btn.on-dark-bg { border-color: white; color: white; }
+        .language-btn.on-dark-bg:hover { border-color: var(--accent); background: rgba(255,255,255,0.1); color: var(--accent); }
+        .language-flag { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; margin-top: 0.5rem; background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; min-width: 150px; }
+        .language-switcher:hover .language-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .language-option { padding: 0.75rem 1.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease; color: #333; }
+        .language-option:hover { background: rgba(23, 60, 103, 0.05); }
+        .language-option.active { background: rgba(23, 60, 103, 0.1); color: var(--primary); font-weight: bold; }
+        
+        [data-lang]:not([data-lang="en"]) { display: none; }
+        body.lang-es [data-lang="en"] { display: none; }
+        body.lang-es [data-lang="es"] { display: initial; }
+
+        /* Navigation */
+        .nav-item { position: relative; cursor: pointer; }
+        .nav-item::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s ease; }
+        .nav-item:hover::after { width: 100%; }
+        
+        .nav-dropdown { position: absolute; top: 100%; left: 0; width: max-content; min-width:240px; padding: 16px; background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 100; }
+        .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-item { padding: 8px 16px; border-radius: 4px; transition: all 0.2s ease; text-decoration: none; color: #333; display: block; }
+        .dropdown-item:hover { background: rgba(23, 60, 103, 0.1); text-decoration: none; color: #333; }
+
+        .data-highlight {
+            background: linear-gradient(135deg, var(--accent), #0ea5e9);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .proof-point {
+            background: rgba(45, 212, 191, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body class="cultural-pattern">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
+            </a>
+            
+            <div class="nav-container hidden md:flex items-center space-x-6 xl:space-x-8">
+                <div class="nav-item">
+                    <span class="font-medium"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></span>
+                    <div class="nav-dropdown">
+                        <a href="platform.html" class="dropdown-item flex items-center">
+                            <i class="fas fa-brain mr-3 text-indigo-600"></i>
+                            <div>
+                                <p class="font-medium">Cultural Brain</p>
+                                <p class="text-sm text-gray-600"><span data-lang="en">Available Now</span><span data-lang="es">Disponible Ahora</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="insights.html" class="nav-item font-medium"><span data-lang="en">Insights</span><span data-lang="es">Insights</span></a>
+                <a href="resources.html" class="nav-item font-medium"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+                <a href="about.html" class="nav-item font-medium"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+                <a href="#contact" class="nav-item font-medium"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="language-switcher">
+                    <button class="language-btn" id="currentLangBtn">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag" id="currentLangFlag">
+                        <span id="currentLangText">EN</span>
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option active" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="language-flag">
+                            <span>Español</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="platform.html" class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero + About Section -->
+    <section class="min-h-screen flex items-center pt-24 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-2/3 text-white" data-aos="fade-right">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        <span data-lang="en">Transforming the $3.2 Trillion Hispanic Market Through Cultural Intelligence</span>
+                        <span data-lang="es">Transformando el Mercado Hispano de $3.2 Billones Mediante Inteligencia Cultural</span>
+                    </h1>
+                    <div class="text-xl mb-8 opacity-90">
+                        <p class="mb-4">
+                            <span data-lang="en">We are the creators of the world's first Cultural Intelligence Platform designed specifically for programmatic advertising. Our flagship product, Cultural Brain, bridges the $120B investment gap in Hispanic marketing by making cultural relevance as measurable and actionable as viewability or brand safety.</span>
+                            <span data-lang="es">Somos los creadores de la primera Plataforma de Inteligencia Cultural del mundo diseñada específicamente para publicidad programática. Nuestro producto estrella, Cultural Brain, cierra la brecha de inversión de $120B en marketing hispano haciendo que la relevancia cultural sea tan medible y accionable como la visibilidad o la seguridad de marca.</span>
+                        </p>
+                        
+                        <div class="proof-point bg-white bg-opacity-20 border-l-4 border-accent p-4 rounded-r-lg">
+                            <p class="font-semibold">
+                                <span data-lang="en">What We've Built:</span>
+                                <span data-lang="es">Lo Que Hemos Construido:</span>
+                            </p>
+                            <ul class="mt-2 space-y-1 text-lg">
+                                <li>• <span class="data-highlight">41,745 sites analyzed</span> <span data-lang="en">with our proprietary HICE engine</span><span data-lang="es">con nuestro motor HICE patentado</span></li>
+                                <li>• <span class="data-highlight">9.3% cost advantage</span> <span data-lang="en">on cultural inventory vs general market</span><span data-lang="es">en inventario cultural vs mercado general</span></li>
+                                <li>• <span class="data-highlight">15,712 blue ocean opportunities</span> <span data-lang="en">identified across 10 major categories</span><span data-lang="es">identificadas en 10 categorías principales</span></li>
+                                <li>• <span class="data-highlight">1,349% higher relevance</span> <span data-lang="en">for only $0.12 extra CPM</span><span data-lang="es">por solo $0.12 extra de CPM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#lead-magnet" class="btn-primary bg-white text-indigo-800 hover:bg-gray-100">
+                            <span data-lang="en">Download Market Analysis</span>
+                            <span data-lang="es">Descargar Análisis de Mercado</span>
+                        </a>
+                        <a href="platform.html" class="btn-secondary border-white text-white hover:bg-white hover:bg-opacity-10">
+                            <span data-lang="en">See Cultural Brain Platform</span>
+                            <span data-lang="es">Ver Plataforma Cultural Brain</span>
+                        </a>
+                    </div>
+                    
+                    <div class="stats-grid mt-12">
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-number">41,745</div>
+                            <div class="stat-label"><span data-lang="en">Sites Analyzed</span><span data-lang="es">Sitios Analizados</span></div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-number">$3.2T</div>
+                            <div class="stat-label"><span data-lang="en">Market Size</span><span data-lang="es">Tamaño de Mercado</span></div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-number">698</div>
+                            <div class="stat-label"><span data-lang="en">IAB Categories</span><span data-lang="es">Categorías IAB</span></div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="stat-number">99.2%</div>
+                            <div class="stat-label"><span data-lang="en">Accuracy</span><span data-lang="es">Precisión</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/3 mt-12 lg:mt-0" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="bg-white bg-opacity-10 rounded-lg p-8">
+                            <div class="text-center">
+                                <div class="text-6xl mb-4">🧠</div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">Cultural Intelligence in Action</h3>
+                                <div class="space-y-3 text-left">
+                                    <div class="bg-white bg-opacity-20 rounded p-3">
+                                        <div class="text-sm opacity-80">Cultural Relevance Score</div>
+                                        <div class="text-xl font-bold">96,334</div>
+                                        <div class="text-xs opacity-70">Highest efficiency recorded</div>
+                                    </div>
+                                    <div class="bg-white bg-opacity-20 rounded p-3">
+                                        <div class="text-sm opacity-80">Cost Advantage</div>
+                                        <div class="text-xl font-bold">9.3%</div>
+                                        <div class="text-xs opacity-70">Below market average</div>
+                                    </div>
+                                    <div class="bg-white bg-opacity-20 rounded p-3">
+                                        <div class="text-sm opacity-80">Performance Lift</div>
+                                        <div class="text-xl font-bold">4.7%</div>
+                                        <div class="text-xs opacity-70">Better viewability</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Leadership Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4"><span data-lang="en">Leadership Team</span><span data-lang="es">Equipo de Liderazgo</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">Pioneers in Cultural Intelligence Technology</span>
+                    <span data-lang="es">Pioneros en Tecnología de Inteligencia Cultural</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">
+                        <span data-lang="en">Our Collective Expertise</span>
+                        <span data-lang="es">Nuestra Experiencia Colectiva</span>
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-bold text-lg">
+                                <span data-lang="en">Hispanic Market Intelligence</span>
+                                <span data-lang="es">Inteligencia del Mercado Hispano</span>
+                            </h4>
+                            <p class="text-gray-600">
+                                <span data-lang="en">15+ years analyzing cultural trends, consumer behavior, and the evolution of bicultural identity in digital spaces. Our cultural insights are validated by the largest dataset in the industry—41,745 sites with verified performance data.</span>
+                                <span data-lang="es">Más de 15 años analizando tendencias culturales, comportamiento del consumidor y la evolución de la identidad bicultural en espacios digitales. Nuestros insights culturales están validados por el conjunto de datos más grande de la industria: 41,745 sitios con datos de rendimiento verificados.</span>
+                            </p>
+                        </div>
+                        
+                        <div class="border-l-4 border-purple-500 pl-4">
+                            <h4 class="font-bold text-lg">
+                                <span data-lang="en">Programmatic Technology Leadership</span>
+                                <span data-lang="es">Liderazgo en Tecnología Programática</span>
+                            </h4>
+                            <p class="text-gray-600">
+                                <span data-lang="en">Former executives from leading DSP/SSP platforms who understand the technical requirements for scaling cultural intelligence within programmatic workflows. We've built the infrastructure to make culture a real-time bidding signal.</span>
+                                <span data-lang="es">Ex-ejecutivos de plataformas DSP/SSP líderes que entienden los requisitos técnicos para escalar la inteligencia cultural dentro de flujos de trabajo programáticos. Hemos construido la infraestructura para hacer de la cultura una señal de licitación en tiempo real.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">
+                        <span data-lang="en">Our Founding Insight</span>
+                        <span data-lang="es">Nuestro Insight Fundacional</span>
+                    </h3>
+                    <blockquote class="text-lg italic text-gray-700 border-l-4 border-accent pl-6">
+                        <span data-lang="en">"The tools to measure cultural relevance as precisely as viewability now exist. The question isn't whether cultural targeting works—our data proves it does. The question is: will your brand capture the arbitrage opportunity before your competitors discover it?"</span>
+                        <span data-lang="es">"Las herramientas para medir la relevancia cultural con la misma precisión que la visibilidad ya existen. La pregunta no es si el targeting cultural funciona—nuestros datos lo prueban. La pregunta es: ¿capturará tu marca la oportunidad de arbitraje antes de que tus competidores la descubran?"</span>
+                    </blockquote>
+                    
+                    <div class="mt-8">
+                        <div class="border-l-4 border-teal-500 pl-4">
+                            <h4 class="font-bold text-lg">
+                                <span data-lang="en">AI & Machine Learning Excellence</span>
+                                <span data-lang="es">Excelencia en IA y Machine Learning</span>
+                            </h4>
+                            <p class="text-gray-600">
+                                <span data-lang="en">PhD-level expertise in natural language processing, cultural analysis, and machine learning applied specifically to Hispanic content. Our HICE engine represents the most advanced cultural analysis technology ever deployed at scale.</span>
+                                <span data-lang="es">Experiencia a nivel de doctorado en procesamiento de lenguaje natural, análisis cultural y machine learning aplicado específicamente al contenido hispano. Nuestro motor HICE representa la tecnología de análisis cultural más avanzada jamás desplegada a escala.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Intelligence in Action Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Cultural Intelligence in Action</span>
+                    <span data-lang="es">Inteligencia Cultural en Acción</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">Key findings from our analysis of 41,745 sites that challenge fundamental assumptions about cultural marketing.</span>
+                    <span data-lang="es">Hallazgos clave de nuestro análisis de 41,745 sitios que desafían las suposiciones fundamentales sobre el marketing cultural.</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold">
+                            <span data-lang="en">The Cultural Efficiency Paradox</span>
+                            <span data-lang="es">La Paradoja de Eficiencia Cultural</span>
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        <span data-lang="en">Cultural inventory doesn't cost more—it costs 9.3% less than general market.</span>
+                        <span data-lang="es">El inventario cultural no cuesta más—cuesta 9.3% menos que el mercado general.</span>
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wide">
+                                    <span data-lang="en">Cultural Sites</span>
+                                    <span data-lang="es">Sitios Culturales</span>
+                                </div>
+                                <div class="text-2xl font-bold text-green-600">$0.98</div>
+                                <div class="text-xs text-gray-500">CPM</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wide">
+                                    <span data-lang="en">General Market</span>
+                                    <span data-lang="es">Mercado General</span>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-600">$1.08</div>
+                                <div class="text-xs text-gray-500">CPM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold">
+                            <span data-lang="en">Blue Ocean Categories</span>
+                            <span data-lang="es">Categorías Océano Azul</span>
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        <span data-lang="en">10 major categories have massive scale but minimal cultural activation.</span>
+                        <span data-lang="es">10 categorías principales tienen escala masiva pero activación cultural mínima.</span>
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+                            <span class="font-medium">
+                                <span data-lang="en">Automotive</span>
+                                <span data-lang="es">Automotriz</span>
+                            </span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-bold">92% <span data-lang="en">untapped</span><span data-lang="es">sin explotar</span></span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+                            <span class="font-medium">
+                                <span data-lang="en">Technology</span>
+                                <span data-lang="es">Tecnología</span>
+                            </span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-bold">97% <span data-lang="en">opportunity</span><span data-lang="es">oportunidad</span></span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+                            <span class="font-medium">
+                                <span data-lang="en">Financial Services</span>
+                                <span data-lang="es">Servicios Financieros</span>
+                            </span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-bold">91% <span data-lang="en">gap</span><span data-lang="es">brecha</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Thought Leadership Section -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Leading the Future of Programmatic</span>
+                    <span data-lang="es">Liderando el Futuro de la Programática</span>
+                </h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="metric-card" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row items-start gap-8">
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold mb-4">
+                                <span data-lang="en">The Future of Programmatic: Why Cultural Intelligence is the Next Targeting Evolution</span>
+                                <span data-lang="es">El Futuro de la Programática: Por Qué la Inteligencia Cultural es la Próxima Evolución del Targeting</span>
+                            </h3>
+                            <p class="text-gray-600 mb-6">
+                                <span data-lang="en">Programmatic advertising has evolved through distinct phases: basic demographic targeting, behavioral data integration, and contextual intelligence. The next evolution is cultural intelligence—the ability to measure and optimize for cultural relevance in real-time bidding decisions.</span>
+                                <span data-lang="es">La publicidad programática ha evolucionado a través de fases distintas: targeting demográfico básico, integración de datos conductuales e inteligencia contextual. La próxima evolución es la inteligencia cultural: la capacidad de medir y optimizar la relevancia cultural en decisiones de licitación en tiempo real.</span>
+                            </p>
+                            <div class="bg-accent bg-opacity-10 border-l-4 border-accent p-4 rounded-r-lg mb-6">
+                                <p class="font-semibold text-accent">
+                                    <span data-lang="en">The Evolutionary Leap:</span>
+                                    <span data-lang="es">El Salto Evolutivo:</span>
+                                </p>
+                                <p class="text-gray-700">
+                                    <span data-lang="en">Cultural intelligence doesn't replace existing targeting methodologies—it enhances them by adding a precision layer that demographics and behavior cannot capture. The result: 9.3% cost advantages and 1,349% relevance improvements.</span>
+                                    <span data-lang="es">La inteligencia cultural no reemplaza las metodologías de targeting existentes—las mejora añadiendo una capa de precisión que la demografía y el comportamiento no pueden capturar. El resultado: ventajas de costo del 9.3% y mejoras de relevancia del 1,349%.</span>
+                                </p>
+                            </div>
+                            <a href="insights.html" class="btn-primary">
+                                <span data-lang="en">Read Full Analysis</span>
+                                <span data-lang="es">Leer Análisis Completo</span>
+                            </a>
+                        </div>
+                        
+                        <div class="md:w-1/3">
+                            <div class="bg-gradient-to-br from-purple-600 to-blue-600 text-white p-6 rounded-lg">
+                                <h4 class="font-bold mb-4">
+                                    <span data-lang="en">Programmatic Evolution</span>
+                                    <span data-lang="es">Evolución Programática</span>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div class="text-sm opacity-75">
+                                        <span data-lang="en">Phase 1: Demographics (2007-2012)</span>
+                                        <span data-lang="es">Fase 1: Demografía (2007-2012)</span>
+                                    </div>
+                                    <div class="text-sm opacity-75">
+                                        <span data-lang="en">Phase 2: Behavioral (2012-2018)</span>
+                                        <span data-lang="es">Fase 2: Conductual (2012-2018)</span>
+                                    </div>
+                                    <div class="text-sm opacity-75">
+                                        <span data-lang="en">Phase 3: Contextual (2018-2023)</span>
+                                        <span data-lang="es">Fase 3: Contextual (2018-2023)</span>
+                                    </div>
+                                    <div class="text-sm font-bold bg-white bg-opacity-20 p-2 rounded">
+                                        <span data-lang="en">Phase 4: Cultural (2024-Future)</span>
+                                        <span data-lang="es">Fase 4: Cultural (2024-Futuro)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lead Magnet Section -->
+    <section id="lead-magnet" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-6">
+                    <span data-lang="en">Download: Analysis of the Hispanic Investment Gap</span>
+                    <span data-lang="es">Descarga: Análisis de la Brecha de Inversión Hispana</span>
+                </h2>
+                <p class="text-xl opacity-90 mb-8">
+                    <span data-lang="en">The US advertising market represents a $380B industry facing a critical paradox: Hispanic consumers with $3.2T in buying power receive only 5.3% of total advertising investment. This disconnect represents more than a diversity gap—it's a $120B+ efficiency opportunity.</span>
+                    <span data-lang="es">El mercado publicitario de EE.UU. representa una industria de $380B que enfrenta una paradoja crítica: los consumidores hispanos con $3.2B en poder adquisitivo reciben solo el 5.3% de la inversión publicitaria total. Esta desconexión representa más que una brecha de diversidad: es una oportunidad de eficiencia de $120B+.</span>
+                </p>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-6">
+                        <span data-lang="en">What You'll Discover:</span>
+                        <span data-lang="es">Lo Que Descubrirás:</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-chart-line text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold">
+                                        <span data-lang="en">$120B+ efficiency opportunity</span>
+                                        <span data-lang="es">Oportunidad de eficiencia de $120B+</span>
+                                    </h4>
+                                    <p class="text-sm opacity-80">
+                                        <span data-lang="en">Quantified market inefficiency analysis</span>
+                                        <span data-lang="es">Análisis cuantificado de ineficiencia del mercado</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-bullseye text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold">
+                                        <span data-lang="en">Blue ocean categories identified</span>
+                                        <span data-lang="es">Categorías océano azul identificadas</span>
+                                    </h4>
+                                    <p class="text-sm opacity-80">
+                                        <span data-lang="en">92% untapped automotive, 97% technology opportunity</span>
+                                        <span data-lang="es">92% automotriz sin explotar, 97% oportunidad tecnológica</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-globe text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold">
+                                        <span data-lang="en">Geographic arbitrage opportunities</span>
+                                        <span data-lang="es">Oportunidades de arbitraje geográfico</span>
+                                    </h4>
+                                    <p class="text-sm opacity-80">
+                                        <span data-lang="en">66% efficiency advantages through TLD optimization</span>
+                                        <span data-lang="es">Ventajas de eficiencia del 66% mediante optimización TLD</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-calculator text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold">
+                                        <span data-lang="en">ROI calculation framework</span>
+                                        <span data-lang="es">Marco de cálculo de ROI</span>
+                                    </h4>
+                                    <p class="text-sm opacity-80">
+                                        <span data-lang="en">Proven methodology for cultural intelligence ROI</span>
+                                        <span data-lang="es">Metodología probada para ROI de inteligencia cultural</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 max-w-md mx-auto">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">
+                        <span data-lang="en">Get Instant Access</span>
+                        <span data-lang="es">Obtén Acceso Instantáneo</span>
+                    </h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                        <input type="email" placeholder="Business Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                        <input type="text" placeholder="Company" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                            <option>Job Title</option>
+                            <option>Marketing Director</option>
+                            <option>Media Buyer</option>
+                            <option>Agency Executive</option>
+                            <option>Brand Manager</option>
+                            <option>Other</option>
+                        </select>
+                        <button type="submit" class="w-full btn-primary py-3 text-lg">
+                            <span data-lang="en">Download Analysis - Immediate Access</span>
+                            <span data-lang="es">Descargar Análisis - Acceso Inmediato</span>
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-600 mt-4">
+                        <span data-lang="en">By downloading, you agree to receive emails with cultural intelligence insights. Unsubscribe anytime.</span>
+                        <span data-lang="es">Al descargar, aceptas recibir emails con insights de inteligencia cultural. Date de baja en cualquier momento.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-6">
+                    <span data-lang="en">Ready to Capture the Cultural Arbitrage?</span>
+                    <span data-lang="es">¿Listo para Capturar el Arbitraje Cultural?</span>
+                </h2>
+                <p class="text-xl text-gray-600 mb-10">
+                    <span data-lang="en">The market inefficiency window is 1-2 years before cultural intelligence becomes widely adopted. First movers will capture the best inventory at discount rates.</span>
+                    <span data-lang="es">La ventana de ineficiencia del mercado es de 1-2 años antes de que la inteligencia cultural sea ampliamente adoptada. Los primeros en moverse capturarán el mejor inventario a precios con descuento.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="platform.html" class="btn-primary">
+                        <span data-lang="en">Start with Cultural Brain</span>
+                        <span data-lang="es">Comenzar con Cultural Brain</span>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <span data-lang="en">Schedule Strategy Session</span>
+                        <span data-lang="es">Agendar Sesión de Estrategia</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10 mb-6">
+                    <p class="opacity-70 mb-6">
+                        <span data-lang="en">The world's first Cultural Intelligence Platform for programmatic advertising.</span>
+                        <span data-lang="es">La primera Plataforma de Inteligencia Cultural del mundo para publicidad programática.</span>
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-accent"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="hover:text-accent"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-accent"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="platform.html" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
+                        <li><a href="about.html" class="opacity-70 hover:opacity-100">HICE Engine</a></li>
+                        <li><a href="platform.html#metrics" class="opacity-70 hover:opacity-100">CRS/CAI/CCS</a></li>
+                        <li><a href="platform.html#api" class="opacity-70 hover:opacity-100">API Access</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="insights.html" class="opacity-70 hover:opacity-100">Industry Analysis</a></li>
+                        <li><a href="resources.html" class="opacity-70 hover:opacity-100">Whitepapers</a></li>
+                        <li><a href="resources.html#case-studies" class="opacity-70 hover:opacity-100">Case Studies</a></li>
+                        <li><a href="resources.html#webinars" class="opacity-70 hover:opacity-100">Webinars</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Company</span><span data-lang="es">Empresa</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="opacity-70 hover:opacity-100"><span data-lang="en">About Us</span><span data-lang="es">Nosotros</span></a></li>
+                        <li><a href="about.html#leadership" class="opacity-70 hover:opacity-100"><span data-lang="en">Leadership</span><span data-lang="es">Liderazgo</span></a></li>
+                        <li><a href="#contact" class="opacity-70 hover:opacity-100"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
+                        <li><a href="#" class="opacity-70 hover:opacity-100"><span data-lang="en">Careers</span><span data-lang="es">Carreras</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="opacity-70 text-sm">
+                    <span data-lang="en">© 2025 HISPAÑO. All rights reserved.</span>
+                    <span data-lang="es">© 2025 HISPAÑO. Todos los derechos reservados.</span>
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-sm opacity-70 hover:opacity-100"><span data-lang="en">Privacy Policy</span><span data-lang="es">Política de Privacidad</span></a>
+                    <a href="#" class="text-sm opacity-70 hover:opacity-100"><span data-lang="en">Terms of Service</span><span data-lang="es">Términos de Servicio</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+            
+            // Language switcher
+            window.changeLanguage = function(lang) {
+                document.body.className = lang === 'es' ? 'cultural-pattern lang-es' : 'cultural-pattern';
+                
+                const currentLangBtn = document.getElementById('currentLangBtn');
+                const currentLangFlag = document.getElementById('currentLangFlag');
+                const currentLangText = document.getElementById('currentLangText');
+                
+                if (lang === 'es') {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'ES';
+                    if (currentLangText) currentLangText.textContent = 'ES';
+                    document.title = 'HISPAÑO - Transformando el Mercado Hispano de $3.2 Billones';
+                } else {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'EN';
+                    if (currentLangText) currentLangText.textContent = 'EN';
+                    document.title = 'HISPAÑO - Transforming the $3.2 Trillion Hispanic Market';
+                }
+                
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('onclick') && option.getAttribute('onclick').includes(`changeLanguage('${lang}')`)) {
+                        option.classList.add('active');
+                    }
+                });
+                
+                localStorage.setItem('hispano-lang', lang);
+                document.documentElement.lang = lang;
+            };
+
+            const savedLang = localStorage.getItem('hispano-lang') || 'en';
+            window.changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

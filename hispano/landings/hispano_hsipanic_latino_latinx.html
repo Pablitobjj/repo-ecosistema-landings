@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hispanic vs. Latino vs. Latinx: Guía de Terminología Cultural - HISPAÑO</title>
+    <meta name="description" content="Una guía estratégica para entender las diferencias entre Hispanic, Latino y Latinx, y cómo usar la terminología correcta para un marketing cultural auténtico.">
+    
+    <link href="https://fontsa.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <style>
+        :root {
+            --primary: #173c67;
+            --secondary: #6D1B8F;
+            --accent: #2DD4BF;
+            --orange: #F27044;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .cultural-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236D1B8F' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        .language-switcher { position: relative; display: inline-block; }
+        .language-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 500; }
+        .language-btn:hover { border-color: var(--secondary); background: rgba(109, 27, 143, 0.05); color: var(--secondary); }
+        .language-flag { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; margin-top: 0.5rem; background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; min-width: 150px; }
+        .language-switcher:hover .language-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .language-option { padding: 0.75rem 1.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease; color: #333; }
+        .language-option:hover { background: rgba(23, 60, 103, 0.05); }
+        .language-option.active { background: rgba(23, 60, 103, 0.1); color: var(--primary); font-weight: bold; }
+        
+        [data-lang]:not([data-lang="en"]) { display: none; }
+        body.lang-es [data-lang="en"] { display: none; }
+        body.lang-es [data-lang="es"] { display: initial; }
+
+        .nav-item { position: relative; cursor: pointer; }
+        .nav-item::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s ease; }
+        .nav-item:hover::after { width: 100%; }
+        
+        .nav-dropdown { position: absolute; top: 100%; left: 0; width: max-content; min-width:240px; padding: 16px; background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 100; }
+        .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-item { padding: 8px 16px; border-radius: 4px; transition: all 0.2s ease; text-decoration: none; color: #333; display: block; }
+        .dropdown-item:hover { background: rgba(23, 60, 103, 0.1); text-decoration: none; color: #333; }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="cultural-pattern">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="https://www.culturalbrain.net/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
+            </a>
+            
+            <div class="nav-container hidden md:flex items-center space-x-6 xl:space-x-8">
+                <div class="nav-item">
+                    <span class="font-medium"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></span>
+                    <div class="nav-dropdown">
+                        <a href="platform.html" class="dropdown-item flex items-center">
+                            <i class="fas fa-brain mr-3 text-indigo-600"></i>
+                            <div>
+                                <p class="font-medium">Cultural Brain</p>
+                                <p class="text-sm text-gray-600"><span data-lang="en">Available Now</span><span data-lang="es">Disponible Ahora</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="insights.html" class="nav-item font-medium"><span data-lang="en">Insights</span><span data-lang="es">Insights</span></a>
+                <a href="resources.html" class="nav-item font-medium"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+                <a href="about.html" class="nav-item font-medium"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="language-switcher">
+                    <button class="language-btn" id="currentLangBtn">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag" id="currentLangFlag">
+                        <span id="currentLangText">EN</span>
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option active" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="language-flag">
+                            <span>Español</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="platform.html" class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <div class="mb-4">
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium">
+                        <i class="fas fa-book-open mr-2"></i>
+                        <span data-lang="en">Cultural Intelligence Guide</span>
+                        <span data-lang="es">Guía de Inteligencia Cultural</span>
+                    </span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span data-lang="en">Hispanic vs. Latino vs. Latinx</span>
+                    <span data-lang="es">Hispanic vs. Latino vs. Latinx</span>
+                </h1>
+                <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    <span data-lang="en">A strategic guide to cultural terminology for authentic marketing. Understand the difference and why it matters for brand connection.</span>
+                    <span data-lang="es">Una guía estratégica sobre terminología cultural para un marketing auténtico. Entiende la diferencia y por qué es crucial para la conexión con tu marca.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Body -->
+    <main class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <article class="max-w-3xl mx-auto article-content text-lg text-gray-800" data-aos="fade-up">
+                
+                <p>
+                    <span data-lang="en">During my time living in South Florida, I was struck by the casual misuse of cultural terminology. The terms "Latin," "Latino," "Latinx," and "Hispanic" were often used interchangeably, revealing a fundamental misunderstanding that impacts everything from market research to advertising effectiveness. This isn't just about being politically correct—it's about demonstrating true cultural intelligence. Getting it wrong immediately signals that a brand is an outsider.</span>
+                    <span data-lang="es">Durante mi tiempo viviendo en el sur de la Florida, me sorprendió el uso casual e incorrecto de la terminología cultural. Los términos "Latin", "Latino", "Latinx" e "Hispanic" se usaban a menudo de forma intercambiable, revelando un malentendido fundamental que impacta todo, desde la investigación de mercado hasta la efectividad publicitaria. No se trata solo de ser políticamente correcto, se trata de demostrar una verdadera inteligencia cultural. Equivocarse en esto señala inmediatamente que una marca es una extraña.</span>
+                </p>
+
+                <blockquote>
+                    <span data-lang="en">"These are not interchangeable terms. Using them incorrectly immediately marks a brand or individual as culturally unaware."</span>
+                    <span data-lang="es">"Estos no son términos intercambiables. Usarlos incorrectamente marca inmediatamente a una marca o individuo como culturalmente ignorante."</span>
+                </blockquote>
+
+                <h3>
+                    <span data-lang="en">Hispanic: The Language-Based Definition</span>
+                    <span data-lang="es">Hispanic: La Definición Basada en el Idioma</span>
+                </h3>
+                <p>
+                    <span data-lang="en">"Hispanic" refers specifically to people from Spanish-speaking countries or those who trace their ancestry to them. This is a <strong>language-based</strong> definition. It includes Spain but excludes Brazil, as Brazilians speak Portuguese.</span>
+                    <span data-lang="es">"Hispanic" se refiere específicamente a personas de países de habla hispana o aquellos que trazan su ascendencia a ellos. Esta es una definición <strong>basada en el idioma</strong>. Incluye a España pero excluye a Brasil, ya que los brasileños hablan portugués.</span>
+                </p>
+
+                <h3>
+                    <span data-lang="en">Latino/Latina: The Geography-Based Definition</span>
+                    <span data-lang="es">Latino/Latina: La Definición Basada en la Geografía</span>
+                </h3>
+                <p>
+                    <span data-lang="en">"Latino" or "Latina" refers to people from Latin America—the geographic region. This is a <strong>geography-based</strong> definition. It includes Brazil but excludes Spain, as Spain is in Europe. Someone from Brazil is Latino but not Hispanic. Someone from Spain is Hispanic but not Latino.</span>
+                    <span data-lang="es">"Latino" o "Latina" se refiere a personas de América Latina, la región geográfica. Esta es una definición <strong>basada en la geografía</strong>. Incluye a Brasil pero excluye a España, ya que España está en Europa. Alguien de Brasil es Latino pero no Hispanic. Alguien de España es Hispanic pero no Latino.</span>
+                </p>
+
+                <h3>
+                    <span data-lang="en">Latinx: The Gender-Neutral Innovation</span>
+                    <span data-lang="es">Latinx: La Innovación de Género Neutro</span>
+                </h3>
+                <p>
+                    <span data-lang="en">"Latinx" emerged as a gender-neutral alternative to "Latino/Latina." While embraced in academic and activist circles, its adoption within the broader community is limited. Research shows that only about 3% of U.S. adults who self-identify as Hispanic or Latino use the term "Latinx." Using it can resonate with younger, progressive audiences but may alienate more traditional community members.</span>
+                    <span data-lang="es">"Latinx" surgió como una alternativa de género neutro a "Latino/Latina". Aunque es aceptado en círculos académicos y activistas, su adopción en la comunidad en general es limitada. Las investigaciones muestran que solo alrededor del 3% de los adultos estadounidenses que se autoidentifican como hispanos o latinos usan el término "Latinx". Su uso puede resonar con audiencias más jóvenes y progresistas, pero podría alienar a miembros más tradicionales de la comunidad.</span>
+                </p>
+
+                <div class="my-8 overflow-x-auto">
+                    <table class="w-full text-left comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="w-1/4"><span data-lang="en">Term</span><span data-lang="es">Término</span></th>
+                                <th class="w-1/4"><span data-lang="en">Basis</span><span data-lang="es">Base</span></th>
+                                <th class="w-1/2"><span data-lang="en">Key Distinction</span><span data-lang="es">Distinción Clave</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">Hispanic</td>
+                                <td><span data-lang="en">Language</span><span data-lang="es">Idioma</span></td>
+                                <td><span data-lang="en">Includes Spain, excludes Brazil.</span><span data-lang="es">Incluye España, excluye Brasil.</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">Latino/a</td>
+                                <td><span data-lang="en">Geography</span><span data-lang="es">Geografía</span></td>
+                                <td><span data-lang="en">Includes Brazil, excludes Spain.</span><span data-lang="es">Incluye Brasil, excluye España.</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">Latinx</td>
+                                <td><span data-lang="en">Gender Identity</span><span data-lang="es">Identidad de Género</span></td>
+                                <td><span data-lang="en">Gender-neutral version of Latino. Niche usage.</span><span data-lang="es">Versión de género neutro de Latino. Uso de nicho.</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>
+                    <span data-lang="en">Strategic Implications for Marketing</span>
+                    <span data-lang="es">Implicaciones Estratégicas para el Marketing</span>
+                </h3>
+                <p>
+                    <span data-lang="en">The choice of terminology has real consequences. A campaign for Spanish-language financial products should use "Hispanic" for precision. A campaign celebrating Pan-American heritage might use "Latino." The key is that the choice must be intentional and informed by audience research, not assumption.</span>
+                    <span data-lang="es">La elección de la terminología tiene consecuencias reales. Una campaña para productos financieros en español debería usar "Hispanic" por precisión. Una campaña que celebra la herencia panamericana podría usar "Latino". La clave es que la elección debe ser intencional e informada por la investigación de la audiencia, no por suposiciones.</span>
+                </p>
+
+                <h3>
+                    <span data-lang="en">Beyond Terminology: The "Chido" vs. "Zarpado" Principle</span>
+                    <span data-lang="es">Más Allá de la Terminología: El Principio "Chido" vs. "Zarpado"</span>
+                </h3>
+                <p>
+                    <span data-lang="en">Ultimately, true cultural intelligence goes deeper than labels. Saying "chido" (Mexican slang for "cool") to an Argentinian or "está zarpado" (Argentine slang) to a Mexican reveals cultural ignorance, regardless of whether you used the "correct" umbrella term.</span>
+                    <span data-lang="es">En última instancia, la verdadera inteligencia cultural es más profunda que las etiquetas. Decir "chido" (jerga mexicana para "genial") a un argentino o "está zarpado" (jerga argentina) a un mexicano revela ignorancia cultural, sin importar si usaste el término general "correcto".</span>
+                </p>
+                <blockquote>
+                    <span data-lang="en">The deeper insight isn't just getting terminology right—it's recognizing that these communities are sophisticated and aware of how they're represented. Generic approaches that ignore cultural complexity are not just ineffective; they're disrespectful.</span>
+                    <span data-lang="es">La visión más profunda no es solo acertar con la terminología, es reconocer que estas comunidades son sofisticadas y conscientes de cómo se las representa. Los enfoques genéricos que ignoran la complejidad cultural no solo son ineficaces; son irrespetuosos.</span>
+                </blockquote>
+                <p>
+                    <span data-lang="en">Rather than seeking one "correct" term, marketers must understand the specific cultural context of their audiences. This moves beyond demographic targeting toward true cultural intelligence—understanding not just who people are, but how they see themselves and want to be seen.</span>
+                    <span data-lang="es">En lugar de buscar un término "correcto", los especialistas en marketing deben comprender el contexto cultural específico de sus audiencias. Esto va más allá del targeting demográfico hacia una verdadera inteligencia cultural: comprender no solo quiénes son las personas, sino cómo se ven a sí mismas y cómo quieren ser vistas.</span>
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6">
+                    <span data-lang="en">Ready to Apply True Cultural Intelligence?</span>
+                    <span data-lang="es">¿Listo para Aplicar Verdadera Inteligencia Cultural?</span>
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    <span data-lang="en">Our platform goes beyond terminology to analyze the cultural markers that truly drive connection and engagement. Stop guessing, start measuring.</span>
+                    <span data-lang="es">Nuestra plataforma va más allá de la terminología para analizar los marcadores culturales que realmente impulsan la conexión y el engagement. Deja de adivinar, empieza a medir.</span>
+                </p>
+                <a href="platform.html" class="btn-primary bg-white text-indigo-800 hover:bg-gray-100 text-lg px-8 py-3">
+                    <span data-lang="en">Explore the Cultural Brain Platform</span>
+                    <span data-lang="es">Explora la Plataforma Cultural Brain</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://www.culturalbrain.net/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10 mb-6">
+                    <p class="opacity-70 mb-6">
+                        <span data-lang="en">The intelligence infrastructure for the Hispanic digital market.</span>
+                        <span data-lang="es">La infraestructura de inteligencia para el mercado digital hispano.</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="platform.html" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
+                        <li><a href="platform.html#metrics" class="opacity-70 hover:opacity-100">CRS/CAI/CCS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="insights.html" class="opacity-70 hover:opacity-100"><span data-lang="en">Industry Analysis</span><span data-lang="es">Análisis de Industria</span></a></li>
+                        <li><a href="resources.html" class="opacity-70 hover:opacity-100">Whitepapers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Company</span><span data-lang="es">Empresa</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="opacity-70 hover:opacity-100"><span data-lang="en">About Us</span><span data-lang="es">Nosotros</span></a></li>
+                        <li><a href="#contact" class="opacity-70 hover:opacity-100"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="opacity-70 text-sm">
+                    <span data-lang="en">© 2025 HISPAÑO. All rights reserved.</span>
+                    <span data-lang="es">© 2025 HISPAÑO. Todos los derechos reservados.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+            
+            window.changeLanguage = function(lang) {
+                document.body.className = lang === 'es' ? 'cultural-pattern lang-es' : 'cultural-pattern';
+                
+                const currentLangFlag = document.getElementById('currentLangFlag');
+                const currentLangText = document.getElementById('currentLangText');
+                
+                if (lang === 'es') {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
+                    if (currentLangText) currentLangText.textContent = 'ES';
+                } else {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
+                    if (currentLangText) currentLangText.textContent = 'EN';
+                }
+                
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('onclick') && option.getAttribute('onclick').includes(`changeLanguage('${lang}')`)) {
+                        option.classList.add('active');
+                    }
+                });
+                
+                localStorage.setItem('hispano-lang', lang);
+                document.documentElement.lang = lang;
+            };
+
+            const savedLang = localStorage.getItem('hispano-lang') || 'en';
+            window.changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pulso del Mercado Digital Hispano - HISPAÑO Insights Report</title>
+    <meta name="description" content="Descarga nuestro reporte exclusivo con insights de +37,000 sitios analizados. Descubre patrones de relevancia, brechas de contenido y oportunidades generacionales.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <style>
+        :root {
+            --primary: #173c67;
+            --secondary: #6D1B8F;
+            --accent: #2DD4BF;
+            --orange: #F27044;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .accent-text { color: var(--accent); }
+        .orange-text { color: var(--orange); }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(23, 60, 103, 0.1);
+            transform: scale(1.05);
+        }
+        
+        .insight-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .insight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .insight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+        }
+        
+        .cultural-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236D1B8F' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        .data-visualization {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+        }
+        
+        .language-switcher { position: relative; display: inline-block; }
+        .language-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 500; }
+        .language-btn:hover { border-color: var(--secondary); background: rgba(109, 27, 143, 0.05); color: var(--secondary); }
+        .language-btn.on-dark-bg { border-color: white; color: white; }
+        .language-btn.on-dark-bg:hover { border-color: var(--accent); background: rgba(255,255,255,0.1); color: var(--accent); }
+        .language-flag { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; margin-top: 0.5rem; background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; min-width: 150px; }
+        .language-switcher:hover .language-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .language-option { padding: 0.75rem 1.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease; color: #333; }
+        .language-option:hover { background: rgba(23, 60, 103, 0.05); }
+        .language-option.active { background: rgba(23, 60, 103, 0.1); color: var(--primary); font-weight: bold; }
+        
+        [data-lang]:not([data-lang="en"]) { display: none; }
+        body.lang-es [data-lang="en"] { display: none; }
+        body.lang-es [data-lang="es"] { display: initial; }
+
+        .nav-item { position: relative; cursor: pointer; }
+        .nav-item::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s ease; }
+        .nav-item:hover::after { width: 100%; }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+        }
+        
+        .stat-badge {
+            background: linear-gradient(135deg, var(--accent), #06b6d4);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 12px;
+            display: inline-block;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin: 20px 0;
+        }
+        
+        .insight-number {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body class="cultural-pattern">
+    <!-- Nav -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/" class="nav-item font-medium"><span data-lang="en">Home</span><span data-lang="es">Inicio</span></a>
+                <a href="/platform" class="nav-item font-medium"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></a>
+                <a href="/resources" class="nav-item font-medium"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+                <a href="/contact" class="nav-item font-medium"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="language-switcher">
+                    <button class="language-btn" id="currentLangBtn">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag" id="currentLangFlag">
+                        <span id="currentLangText">EN</span>
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option active" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="language-flag">
+                            <span>Español</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <div class="mb-6">
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        <span data-lang="en">Data Insights Report</span>
+                        <span data-lang="es">Reporte de Insights de Datos</span>
+                    </span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span data-lang="en">The Pulse of the Hispanic Digital Market</span>
+                    <span data-lang="es">El Pulso del Mercado Digital Hispano</span>
+                </h1>
+                <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    <span data-lang="en">Key insights from +37,000 sites analyzed. Discover relevance patterns, content gaps, and generational opportunities our data reveals.</span>
+                    <span data-lang="es">Insights clave de +37,000 sitios analizados. Descubre patrones de relevancia, brechas de contenido y oportunidades generacionales que nuestros datos revelan.</span>
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <span class="stat-badge">37,028 <span data-lang="en">Sites</span><span data-lang="es">Sitios</span></span>
+                    <span class="stat-badge">698 <span data-lang="en">IAB Categories</span><span data-lang="es">Categorías IAB</span></span>
+                    <span class="stat-badge">12 <span data-lang="en">Key Insights</span><span data-lang="es">Insights Clave</span></span>
+                    <span class="stat-badge"><span data-lang="en">Live Data</span><span data-lang="es">Datos en Vivo</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Insights Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span data-lang="en">Four Game-Changing Insights</span>
+                    <span data-lang="es">Cuatro Insights que Cambian el Juego</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    <span data-lang="en">Data-driven discoveries that reveal hidden opportunities in the Hispanic digital market</span>
+                    <span data-lang="es">Descubrimientos basados en datos que revelan oportunidades ocultas en el mercado digital hispano</span>
+                </p>
+            </div>
+            
+            <!-- Insight 1: Cultural Relevance Map -->
+            <div class="insight-card mb-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="insight-number">1</div>
+                        <h3 class="text-2xl font-bold mb-4">
+                            <span data-lang="en">The Cultural Relevance Map by Industry</span>
+                            <span data-lang="es">El Mapa de Relevancia Cultural por Industria</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span data-lang="en">Our analysis reveals dramatic variations in Cultural Relevance Score (CRS) across industries. Entertainment & Media leads with an average CRS of 78.2, while Financial Services lag at 31.4 - representing a massive opportunity gap.</span>
+                            <span data-lang="es">Nuestro análisis revela variaciones dramáticas en el Score de Relevancia Cultural (CRS) entre industrias. Entretenimiento y Medios lidera con un CRS promedio de 78.2, mientras que Servicios Financieros se queda en 31.4 - representando una brecha de oportunidad masiva.</span>
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium"><span data-lang="en">Entertainment & Media</span><span data-lang="es">Entretenimiento y Medios</span></span>
+                                <span class="gradient-text font-bold">78.2</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium"><span data-lang="en">Food & Beverage</span><span data-lang="es">Alimentos y Bebidas</span></span>
+                                <span class="gradient-text font-bold">65.7</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium"><span data-lang="en">Retail & E-commerce</span><span data-lang="es">Retail y E-commerce</span></span>
+                                <span class="gradient-text font-bold">52.3</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium"><span data-lang="en">Automotive</span><span data-lang="es">Automotriz</span></span>
+                                <span class="gradient-text font-bold">47.1</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium"><span data-lang="en">Financial Services</span><span data-lang="es">Servicios Financieros</span></span>
+                                <span class="gradient-text font-bold">31.4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="data-visualization">
+                            <div class="chart-container">
+                                <canvas id="industryChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Insight 2: Code-Switching Analysis -->
+            <div class="insight-card mb-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="data-visualization">
+                            <div class="chart-container">
+                                <canvas id="generationChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="insight-number">2</div>
+                        <h3 class="text-2xl font-bold mb-4">
+                            <span data-lang="en">The Code-Switching Code: Language & Affinity by Generation</span>
+                            <span data-lang="es">El Código del Code-Switching: Idioma y Afinidad por Generación</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span data-lang="en">Bilingual content drives 43% higher Cultural Affinity Index (CAI) among Gen Z Hispanics, but only 18% higher among Gen X. This reveals the strategic importance of language mixing for younger demographics.</span>
+                            <span data-lang="es">El contenido bilingüe impulsa un 43% más alto el Índice de Afinidad Cultural (CAI) entre hispanos Gen Z, pero solo 18% más alto entre Gen X. Esto revela la importancia estratégica de la mezcla de idiomas para demografías más jóvenes.</span>
+                        </p>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 mb-2">
+                                <span data-lang="en">Key Findings:</span>
+                                <span data-lang="es">Hallazgos Clave:</span>
+                            </h4>
+                            <ul class="text-sm text-blue-700 space-y-1">
+                                <li>• <span data-lang="en">Gen Z shows 43% CAI boost with bilingual content</span><span data-lang="es">Gen Z muestra 43% más CAI con contenido bilingüe</span></li>
+                                <li>• <span data-lang="en">Millennials: 31% CAI increase</span><span data-lang="es">Millennials: 31% aumento en CAI</span></li>
+                                <li>• <span data-lang="en">Gen X: 18% CAI increase</span><span data-lang="es">Gen X: 18% aumento en CAI</span></li>
+                                <li>• <span data-lang="en">Spanglish terms drive 67% engagement boost in social content</span><span data-lang="es">Términos de spanglish impulsan 67% más engagement en contenido social</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Insight 3: Hidden Inventory Gems -->
+            <div class="insight-card mb-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="insight-number">3</div>
+                        <h3 class="text-2xl font-bold mb-4">
+                            <span data-lang="en">Hidden Inventory Gems: The Quality vs Cultural Matrix</span>
+                            <span data-lang="es">Joyas Ocultas del Inventario: La Matriz Calidad vs Cultural</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span data-lang="en">By plotting PageRank against CRS, we discovered 1,247 "hidden gems" - sites with high cultural relevance but lower traditional quality metrics, and 892 "opportunity sites" - high-quality sites with cultural improvement potential.</span>
+                            <span data-lang="es">Al graficar PageRank contra CRS, descubrimos 1,247 "joyas ocultas" - sitios con alta relevancia cultural pero métricas de calidad tradicionales más bajas, y 892 "sitios de oportunidad" - sitios de alta calidad con potencial de mejora cultural.</span>
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <div class="text-2xl font-bold text-green-600">1,247</div>
+                                <div class="text-sm text-green-700">
+                                    <span data-lang="en">Hidden Gems</span>
+                                    <span data-lang="es">Joyas Ocultas</span>
+                                </div>
+                                <div class="text-xs text-gray-600 mt-1">
+                                    <span data-lang="en">High CRS, Lower PageRank</span>
+                                    <span data-lang="es">Alto CRS, Menor PageRank</span>
+                                </div>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg text-center">
+                                <div class="text-2xl font-bold text-orange-600">892</div>
+                                <div class="text-sm text-orange-700">
+                                    <span data-lang="en">Opportunity Sites</span>
+                                    <span data-lang="es">Sitios de Oportunidad</span>
+                                </div>
+                                <div class="text-xs text-gray-600 mt-1">
+                                    <span data-lang="en">High PageRank, Lower CRS</span>
+                                    <span data-lang="es">Alto PageRank, Menor CRS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="data-visualization">
+                            <div class="chart-container">
+                                <canvas id="scatterChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Insight 4: Cultural Consistency -->
+            <div class="insight-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="data-visualization">
+                            <div class="chart-container">
+                                <canvas id="consistencyChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="insight-number">4</div>
+                        <h3 class="text-2xl font-bold mb-4">
+                            <span data-lang="en">Consistency is King: Cultural Cohesion Score Patterns</span>
+                            <span data-lang="es">La Consistencia es Clave: Patrones del Score de Cohesión Cultural</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span data-lang="en">Sites with high Cultural Cohesion Score (CCS) show 156% better long-term performance. News & Information sites lead with 94.2 average CCS, making them ideal for sustained partnerships.</span>
+                            <span data-lang="es">Los sitios con alto Score de Cohesión Cultural (CCS) muestran 156% mejor rendimiento a largo plazo. Los sitios de Noticias e Información lideran con 94.2 CCS promedio, haciéndolos ideales para asociaciones sostenidas.</span>
+                        </p>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-purple-800 mb-3">
+                                <span data-lang="en">Top Performing Categories by CCS:</span>
+                                <span data-lang="es">Categorías de Mayor Rendimiento por CCS:</span>
+                            </h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-sm"><span data-lang="en">News & Information</span><span data-lang="es">Noticias e Información</span></span>
+                                    <span class="font-bold text-purple-600">94.2</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm"><span data-lang="en">Education & Learning</span><span data-lang="es">Educación y Aprendizaje</span></span>
+                                    <span class="font-bold text-purple-600">91.7</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm"><span data-lang="en">Community & Forums</span><span data-lang="es">Comunidad y Foros</span></span>
+                                    <span class="font-bold text-purple-600">89.3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Content -->
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6">
+                            <span data-lang="en">Want to See All 12 Insights?</span>
+                            <span data-lang="es">¿Quieres Ver los 12 Insights Completos?</span>
+                        </h2>
+                        <p class="text-xl mb-8 opacity-90">
+                            <span data-lang="en">Download the complete report with all insights, detailed charts, and actionable recommendations for your vertical.</span>
+                            <span data-lang="es">Descarga el reporte completo con todos los insights, gráficos detallados y recomendaciones accionables para tu vertical.</span>
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-white bg-opacity-10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">37,028</div>
+                                <div class="text-sm opacity-80">
+                                    <span data-lang="en">Sites Analyzed</span>
+                                    <span data-lang="es">Sitios Analizados</span>
+                                </div>
+                            </div>
+                            <div class="bg-white bg-opacity-10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">12</div>
+                                <div class="text-sm opacity-80">
+                                    <span data-lang="en">Key Insights</span>
+                                    <span data-lang="es">Insights Clave</span>
+                                </div>
+                            </div>
+                            <div class="bg-white bg-opacity-10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">24</div>
+                                <div class="text-sm opacity-80">
+                                    <span data-lang="en">Data Visuals</span>
+                                    <span data-lang="es">Visualizaciones</span>
+                                </div>
+                            </div>
+                            <div class="bg-white bg-opacity-10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">∞</div>
+                                <div class="text-sm opacity-80">
+                                    <span data-lang="en">Opportunities</span>
+                                    <span data-lang="es">Oportunidades</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form -->
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-lg p-8">
+                            <div class="text-center mb-6">
+                                <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-chart-line text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                                    <span data-lang="en">Get the Full Report</span>
+                                    <span data-lang="es">Obtén el Reporte Completo</span>
+                                </h3>
+                                <p class="text-gray-600 text-sm">
+                                    <span data-lang="en">Instant download + weekly insights from our data team</span>
+                                    <span data-lang="es">Descarga instantánea + insights semanales de nuestro equipo de datos</span>
+                                </p>
+                            </div>
+                            
+                            <form id="insights-form" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <input type="text" name="firstName" placeholder="First Name" required class="form-input text-sm">
+                                    </div>
+                                    <div>
+                                        <input type="text" name="lastName" placeholder="Last Name" required class="form-input text-sm">
+                                    </div>
+                                </div>
+                                
+                                <input type="email" name="email" placeholder="Business Email" required class="form-input text-sm">
+                                <input type="text" name="company" placeholder="Company" required class="form-input text-sm">
+                                
+                                <select name="industry" class="form-input text-sm">
+                                    <option value="">
+                                        <span data-lang="en">Select Industry...</span>
+                                        <span data-lang="es">Seleccionar Industria...</span>
+                                    </option>
+                                    <option value="agency">
+                                        <span data-lang="en">Advertising Agency</span>
+                                        <span data-lang="es">Agencia de Publicidad</span>
+                                    </option>
+                                    <option value="brand">
+                                        <span data-lang="en">Brand/Advertiser</span>
+                                        <span data-lang="es">Marca/Anunciante</span>
+                                    </option>
+                                    <option value="media">
+                                        <span data-lang="en">Media/Publisher</span>
+                                        <span data-lang="es">Medios/Editor</span>
+                                    </option>
+                                    <option value="tech">
+                                        <span data-lang="en">Technology</span>
+                                        <span data-lang="es">Tecnología</span>
+                                    </option>
+                                    <option value="other">
+                                        <span data-lang="en">Other</span>
+                                        <span data-lang="es">Otro</span>
+                                    </option>
+                                </select>
+                                
+                                <div class="flex items-start">
+                                    <input type="checkbox" id="consent2" name="consent" required class="mt-1 mr-3">
+                                    <label for="consent2" class="text-xs text-gray-600">
+                                        <span data-lang="en">I agree to receive the report and insights from HISPAÑO.</span>
+                                        <span data-lang="es">Acepto recibir el reporte e insights de HISPAÑO.</span>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn-primary w-full text-sm py-3 mt-4">
+                                    <i class="fas fa-download mr-2"></i>
+                                    <span data-lang="en">Get Full Report</span>
+                                    <span data-lang="es">Obtener Reporte Completo</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Next Steps Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6">
+                    <span data-lang="en">These are Just 4 of Thousands of Insights</span>
+                    <span data-lang="es">Estos son Solo 4 de Miles de Insights</span>
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    <span data-lang="en">Our platform can generate insights specific to your vertical, audience, and objectives. Want to see what applies to your brand?</span>
+                    <span data-lang="es">Nuestra plataforma puede generar insights específicos para tu vertical, audiencia y objetivos. ¿Quieres ver qué aplica a tu marca?</span>
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="/cultural-brain" class="btn-primary">
+                        <span data-lang="en">Try Cultural Brain</span>
+                        <span data-lang="es">Probar Cultural Brain</span>
+                    </a>
+                    <a href="/contact" class="btn-secondary">
+                        <span data-lang="en">Schedule Custom Analysis</span>
+                        <span data-lang="es">Agendar Análisis Personalizado</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10 mb-6">
+                    <p class="opacity-70 mb-6">
+                        <span data-lang="en">The intelligence infrastructure for the Hispanic digital market.</span>
+                        <span data-lang="es">La infraestructura de inteligencia para el mercado digital hispano.</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">
+                        <span data-lang="en">Platform</span>
+                        <span data-lang="es">Plataforma</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="/cultural-brain" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
+                        <li><span class="opacity-50">Culture Sight <span data-lang="en">(Coming Soon)</span><span data-lang="es">(Próximamente)</span></span></li>
+                        <li><span class="opacity-50">Regional Knowledge Base <span data-lang="en">(Coming Soon)</span><span data-lang="es">(Próximamente)</span></span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">
+                        <span data-lang="en">Resources</span>
+                        <span data-lang="es">Recursos</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="/whitepapers" class="opacity-70 hover:opacity-100">Whitepapers</a></li>
+                        <li><a href="/insights" class="opacity-70 hover:opacity-100">
+                            <span data-lang="en">Market Insights</span>
+                            <span data-lang="es">Insights de Mercado</span>
+                        </a></li>
+                        <li><a href="/blog" class="opacity-70 hover:opacity-100">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">
+                        <span data-lang="en">Company</span>
+                        <span data-lang="es">Empresa</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="/about" class="opacity-70 hover:opacity-100">
+                            <span data-lang="en">About Us</span>
+                            <span data-lang="es">Nosotros</span>
+                        </a></li>
+                        <li><a href="/contact" class="opacity-70 hover:opacity-100">
+                            <span data-lang="en">Contact</span>
+                            <span data-lang="es">Contacto</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="opacity-70 text-sm">
+                    <span data-lang="en">© 2025 HISPAÑO. All rights reserved.</span>
+                    <span data-lang="es">© 2025 HISPAÑO. Todos los derechos reservados.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+            
+            // Language switcher
+            window.changeLanguage = function(lang) {
+                document.body.className = lang === 'es' ? 'cultural-pattern lang-es' : 'cultural-pattern';
+                
+                const currentLangBtn = document.getElementById('currentLangBtn');
+                const currentLangFlag = document.getElementById('currentLangFlag');
+                const currentLangText = document.getElementById('currentLangText');
+                
+                if (lang === 'es') {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'ES';
+                    if (currentLangText) currentLangText.textContent = 'ES';
+                } else {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'EN';
+                    if (currentLangText) currentLangText.textContent = 'EN';
+                }
+                
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('onclick') && option.getAttribute('onclick').includes(`changeLanguage('${lang}')`)) {
+                        option.classList.add('active');
+                    }
+                });
+                
+                localStorage.setItem('hispano-lang', lang);
+                document.documentElement.lang = lang;
+            };
+
+            // Initialize Charts
+            initializeCharts();
+            
+            // Form handling
+            document.getElementById('insights-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const button = e.target.querySelector('button[type="submit"]');
+                const originalText = button.innerHTML;
+                
+                button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Preparing Report...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    const link = document.createElement('a');
+                    link.href = '#';
+                    link.download = 'hispano-digital-market-insights-report.pdf';
+                    link.click();
+                    
+                    button.innerHTML = '<i class="fas fa-check mr-2"></i>Report Sent to Email!';
+                    
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.disabled = false;
+                    }, 3000);
+                }, 2000);
+            });
+
+            const savedLang = localStorage.getItem('hispano-lang') || 'en';
+            window.changeLanguage(savedLang);
+        });
+        
+        function initializeCharts() {
+            // Industry CRS Chart
+            const industryCtx = document.getElementById('industryChart');
+            if (industryCtx) {
+                new Chart(industryCtx, {
+                    type: 'horizontalBar',
+                    data: {
+                        labels: ['Entertainment & Media', 'Food & Beverage', 'Retail & E-commerce', 'Automotive', 'Financial Services'],
+                        datasets: [{
+                            data: [78.2, 65.7, 52.3, 47.1, 31.4],
+                            backgroundColor: ['#6D1B8F', '#173c67', '#2DD4BF', '#F27044', '#64748b']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        legend: { display: false },
+                        scales: {
+                            xAxes: [{ ticks: { beginAtZero: true, max: 100 } }],
+                            yAxes: [{ ticks: { fontSize: 12 } }]
+                        }
+                    }
+                });
+            }
+            
+            // Generation Chart
+            const generationCtx = document.getElementById('generationChart');
+            if (generationCtx) {
+                new Chart(generationCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Gen Z', 'Millennials', 'Gen X'],
+                        datasets: [{
+                            label: 'Bilingual CAI Boost (%)',
+                            data: [43, 31, 18],
+                            backgroundColor: ['#6D1B8F', '#173c67', '#2DD4BF']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        legend: { display: false },
+                        scales: {
+                            yAxes: [{ ticks: { beginAtZero: true } }]
+                        }
+                    }
+                });
+            }
+            
+            // Scatter Chart
+            const scatterCtx = document.getElementById('scatterChart');
+            if (scatterCtx) {
+                new Chart(scatterCtx, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [{
+                            label: 'Hidden Gems',
+                            data: Array.from({length: 20}, () => ({
+                                x: Math.random() * 5 + 1,
+                                y: Math.random() * 30 + 60
+                            })),
+                            backgroundColor: '#10b981'
+                        }, {
+                            label: 'Opportunity Sites',
+                            data: Array.from({length: 15}, () => ({
+                                x: Math.random() * 3 + 7,
+                                y: Math.random() * 30 + 20
+                            })),
+                            backgroundColor: '#F27044'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            xAxes: [{ 
+                                scaleLabel: { display: true, labelString: 'PageRank' },
+                                ticks: { min: 0, max: 10 }
+                            }],
+                            yAxes: [{ 
+                                scaleLabel: { display: true, labelString: 'CRS' },
+                                ticks: { min: 0, max: 100 }
+                            }]
+                        }
+                    }
+                });
+            }
+            
+            // Consistency Chart
+            const consistencyCtx = document.getElementById('consistencyChart');
+            if (consistencyCtx) {
+                new Chart(consistencyCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['News & Information', 'Education & Learning', 'Community & Forums', 'Others'],
+                        datasets: [{
+                            data: [94.2, 91.7, 89.3, 75.1],
+                            backgroundColor: ['#6D1B8F', '#173c67', '#2DD4BF', '#e5e7eb']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        legend: { position: 'bottom' }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

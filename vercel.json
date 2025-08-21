@@ -1,0 +1,49 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "cleanUrls": false,
+
+  "rewrites": [
+    /* =========================
+       HISPAN.IO  (apex + www)
+       ========================= */
+    { "source": "/",         "has": [{ "type": "host", "value": "hispan.io" }],        "destination": "/hispano/landings/hispano_index.html" },
+    { "source": "/",         "has": [{ "type": "host", "value": "www.hispan.io" }],    "destination": "/hispano/landings/hispano_index.html" },
+
+    { "source": "/about",                "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_about.html" },
+    { "source": "/platform",             "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_platform.html" },
+    { "source": "/insights",             "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_insights.html" },
+    { "source": "/insights/analysis",    "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_insights_analysis.html" },
+    { "source": "/resources",            "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_resources_authentic.html" },
+    { "source": "/whitepaper",           "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_whitepaper.html" },
+    { "source": "/miami-awakening",      "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_Miami_Awakening.html" },
+    { "source": "/hispanic-latino-latinx", "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_hispanic_latino_latinx.html" },
+    { "source": "/reporte-insights",     "has": [{ "type": "host", "value": "hispan.io" }], "destination": "/hispano/landings/hispano_reporte_insights.html" },
+
+    /* PDFs hispano: acceso directo por ruta real (no hace falta rewrite)
+       Ejemplo URL pública:
+       https://hispan.io/hispano/public/resources/hispano_9.3_AdvantagePDF.pdf
+       (si querés slugs bonitos, luego te paso un bloque de rewrites extra)
+    */
+
+    /* ==============================
+       CULTURALBRAIN.NET  (apex + www)
+       ============================== */
+    { "source": "/",         "has": [{ "type": "host", "value": "culturalbrain.net" }],     "destination": "/culturalbrain/landings/cultural_brain_index.html" },
+    { "source": "/",         "has": [{ "type": "host", "value": "www.culturalbrain.net" }], "destination": "/culturalbrain/landings/cultural_brain_index.html" },
+
+    { "source": "/about",     "has": [{ "type": "host", "value": "culturalbrain.net" }], "destination": "/culturalbrain/landings/cultural_brain_nosotros.html" },
+    { "source": "/pricing",   "has": [{ "type": "host", "value": "culturalbrain.net" }], "destination": "/culturalbrain/landings/cultural_brain_precios.html" },
+    { "source": "/resources", "has": [{ "type": "host", "value": "culturalbrain.net" }], "destination": "/culturalbrain/landings/cultural_brain_resources.html" }
+
+    /* PDFs culturalbrain: igual que arriba, acceso directo:
+       https://culturalbrain.net/culturalbrain/public/resources/cultural_brain_Metricas_Cultural_BrainPDF.pdf
+    */
+  ],
+
+  "redirects": [
+    /* opcional: evita duplicados sirviendo slugs sin .html si alguien entra directo */
+    { "source": "/hispano/landings/:file.html", "destination": "/hispano/landings/:file", "permanent": false },
+    { "source": "/culturalbrain/landings/:file.html", "destination": "/culturalbrain/landings/:file", "permanent": false }
+  ]
+}

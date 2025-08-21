@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Brecha de Inversión Hispana - HISPAÑO Whitepaper</title>
+    <meta name="description" content="Descarga nuestro whitepaper exclusivo sobre la oportunidad de $120 mil millones que las marcas están perdiendo en el mercado hispano por falta de herramientas de medición cultural.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <style>
+        :root {
+            --primary: #173c67;
+            --secondary: #6D1B8F;
+            --accent: #2DD4BF;
+            --orange: #F27044;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .accent-text { color: var(--accent); }
+        .orange-text { color: var(--orange); }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(23, 60, 103, 0.1);
+            transform: scale(1.05);
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .cultural-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236D1B8F' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        .whitepaper-preview {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .whitepaper-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary), var(--primary), var(--accent));
+        }
+        
+        .language-switcher { position: relative; display: inline-block; }
+        .language-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 500; }
+        .language-btn:hover { border-color: var(--secondary); background: rgba(109, 27, 143, 0.05); color: var(--secondary); }
+        .language-btn.on-dark-bg { border-color: white; color: white; }
+        .language-btn.on-dark-bg:hover { border-color: var(--accent); background: rgba(255,255,255,0.1); color: var(--accent); }
+        .language-flag { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; margin-top: 0.5rem; background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; min-width: 150px; }
+        .language-switcher:hover .language-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .language-option { padding: 0.75rem 1.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease; color: #333; }
+        .language-option:hover { background: rgba(23, 60, 103, 0.05); }
+        .language-option.active { background: rgba(23, 60, 103, 0.1); color: var(--primary); font-weight: bold; }
+        
+        [data-lang]:not([data-lang="en"]) { display: none; }
+        body.lang-es [data-lang="en"] { display: none; }
+        body.lang-es [data-lang="es"] { display: initial; }
+
+        .nav-item { position: relative; cursor: pointer; }
+        .nav-item::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s ease; }
+        .nav-item:hover::after { width: 100%; }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+        }
+        
+        .chapter-item {
+            background: white;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .chapter-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .stat-highlight {
+            background: linear-gradient(135deg, var(--accent), #06b6d4);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="cultural-pattern">
+    <!-- Nav -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/" class="nav-item font-medium"><span data-lang="en">Home</span><span data-lang="es">Inicio</span></a>
+                <a href="/platform" class="nav-item font-medium"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></a>
+                <a href="/resources" class="nav-item font-medium"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+                <a href="/contact" class="nav-item font-medium"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="language-switcher">
+                    <button class="language-btn" id="currentLangBtn">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag" id="currentLangFlag">
+                        <span id="currentLangText">EN</span>
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option active" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="language-flag">
+                            <span>Español</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <div class="mb-6">
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium">
+                        <i class="fas fa-file-alt mr-2"></i>
+                        <span data-lang="en">Executive Whitepaper</span>
+                        <span data-lang="es">Whitepaper Ejecutivo</span>
+                    </span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span data-lang="en">The Hispanic Investment Gap: How to Measure and Close with Cultural Data</span>
+                    <span data-lang="es">La Brecha de Inversión Hispana: Cómo Medir y Cerrar con Datos Culturales</span>
+                </h1>
+                <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    <span data-lang="en">A comprehensive analysis of the ~$3T market and the +$120 billion opportunity brands are missing due to lack of cultural measurement tools.</span>
+                    <span data-lang="es">Un análisis integral del mercado de ~$3B y la oportunidad de +$120 mil millones que las marcas están perdiendo por la falta de herramientas de medición cultural.</span>
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <span class="stat-highlight">32 páginas</span>
+                    <span class="stat-highlight"><span data-lang="en">15+ Data Visualizations</span><span data-lang="es">15+ Visualizaciones</span></span>
+                    <span class="stat-highlight"><span data-lang="en">Industry Analysis</span><span data-lang="es">Análisis de Industria</span></span>
+                    <span class="stat-highlight"><span data-lang="en">Actionable Framework</span><span data-lang="es">Framework Accionable</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Stats Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span data-lang="en">The Opportunity in Numbers</span>
+                    <span data-lang="es">La Oportunidad en Números</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    <span data-lang="en">Data-driven insights revealing the scale of untapped Hispanic market potential</span>
+                    <span data-lang="es">Insights basados en datos que revelan la escala del potencial sin explotar del mercado hispano</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="metric-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold gradient-text mb-2">$3.2T</div>
+                    <div class="text-gray-600 font-medium">
+                        <span data-lang="en">Hispanic Buying Power</span>
+                        <span data-lang="es">Poder Adquisitivo Hispano</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">
+                        <span data-lang="en">by 2025</span>
+                        <span data-lang="es">para 2025</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold gradient-text mb-2">$120B</div>
+                    <div class="text-gray-600 font-medium">
+                        <span data-lang="en">Investment Gap</span>
+                        <span data-lang="es">Brecha de Inversión</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">
+                        <span data-lang="en">annual opportunity</span>
+                        <span data-lang="es">oportunidad anual</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold gradient-text mb-2">73%</div>
+                    <div class="text-gray-600 font-medium">
+                        <span data-lang="en">Cultural Relevance Impact</span>
+                        <span data-lang="es">Impacto Relevancia Cultural</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">
+                        <span data-lang="en">on engagement</span>
+                        <span data-lang="es">en engagement</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-bold gradient-text mb-2">89%</div>
+                    <div class="text-gray-600 font-medium">
+                        <span data-lang="en">Brands Lack Tools</span>
+                        <span data-lang="es">Marcas sin Herramientas</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">
+                        <span data-lang="en">for cultural measurement</span>
+                        <span data-lang="es">para medición cultural</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Document Preview -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="whitepaper-preview p-8">
+                        <div class="mb-6">
+                            <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-8 mb-4">
+                            <h3 class="text-2xl font-bold mb-2">
+                                <span data-lang="en">Executive Summary</span>
+                                <span data-lang="es">Resumen Ejecutivo</span>
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                <span data-lang="en">The Hispanic market represents a $3.2 trillion economic powerhouse, yet brands consistently under-invest in culturally relevant strategies. This whitepaper reveals why 89% of brands lack proper measurement tools and how this creates a $120 billion annual opportunity gap.</span>
+                                <span data-lang="es">El mercado hispano representa una potencia económica de $3.2 billones, pero las marcas sistemáticamente sub-invierten en estrategias culturalmente relevantes. Este whitepaper revela por qué el 89% de las marcas carecen de herramientas de medición adecuadas y cómo esto crea una brecha de oportunidad de $120 mil millones anuales.</span>
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="chapter-item">
+                                <h4 class="font-bold text-sm mb-1">
+                                    <span data-lang="en">Chapter 1: Economic Opportunity</span>
+                                    <span data-lang="es">Capítulo 1: Oportunidad Económica</span>
+                                </h4>
+                                <p class="text-xs text-gray-600">
+                                    <span data-lang="en">Census data, BLS analysis, and cultural influence metrics</span>
+                                    <span data-lang="es">Datos del censo, análisis BLS y métricas de influencia cultural</span>
+                                </p>
+                            </div>
+                            
+                            <div class="chapter-item">
+                                <h4 class="font-bold text-sm mb-1">
+                                    <span data-lang="en">Chapter 2: The $120B Gap Origin</span>
+                                    <span data-lang="es">Capítulo 2: Origen de la Brecha de $120B</span>
+                                </h4>
+                                <p class="text-xs text-gray-600">
+                                    <span data-lang="en">Why tools matter more than intent</span>
+                                    <span data-lang="es">Por qué las herramientas importan más que la intención</span>
+                                </p>
+                            </div>
+                            
+                            <div class="chapter-item">
+                                <h4 class="font-bold text-sm mb-1">
+                                    <span data-lang="en">Chapter 3: Culture as Measurable KPI</span>
+                                    <span data-lang="es">Capítulo 3: La Cultura como KPI Medible</span>
+                                </h4>
+                                <p class="text-xs text-gray-600">
+                                    <span data-lang="en">Introducing CRS, CAI, and CCS metrics</span>
+                                    <span data-lang="es">Introduciendo métricas CRS, CAI y CCS</span>
+                                </p>
+                            </div>
+                            
+                            <div class="chapter-item">
+                                <h4 class="font-bold text-sm mb-1">
+                                    <span data-lang="en">Chapter 4: From Measurement to Action</span>
+                                    <span data-lang="es">Capítulo 4: De la Medición a la Acción</span>
+                                </h4>
+                                <p class="text-xs text-gray-600">
+                                    <span data-lang="en">Implementation framework and ROI projections</span>
+                                    <span data-lang="es">Framework de implementación y proyecciones de ROI</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-chart-bar text-blue-600 mr-2"></i>
+                                <span class="font-medium text-blue-800">
+                                    <span data-lang="en">Includes 15+ Data Visualizations</span>
+                                    <span data-lang="es">Incluye 15+ Visualizaciones de Datos</span>
+                                </span>
+                            </div>
+                            <p class="text-sm text-blue-700">
+                                <span data-lang="en">Charts, graphs, and frameworks you can present to stakeholders</span>
+                                <span data-lang="es">Gráficos, tablas y frameworks que puedes presentar a stakeholders</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Download Form -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-white rounded-lg shadow-xl p-8">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-download text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">
+                                <span data-lang="en">Download Your Free Copy</span>
+                                <span data-lang="es">Descarga tu Copia Gratuita</span>
+                            </h3>
+                            <p class="text-gray-600">
+                                <span data-lang="en">Get immediate access to this exclusive 32-page analysis</span>
+                                <span data-lang="es">Obtén acceso inmediato a este análisis exclusivo de 32 páginas</span>
+                            </p>
+                        </div>
+                        
+                        <form id="whitepaper-form" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        <span data-lang="en">First Name *</span>
+                                        <span data-lang="es">Nombre *</span>
+                                    </label>
+                                    <input type="text" name="firstName" required class="form-input">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        <span data-lang="en">Last Name *</span>
+                                        <span data-lang="es">Apellido *</span>
+                                    </label>
+                                    <input type="text" name="lastName" required class="form-input">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <span data-lang="en">Business Email *</span>
+                                    <span data-lang="es">Email Empresarial *</span>
+                                </label>
+                                <input type="email" name="email" required class="form-input">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <span data-lang="en">Company *</span>
+                                    <span data-lang="es">Empresa *</span>
+                                </label>
+                                <input type="text" name="company" required class="form-input">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <span data-lang="en">Job Title *</span>
+                                    <span data-lang="es">Cargo *</span>
+                                </label>
+                                <input type="text" name="jobTitle" required class="form-input">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <span data-lang="en">Company Size</span>
+                                    <span data-lang="es">Tamaño de Empresa</span>
+                                </label>
+                                <select name="companySize" class="form-input">
+                                    <option value="">
+                                        <span data-lang="en">Select...</span>
+                                        <span data-lang="es">Seleccionar...</span>
+                                    </option>
+                                    <option value="startup">
+                                        <span data-lang="en">Startup (1-50)</span>
+                                        <span data-lang="es">Startup (1-50)</span>
+                                    </option>
+                                    <option value="mid">
+                                        <span data-lang="en">Mid-size (51-500)</span>
+                                        <span data-lang="es">Mediana (51-500)</span>
+                                    </option>
+                                    <option value="enterprise">
+                                        <span data-lang="en">Enterprise (500+)</span>
+                                        <span data-lang="es">Empresa (500+)</span>
+                                    </option>
+                                </select>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" id="consent" name="consent" required class="mt-1 mr-3">
+                                <label for="consent" class="text-sm text-gray-600">
+                                    <span data-lang="en">I agree to receive marketing communications from HISPAÑO and understand that I can unsubscribe at any time.</span>
+                                    <span data-lang="es">Acepto recibir comunicaciones de marketing de HISPAÑO y entiendo que puedo darme de baja en cualquier momento.</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full text-lg py-4 mt-6">
+                                <i class="fas fa-download mr-2"></i>
+                                <span data-lang="en">Download Whitepaper</span>
+                                <span data-lang="es">Descargar Whitepaper</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Author/Company Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6">
+                    <span data-lang="en">About HISPAÑO</span>
+                    <span data-lang="es">Sobre HISPAÑO</span>
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    <span data-lang="en">HISPAÑO is building the intelligence infrastructure for the Hispanic digital economy. Our Cultural Brain platform has analyzed 37,028+ sites, providing the data and tools brands need to authentically connect with Hispanic consumers.</span>
+                    <span data-lang="es">HISPAÑO está construyendo la infraestructura de inteligencia para la economía digital hispana. Nuestra plataforma Cultural Brain ha analizado 37,028+ sitios, proporcionando los datos y herramientas que las marcas necesitan para conectar auténticamente con consumidores hispanos.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="/" class="btn-secondary">
+                        <span data-lang="en">Learn More About Our Platform</span>
+                        <span data-lang="es">Conoce Más Sobre Nuestra Plataforma</span>
+                    </a>
+                    <a href="/contact" class="btn-primary">
+                        <span data-lang="en">Schedule a Demo</span>
+                        <span data-lang="es">Agendar una Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10 mb-6">
+                    <p class="opacity-70 mb-6">
+                        <span data-lang="en">The intelligence infrastructure for the Hispanic digital market.</span>
+                        <span data-lang="es">La infraestructura de inteligencia para el mercado digital hispano.</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">
+                        <span data-lang="en">Platform</span>
+                        <span data-lang="es">Plataforma</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="/cultural-brain" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
+                        <li><span class="opacity-50">Culture Sight <span data-lang="en">(Coming Soon)</span><span data-lang="es">(Próximamente)</span></span></li>
+                        <li><span class="opacity-50">Regional Knowledge Base <span data-lang="en">(Coming Soon)</span><span data-lang="es">(Próximamente)</span></span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">
+                        <span data-lang="en">Resources</span>
+                        <span data-lang="es">Recursos</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="/whitepapers" class="opacity-70 hover:opacity-100">Whitepapers</a></li>
+                        <li><a href="/insights" class="opacity-70 hover:opacity-100">
+                            <span data-lang="en">Market Insights</span>
+                            <span data-lang="es">Insights de Mercado</span>
+                        </a></li>
+                        <li><a href="/blog" class="opacity-70 hover:opacity-100">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">
+                        <span data-lang="en">Company</span>
+                        <span data-lang="es">Empresa</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="/about" class="opacity-70 hover:opacity-100">
+                            <span data-lang="en">About Us</span>
+                            <span data-lang="es">Nosotros</span>
+                        </a></li>
+                        <li><a href="/contact" class="opacity-70 hover:opacity-100">
+                            <span data-lang="en">Contact</span>
+                            <span data-lang="es">Contacto</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="opacity-70 text-sm">
+                    <span data-lang="en">© 2025 HISPAÑO. All rights reserved.</span>
+                    <span data-lang="es">© 2025 HISPAÑO. Todos los derechos reservados.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+            
+            // Language switcher
+            window.changeLanguage = function(lang) {
+                document.body.className = lang === 'es' ? 'cultural-pattern lang-es' : 'cultural-pattern';
+                
+                const currentLangBtn = document.getElementById('currentLangBtn');
+                const currentLangFlag = document.getElementById('currentLangFlag');
+                const currentLangText = document.getElementById('currentLangText');
+                
+                if (lang === 'es') {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'ES';
+                    if (currentLangText) currentLangText.textContent = 'ES';
+                } else {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'EN';
+                    if (currentLangText) currentLangText.textContent = 'EN';
+                }
+                
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('onclick') && option.getAttribute('onclick').includes(`changeLanguage('${lang}')`)) {
+                        option.classList.add('active');
+                    }
+                });
+                
+                localStorage.setItem('hispano-lang', lang);
+                document.documentElement.lang = lang;
+            };
+
+            // Form handling
+            document.getElementById('whitepaper-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate download
+                const button = e.target.querySelector('button[type="submit"]');
+                const originalText = button.innerHTML;
+                
+                button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Preparing Download...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    // Simulate file download
+                    const link = document.createElement('a');
+                    link.href = '#'; // In real implementation, this would be the PDF URL
+                    link.download = 'hispano-investment-gap-whitepaper.pdf';
+                    link.click();
+                    
+                    button.innerHTML = '<i class="fas fa-check mr-2"></i>Downloaded! Check your email.';
+                    
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.disabled = false;
+                    }, 3000);
+                }, 2000);
+            });
+
+            const savedLang = localStorage.getItem('hispano-lang') || 'en';
+            window.changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

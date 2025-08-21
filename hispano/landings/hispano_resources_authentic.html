@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Intelligence Resources - Research, Methodology & Insights</title>
+    <meta name="description" content="Download authentic research on Hispanic marketing intelligence, cultural curation methodology, and programmatic advertising insights from Cultural Brain's founder.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <style>
+        :root {
+            --primary: #173c67;
+            --secondary: #6D1B8F;
+            --accent: #2DD4BF;
+            --orange: #F27044;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(23, 60, 103, 0.1);
+            transform: scale(1.05);
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .cultural-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236D1B8F' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        /* Language Switcher y Navigation */
+        .language-switcher { position: relative; display: inline-block; }
+        .language-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 500; }
+        .language-btn:hover { border-color: var(--secondary); background: rgba(109, 27, 143, 0.05); color: var(--secondary); }
+        .language-flag { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; margin-top: 0.5rem; background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; min-width: 150px; }
+        .language-switcher:hover .language-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .language-option { padding: 0.75rem 1.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease; color: #333; }
+        .language-option:hover { background: rgba(23, 60, 103, 0.05); }
+        .language-option.active { background: rgba(23, 60, 103, 0.1); color: var(--primary); font-weight: bold; }
+        
+        [data-lang]:not([data-lang="en"]) { display: none; }
+        body.lang-es [data-lang="en"] { display: none; }
+        body.lang-es [data-lang="es"] { display: initial; }
+
+        .nav-item { position: relative; cursor: pointer; }
+        .nav-item::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s ease; }
+        .nav-item:hover::after { width: 100%; }
+        
+        .nav-dropdown { position: absolute; top: 100%; left: 0; width: max-content; min-width:240px; padding: 16px; background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 100; }
+        .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-item { padding: 8px 16px; border-radius: 4px; transition: all 0.2s ease; text-decoration: none; color: #333; display: block; }
+        .dropdown-item:hover { background: rgba(23, 60, 103, 0.1); text-decoration: none; color: #333; }
+
+        .data-highlight {
+            background: linear-gradient(135deg, var(--accent), #0ea5e9);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .resource-type-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: linear-gradient(135deg, var(--accent), #0ea5e9);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+
+        .featured-resource {
+            background: linear-gradient(135deg, rgba(23, 60, 103, 0.05), rgba(109, 27, 143, 0.05));
+            border: 2px solid var(--accent);
+        }
+
+        .download-count {
+            display: inline-flex;
+            align-items: center;
+            font-size: 12px;
+            color: #6b7280;
+            background: #f3f4f6;
+            padding: 4px 8px;
+            border-radius: 12px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            background: #f3f4f6;
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .filter-tab {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 16px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tab.active {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .founder-story-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 32px;
+            border-radius: 12px;
+            margin: 16px 0;
+        }
+
+        .lead-capture-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .roadmap-card {
+            background: linear-gradient(135deg, var(--orange), #ff6b6b);
+            color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .coming-soon-badge {
+            background: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .methodology-badge {
+            background: #6b7280;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="cultural-pattern">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10">
+            </a>
+            
+            <div class="nav-container hidden md:flex items-center space-x-6 xl:space-x-8">
+                <div class="nav-item">
+                    <span class="font-medium"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></span>
+                    <div class="nav-dropdown">
+                        <a href="platform.html" class="dropdown-item flex items-center">
+                            <i class="fas fa-brain mr-3 text-indigo-600"></i>
+                            <div>
+                                <p class="font-medium">Cultural Brain</p>
+                                <p class="text-sm text-gray-600"><span data-lang="en">Available Now</span><span data-lang="es">Disponible Ahora</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="insights.html" class="nav-item font-medium"><span data-lang="en">Insights</span><span data-lang="es">Insights</span></a>
+                <a href="resources.html" class="nav-item font-medium text-indigo-600"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+                <a href="about.html" class="nav-item font-medium"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+                <a href="#contact" class="nav-item font-medium"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="language-switcher">
+                    <button class="language-btn" id="currentLangBtn">
+                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag" id="currentLangFlag">
+                        <span id="currentLangText">EN</span>
+                        <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option active" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="language-flag">
+                            <span>Español</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="platform.html" class="btn-primary hidden sm:block"><span data-lang="en">Try Cultural Brain</span><span data-lang="es">Probar Cultural Brain</span></a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span data-lang="en">Cultural Intelligence Resources</span>
+                    <span data-lang="es">Recursos de Inteligencia Cultural</span>
+                </h1>
+                <p class="text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+                    <span data-lang="en">Authentic research, methodology insights, and the story behind the world's first Cultural Intelligence Platform</span>
+                    <span data-lang="es">Investigación auténtica, insights de metodología, y la historia detrás de la primera Plataforma de Inteligencia Cultural del mundo</span>
+                </p>
+                <div class="flex justify-center space-x-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold"><span class="data-highlight">41,745</span></div>
+                        <div class="text-sm opacity-80"><span data-lang="en">Sites Analyzed</span><span data-lang="es">Sitios Analizados</span></div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold"><span class="data-highlight">3</span></div>
+                        <div class="text-sm opacity-80"><span data-lang="en">Proprietary Metrics</span><span data-lang="es">Métricas Propietarias</span></div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold"><span class="data-highlight">100%</span></div>
+                        <div class="text-sm opacity-80"><span data-lang="en">Authentic Content</span><span data-lang="es">Contenido Auténtico</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Content Filters -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="filter-tabs max-w-4xl mx-auto" data-aos="fade-up">
+                <button class="filter-tab active" onclick="filterResources('all')">
+                    <span data-lang="en">All Resources</span>
+                    <span data-lang="es">Todos los Recursos</span>
+                </button>
+                <button class="filter-tab" onclick="filterResources('whitepapers')">
+                    <span data-lang="en">Methodology</span>
+                    <span data-lang="es">Metodología</span>
+                </button>
+                <button class="filter-tab" onclick="filterResources('founder-story')">
+                    <span data-lang="en">Founder Story</span>
+                    <span data-lang="es">Historia del Fundador</span>
+                </button>
+                <button class="filter-tab" onclick="filterResources('research')">
+                    <span data-lang="en">Research</span>
+                    <span data-lang="es">Investigación</span>
+                </button>
+                <button class="filter-tab" onclick="filterResources('roadmap')">
+                    <span data-lang="en">Roadmap</span>
+                    <span data-lang="es">Hoja de Ruta</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Research Paper -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="featured-resource resource-card p-0 mb-12" data-aos="fade-up">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">FEATURED RESEARCH</span>
+                        <span data-lang="es">INVESTIGACIÓN DESTACADA</span>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-bold mb-6">
+                                <span data-lang="en">The URL Curation Challenge in Programmatic Advertising</span>
+                                <span data-lang="es">El Desafío de la Curación de URLs en Publicidad Programática</span>
+                            </h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                <span data-lang="en">From my experience at GroupM analyzing 2,000-3,000 site whitelists and blacklists manually, this paper explores why traditional site analysis fails and how Cultural Intelligence transforms URL curation from intuitive guessing to scientific classification.</span>
+                                <span data-lang="es">Desde mi experiencia en GroupM analizando manualmente listas blancas y negras de 2,000-3,000 sitios, este documento explora por qué el análisis tradicional de sitios falla y cómo la Inteligencia Cultural transforma la curación de URLs de adivinanza intuitiva a clasificación científica.</span>
+                            </p>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="download-count">
+                                    <i class="fas fa-download mr-2"></i>
+                                    <span data-lang="en">Real insights</span>
+                                    <span data-lang="es">Insights reales</span>
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    <span data-lang="en">28 pages • PDF</span>
+                                    <span data-lang="es">28 páginas • PDF</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="showLeadCapture('url-curation-challenge')">
+                                <span data-lang="en">Download Research Paper</span>
+                                <span data-lang="es">Descargar Documento de Investigación</span>
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-br from-indigo-600 to-purple-600 p-8 lg:p-12 text-white">
+                            <h3 class="text-xl font-bold mb-6">
+                                <span data-lang="en">What You'll Learn:</span>
+                                <span data-lang="es">Lo Que Aprenderás:</span>
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-brain text-accent mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold">
+                                            <span data-lang="en">The mental fatigue problem of manual analysis</span>
+                                            <span data-lang="es">El problema de fatiga mental del análisis manual</span>
+                                        </h4>
+                                        <p class="text-sm opacity-80">
+                                            <span data-lang="en">Why reviewing 200+ sites leads to error and bias</span>
+                                            <span data-lang="es">Por qué revisar 200+ sitios lleva a error y sesgo</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-search text-accent mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold">
+                                            <span data-lang="en">Beyond IAB categories: Cultural context matters</span>
+                                            <span data-lang="es">Más allá de categorías IAB: El contexto cultural importa</span>
+                                        </h4>
+                                        <p class="text-sm opacity-80">
+                                            <span data-lang="en">How CRS, CAI, CCS metrics solve the "what is this site about?" question</span>
+                                            <span data-lang="es">Cómo las métricas CRS, CAI, CCS resuelven la pregunta "¿de qué trata este sitio?"</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-shield-alt text-accent mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold">
+                                            <span data-lang="en">Why brand safety tools miss cultural nuance</span>
+                                            <span data-lang="es">Por qué las herramientas de brand safety pierden matices culturales</span>
+                                        </h4>
+                                        <p class="text-sm opacity-80">
+                                            <span data-lang="en">The limitation of keyword-based exclusion logic</span>
+                                            <span data-lang="es">La limitación de la lógica de exclusión basada en palabras clave</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-cogs text-accent mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold">
+                                            <span data-lang="en">Scientific methodology for site classification</span>
+                                            <span data-lang="es">Metodología científica para clasificación de sitios</span>
+                                        </h4>
+                                        <p class="text-sm opacity-80">
+                                            <span data-lang="en">How Cultural Brain automates what humans do intuitively</span>
+                                            <span data-lang="es">Cómo Cultural Brain automatiza lo que los humanos hacen intuitivamente</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Methodology Whitepapers Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Methodology & Technical Papers</span>
+                    <span data-lang="es">Metodología y Documentos Técnicos</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">Deep-dive into the technical methodology behind Cultural Brain's intelligence engine</span>
+                    <span data-lang="es">Análisis profundo de la metodología técnica detrás del motor de inteligencia de Cultural Brain</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <article class="resource-card whitepapers-content" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">METHODOLOGY</span>
+                        <span data-lang="es">METODOLOGÍA</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 p-6 flex items-end">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">Cultural Brain Metrics Explained: CRS, CAI, CCS Deep Dive</span>
+                                <span data-lang="es">Métricas de Cultural Brain Explicadas: Análisis Profundo de CRS, CAI, CCS</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">A comprehensive technical explanation of how Cultural Relevance Score, Cultural Affinity Index, and Cultural Cohesion Score are calculated and applied to programmatic advertising.</span>
+                            <span data-lang="es">Una explicación técnica completa de cómo se calculan y aplican el Cultural Relevance Score, Cultural Affinity Index y Cultural Cohesion Score en publicidad programática.</span>
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="download-count">
+                                <i class="fas fa-calculator mr-2"></i>
+                                <span data-lang="en">Technical</span>
+                                <span data-lang="es">Técnico</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <span data-lang="en">35 pages</span>
+                                <span data-lang="es">35 páginas</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full" onclick="showLeadCapture('cultural-metrics-explained')">
+                            <span data-lang="en">Download Methodology</span>
+                            <span data-lang="es">Descargar Metodología</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="resource-card whitepapers-content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">METHODOLOGY</span>
+                        <span data-lang="es">METODOLOGÍA</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 p-6 flex items-end">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">Beyond Demographics: Why Cultural Intelligence Matters</span>
+                                <span data-lang="es">Más Allá de Demografía: Por Qué la Inteligencia Cultural Importa</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">Why traditional demographic targeting falls short for Hispanic audiences and how cultural markers provide deeper insights into content resonance and advertising effectiveness.</span>
+                            <span data-lang="es">Por qué el targeting demográfico tradicional se queda corto para audiencias hispanas y cómo los marcadores culturales proporcionan insights más profundos sobre resonancia de contenido y efectividad publicitaria.</span>
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="download-count">
+                                <i class="fas fa-users mr-2"></i>
+                                <span data-lang="en">Strategic</span>
+                                <span data-lang="es">Estratégico</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <span data-lang="en">24 pages</span>
+                                <span data-lang="es">24 páginas</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full" onclick="showLeadCapture('beyond-demographics')">
+                            <span data-lang="en">Download Paper</span>
+                            <span data-lang="es">Descargar Documento</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="resource-card whitepapers-content" data-aos="fade-up" data-aos-delay="300">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">METHODOLOGY</span>
+                        <span data-lang="es">METODOLOGÍA</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 p-6 flex items-end">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">The Art of Digital Curation: From Manual to Intelligent</span>
+                                <span data-lang="es">El Arte de la Curación Digital: De Manual a Inteligente</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">Evolution of content curation from traditional manual processes to AI-powered cultural intelligence, with practical applications for programmatic advertising campaigns.</span>
+                            <span data-lang="es">Evolución de la curación de contenido desde procesos manuales tradicionales hasta inteligencia cultural impulsada por IA, con aplicaciones prácticas para campañas de publicidad programática.</span>
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="download-count">
+                                <i class="fas fa-robot mr-2"></i>
+                                <span data-lang="en">Evolution</span>
+                                <span data-lang="es">Evolución</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <span data-lang="en">31 pages</span>
+                                <span data-lang="es">31 páginas</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full" onclick="showLeadCapture('digital-curation-evolution')">
+                            <span data-lang="en">Download Paper</span>
+                            <span data-lang="es">Descargar Documento</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Founder Story Section -->
+    <section id="founder-story" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">The Story Behind Cultural Brain</span>
+                    <span data-lang="es">La Historia Detrás de Cultural Brain</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">From GroupM site analysis to Miami cultural awakening - how personal experience shaped a platform</span>
+                    <span data-lang="es">Del análisis de sitios en GroupM al despertar cultural en Miami - cómo la experiencia personal moldeó una plataforma</span>
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="founder-story-card founder-story-content mb-8" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-6">
+                        <span data-lang="en">The GroupM Challenge: Manual Site Analysis at Scale</span>
+                        <span data-lang="es">El Desafío de GroupM: Análisis Manual de Sitios a Escala</span>
+                    </h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-lg opacity-90 mb-4">
+                                <span data-lang="en">"Working at GroupM, I routinely received whitelists and blacklists containing 2,000-3,000 sites that needed analysis and approval for campaign deployment. The question was always: how do you properly evaluate thousands of sites manually?"</span>
+                                <span data-lang="es">"Trabajando en GroupM, recibía rutinariamente listas blancas y negras con 2,000-3,000 sitios que necesitaban análisis y aprobación para despliegue de campañas. La pregunta siempre era: ¿cómo evalúas apropiadamente miles de sitios manualmente?"</span>
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <span data-lang="en">"After reviewing 200 sites, mental fatigue sets in. Bias creeps in. Error margins expand. This wasn't just inefficient - it was fundamentally flawed."</span>
+                                <span data-lang="es">"Después de revisar 200 sitios, aparece la fatiga mental. Se filtra el sesgo. Los márgenes de error se expanden. Esto no era solo ineficiente - era fundamentalmente defectuoso."</span>
+                            </p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">
+                                <span data-lang="en">The Manual Analysis Problem</span>
+                                <span data-lang="es">El Problema del Análisis Manual</span>
+                            </h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-clock mr-3"></i>
+                                    <span data-lang="en">200+ sites = Mental fatigue</span>
+                                    <span data-lang="es">200+ sitios = Fatiga mental</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-eye mr-3"></i>
+                                    <span data-lang="en">Subjective visual assessment</span>
+                                    <span data-lang="es">Evaluación visual subjetiva</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-language mr-3"></i>
+                                    <span data-lang="en">Language barriers ignored</span>
+                                    <span data-lang="es">Barreras idiomáticas ignoradas</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-question mr-3"></i>
+                                    <span data-lang="en">Cultural context missing</span>
+                                    <span data-lang="es">Contexto cultural ausente</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card founder-story-content mb-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-6">
+                            <span data-lang="en">Miami Awakening: Understanding Hispanic Diversity</span>
+                            <span data-lang="es">Despertar en Miami: Entendiendo la Diversidad Hispana</span>
+                        </h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                            <div class="lg:col-span-2">
+                                <p class="text-gray-700 mb-4">
+                                    <span data-lang="en">"Living in South Florida from 2021-2022 opened my eyes to something extraordinary: a living laboratory of Hispanic diversity. In one neighborhood, I encountered Cubans, Mexicans, Colombians, Venezuelans, Guatemalans, Hondurans, Salvadorians, Dominicans, Argentinians, Chileans, Peruvians..."</span>
+                                    <span data-lang="es">"Vivir en el sur de Florida de 2021-2022 me abrió los ojos a algo extraordinario: un laboratorio viviente de diversidad hispana. En un barrio, encontré cubanos, mexicanos, colombianos, venezolanos, guatemaltecos, hondureños, salvadoreños, dominicanos, argentinos, chilenos, peruanos..."</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    <span data-lang="en">"While we all shared Spanish as our 'syntax code,' each subgroup had different expressions, traditions, gestures. When mixed with American culture, these evolved further. Saying 'chido' to an Argentinian or 'está zarpado' to a Venezuelan would be a beginner's mistake."</span>
+                                    <span data-lang="es">"Aunque todos compartíamos el español como nuestro 'código de sintaxis,' cada subgrupo tenía diferentes expresiones, tradiciones, gestos. Al mezclarse con la cultura americana, estos evolucionaron aún más. Decir 'chido' a un argentino o 'está zarpado' a un venezolano sería un error de principiante."</span>
+                                </p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h4 class="font-bold mb-4">
+                                    <span data-lang="en">Cultural Nuances Discovered</span>
+                                    <span data-lang="es">Matices Culturales Descubiertos</span>
+                                </h4>
+                                <div class="space-y-3 text-sm">
+                                    <div>
+                                        <strong>Mexican FL:</strong> <span data-lang="en">Different from TX or CA</span><span data-lang="es">Diferente de TX o CA</span>
+                                    </div>
+                                    <div>
+                                        <strong>Cuban Miami:</strong> <span data-lang="en">Unique exile culture</span><span data-lang="es">Cultura única de exilio</span>
+                                    </div>
+                                    <div>
+                                        <strong>Venezuelan:</strong> <span data-lang="en">Recent diaspora patterns</span><span data-lang="es">Patrones recientes de diáspora</span>
+                                    </div>
+                                    <div>
+                                        <strong>Colombian:</strong> <span data-lang="en">Multi-generational presence</span><span data-lang="es">Presencia multigeneracional</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item founder-story-content" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-4">
+                        <span data-lang="en">The "Latin" vs "Latino" vs "Hispanic" Revelation</span>
+                        <span data-lang="es">La Revelación de "Latin" vs "Latino" vs "Hispanic"</span>
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        <span data-lang="en">"I was struck by the term 'Latin' or 'Latinx' being used for Spanish speakers. This is a common error - 'Latin' refers to the valleys of Lazio (Italian!), making it broader than Hispanic and including Portuguese, Italian, maybe French... Understanding these distinctions became crucial for authentic targeting."</span>
+                        <span data-lang="es">"Me llamó la atención el término 'Latin' o 'Latinx' usado para hispanohablantes. Este es un error común - 'Latin' se refiere a los valles del Lazio (¡italiano!), haciéndolo más amplio que hispano e incluyendo portugués, italiano, quizás francés... Entender estas distinciones se volvió crucial para targeting auténtico."</span>
+                    </p>
+                </div>
+
+                <div class="timeline-item founder-story-content" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-bold mb-4">
+                        <span data-lang="en">The Technical Solution: Cultural Intelligence Metrics</span>
+                        <span data-lang="es">La Solución Técnica: Métricas de Inteligencia Cultural</span>
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        <span data-lang="en">"Combining my GroupM experience with Miami cultural insights, I realized we needed to automate what humans do intuitively but inconsistently. Cultural Brain emerged as the solution: scientific classification and qualification of sites using CRS, CAI, and CCS metrics."</span>
+                        <span data-lang="es">"Combinando mi experiencia en GroupM con insights culturales de Miami, me di cuenta de que necesitábamos automatizar lo que los humanos hacen intuitivamente pero inconsistentemente. Cultural Brain emergió como la solución: clasificación y calificación científica de sitios usando métricas CRS, CAI y CCS."</span>
+                    </p>
+                </div>
+
+                <div class="founder-story-card founder-story-content" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="text-2xl font-bold mb-6">
+                        <span data-lang="en">Download Complete Founder Journey</span>
+                        <span data-lang="es">Descargar Viaje Completo del Fundador</span>
+                    </h3>
+                    <p class="text-lg opacity-90 mb-6">
+                        <span data-lang="en">Get the full 47-page story: from agency frustrations to cultural awakening to building the world's first Cultural Intelligence Platform.</span>
+                        <span data-lang="es">Obtén la historia completa de 47 páginas: desde frustraciones de agencia hasta despertar cultural hasta construir la primera Plataforma de Inteligencia Cultural del mundo.</span>
+                    </p>
+                    <button class="btn-primary bg-white text-purple-600 hover:bg-gray-100" onclick="showLeadCapture('founder-complete-story')">
+                        <span data-lang="en">Download Full Story</span>
+                        <span data-lang="es">Descargar Historia Completa</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Research Papers Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Research Papers & Essays</span>
+                    <span data-lang="es">Documentos de Investigación y Ensayos</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">Original research based on analysis of 41,745 sites and real cultural intelligence insights</span>
+                    <span data-lang="es">Investigación original basada en análisis de 41,745 sitios e insights reales de inteligencia cultural</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <article class="resource-card research-content" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">RESEARCH</span>
+                        <span data-lang="es">INVESTIGACIÓN</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-indigo-700 p-6 flex items-end">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">Hispanic vs Latino/Latinx: Understanding Cultural Terminology</span>
+                                <span data-lang="es">Hispanic vs Latino/Latinx: Entendiendo la Terminología Cultural</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">Why terminology matters in marketing: the historical, geographical, and cultural differences between Hispanic, Latino, and Latinx, and how misunderstanding impacts campaign effectiveness.</span>
+                            <span data-lang="es">Por qué la terminología importa en marketing: las diferencias históricas, geográficas y culturales entre Hispanic, Latino y Latinx, y cómo el malentendido impacta la efectividad de campañas.</span>
+                        </p>
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-lg font-bold text-teal-600">Hispanic</div>
+                                <div class="text-xs text-gray-600">Language</div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-lg font-bold text-teal-600">Latino</div>
+                                <div class="text-xs text-gray-600">Geography</div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-lg font-bold text-teal-600">Latinx</div>
+                                <div class="text-xs text-gray-600">Gender</div>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full" onclick="showLeadCapture('hispanic-latino-terminology')">
+                            <span data-lang="en">Download Essay</span>
+                            <span data-lang="es">Descargar Ensayo</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="resource-card research-content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">RESEARCH</span>
+                        <span data-lang="es">INVESTIGACIÓN</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-yellow-600 to-orange-700 p-6 flex items-end">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">The Miami Experience: A Microcosm of Hispanic Diversity</span>
+                                <span data-lang="es">La Experiencia de Miami: Un Microcosmos de Diversidad Hispana</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">Personal observations from living in South Florida: how geographic concentration reveals Hispanic diversity patterns that challenge one-size-fits-all marketing approaches.</span>
+                            <span data-lang="es">Observaciones personales de vivir en el sur de Florida: cómo la concentración geográfica revela patrones de diversidad hispana que desafían enfoques de marketing de talla única.</span>
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-600">20+</div>
+                                <div class="text-sm text-gray-600"><span data-lang="en">Countries Represented</span><span data-lang="es">Países Representados</span></div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-600">50+</div>
+                                <div class="text-sm text-gray-600"><span data-lang="en">Cultural Nuances</span><span data-lang="es">Matices Culturales</span></div>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full" onclick="showLeadCapture('miami-experience-essay')">
+                            <span data-lang="en">Download Essay</span>
+                            <span data-lang="es">Descargar Ensayo</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="resource-card research-content" data-aos="fade-up" data-aos-delay="300">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">RESEARCH</span>
+                        <span data-lang="es">INVESTIGACIÓN</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-indigo-700 p-6 flex items-end">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">Geographic Cultural Variations: Mexican-Americans Across States</span>
+                                <span data-lang="es">Variaciones Culturales Geográficas: México-Americanos Across Estados</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">How the same cultural group expresses differently based on geographic location: Mexican-Americans in Florida vs Texas vs California, and what this means for targeted advertising.</span>
+                            <span data-lang="es">Cómo el mismo grupo cultural se expresa diferentemente basado en ubicación geográfica: México-americanos en Florida vs Texas vs California, y qué significa esto para publicidad dirigida.</span>
+                        </p>
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-lg font-bold text-purple-600">FL</div>
+                                <div class="text-xs text-gray-600">Cuban influence</div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-lg font-bold text-purple-600">TX</div>
+                                <div class="text-xs text-gray-600">Border culture</div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-lg font-bold text-purple-600">CA</div>
+                                <div class="text-xs text-gray-600">Pacific patterns</div>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full" onclick="showLeadCapture('geographic-variations-study')">
+                            <span data-lang="en">Download Study</span>
+                            <span data-lang="es">Descargar Estudio</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="resource-card research-content" data-aos="fade-up" data-aos-delay="400">
+                    <div class="resource-type-badge">
+                        <span data-lang="en">ANALYSIS</span>
+                        <span data-lang="es">ANÁLISIS</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-red-600 to-pink-700 p-6 flex items-end">
+                        <div class="text-white">
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">The 35-Year Hispanic Majority Projection: Marketing Implications</span>
+                                <span data-lang="es">La Proyección de Mayoría Hispana en 35 Años: Implicaciones de Marketing</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">Analysis of demographic trends showing Hispanic Americans becoming the US majority by 2060, and what brands need to know to prepare for this transformation.</span>
+                            <span data-lang="es">Análisis de tendencias demográficas mostrando que los hispano-americanos se convertirán en mayoría de EE.UU. para 2060, y qué necesitan saber las marcas para prepararse para esta transformación.</span>
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-2xl font-bold text-red-600">2060</div>
+                                <div class="text-sm text-gray-600"><span data-lang="en">Majority Year</span><span data-lang="es">Año de Mayoría</span></div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-2xl font-bold text-red-600">$3.2T</div>
+                                <div class="text-sm text-gray-600"><span data-lang="en">Buying Power</span><span data-lang="es">Poder Adquisitivo</span></div>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full" onclick="showLeadCapture('hispanic-majority-projection')">
+                            <span data-lang="en">Download Analysis</span>
+                            <span data-lang="es">Descargar Análisis</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Future Roadmap Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Future Roadmap: What's Next</span>
+                    <span data-lang="es">Hoja de Ruta Futura: Qué Sigue</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">The evolution of Cultural Brain: from site analysis to comprehensive cultural intelligence ecosystem</span>
+                    <span data-lang="es">La evolución de Cultural Brain: del análisis de sitios al ecosistema integral de inteligencia cultural</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <article class="roadmap-card roadmap-content" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="coming-soon-badge">
+                                <span data-lang="en">Q2 2025</span>
+                                <span data-lang="es">Q2 2025</span>
+                            </div>
+                            <i class="fas fa-database text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">
+                            <span data-lang="en">RKB (Research Knowledge Base)</span>
+                            <span data-lang="es">RKB (Base de Conocimiento de Investigación)</span>
+                        </h3>
+                        <p class="text-white opacity-90 mb-6">
+                            <span data-lang="en">Comprehensive database of Hispanic cultural markers, traditions, values, and linguistic patterns from 20+ countries, continuously updated and verified.</span>
+                            <span data-lang="es">Base de datos integral de marcadores culturales hispanos, tradiciones, valores y patrones lingüísticos de 20+ países, continuamente actualizada y verificada.</span>
+                        </p>
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Key Features:</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>• <span data-lang="en">20+ country profiles</span><span data-lang="es">20+ perfiles de países</span></li>
+                                <li>• <span data-lang="en">Regional variations</span><span data-lang="es">Variaciones regionales</span></li>
+                                <li>• <span data-lang="en">Generational differences</span><span data-lang="es">Diferencias generacionales</span></li>
+                                <li>• <span data-lang="en">Linguistic evolution tracking</span><span data-lang="es">Seguimiento de evolución lingüística</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="resource-card roadmap-content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 p-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="coming-soon-badge mb-3">
+                                <span data-lang="en">Q3 2025</span>
+                                <span data-lang="es">Q3 2025</span>
+                            </div>
+                            <i class="fas fa-chart-line text-white text-3xl mb-3"></i>
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">Research Center 2.5</span>
+                                <span data-lang="es">Centro de Investigación 2.5</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">Advanced analytics platform providing real-time cultural intelligence insights, trend analysis, and predictive modeling for Hispanic market evolution.</span>
+                            <span data-lang="es">Plataforma de análisis avanzado que proporciona insights de inteligencia cultural en tiempo real, análisis de tendencias y modelado predictivo para la evolución del mercado hispano.</span>
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">
+                                    <i class="fas fa-real-time"></i>
+                                </div>
+                                <div class="text-sm text-gray-600"><span data-lang="en">Real-time</span><span data-lang="es">Tiempo real</span></div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">
+                                    <i class="fas fa-crystal-ball"></i>
+                                </div>
+                                <div class="text-sm text-gray-600"><span data-lang="en">Predictive</span><span data-lang="es">Predictivo</span></div>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-full" onclick="showLeadCapture('research-center-roadmap')">
+                            <span data-lang="en">Early Access List</span>
+                            <span data-lang="es">Lista de Acceso Temprano</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="resource-card roadmap-content" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 p-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="coming-soon-badge mb-3">
+                                <span data-lang="en">Q4 2025</span>
+                                <span data-lang="es">Q4 2025</span>
+                            </div>
+                            <i class="fas fa-brain text-white text-3xl mb-3"></i>
+                            <h3 class="text-xl font-bold">
+                                <span data-lang="en">MACE</span>
+                                <span data-lang="es">MACE</span>
+                            </h3>
+                            <p class="text-sm opacity-90">Multimodel Analysis & Creation Engine</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <span data-lang="en">AI-powered engine that analyzes and generates culturally intelligent content, creative assets, and campaign strategies tailored to specific Hispanic market segments.</span>
+                            <span data-lang="es">Motor impulsado por IA que analiza y genera contenido culturalmente inteligente, activos creativos y estrategias de campaña adaptadas a segmentos específicos del mercado hispano.</span>
+                        </p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span data-lang="en">Content analysis & generation</span>
+                                <span data-lang="es">Análisis y generación de contenido</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span data-lang="en">Creative asset optimization</span>
+                                <span data-lang="es">Optimización de activos creativos</span>
+                            </div>
+                            <div class="flex items-center text-sm">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span data-lang="en">Campaign strategy automation</span>
+                                <span data-lang="es">Automatización de estrategia de campaña</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-full" onclick="showLeadCapture('mace-beta-signup')">
+                            <span data-lang="en">Beta Signup</span>
+                            <span data-lang="es">Registro Beta</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="max-w-4xl mx-auto mt-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center">
+                        <span data-lang="en">The Vision: Complete Cultural Intelligence Ecosystem</span>
+                        <span data-lang="es">La Visión: Ecosistema Completo de Inteligencia Cultural</span>
+                    </h3>
+                    <p class="text-gray-700 text-center mb-6">
+                        <span data-lang="en">"Cultural Brain is evolving from a site analysis tool to a comprehensive cultural intelligence platform that understands, predicts, and creates culturally resonant content for the fastest-growing demographic in America."</span>
+                        <span data-lang="es">"Cultural Brain está evolucionando de una herramienta de análisis de sitios a una plataforma integral de inteligencia cultural que entiende, predice y crea contenido culturalmente resonante para el demográfico de más rápido crecimiento en América."</span>
+                    </p>
+                    <div class="text-center">
+                        <button class="btn-primary" onclick="showLeadCapture('complete-roadmap')">
+                            <span data-lang="en">Download Complete Roadmap</span>
+                            <span data-lang="es">Descargar Hoja de Ruta Completa</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lead Capture Modal -->
+    <div class="lead-capture-modal" id="leadCaptureModal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">
+                    <span data-lang="en">Download Resource</span>
+                    <span data-lang="es">Descargar Recurso</span>
+                </h3>
+                <button onclick="closeLeadCapture()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="mb-6">
+                <p class="text-gray-600">
+                    <span data-lang="en">Get instant access to authentic cultural intelligence research and insights.</span>
+                    <span data-lang="es">Obtén acceso instantáneo a investigación e insights auténticos de inteligencia cultural.</span>
+                </p>
+            </div>
+            
+            <form class="space-y-4">
+                <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                <input type="email" placeholder="Business Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                <input type="text" placeholder="Company" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                    <option>Your Role</option>
+                    <option>Marketing Director</option>
+                    <option>Media Buyer</option>
+                    <option>Agency Executive</option>
+                    <option>Brand Manager</option>
+                    <option>Research Analyst</option>
+                    <option>Other</option>
+                </select>
+                <button type="submit" class="w-full btn-primary py-3 text-lg">
+                    <span data-lang="en">Download Now - Instant Access</span>
+                    <span data-lang="es">Descargar Ahora - Acceso Instantáneo</span>
+                </button>
+            </form>
+            <p class="text-xs text-gray-600 mt-4 text-center">
+                <span data-lang="en">By downloading, you agree to receive emails with cultural intelligence insights. Unsubscribe anytime.</span>
+                <span data-lang="es">Al descargar, aceptas recibir emails con insights de inteligencia cultural. Date de baja en cualquier momento.</span>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://www.culturalbrain.app/static/images/logo_hispano_01.png" alt="HISPAÑO" class="h-10 mb-6">
+                    <p class="opacity-70 mb-6">
+                        <span data-lang="en">The world's first Cultural Intelligence Platform for programmatic advertising.</span>
+                        <span data-lang="es">La primera Plataforma de Inteligencia Cultural del mundo para publicidad programática.</span>
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-accent"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="hover:text-accent"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-accent"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="platform.html" class="opacity-70 hover:opacity-100">Cultural Brain</a></li>
+                        <li><a href="platform.html#metrics" class="opacity-70 hover:opacity-100">CRS/CAI/CCS</a></li>
+                        <li><a href="platform.html#api" class="opacity-70 hover:opacity-100">API Access</a></li>
+                        <li><a href="about.html" class="opacity-70 hover:opacity-100">HICE Engine</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="insights.html" class="opacity-70 hover:opacity-100">Industry Analysis</a></li>
+                        <li><a href="resources.html" class="opacity-70 hover:opacity-100">Research Papers</a></li>
+                        <li><a href="#founder-story" class="opacity-70 hover:opacity-100">Founder Story</a></li>
+                        <li><a href="#roadmap" class="opacity-70 hover:opacity-100">Future Roadmap</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6"><span data-lang="en">Company</span><span data-lang="es">Empresa</span></h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="opacity-70 hover:opacity-100"><span data-lang="en">About Us</span><span data-lang="es">Nosotros</span></a></li>
+                        <li><a href="about.html#leadership" class="opacity-70 hover:opacity-100"><span data-lang="en">Leadership</span><span data-lang="es">Liderazgo</span></a></li>
+                        <li><a href="#contact" class="opacity-70 hover:opacity-100"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
+                        <li><a href="#" class="opacity-70 hover:opacity-100"><span data-lang="en">Careers</span><span data-lang="es">Carreras</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="opacity-70 text-sm">
+                    <span data-lang="en">© 2025 HISPAÑO. All rights reserved.</span>
+                    <span data-lang="es">© 2025 HISPAÑO. Todos los derechos reservados.</span>
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-sm opacity-70 hover:opacity-100"><span data-lang="en">Privacy Policy</span><span data-lang="es">Política de Privacidad</span></a>
+                    <a href="#" class="text-sm opacity-70 hover:opacity-100"><span data-lang="en">Terms of Service</span><span data-lang="es">Términos de Servicio</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+            
+            // Resource filtering
+            window.filterResources = function(category) {
+                // Update active tab
+                document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
+                event.target.classList.add('active');
+                
+                // Filter content
+                const resources = document.querySelectorAll('.resource-card, .founder-story-card, .timeline-item');
+                resources.forEach(resource => {
+                    if (category === 'all') {
+                        resource.style.display = 'block';
+                    } else {
+                        const hasCategory = resource.classList.contains(category + '-content');
+                        resource.style.display = hasCategory ? 'block' : 'none';
+                    }
+                });
+            };
+            
+            // Lead capture modal
+            window.showLeadCapture = function(resourceId) {
+                document.getElementById('leadCaptureModal').style.display = 'flex';
+                // Track which resource triggered the modal
+                console.log('Lead capture for:', resourceId);
+            };
+            
+            window.closeLeadCapture = function() {
+                document.getElementById('leadCaptureModal').style.display = 'none';
+            };
+            
+            // Close modal on background click
+            document.getElementById('leadCaptureModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeLeadCapture();
+                }
+            });
+            
+            // Language switcher
+            window.changeLanguage = function(lang) {
+                document.body.className = lang === 'es' ? 'cultural-pattern lang-es' : 'cultural-pattern';
+                
+                const currentLangBtn = document.getElementById('currentLangBtn');
+                const currentLangFlag = document.getElementById('currentLangFlag');
+                const currentLangText = document.getElementById('currentLangText');
+                
+                if (lang === 'es') {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'ES';
+                    if (currentLangText) currentLangText.textContent = 'ES';
+                    document.title = 'Recursos de Inteligencia Cultural - Investigación, Metodología e Insights';
+                } else {
+                    if (currentLangFlag) currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
+                    if (currentLangFlag) currentLangFlag.alt = 'EN';
+                    if (currentLangText) currentLangText.textContent = 'EN';
+                    document.title = 'Cultural Intelligence Resources - Research, Methodology & Insights';
+                }
+                
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('onclick') && option.getAttribute('onclick').includes(`changeLanguage('${lang}')`)) {
+                        option.classList.add('active');
+                    }
+                });
+                
+                localStorage.setItem('hispano-lang', lang);
+                document.documentElement.lang = lang;
+            };
+
+            const savedLang = localStorage.getItem('hispano-lang') || 'en';
+            window.changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
