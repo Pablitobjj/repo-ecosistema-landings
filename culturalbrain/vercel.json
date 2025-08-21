@@ -1,6 +1,8 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "version": 2,
+  "builds": [
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
   "routes": [
     { "src": "^/$", "dest": "/public/cultural_brain_index.html" },
     { "src": "^/about/?$", "dest": "/public/cultural_brain_nosotros.html" },

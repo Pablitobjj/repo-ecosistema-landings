@@ -1,6 +1,8 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "version": 2,
+  "builds": [
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
   "routes": [
     { "src": "^/$", "dest": "/public/hispano_index.html" },
     { "src": "^/about/?$", "dest": "/public/hispano_about.html" },
