@@ -101,7 +101,7 @@
             background-attachment: fixed;
         }
         
-        /* Language Switcher y Navigation (mismo código anterior) */
+        /* Language Switcher y Navigation */
         .language-switcher { position: relative; display: inline-block; }
         .language-btn { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; font-weight: 500; }
         .language-btn:hover { border-color: var(--secondary); background: rgba(109, 27, 143, 0.05); color: var(--secondary); }
@@ -166,10 +166,23 @@
             padding: 24px;
             margin: 24px 0;
         }
+
+        .module-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 12px;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 24px;
+        }
     </style>
 </head>
 <body class="cultural-pattern">
-    <!-- Navigation (mismo código) -->
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="/" class="flex items-center">
@@ -228,8 +241,8 @@
                         <div>
                             <h1 class="text-5xl md:text-6xl font-bold">Cultural Brain®</h1>
                             <p class="text-xl opacity-90 mt-2">
-                                <span data-lang="en">Intelligence Meets Culture</span>
-                                <span data-lang="es">La Inteligencia se Encuentra con la Cultura</span>
+                                <span data-lang="en">Cultural Intelligence Workbench</span>
+                                <span data-lang="es">Mesa de Trabajo de Inteligencia Cultural</span>
                             </p>
                         </div>
                     </div>
@@ -241,8 +254,8 @@
                     
                     <div class="feature-demo bg-white bg-opacity-20 border-2 border-white border-opacity-30">
                         <h3 class="text-xl font-bold mb-4">
-                            <span data-lang="en">Proven Results:</span>
-                            <span data-lang="es">Resultados Probados:</span>
+                            <span data-lang="en">Proven Data Foundation:</span>
+                            <span data-lang="es">Base de Datos Probada:</span>
                         </h3>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
@@ -258,8 +271,8 @@
                                 <div class="text-sm opacity-90"><span data-lang="en">Accuracy</span><span data-lang="es">Precisión</span></div>
                             </div>
                             <div>
-                                <div class="text-2xl font-bold"><span class="data-highlight">1,349%</span></div>
-                                <div class="text-sm opacity-90"><span data-lang="en">Higher Relevance</span><span data-lang="es">Mayor Relevancia</span></div>
+                                <div class="text-2xl font-bold"><span class="data-highlight">96,334</span></div>
+                                <div class="text-sm opacity-90"><span data-lang="en">Peak Efficiency</span><span data-lang="es">Eficiencia Máxima</span></div>
                             </div>
                         </div>
                     </div>
@@ -279,8 +292,8 @@
                 <div class="lg:w-1/3 mt-12 lg:mt-0" data-aos="fade-left">
                     <div class="metric-visual">
                         <h3 class="text-2xl font-bold mb-6">
-                            <span data-lang="en">Live Cultural Intelligence</span>
-                            <span data-lang="es">Inteligencia Cultural en Vivo</span>
+                            <span data-lang="en">Cultural Intelligence Data</span>
+                            <span data-lang="es">Datos de Inteligencia Cultural</span>
                         </h3>
                         <div class="space-y-4">
                             <div class="bg-white bg-opacity-20 rounded-lg p-4">
@@ -315,8 +328,8 @@
                             </div>
                         </div>
                         <div class="mt-6 text-sm">
-                            <span data-lang="en">Real-time cultural scoring across 698 IAB categories</span>
-                            <span data-lang="es">Puntuación cultural en tiempo real en 698 categorías IAB</span>
+                            <span data-lang="en">Cultural scoring across 698 IAB categories</span>
+                            <span data-lang="es">Puntuación cultural en 698 categorías IAB</span>
                         </div>
                     </div>
                 </div>
@@ -423,8 +436,8 @@
                                 <span data-lang="es">Índice de Afinidad Cultural (CAI)</span>
                             </h3>
                             <p class="text-lg text-gray-600 mb-6">
-                                <span data-lang="en">Dynamic measurement of message-audience cultural fit. Optimize in real-time like you do with viewability. Generation-specific weighting based on cultural preferences.</span>
-                                <span data-lang="es">Medición dinámica del ajuste cultural mensaje-audiencia. Optimiza en tiempo real como lo haces con la visibilidad. Ponderación específica por generación basada en preferencias culturales.</span>
+                                <span data-lang="en">Dynamic measurement of message-audience cultural fit. Calculate cultural alignment for specific audience segments. Generation-specific weighting based on cultural preferences.</span>
+                                <span data-lang="es">Medición dinámica del ajuste cultural mensaje-audiencia. Calcula la alineación cultural para segmentos específicos de audiencia. Ponderación específica por generación basada en preferencias culturales.</span>
                             </p>
                             <div class="performance-chart">
                                 <h4 class="font-bold mb-4">
@@ -604,8 +617,8 @@
                 
                 <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-2xl font-bold mb-6 gradient-text">
-                        <span data-lang="en">Performance Analytics</span>
-                        <span data-lang="es">Analíticas de Rendimiento</span>
+                        <span data-lang="en">Analysis Performance</span>
+                        <span data-lang="es">Rendimiento de Análisis</span>
                     </h3>
                     <div class="space-y-4">
                         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-lg">
@@ -631,12 +644,12 @@
                         
                         <div class="border-l-4 border-accent pl-4">
                             <h4 class="font-bold text-lg mb-2">
-                                <span data-lang="en">Real-Time Processing</span>
-                                <span data-lang="es">Procesamiento en Tiempo Real</span>
+                                <span data-lang="en">API Integration</span>
+                                <span data-lang="es">Integración API</span>
                             </h4>
                             <p class="text-gray-600 mb-3">
-                                <span data-lang="en">Cultural scoring integration directly into your programmatic workflow. Optimize cultural relevance like you optimize viewability.</span>
-                                <span data-lang="es">Integración de puntuación cultural directamente en tu flujo de trabajo programático. Optimiza la relevancia cultural como optimizas la visibilidad.</span>
+                                <span data-lang="en">Cultural scoring integration into your planning workflow. Access CRS, CAI, and CCS metrics programmatically for data-driven cultural decisions.</span>
+                                <span data-lang="es">Integración de puntuación cultural en tu flujo de trabajo de planificación. Accede a métricas CRS, CAI y CCS programáticamente para decisiones culturales basadas en datos.</span>
                             </p>
                             <div class="api-endpoint">
                                 <span data-lang="en">GET /api/v1/cultural-score?url=example.com
@@ -651,99 +664,169 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
         </div>
     </section>
     
-    <!-- Use Cases Section -->
+    <!-- Platform Modules Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-bold mb-4">
-                    <span data-lang="en">Platform Use Cases</span>
-                    <span data-lang="es">Casos de Uso de la Plataforma</span>
+                    <span data-lang="en">Complete Cultural Intelligence Workflow</span>
+                    <span data-lang="es">Flujo de Trabajo Completo de Inteligencia Cultural</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    <span data-lang="en">From campaign planning to real-time optimization, Cultural Brain transforms every stage of your Hispanic marketing workflow.</span>
-                    <span data-lang="es">Desde la planificación de campañas hasta la optimización en tiempo real, Cultural Brain transforma cada etapa de tu flujo de trabajo de marketing hispano.</span>
+                    <span data-lang="en">From cultural discovery to campaign execution, Cultural Brain provides the complete toolkit for data-driven Hispanic marketing.</span>
+                    <span data-lang="es">Desde el descubrimiento cultural hasta la ejecución de campañas, Cultural Brain proporciona el conjunto completo de herramientas para marketing hispano basado en datos.</span>
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-search text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold">
-                            <span data-lang="en">Pre-Campaign Cultural Curation</span>
-                            <span data-lang="es">Curación Cultural Pre-Campaña</span>
-                        </h3>
+                    <div class="module-icon">
+                        <i class="fas fa-search"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-center mb-4">
+                        <span data-lang="en">Cultural Site Intelligence</span>
+                        <span data-lang="es">Inteligencia Cultural de Sitios</span>
+                    </h3>
                     <p class="text-gray-600 mb-4">
-                        <span data-lang="en">Identify and curate the most culturally efficient inventory before launch. Discover blue ocean opportunities with 92% untapped automotive and 97% technology categories.</span>
-                        <span data-lang="es">Identifica y cura el inventario más eficiente culturalmente antes del lanzamiento. Descubre oportunidades océano azul con 92% automotriz sin explotar y 97% categorías tecnológicas.</span>
+                        <span data-lang="en">Analyze any website for cultural relevance with CRS/CAI/CCS scoring. Deep cultural analysis reveals markers, values, traditions, and generation alignment across 698 IAB categories.</span>
+                        <span data-lang="es">Analiza cualquier sitio web para relevancia cultural con puntuación CRS/CAI/CCS. El análisis cultural profundo revela marcadores, valores, tradiciones y alineación generacional en 698 categorías IAB.</span>
                     </p>
                     <div class="border-t pt-4">
-                        <div class="text-sm font-medium text-indigo-600">
-                            <span data-lang="en">Key Benefits:</span>
-                            <span data-lang="es">Beneficios Clave:</span>
+                        <div class="text-sm font-medium text-indigo-600 mb-2">
+                            <span data-lang="en">Analysis Features:</span>
+                            <span data-lang="es">Características de Análisis:</span>
                         </div>
-                        <ul class="text-sm text-gray-600 mt-2 space-y-1">
-                            <li>• <span data-lang="en">12% cost advantage identification</span><span data-lang="es">Identificación de ventaja de costo del 12%</span></li>
-                            <li>• <span data-lang="en">Blue ocean category discovery</span><span data-lang="es">Descubrimiento de categorías océano azul</span></li>
-                            <li>• <span data-lang="en">Geographic arbitrage mapping</span><span data-lang="es">Mapeo de arbitraje geográfico</span></li>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• <span data-lang="en">Individual site cultural scoring</span><span data-lang="es">Puntuación cultural individual de sitios</span></li>
+                            <li>• <span data-lang="en">Bulk URL analysis and classification</span><span data-lang="es">Análisis masivo de URLs y clasificación</span></li>
+                            <li>• <span data-lang="en">Cultural markers validation and detection</span><span data-lang="es">Validación y detección de marcadores culturales</span></li>
+                            <li>• <span data-lang="en">Generation and language profile analysis</span><span data-lang="es">Análisis de perfil generacional y lingüístico</span></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-cogs text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold">
-                            <span data-lang="en">Real-Time Cultural Optimization</span>
-                            <span data-lang="es">Optimización Cultural en Tiempo Real</span>
-                        </h3>
+                    <div class="module-icon">
+                        <i class="fas fa-filter"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-center mb-4">
+                        <span data-lang="en">Inventory Discovery & Curation</span>
+                        <span data-lang="es">Descubrimiento y Curación de Inventario</span>
+                    </h3>
                     <p class="text-gray-600 mb-4">
-                        <span data-lang="en">Dynamic cultural intelligence integration with programmatic bidding. Optimize cultural relevance in real-time alongside viewability and brand safety.</span>
-                        <span data-lang="es">Integración dinámica de inteligencia cultural con licitación programática. Optimiza la relevancia cultural en tiempo real junto con la visibilidad y seguridad de marca.</span>
+                        <span data-lang="en">Discover culturally efficient inventory using advanced filters. Create and manage site lists with cultural criteria, compare lists, and export optimized whitelists for campaign execution.</span>
+                        <span data-lang="es">Descubre inventario culturalmente eficiente usando filtros avanzados. Crea y gestiona listas de sitios con criterios culturales, compara listas y exporta whitelists optimizadas para ejecución de campañas.</span>
                     </p>
                     <div class="border-t pt-4">
-                        <div class="text-sm font-medium text-purple-600">
-                            <span data-lang="en">Platform Integration:</span>
-                            <span data-lang="es">Integración de Plataforma:</span>
+                        <div class="text-sm font-medium text-purple-600 mb-2">
+                            <span data-lang="en">Curation Tools:</span>
+                            <span data-lang="es">Herramientas de Curación:</span>
                         </div>
-                        <ul class="text-sm text-gray-600 mt-2 space-y-1">
-                            <li>• <span data-lang="en">API integration with DSPs</span><span data-lang="es">Integración API con DSPs</span></li>
-                            <li>• <span data-lang="en">Real-time bid adjustment</span><span data-lang="es">Ajuste de licitación en tiempo real</span></li>
-                            <li>• <span data-lang="en">Performance attribution</span><span data-lang="es">Atribución de rendimiento</span></li>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• <span data-lang="en">Siteplanner with cultural filters (CRS, generation, geography)</span><span data-lang="es">Siteplanner con filtros culturales (CRS, generación, geografía)</span></li>
+                            <li>• <span data-lang="en">Sitelist Manager for whitelist/blacklist creation</span><span data-lang="es">Gestor de Listas para creación de whitelist/blacklist</span></li>
+                            <li>• <span data-lang="en">List comparison and overlap analysis</span><span data-lang="es">Comparación de listas y análisis de solapamiento</span></li>
+                            <li>• <span data-lang="en">Cultural efficiency ranking and optimization</span><span data-lang="es">Ranking de eficiencia cultural y optimización</span></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-center mb-6">
-                        <div class="bg-gradient-to-r from-teal-500 to-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-chart-line text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold">
-                            <span data-lang="en">Cultural Performance Attribution</span>
-                            <span data-lang="es">Atribución de Rendimiento Cultural</span>
-                        </h3>
+                    <div class="module-icon">
+                        <i class="fas fa-users"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-center mb-4">
+                        <span data-lang="en">Cultural Campaign Planning</span>
+                        <span data-lang="es">Planificación Cultural de Campañas</span>
+                    </h3>
                     <p class="text-gray-600 mb-4">
-                        <span data-lang="en">Comprehensive post-campaign analysis linking cultural intelligence to business outcomes. Prove ROI and scale successful cultural strategies across portfolios.</span>
-                        <span data-lang="es">Análisis integral post-campaña que vincula la inteligencia cultural con resultados de negocio. Prueba el ROI y escala estrategias culturales exitosas a través de portafolios.</span>
+                        <span data-lang="en">Build comprehensive media plans with cultural objectives and KPIs. Define target audiences with US Census validation, set cultural goals, and create campaign templates ready for programmatic execution.</span>
+                        <span data-lang="es">Construye planes de medios comprensivos con objetivos culturales y KPIs. Define audiencias objetivo con validación del Censo de EE.UU., establece metas culturales y crea plantillas de campañas listas para ejecución programática.</span>
                     </p>
                     <div class="border-t pt-4">
-                        <div class="text-sm font-medium text-teal-600">
-                            <span data-lang="en">Success Metrics:</span>
-                            <span data-lang="es">Métricas de Éxito:</span>
+                        <div class="text-sm font-medium text-teal-600 mb-2">
+                            <span data-lang="en">Planning Features:</span>
+                            <span data-lang="es">Características de Planificación:</span>
                         </div>
-                        <ul class="text-sm text-gray-600 mt-2 space-y-1">
-                            <li>• <span data-lang="en">Cultural ROI: 456% average</span><span data-lang="es">ROI Cultural: 456% promedio</span></li>
-                            <li>• <span data-lang="en">Efficiency gains: 20-40%</span><span data-lang="es">Ganancias de eficiencia: 20-40%</span></li>
-                            <li>• <span data-lang="en">Cultural engagement: +67%</span><span data-lang="es">Participación cultural: +67%</span></li>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• <span data-lang="en">Campaign management with cultural objectives</span><span data-lang="es">Gestión de campañas con objetivos culturales</span></li>
+                            <li>• <span data-lang="en">Audience Manager with Census data validation</span><span data-lang="es">Gestor de Audiencias con validación de datos del Censo</span></li>
+                            <li>• <span data-lang="en">Media planning with cultural distribution</span><span data-lang="es">Planificación de medios con distribución cultural</span></li>
+                            <li>• <span data-lang="en">IO management and approval workflows</span><span data-lang="es">Gestión de IO y flujos de aprobación</span></li>
                         </ul>
+                    </div>
+                </div>
+                
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="module-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">
+                        <span data-lang="en">Programmatic Bridge</span>
+                        <span data-lang="es">Puente Programático</span>
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        <span data-lang="en">Export your culturally curated campaigns directly to DSPs and SSPs. Bridge the gap between cultural planning and programmatic execution with pre-built campaign templates and optimized site lists.</span>
+                        <span data-lang="es">Exporta tus campañas culturalmente curadas directamente a DSPs y SSPs. Cierra la brecha entre planificación cultural y ejecución programática con plantillas de campaña pre-construidas y listas de sitios optimizadas.</span>
+                    </p>
+                    <div class="border-t pt-4">
+                        <div class="text-sm font-medium text-orange-600 mb-2">
+                            <span data-lang="en">Export Capabilities:</span>
+                            <span data-lang="es">Capacidades de Exportación:</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• <span data-lang="en">Campaign template export to DV360 and Equativ</span><span data-lang="es">Exportación de plantillas de campaña a DV360 y Equativ</span></li>
+                            <li>• <span data-lang="en">Cultural site lists as targeting parameters</span><span data-lang="es">Listas de sitios culturales como parámetros de targeting</span></li>
+                            <li>• <span data-lang="en">Deal creation with cultural inventory focus</span><span data-lang="es">Creación de deals con enfoque en inventario cultural</span></li>
+                            <li>• <span data-lang="en">Campaign structure mapping for execution platforms</span><span data-lang="es">Mapeo de estructura de campaña para plataformas de ejecución</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Post-Campaign Analysis Section -->
+            <div class="metric-card bg-gradient-to-r from-blue-50 to-indigo-50" data-aos="fade-up" data-aos-delay="500">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="text-center lg:text-left">
+                        <div class="module-icon bg-gradient-to-r from-green-500 to-blue-600">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">
+                            <span data-lang="en">Post-Campaign Cultural Analysis</span>
+                            <span data-lang="es">Análisis Cultural Post-Campaña</span>
+                        </h3>
+                        <p class="text-gray-600">
+                            <span data-lang="en">Import campaign results to analyze actual cultural performance. Understand which cultural environments delivered your impressions and optimize future targeting strategies.</span>
+                            <span data-lang="es">Importa resultados de campaña para analizar el rendimiento cultural real. Entiende qué entornos culturales entregaron tus impresiones y optimiza futuras estrategias de targeting.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="lg:col-span-2">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white rounded-lg p-4 border-l-4 border-green-500">
+                                <h4 class="font-bold text-green-700 mb-2">
+                                    <span data-lang="en">Campaign Performance Review</span>
+                                    <span data-lang="es">Revisión de Rendimiento de Campaña</span>
+                                </h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• <span data-lang="en">Import impression data by site</span><span data-lang="es">Importar datos de impresiones por sitio</span></li>
+                                    <li>• <span data-lang="en">Compare actual vs cultural objectives</span><span data-lang="es">Comparar real vs objetivos culturales</span></li>
+                                    <li>• <span data-lang="en">Cultural environment analysis</span><span data-lang="es">Análisis de entorno cultural</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
+                                <h4 class="font-bold text-blue-700 mb-2">
+                                    <span data-lang="en">Cultural Optimization Insights</span>
+                                    <span data-lang="es">Insights de Optimización Cultural</span>
+                                </h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• <span data-lang="en">Analyze delivery by cultural markers</span><span data-lang="es">Analizar entrega por marcadores culturales</span></li>
+                                    <li>• <span data-lang="en">Generation alignment performance</span><span data-lang="es">Rendimiento de alineación generacional</span></li>
+                                    <li>• <span data-lang="en">Cultural performance reporting</span><span data-lang="es">Reportes de rendimiento cultural</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -760,8 +843,8 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
                         <span data-lang="es">Integración API</span>
                     </h2>
                     <p class="text-xl text-gray-600">
-                        <span data-lang="en">Integrate Cultural Brain's intelligence directly into your programmatic stack. Real-time cultural scoring in under 50ms.</span>
-                        <span data-lang="es">Integra la inteligencia de Cultural Brain directamente en tu stack programático. Puntuación cultural en tiempo real en menos de 50ms.</span>
+                        <span data-lang="en">Integrate Cultural Brain's intelligence directly into your planning workflow. Cultural scoring and data export capabilities for seamless integration.</span>
+                        <span data-lang="es">Integra la inteligencia de Cultural Brain directamente en tu flujo de trabajo de planificación. Capacidades de puntuación cultural y exportación de datos para integración perfecta.</span>
                     </p>
                 </div>
                 
@@ -769,38 +852,38 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
                             <h3 class="text-2xl font-bold mb-4">
-                                <span data-lang="en">Technical Specifications</span>
-                                <span data-lang="es">Especificaciones Técnicas</span>
+                                <span data-lang="en">API Capabilities</span>
+                                <span data-lang="es">Capacidades API</span>
                             </h3>
                             <div class="space-y-4">
                                 <div class="border-l-4 border-blue-500 pl-4">
                                     <h4 class="font-bold">
-                                        <span data-lang="en">Response Time</span>
-                                        <span data-lang="es">Tiempo de Respuesta</span>
+                                        <span data-lang="en">Cultural Scoring</span>
+                                        <span data-lang="es">Puntuación Cultural</span>
                                     </h4>
                                     <p class="text-gray-600">
-                                        <span data-lang="en">Sub-50ms cultural score lookup for real-time bidding integration</span>
-                                        <span data-lang="es">Búsqueda de puntuación cultural sub-50ms para integración de licitación en tiempo real</span>
+                                        <span data-lang="en">Get CRS, CAI, and CCS scores for any URL in your media planning workflow</span>
+                                        <span data-lang="es">Obtén puntuaciones CRS, CAI y CCS para cualquier URL en tu flujo de planificación de medios</span>
                                     </p>
                                 </div>
                                 <div class="border-l-4 border-purple-500 pl-4">
                                     <h4 class="font-bold">
-                                        <span data-lang="en">Data Format</span>
-                                        <span data-lang="es">Formato de Datos</span>
+                                        <span data-lang="en">Data Export</span>
+                                        <span data-lang="es">Exportación de Datos</span>
                                     </h4>
                                     <p class="text-gray-600">
-                                        <span data-lang="en">JSON API with CRS, CAI, and CCS metrics plus geographic efficiency data</span>
-                                        <span data-lang="es">API JSON con métricas CRS, CAI y CCS más datos de eficiencia geográfica</span>
+                                        <span data-lang="en">Export curated site lists and campaign templates to DSPs and SSPs</span>
+                                        <span data-lang="es">Exporta listas de sitios curadas y plantillas de campaña a DSPs y SSPs</span>
                                     </p>
                                 </div>
                                 <div class="border-l-4 border-teal-500 pl-4">
                                     <h4 class="font-bold">
-                                        <span data-lang="en">Scale</span>
-                                        <span data-lang="es">Escala</span>
+                                        <span data-lang="en">Batch Processing</span>
+                                        <span data-lang="es">Procesamiento por Lotes</span>
                                     </h4>
                                     <p class="text-gray-600">
-                                        <span data-lang="en">Handle millions of requests per day with 99.9% uptime guarantee</span>
-                                        <span data-lang="es">Maneja millones de solicitudes por día con garantía de 99.9% de tiempo activo</span>
+                                        <span data-lang="en">Analyze multiple URLs simultaneously for large-scale cultural inventory discovery</span>
+                                        <span data-lang="es">Analiza múltiples URLs simultáneamente para descubrimiento de inventario cultural a gran escala</span>
                                     </p>
                                 </div>
                             </div>
@@ -819,20 +902,20 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
     "cai": 0.87,
     "ccs": 94.2
   },
+  "cultural_analysis": {
+    "iab_category": "Travel",
+    "cultural_profile": "MULTICULTURAL",
+    "primary_generation": "millennials",
+    "cultural_markers": {
+      "references": 5,
+      "values": 2,
+      "traditions": 1
+    }
+  },
   "performance_data": {
     "viewability": 100,
     "efficiency_score": 82587,
-    "cost_advantage": 0.093
-  },
-  "geographic_data": {
-    "tld": ".com",
-    "region_efficiency": 155.09,
-    "arbitrage_opportunity": true
-  },
-  "generation_targeting": {
-    "gen_z_affinity": 0.67,
-    "millennial_affinity": 0.84,
-    "gen_x_affinity": 0.72
+    "pagerank": 6
   }
 }
                             </div>
@@ -843,17 +926,71 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
         </div>
     </section>
     
+    <!-- Data Foundation Section -->
+    <section class="py-20 bg-gradient-to-br from-indigo-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Built on Proven Data Foundation</span>
+                    <span data-lang="es">Construido sobre Base de Datos Probada</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">Our recommendations are based on the largest cultural performance dataset in the industry, not assumptions or small samples.</span>
+                    <span data-lang="es">Nuestras recomendaciones se basan en el conjunto de datos de rendimiento cultural más grande de la industria, no en suposiciones o muestras pequeñas.</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="metric-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">41,745</div>
+                    <h3 class="text-lg font-bold mb-3">
+                        <span data-lang="en">Sites with Performance Data</span>
+                        <span data-lang="es">Sitios con Datos de Rendimiento</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Comprehensive analysis across Hispanic and multicultural websites with verified CPM, viewability, and cultural metrics</span>
+                        <span data-lang="es">Análisis comprensivo de sitios web hispanos y multiculturales con CPM verificado, visibilidad y métricas culturales</span>
+                    </p>
+                </div>
+                
+                <div class="metric-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">15,712</div>
+                    <h3 class="text-lg font-bold mb-3">
+                        <span data-lang="en">Underutilized Cultural Sites</span>
+                        <span data-lang="es">Sitios Culturales Subutilizados</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">High-opportunity inventory across automotive (92% untapped), technology (97% untapped), and education (93% untapped) categories</span>
+                        <span data-lang="es">Inventario de alta oportunidad en categorías automotriz (92% sin explotar), tecnología (97% sin explotar) y educación (93% sin explotar)</span>
+                    </p>
+                </div>
+                
+                <div class="metric-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold text-teal-600 mb-2">9.3%</div>
+                    <h3 class="text-lg font-bold mb-3">
+                        <span data-lang="en">Average Cost Advantage</span>
+                        <span data-lang="es">Ventaja de Costo Promedio</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Cultural inventory costs less than general market, contradicting industry assumptions about premium cultural targeting</span>
+                        <span data-lang="es">El inventario cultural cuesta menos que el mercado general, contradiciendo las suposiciones de la industria sobre targeting cultural premium</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Free Trial CTA -->
     <section id="trial" class="py-20 gradient-bg text-white">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
                 <h2 class="text-4xl font-bold mb-6">
-                    <span data-lang="en">Start Your Free Cultural Intelligence Trial</span>
-                    <span data-lang="es">Inicia Tu Prueba Gratuita de Inteligencia Cultural</span>
+                    <span data-lang="en">Start Your Cultural Intelligence Journey</span>
+                    <span data-lang="es">Inicia Tu Jornada de Inteligencia Cultural</span>
                 </h2>
                 <p class="text-xl opacity-90 mb-8">
-                    <span data-lang="en">See how Cultural Brain transforms your Hispanic marketing efficiency. Full platform access for 14 days, no commitment required.</span>
-                    <span data-lang="es">Ve cómo Cultural Brain transforma tu eficiencia de marketing hispano. Acceso completo a la plataforma por 14 días, no se requiere compromiso.</span>
+                    <span data-lang="en">Experience how Cultural Brain transforms your Hispanic marketing planning. Full platform access for 14 days, no commitment required.</span>
+                    <span data-lang="es">Experimenta cómo Cultural Brain transforma tu planificación de marketing hispano. Acceso completo a la plataforma por 14 días, no se requiere compromiso.</span>
                 </p>
                 
                 <div class="bg-white bg-opacity-10 rounded-lg p-8 mb-8">
@@ -865,7 +1002,7 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
                         <div class="space-y-4">
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-accent mr-3"></i>
-                                <span><span data-lang="en">Cultural scoring for up to 10,000 URLs</span><span data-lang="es">Puntuación cultural para hasta 10,000 URLs</span></span>
+                                <span><span data-lang="en">Cultural scoring for up to 1,000 URLs</span><span data-lang="es">Puntuación cultural para hasta 1,000 URLs</span></span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-accent mr-3"></i>
@@ -873,17 +1010,17 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-accent mr-3"></i>
-                                <span><span data-lang="en">Blue ocean opportunity analysis</span><span data-lang="es">Análisis de oportunidades océano azul</span></span>
+                                <span><span data-lang="en">Campaign planning and audience management</span><span data-lang="es">Planificación de campañas y gestión de audiencias</span></span>
                             </div>
                         </div>
                         <div class="space-y-4">
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-accent mr-3"></i>
-                                <span><span data-lang="en">Geographic arbitrage identification</span><span data-lang="es">Identificación de arbitraje geográfico</span></span>
+                                <span><span data-lang="en">Site list curation and comparison tools</span><span data-lang="es">Herramientas de curación y comparación de listas de sitios</span></span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-accent mr-3"></i>
-                                <span><span data-lang="en">API access for programmatic integration</span><span data-lang="es">Acceso API para integración programática</span></span>
+                                <span><span data-lang="en">Export capabilities to DSPs and SSPs</span><span data-lang="es">Capacidades de exportación a DSPs y SSPs</span></span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-accent mr-3"></i>
@@ -923,7 +1060,7 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
         </div>
     </section>
     
-    <!-- Footer (mismo código anterior) -->
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -985,7 +1122,7 @@ Respuesta: {"crs": 87, "cai": 0.74, "ccs": 94}</span>
             // Initialize AOS
             AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
             
-            // Language switcher (mismo código anterior)
+            // Language switcher
             window.changeLanguage = function(lang) {
                 document.body.className = lang === 'es' ? 'cultural-pattern lang-es' : 'cultural-pattern';
                 
