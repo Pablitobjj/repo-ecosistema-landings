@@ -15,17 +15,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     
     <style>
-        /* Custom styling */
+        /* Mantener todos los estilos existentes exactamente igual */
         :root {
-            --primary: #1e3a8a; /* Deep Blue */
-            --secondary: #6d1b8f; /* Deep Purple */
-            --accent: #2dd4bf; /* Teal */
-            --orange: #f27044; /* Orange for accents */
-            --gradient-start: #f14b74; /* Pinkish-Red for brain gradient */
-            --gradient-end: #1d41db;   /* Strong Blue for brain gradient */
-            --globe-blue: #599cfc; /* Lighter blue for globe in logo */
+            --primary: #1e3a8a;
+            --secondary: #6d1b8f;
+            --accent: #2dd4bf;
+            --orange: #f27044;
+            --gradient-start: #f14b74;
+            --gradient-end: #1d41db;
+            --globe-blue: #599cfc;
             --text-dark: #1f2937;
-            --bg-white: #e5e7eb; /* Light gray for backgrounds */
+            --bg-white: #e5e7eb;
         }
         
         body {
@@ -166,6 +166,16 @@
             color: rgba(109, 27, 143, 0.1);
             z-index: -1;
         }
+
+        /* Nuevos estilos para separación User/Enterprise */
+        .pricing-section-divider {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(109, 27, 143, 0.1));
+            border: 2px dashed rgba(30, 58, 138, 0.2);
+            margin: 3rem 0;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -229,8 +239,8 @@
     <div class="stats-banner py-3 px-6 mt-20">
         <div class="container mx-auto text-center">
             <p class="text-sm font-medium text-indigo-900">
-                <span data-lang="en">✅ Operational: <strong>5,553 sites analyzed</strong> • <strong>99.9% cultural coverage</strong> • <strong>Pipeline stable</strong> (Data cut-off: Aug 12, 2025)</span>
-                <span data-lang="es">✅ Operativo: <strong>5,553 sitios analizados</strong> • <strong>99.9% cobertura cultural</strong> • <strong>Pipeline estable</strong> (Corte: 12 Ago 2025)</span>
+                <span data-lang="en">✅ Operational: <strong>41,745 sites analyzed</strong> • <strong>99.2% cultural accuracy</strong> • <strong>Platform stable</strong> (Data cut-off: Aug 12, 2025)</span>
+                <span data-lang="es">✅ Operativo: <strong>41,745 sitios analizados</strong> • <strong>99.2% precisión cultural</strong> • <strong>Plataforma estable</strong> (Corte: 12 Ago 2025)</span>
             </p>
         </div>
     </div>
@@ -266,7 +276,7 @@
             </div>
         </section>
 
-        <!-- Pricing Plans Section -->
+        <!-- Pricing Plans Section - COMPLETAMENTE REESTRUCTURADA -->
         <section id="pricing-plans" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6 md:px-12">
                 <div class="text-center mb-16">
@@ -279,270 +289,472 @@
                         </span>
                     </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        <span data-lang="en">All plans include access to our 5,553-site cultural database with verified performance data and core CRS/CAI/CCS metrics.</span>
-                        <span data-lang="es">Todos los planes incluyen acceso a nuestra base de datos cultural de 5,553 sitios con datos de performance verificados y métricas centrales CRS/CAI/CCS.</span>
+                        <span data-lang="en">All plans include access to our 41,745-site cultural database with verified performance data and core CRS/CAI/CCS metrics.</span>
+                        <span data-lang="es">Todos los planes incluyen acceso a nuestra base de datos cultural de 41,745 sitios con datos de performance verificados y métricas centrales CRS/CAI/CCS.</span>
                     </p>
                 </div>
                 
-                <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Starter Plan -->
-                    <div class="bg-white rounded-xl shadow-lg p-8 card relative">
-                        <div class="absolute top-6 right-6">
-                            <span class="value-badge">
-                                <span data-lang="en">Free Audit</span>
-                                <span data-lang="es">Auditoría Gratis</span>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">
-                            <span data-lang="en">Starter</span>
-                            <span data-lang="es">Básico</span>
+                <!-- USER EDITION SECTION -->
+                <div class="mb-16">
+                    <div class="text-center mb-12">
+                        <h3 class="text-2xl md:text-3xl font-bold text-indigo-900 mb-3">
+                            <span data-lang="en">User Edition</span>
+                            <span data-lang="es">Edición Usuario</span>
                         </h3>
-                        <div class="flex items-end mb-6">
-                            <span class="text-4xl font-bold">$4,999</span>
-                            <span class="text-gray-500 ml-2">
-                                <span data-lang="en">/month</span>
-                                <span data-lang="es">/mes</span>
-                            </span>
-                        </div>
-                        <p class="text-gray-600 mb-6">
-                            <span data-lang="en">Perfect for agencies and brands getting started with cultural intelligence. Includes free comprehensive audit.</span>
-                            <span data-lang="es">Perfecto para agencias y marcas que comienzan con inteligencia cultural. Incluye auditoría integral gratuita.</span>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                            <span data-lang="en">Perfect for freelancers and small agencies starting their cultural intelligence journey</span>
+                            <span data-lang="es">Perfecto para freelancers y agencias pequeñas iniciando su jornada de inteligencia cultural</span>
                         </p>
-                        <div class="mb-8">
-                            <p class="font-bold text-lg mb-4">
-                                <span data-lang="en">What's included:</span>
-                                <span data-lang="es">Qué incluye:</span>
-                            </p>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Free Cultural Readiness Audit (48-hour turnaround)</span>
-                                        <span data-lang="es">Auditoría Cultural Gratuita (entrega 48 horas)</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">CRS/CAI/CCS metrics access</span>
-                                        <span data-lang="es">Acceso métricas CRS/CAI/CCS</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Blue ocean opportunity identification</span>
-                                        <span data-lang="es">Identificación oportunidades blue ocean</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Basic site analysis (up to 1,000 sites/month)</span>
-                                        <span data-lang="es">Análisis básico sitios (hasta 1,000 sitios/mes)</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Email support & training</span>
-                                        <span data-lang="es">Soporte email y entrenamiento</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start text-gray-400">
-                                    <i class="fas fa-times mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Advanced programmatic integrations</span>
-                                        <span data-lang="es">Integraciones programáticas avanzadas</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start text-gray-400">
-                                    <i class="fas fa-times mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Dedicated account management</span>
-                                        <span data-lang="es">Gestión cuenta dedicada</span>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <a href="#demo" class="block w-full py-3 text-center rounded-lg btn-secondary font-semibold">
-                            <span data-lang="en">Start Free Audit</span>
-                            <span data-lang="es">Iniciar Auditoría Gratis</span>
-                        </a>
                     </div>
                     
-                    <!-- Professional Plan -->
-                    <div class="bg-white rounded-xl shadow-2xl p-8 card transform lg:scale-105 border-4 border-indigo-600 relative">
-                        <div class="popular-badge">
-                            <span data-lang="en">Most Popular</span>
-                            <span data-lang="es">Más Popular</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 mt-4">
-                            <span data-lang="en">Professional</span>
-                            <span data-lang="es">Profesional</span>
-                        </h3>
-                        <div class="flex items-end mb-6">
-                            <span class="text-5xl font-bold">$9,999</span>
-                            <span class="text-gray-500 ml-2">
-                                <span data-lang="en">/month</span>
-                                <span data-lang="es">/mes</span>
-                            </span>
-                        </div>
-                        <p class="text-gray-600 mb-6">
-                            <span data-lang="en">Complete platform access with all modules, SLA-defined update windows, and programmatic bridge for established teams.</span>
-                            <span data-lang="es">Acceso completo plataforma con todos los módulos, ventanas actualización SLA y puente programático para equipos establecidos.</span>
-                        </p>
-                        <div class="mb-8">
-                            <p class="font-bold text-lg mb-4">
-                                <span data-lang="en">Everything in Starter, plus:</span>
-                                <span data-lang="es">Todo en Básico, más:</span>
+                    <div class="grid lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <!-- Free Plan -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card">
+                            <h4 class="text-xl font-bold mb-2">
+                                <span data-lang="en">Free</span>
+                                <span data-lang="es">Gratis</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-3xl font-bold">$0</span>
+                                <span class="text-gray-500 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                <span data-lang="en">Try cultural intelligence without commitment.</span>
+                                <span data-lang="es">Prueba inteligencia cultural sin compromiso.</span>
                             </p>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Unlimited cultural scoring (up to 50K sites/month)</span>
-                                        <span data-lang="es">Scoring cultural ilimitado (hasta 50K sitios/mes)</span>
-                                    </span>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">1 cultural search/month</span>
+                                    <span data-lang="es">1 búsqueda cultural/mes</span>
                                 </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">SLA-defined update windows & latencies</span>
-                                        <span data-lang="es">Ventanas actualización y latencias definidas por SLA</span>
-                                    </span>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Up to 10 sites preview</span>
+                                    <span data-lang="es">Hasta 10 sitios preview</span>
                                 </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Programmatic Bridge export (DV360 certified)</span>
-                                        <span data-lang="es">Export Programmatic Bridge (DV360 certificado)</span>
-                                    </span>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Basic cultural filters</span>
+                                    <span data-lang="es">Filtros culturales básicos</span>
                                 </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Geographic arbitrage identification</span>
-                                        <span data-lang="es">Identificación arbitraje geográfico</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Advanced reporting & analytics</span>
-                                        <span data-lang="es">Reportes y analytics avanzados</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Multi-user accounts (up to 10 seats)</span>
-                                        <span data-lang="es">Cuentas multi-usuario (hasta 10 usuarios)</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start text-gray-400">
-                                    <i class="fas fa-times mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Custom cultural scoring models</span>
-                                        <span data-lang="es">Modelos scoring cultural personalizados</span>
-                                    </span>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Email support</span>
+                                    <span data-lang="es">Soporte email</span>
                                 </li>
                             </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg btn-secondary font-semibold">
+                                <span data-lang="en">Start Free</span>
+                                <span data-lang="es">Comenzar Gratis</span>
+                            </a>
                         </div>
-                        <a href="#demo" class="block w-full py-3 text-center rounded-lg text-white btn-primary font-semibold">
-                            <span data-lang="en">Start 14-Day Trial</span>
-                            <span data-lang="es">Iniciar Prueba 14 Días</span>
-                        </a>
+                        
+                        <!-- Starter Plan -->
+                        <div class="bg-white rounded-xl shadow-xl p-6 card transform lg:scale-105 border-2 border-indigo-600 relative">
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                                <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                                    <span data-lang="en">MOST POPULAR</span>
+                                    <span data-lang="es">MÁS POPULAR</span>
+                                </span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2 mt-2">
+                                <span data-lang="en">Starter</span>
+                                <span data-lang="es">Básico</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-3xl font-bold">$29</span>
+                                <span class="text-gray-500 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                <span data-lang="en">Your cultural intelligence assistant. Transform 15 hours of research into 15 minutes.</span>
+                                <span data-lang="es">Tu asistente de inteligencia cultural. Convierte 15 horas de investigación en 15 minutos.</span>
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">5 cultural searches/month</span>
+                                    <span data-lang="es">5 búsquedas culturales/mes</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">CSV export (100 URLs)</span>
+                                    <span data-lang="es">Export CSV (100 URLs)</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Basic cultural filters (3 categories)</span>
+                                    <span data-lang="es">Filtros culturales básicos (3 categorías)</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Email support</span>
+                                    <span data-lang="es">Soporte email</span>
+                                </li>
+                            </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg text-white btn-primary font-semibold">
+                                <span data-lang="en">Start Today</span>
+                                <span data-lang="es">Empezar Hoy</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Pro Plan -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card">
+                            <h4 class="text-xl font-bold mb-2">
+                                <span data-lang="en">Pro</span>
+                                <span data-lang="es">Pro</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-3xl font-bold">$79</span>
+                                <span class="text-gray-500 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                <span data-lang="en">Unlock the full power of cultural intelligence.</span>
+                                <span data-lang="es">Desbloquea el poder total de inteligencia cultural.</span>
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Unlimited searches</span>
+                                    <span data-lang="es">Búsquedas ilimitadas</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">500 URLs per list</span>
+                                    <span data-lang="es">500 URLs por lista</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Advanced filters (15+ categories)</span>
+                                    <span data-lang="es">Filtros avanzados (15+ categorías)</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Negative lists automation</span>
+                                    <span data-lang="es">Listas negativas automáticas</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Basic competitor analysis</span>
+                                    <span data-lang="es">Análisis básico competencia</span>
+                                </li>
+                            </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg btn-secondary font-semibold">
+                                <span data-lang="en">Unlock Pro</span>
+                                <span data-lang="es">Desbloquear Pro</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Agency Plan -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card">
+                            <div class="absolute top-3 right-3">
+                                <span class="value-badge">
+                                    <span data-lang="en">Teams</span>
+                                    <span data-lang="es">Equipos</span>
+                                </span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2 mt-4">
+                                <span data-lang="en">Agency</span>
+                                <span data-lang="es">Agencia</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-3xl font-bold">$199</span>
+                                <span class="text-gray-500 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                <span data-lang="en">Everything Pro + multi-user and white-label reports.</span>
+                                <span data-lang="es">Todo Pro + multi-usuario y reportes marca blanca.</span>
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Everything in Pro +</span>
+                                    <span data-lang="es">Todo en Pro +</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Multi-user (up to 5 seats)</span>
+                                    <span data-lang="es">Multi-usuario (hasta 5 usuarios)</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">White-label reports</span>
+                                    <span data-lang="es">Reportes marca blanca</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Priority support</span>
+                                    <span data-lang="es">Soporte prioritario</span>
+                                </li>
+                            </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg btn-secondary font-semibold">
+                                <span data-lang="en">Contact Sales</span>
+                                <span data-lang="es">Contactar Ventas</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION DIVIDER -->
+                <div class="pricing-section-divider">
+                    <h3 class="text-xl font-bold text-indigo-900 mb-2">
+                        <i class="fas fa-arrow-down mr-2"></i>
+                        <span data-lang="en">Need Enterprise-Scale Cultural Intelligence?</span>
+                        <span data-lang="es">¿Necesitas Inteligencia Cultural a Escala Empresarial?</span>
+                        <i class="fas fa-arrow-down ml-2"></i>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">For large agencies and Fortune 500 brands requiring unlimited scale, custom integrations, and dedicated success management</span>
+                        <span data-lang="es">Para grandes agencias y marcas Fortune 500 que requieren escala ilimitada, integraciones personalizadas y gestión de éxito dedicada</span>
+                    </p>
+                </div>
+
+                <!-- ENTERPRISE EDITION SECTION -->
+                <div>
+                    <div class="text-center mb-12">
+                        <h3 class="text-2xl md:text-3xl font-bold text-purple-900 mb-3">
+                            <span data-lang="en">Enterprise Edition</span>
+                            <span data-lang="es">Edición Empresarial</span>
+                        </h3>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                            <span data-lang="en">For Tier-1 agencies and Fortune 500 brands requiring unlimited cultural intelligence with seamless programmatic integration</span>
+                            <span data-lang="es">Para agencias Tier-1 y marcas Fortune 500 que requieren inteligencia cultural ilimitada con integración programática perfecta</span>
+                        </p>
                     </div>
                     
-                    <!-- Enterprise Plan -->
-                    <div class="bg-white rounded-xl shadow-lg p-8 card relative">
-                        <div class="absolute top-6 right-6">
-                            <span class="value-badge">
-                                <span data-lang="en">Custom</span>
-                                <span data-lang="es">Personalizado</span>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">
-                            <span data-lang="en">Enterprise</span>
-                            <span data-lang="es">Empresarial</span>
-                        </h3>
-                        <div class="flex items-end mb-6">
-                            <span class="text-4xl font-bold">
-                                <span data-lang="en">Custom</span>
-                                <span data-lang="es">Personalizado</span>
-                            </span>
-                        </div>
-                        <p class="text-gray-600 mb-6">
-                            <span data-lang="en">Enterprise-grade cultural intelligence with unlimited scale, custom integrations, and dedicated success management.</span>
-                            <span data-lang="es">Inteligencia cultural nivel empresarial con escala ilimitada, integraciones personalizadas y gestión de éxito dedicada.</span>
-                        </p>
-                        <div class="mb-8">
-                            <p class="font-bold text-lg mb-4">
-                                <span data-lang="en">Everything in Professional, plus:</span>
-                                <span data-lang="es">Todo en Profesional, más:</span>
+                    <div class="grid lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <!-- Enterprise Core -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card">
+                            <div class="absolute top-3 right-3">
+                                <span class="value-badge">
+                                    <span data-lang="en">Free Audit</span>
+                                    <span data-lang="es">Auditoría Gratis</span>
+                                </span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2 mt-4">
+                                <span data-lang="en">Enterprise Core</span>
+                                <span data-lang="es">Empresarial Core</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-3xl font-bold">$2,500</span>
+                                <span class="text-gray-500 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                <span data-lang="en">Perfect entry point with free comprehensive audit and blue ocean identification.</span>
+                                <span data-lang="es">Punto de entrada perfecto con auditoría integral gratuita e identificación blue ocean.</span>
                             </p>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Unlimited cultural scoring & analysis</span>
-                                        <span data-lang="es">Scoring y análisis cultural ilimitado</span>
-                                    </span>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Free Cultural Audit (48h)</span>
+                                    <span data-lang="es">Auditoría Cultural Gratis (48h)</span>
                                 </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Custom cultural scoring models & algorithms</span>
-                                        <span data-lang="es">Modelos y algoritmos scoring cultural personalizados</span>
-                                    </span>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Up to 1K sites/month</span>
+                                    <span data-lang="es">Hasta 1K sitios/mes</span>
                                 </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Full programmatic API integration suite</span>
-                                        <span data-lang="es">Suite completa integración API programática</span>
-                                    </span>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">CRS/CAI/CCS metrics</span>
+                                    <span data-lang="es">Métricas CRS/CAI/CCS</span>
                                 </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">BI/Data warehouse connectors</span>
-                                        <span data-lang="es">Conectores BI/Data warehouse</span>
-                                    </span>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Blue ocean identification</span>
+                                    <span data-lang="es">Identificación blue ocean</span>
                                 </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Dedicated customer success manager</span>
-                                        <span data-lang="es">Gerente éxito cliente dedicado</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">White-label platform options</span>
-                                        <span data-lang="es">Opciones plataforma marca blanca</span>
-                                    </span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                    <span>
-                                        <span data-lang="en">Priority support & custom SLA</span>
-                                        <span data-lang="es">Soporte prioritario y SLA personalizado</span>
-                                    </span>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Email support</span>
+                                    <span data-lang="es">Soporte email</span>
                                 </li>
                             </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg btn-secondary font-semibold">
+                                <span data-lang="en">Start Free Audit</span>
+                                <span data-lang="es">Iniciar Auditoría Gratis</span>
+                            </a>
                         </div>
-                        <a href="#demo" class="block w-full py-3 text-center rounded-lg btn-secondary font-semibold">
-                            <span data-lang="en">Contact Sales</span>
-                            <span data-lang="es">Contactar Ventas</span>
-                        </a>
+                        
+                        <!-- Enterprise Advanced -->
+                        <div class="bg-white rounded-xl shadow-xl p-6 card transform lg:scale-105 border-2 border-purple-600 relative">
+                            <div class="popular-badge">
+                                <span data-lang="en">Enterprise Popular</span>
+                                <span data-lang="es">Empresarial Popular</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2 mt-4">
+                                <span data-lang="en">Enterprise Advanced</span>
+                                <span data-lang="es">Empresarial Avanzado</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-3xl font-bold">$5,000</span>
+                                <span class="text-gray-500 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                <span data-lang="en">Complete platform access with SLA-defined updates and programmatic bridge for established teams.</span>
+                                <span data-lang="es">Acceso completo plataforma con actualizaciones SLA y puente programático para equipos establecidos.</span>
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Everything in Core +</span>
+                                    <span data-lang="es">Todo en Core +</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Unlimited cultural scoring</span>
+                                    <span data-lang="es">Scoring cultural ilimitado</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">SLA-defined update windows</span>
+                                    <span data-lang="es">Ventanas actualización SLA</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Programmatic Bridge (DV360)</span>
+                                    <span data-lang="es">Puente Programático (DV360)</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Multi-user (10 seats)</span>
+                                    <span data-lang="es">Multi-usuario (10 usuarios)</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Advanced analytics</span>
+                                    <span data-lang="es">Analytics avanzados</span>
+                                </li>
+                            </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg text-white btn-primary font-semibold">
+                                <span data-lang="en">14-Day Trial</span>
+                                <span data-lang="es">Prueba 14 Días</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Enterprise Premium -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card">
+                            <h4 class="text-xl font-bold mb-2">
+                                <span data-lang="en">Enterprise Premium</span>
+                                <span data-lang="es">Empresarial Premium</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-3xl font-bold">$8,500</span>
+                                <span class="text-gray-500 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                <span data-lang="en">Advanced customization with BI integrations and priority support.</span>
+                                <span data-lang="es">Personalización avanzada con integraciones BI y soporte prioritario.</span>
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Everything in Advanced +</span>
+                                    <span data-lang="es">Todo en Avanzado +</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Custom cultural models</span>
+                                    <span data-lang="es">Modelos culturales personalizados</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">BI/warehouse connectors</span>
+                                    <span data-lang="es">Conectores BI/warehouse</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Multi-tenant architecture</span>
+                                    <span data-lang="es">Arquitectura multi-tenant</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span data-lang="en">Priority support (2h SLA)</span>
+                                    <span data-lang="es">Soporte prioritario (2h SLA)</span>
+                                </li>
+                            </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg btn-secondary font-semibold">
+                                <span data-lang="en">Contact Sales</span>
+                                <span data-lang="es">Contactar Ventas</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Custom Enterprise -->
+                        <div class="bg-gradient text-white rounded-xl shadow-lg p-6 card">
+                            <h4 class="text-xl font-bold mb-2">
+                                <span data-lang="en">Custom Enterprise</span>
+                                <span data-lang="es">Empresarial Personalizado</span>
+                            </h4>
+                            <div class="flex items-end mb-4">
+                                <span class="text-2xl font-bold">$15,000+</span>
+                                <span class="text-gray-200 ml-2">
+                                    <span data-lang="en">/month</span>
+                                    <span data-lang="es">/mes</span>
+                                </span>
+                            </div>
+                            <p class="text-gray-200 mb-4">
+                                <span data-lang="en">Enterprise-grade with full API suite, white-label platform, and dedicated CSM.</span>
+                                <span data-lang="es">Nivel empresarial con suite API completa, plataforma marca blanca y CSM dedicado.</span>
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
+                                    <span data-lang="en">Everything in Premium +</span>
+                                    <span data-lang="es">Todo en Premium +</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
+                                    <span data-lang="en">Full API integration suite</span>
+                                    <span data-lang="es">Suite integración API completa</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
+                                    <span data-lang="en">White-label platform</span>
+                                    <span data-lang="es">Plataforma marca blanca</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
+                                    <span data-lang="en">Dedicated CSM</span>
+                                    <span data-lang="es">CSM dedicado</span>
+                                </li>
+                                <li class="flex items-start text-sm">
+                                    <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
+                                    <span data-lang="en">Custom SLA & QBR</span>
+                                    <span data-lang="es">SLA personalizado y QBR</span>
+                                </li>
+                            </ul>
+                            <a href="#demo" class="block w-full py-2 text-center rounded-lg bg-white text-indigo-900 font-semibold hover:bg-gray-100">
+                                <span data-lang="en">Contact Sales</span>
+                                <span data-lang="es">Contactar Ventas</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Mantener exactamente igual el resto de secciones: ROI Calculator, Social Proof, FAQ, CTA -->
         <!-- ROI Calculator Section -->
         <section id="roi-calculator-section" class="py-20 bg-white">
             <div class="container mx-auto px-6 md:px-12">
@@ -556,8 +768,8 @@
                         </span>
                     </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        <span data-lang="en">See your potential savings based on our analysis of 5,553 sites showing cultural inventory costs 9.3% less than general market.</span>
-                        <span data-lang="es">Ve tus ahorros potenciales basados en nuestro análisis de 5,553 sitios mostrando que inventario cultural cuesta 9.3% menos que mercado general.</span>
+                        <span data-lang="en">See your potential savings based on our analysis of 41,745 sites showing cultural inventory costs 9.3% less than general market.</span>
+                        <span data-lang="es">Ve tus ahorros potenciales basados en nuestro análisis de 41,745 sitios mostrando que inventario cultural cuesta 9.3% menos que mercado general.</span>
                     </p>
                 </div>
 
@@ -764,8 +976,8 @@
                             <span data-lang="es">¿Cómo miden la relevancia cultural?</span>
                         </h4>
                         <p class="text-gray-700">
-                            <span data-lang="en">Our proprietary HICE engine analyzes content for cultural markers (references, values, traditions, language patterns) and validates them against Hispanic cultural preference data from our 5,553-site database. The result is auditable CRS/CAI/CCS scores from 0-100.</span>
-                            <span data-lang="es">Nuestro motor propietario HICE analiza contenido para marcadores culturales (referencias, valores, tradiciones, patrones idioma) y los valida contra datos preferencia cultural hispana de nuestra base de 5,553 sitios. El resultado son scores auditables CRS/CAI/CCS de 0-100.</span>
+                            <span data-lang="en">Our proprietary HICE engine analyzes content for cultural markers (references, values, traditions, language patterns) and validates them against Hispanic cultural preference data from our 41,745-site database. The result is auditable CRS/CAI/CCS scores from 0-100.</span>
+                            <span data-lang="es">Nuestro motor propietario HICE analiza contenido para marcadores culturales (referencias, valores, tradiciones, patrones idioma) y los valida contra datos preferencia cultural hispana de nuestra base de 41,745 sitios. El resultado son scores auditables CRS/CAI/CCS de 0-100.</span>
                         </p>
                     </div>
                     
@@ -805,8 +1017,8 @@
                                 <span data-lang="es">¿Listo para Iniciar tu Viaje de Inteligencia Cultural?</span>
                             </h2>
                             <p class="text-xl text-gray-600 mb-8">
-                                <span data-lang="en">Get your free Cultural Readiness Audit and see how your current strategy compares to 5,553 analyzed sites with verified performance data.</span>
-                                <span data-lang="es">Obtén tu Auditoría de Preparación Cultural gratuita y ve cómo tu estrategia actual se compara con 5,553 sitios analizados con datos de performance verificados.</span>
+                                <span data-lang="en">Get your free Cultural Readiness Audit and see how your current strategy compares to 41,745 analyzed sites with verified performance data.</span>
+                                <span data-lang="es">Obtén tu Auditoría de Preparación Cultural gratuita y ve cómo tu estrategia actual se compara con 41,745 sitios analizados con datos de performance verificados.</span>
                             </p>
                             <form class="space-y-4">
                                 <div>
@@ -814,18 +1026,18 @@
                                         <span data-lang="en">Name</span>
                                         <span data-lang="es">Nombre</span>
                                     </label>
-                                    <input type="text" id="name" placeholder_en="Your name" placeholder_es="Tu nombre" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    <input type="text" id="name" placeholder="Your name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                 </div>
                                 <div>
                                     <label for="company" class="block text-sm font-medium text-gray-700 mb-1">
                                         <span data-lang="en">Company</span>
                                         <span data-lang="es">Empresa</span>
                                     </label>
-                                    <input type="text" id="company" placeholder_en="Your company" placeholder_es="Tu empresa" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    <input type="text" id="company" placeholder="Your company" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                    <input type="email" id="email" placeholder_en="Your email" placeholder_es="Tu email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    <input type="email" id="email" placeholder="Your email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                 </div>
                                 <button type="submit" class="w-full py-3 rounded-lg text-white btn-primary font-semibold">
                                     <span data-lang="en">Get Free Cultural Audit</span>
@@ -872,8 +1084,8 @@
                         <text x="65" y="55" font-family="Space Grotesk" font-weight="600" font-size="20" fill="white">Brain</text>
                     </svg>
                     <p class="text-sm text-gray-400 mb-4">
-                        <span data-lang="en">The platform that combines cultural intelligence with programmatic activation. Pipeline operational with 5,553+ sites analyzed.</span>
-                        <span data-lang="es">La plataforma que combina inteligencia cultural con activación programática. Pipeline operativo con 5,553+ sitios analizados.</span>
+                        <span data-lang="en">The platform that combines cultural intelligence with programmatic activation. Pipeline operational with 41,745+ sites analyzed.</span>
+                        <span data-lang="es">La plataforma que combina inteligencia cultural con activación programática. Pipeline operativo con 41,745+ sitios analizados.</span>
                     </p>
                     <p class="text-xs text-gray-500">
                         <span data-lang="en">Data cut-off: Aug 12, 2025</span>
@@ -979,9 +1191,9 @@
                     currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
                     currentLangFlag.alt = 'ES';
                     currentLangText.textContent = 'ES';
-                    if(nameInput) nameInput.placeholder = nameInput.getAttribute('placeholder_es');
-                    if(companyInput) companyInput.placeholder = companyInput.getAttribute('placeholder_es');
-                    if(emailInput) emailInput.placeholder = emailInput.getAttribute('placeholder_es');
+                    if(nameInput) nameInput.placeholder = 'Tu nombre';
+                    if(companyInput) companyInput.placeholder = 'Tu empresa';
+                    if(emailInput) emailInput.placeholder = 'Tu email';
                     document.title = 'Cultural Brain - Precios Flexibles | Inteligencia Cultural Programática';
                     document.querySelector('meta[name="description"]').setAttribute("content", "Escala tu marketing hispano con precios flexibles. Desde auditoría cultural gratis hasta inteligencia empresarial. Actualizaciones SLA, métricas auditables, ROI comprobado.");
 
@@ -989,9 +1201,9 @@
                     currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
                     currentLangFlag.alt = 'EN';
                     currentLangText.textContent = 'EN';
-                    if(nameInput) nameInput.placeholder = nameInput.getAttribute('placeholder_en');
-                    if(companyInput) companyInput.placeholder = companyInput.getAttribute('placeholder_en');
-                    if(emailInput) emailInput.placeholder = emailInput.getAttribute('placeholder_en');
+                    if(nameInput) nameInput.placeholder = 'Your name';
+                    if(companyInput) companyInput.placeholder = 'Your company';
+                    if(emailInput) emailInput.placeholder = 'Your email';
                     document.title = 'Cultural Brain - Flexible Pricing Plans | Programmatic Cultural Intelligence';
                     document.querySelector('meta[name="description"]').setAttribute("content", "Scale your Hispanic marketing with flexible pricing. From free cultural audit to enterprise intelligence. SLA-defined updates, auditable metrics, proven ROI.");
                 }
