@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cultural Brain - Cultural Intelligence Platform | Hispanic Media Planning</title>
-    <meta name="description" content="Plan and measure Hispanic marketing campaigns with scientific precision. 41,745+ sites analyzed. CRS, CAI, CCS metrics. Cultural intelligence for media planning.">
+    <title>Cultural Brain - Actionable Cultural Intelligence, Cookieless | US & LATAM</title>
+    <meta name="description" content="Define audiences by geo+demo+lifestyle+media consumption. Estimate size with official data and activate site/app/channel/keyword lists in minutes. CRS/CAI/CCS auditable metrics.">
     
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
 
-    
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
         :root {
@@ -91,51 +89,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
-        }
-        
-        .use-case-tab {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-        
-        .use-case-tab.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .use-case-content {
-            display: none;
-        }
-        
-        .use-case-content.active {
-            display: block;
-        }
-        
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .animate-pulse-slow {
-            animation: pulse 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-        
-        .stats-banner {
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(109, 27, 143, 0.05));
-            border: 1px solid rgba(30, 58, 138, 0.1);
         }
         
         .language-switcher {
@@ -220,1065 +173,1167 @@
         body.lang-es [data-lang="es"] {
             display: initial;
         }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .stat-box {
+            background: rgba(109, 27, 143, 0.05);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .country-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .country-card:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 4px 12px rgba(109, 27, 143, 0.1);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(109, 27, 143, 0.1);
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            min-height: 120px;
+            resize: vertical;
+            transition: all 0.3s ease;
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(109, 27, 143, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
     </style>
 </head>
-<body class="bg-white">
-
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="flex items-center">
-               <img src="https://www.culturalbrain.app/static/images/logo_cb_01.png" alt="Cultural Brain Logo" class="h-12 w-auto"> 
-            </a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#platform" class="text-gray-600 hover:text-indigo-900 font-medium transition-colors">
-                    <span data-lang="en">Platform</span>
-                    <span data-lang="es">Plataforma</span>
-                </a>
-                <a href="#metrics" class="text-gray-600 hover:text-indigo-900 font-medium transition-colors">
-                    <span data-lang="en">Metrics</span>
-                    <span data-lang="es">Métricas</span>
-                </a>
-                <a href="#use-cases" class="text-gray-600 hover:text-indigo-900 font-medium transition-colors">
-                    <span data-lang="en">Use Cases</span>
-                    <span data-lang="es">Casos de Uso</span>
-                </a>
-                <a href="/pricing" class="text-gray-600 hover:text-indigo-900 font-medium transition-colors">
-                    <span data-lang="en">Pricing</span>
-                    <span data-lang="es">Precios</span>
-                </a>
-                <div class="language-switcher">
-                    <button class="language-btn" id="currentLangBtn">
-                        <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag" id="currentLangFlag">
-                        <span id="currentLangText">EN</span>
-                        <i class="fas fa-chevron-down text-xs ml-1"></i>
-                    </button>
-                    <div class="language-dropdown">
-                        <div class="language-option active" onclick="changeLanguage('en')">
-                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
-                            <span>English</span>
-                        </div>
-                        <div class="language-option" onclick="changeLanguage('es')">
-                            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="language-flag">
-                            <span>Español</span>
+<body>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <h1 class="text-2xl font-bold brain-gradient">🧠 Cultural Brain</h1>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-semibold">US + LATAM</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#how-we-work" class="text-gray-700 hover:text-purple-600 transition-colors">
+                        <span data-lang="en">How We Work</span>
+                        <span data-lang="es">Cómo Trabajamos</span>
+                    </a>
+                    <a href="#metrics" class="text-gray-700 hover:text-purple-600 transition-colors">
+                        <span data-lang="en">Metrics</span>
+                        <span data-lang="es">Métricas</span>
+                    </a>
+                    <a href="#modules" class="text-gray-700 hover:text-purple-600 transition-colors">
+                        <span data-lang="en">Modules</span>
+                        <span data-lang="es">Módulos</span>
+                    </a>
+                    <a href="/pricing.html" class="text-gray-700 hover:text-purple-600 transition-colors">
+                        <span data-lang="en">Pricing</span>
+                        <span data-lang="es">Precios</span>
+                    </a>
+                    
+                    <div class="language-switcher">
+                        <button id="currentLangBtn" class="language-btn">
+                            <img id="currentLangFlag" src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag">
+                            <span id="currentLangText">EN</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="language-dropdown">
+                            <div class="language-option" onclick="changeLanguage('en')">
+                                <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" onclick="changeLanguage('es')">
+                                <img src="https://flagcdn.com/w20/es.png" alt="ES" class="language-flag">
+                                <span>Español</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <a href="#demo" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
+                        <span data-lang="en">Get Started</span>
+                        <span data-lang="es">Comenzar</span>
+                    </a>
                 </div>
-                <a href="#demo" class="px-6 py-2 rounded-lg text-white btn-primary font-semibold">
-                    <span data-lang="en">Get Started</span>
-                    <span data-lang="es">Comenzar</span>
-                </a>
+                
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-100 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-4 text-sm">
+                <span class="status-badge">
+                    <span class="status-dot"></span>
+                    <span data-lang="en">Operational</span>
+                    <span data-lang="es">Operativo</span>
+                </span>
+                <span class="text-gray-600">
+                    <span data-lang="en">42,000+ sites analyzed • High precision validated • Stable platform</span>
+                    <span data-lang="es">42,000+ sitios analizados • Alta precisión validada • Plataforma estable</span>
+                </span>
             </div>
         </div>
     </nav>
 
-    <!-- Stats Banner -->
-    <div class="stats-banner py-3 px-6 mt-20">
-        <div class="container mx-auto text-center">
-            <p class="text-sm font-medium text-indigo-900">
-                <span data-lang="en">✅ Operational: <strong>41,745 sites analyzed</strong> • <strong>99.2% cultural accuracy</strong> • <strong>Platform stable</strong> (Data cut-off: Aug 12, 2025)</span>
-                <span data-lang="es">✅ Operativo: <strong>41,745 sitios analizados</strong> • <strong>99.2% precisión cultural</strong> • <strong>Plataforma estable</strong> (Corte: 12 Ago 2025)</span>
+    <section class="pt-20 pb-20 bg-hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-xs uppercase tracking-wider text-gray-500 mb-4">
+                <span data-lang="en">Cookieless • Audience → Media → Tactics</span>
+                <span data-lang="es">Cookieless • Audiencia → Medios → Táctica</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                <span data-lang="en">Actionable Cultural Intelligence, </span>
+                <span data-lang="es">Inteligencia Cultural Accionable, </span>
+                <span class="brain-gradient">
+                    <span data-lang="en">Cookieless</span>
+                    <span data-lang="es">Sin Cookies</span>
+                </span>
+            </h1>
+            
+            <p class="text-xl text-gray-700 mb-8 max-w-4xl">
+                <span data-lang="en">Define audiences by <strong>geo, demo, lifestyle, and media consumption</strong>, estimate their size with <strong>official data</strong> (USA Census/ACS/PUMS, <strong>INEGI, INDEC, DANE, INE, INEI</strong>), and <strong>activate</strong> lists of <strong>sites, apps, channels, and keywords</strong> in minutes. All with auditable <strong>CRS/CAI/CCS</strong> metrics and <strong>contextual brand protection</strong>.</span>
+                <span data-lang="es">Definí audiencias por <strong>geo, demo, estilo de vida y consumo de medios</strong>, estimá su tamaño con <strong>datos oficiales</strong> (USA Census/ACS/PUMS, <strong>INEGI, INDEC, DANE, INE, INEI</strong>) y <strong>activá</strong> listas de <strong>sitios, apps, canales y keywords</strong> en minutos. Todo con métricas <strong>CRS/CAI/CCS</strong> auditables y <strong>protección de marca contextual</strong>.</span>
             </p>
-        </div>
-    </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="pt-20 pb-20 bg-hero-pattern">
-            <div class="container mx-auto px-6 md:px-12 text-center">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                    <span data-lang="en">Transform Cultural Relevance Into </span>
-                    <span data-lang="es">Transforma la Relevancia Cultural en </span>
-                    <span class="brain-gradient">
-                        <span data-lang="en">Measurable Intelligence</span>
-                        <span data-lang="es">Inteligencia Medible</span>
-                    </span>
-                </h1>
-                <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-10">
-                    <span data-lang="en">The first Cultural Intelligence Platform for Hispanic media planning. Make cultural relevance as measurable and actionable as viewability or brand safety.</span>
-                    <span data-lang="es">La primera Plataforma de Inteligencia Cultural para planificación de medios hispanos. Haz que la relevancia cultural sea tan medible y accionable como la visibilidad o la seguridad de marca.</span>
-                </p>
-                
-                <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <a href="#demo" class="px-8 py-4 rounded-lg text-white btn-primary font-bold text-lg">
-                        <span data-lang="en">Free Cultural Audit</span>
-                        <span data-lang="es">Auditoría Cultural Gratuita</span>
-                    </a>
-                    <a href="#demo" class="px-8 py-4 rounded-lg btn-secondary font-bold text-lg">
-                        <span data-lang="en">Book Platform Demo</span>
-                        <span data-lang="es">Agendar Demo Plataforma</span>
-                    </a>
-                </div>
-
-                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-left p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200">
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <span class="block text-3xl font-bold text-blue-900">41,745</span>
-                        <span class="block text-gray-600">
-                            <span data-lang="en">sites analyzed with verified performance data</span>
-                            <span data-lang="es">sitios analizados con datos de performance verificados</span>
-                        </span>
-                    </div>
-                    <div class="border-l-4 border-purple-600 pl-4">
-                        <span class="block text-3xl font-bold text-purple-900">9.3%</span>
-                        <span class="block text-gray-600">
-                            <span data-lang="en">average cost advantage on cultural inventory</span>
-                            <span data-lang="es">ventaja promedio de costo en inventario cultural</span>
-                        </span>
-                    </div>
-                    <div class="border-l-4 border-teal-500 pl-4">
-                        <span class="block text-3xl font-bold text-teal-800">15,712</span>
-                        <span class="block text-gray-600">
-                            <span data-lang="en">underutilized cultural sites identified</span>
-                            <span data-lang="es">sitios culturales subutilizados identificados</span>
-                        </span>
-                    </div>
-                    <div class="border-l-4 border-red-500 pl-4">
-                        <span class="block text-3xl font-bold text-red-800">96,334</span>
-                        <span class="block text-gray-600">
-                            <span data-lang="en">peak efficiency score recorded</span>
-                            <span data-lang="es">puntaje máximo de eficiencia registrado</span>
-                        </span>
-                    </div>
-                </div>
-                <p class="mt-8 text-gray-600 italic">
-                    <span data-lang="en">"Cultural Brain identified efficiency opportunities in our automotive campaigns that we never knew existed."</span>
-                    <span data-lang="es">"Cultural Brain identificó oportunidades de eficiencia en nuestras campañas automotrices que nunca supimos que existían."</span>
-                    <br><strong>
-                        <span data-lang="en">- Media Planning Director, Major Agency</span>
-                        <span data-lang="es">- Director de Planificación de Medios, Agencia Principal</span>
-                    </strong>
-                </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+                <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 font-medium">Cookieless</span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 font-medium">
+                    <span data-lang="en">Audience → Media → Tactics</span>
+                    <span data-lang="es">Audiencia → Medios → Táctica</span>
+                </span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 font-medium">
+                    <span data-lang="en">Auditable CRS/CAI/CCS</span>
+                    <span data-lang="es">CRS/CAI/CCS Auditables</span>
+                </span>
+                <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 font-medium">
+                    <span data-lang="en">Contextual Brand Protection</span>
+                    <span data-lang="es">Protección de Marca Contextual</span>
+                </span>
             </div>
-        </section>
-
-        <!-- Problem Solution Section -->
-        <section id="problem-solution" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                            <span data-lang="en">The <span class="text-red-600">$120B Opportunity</span> Hidden By Measurement Blindness</span>
-                            <span data-lang="es">La <span class="text-red-600">Oportunidad de $120B</span> Oculta por la Ceguera de Medición</span>
-                        </h2>
-                        <p class="text-lg text-gray-600 mb-6">
-                            <span data-lang="en">Hispanic consumers represent $3.2T in buying power but receive only 5.3% of advertising investment. The gap isn't about awareness—it's about measurement.</span>
-                            <span data-lang="es">Los consumidores hispanos representan $3.2T en poder adquisitivo pero reciben solo el 5.3% de la inversión publicitaria. La brecha no es sobre conciencia—es sobre medición.</span>
-                        </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <i class="fas fa-times-circle text-red-500 mr-3 mt-1"></i>
-                                <span>
-                                    <strong>
-                                        <span data-lang="en">Traditional tools can't measure culture:</span>
-                                        <span data-lang="es">Las herramientas tradicionales no pueden medir cultura:</span>
-                                    </strong>
-                                    <span data-lang="en"> They segment by demographics, not cultural relevance.</span>
-                                    <span data-lang="es"> Segmentan por demografía, no por relevancia cultural.</span>
-                                </span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-times-circle text-red-500 mr-3 mt-1"></i>
-                                <span>
-                                    <strong>
-                                        <span data-lang="en">False "premium" assumption:</span>
-                                        <span data-lang="es">Falsa suposición de "premium":</span>
-                                    </strong>
-                                    <span data-lang="en"> The market thinks cultural targeting costs more, but our data proves it costs 9.3% less.</span>
-                                    <span data-lang="es"> El mercado piensa que el targeting cultural cuesta más, pero nuestros datos prueban que cuesta 9.3% menos.</span>
-                                </span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-times-circle text-red-500 mr-3 mt-1"></i>
-                                <span>
-                                    <strong>
-                                        <span data-lang="en">Massive missed opportunities:</span>
-                                        <span data-lang="es">Oportunidades masivas perdidas:</span>
-                                    </strong>
-                                    <span data-lang="en"> Categories like Automotive (92% underutilized) and Technology (97% underutilized) are ignored.</span>
-                                    <span data-lang="es"> Categorías como Automotriz (92% subutilizada) y Tecnología (97% subutilizada) son ignoradas.</span>
-                                </span>
-                            </li>
-                        </ul>
-                        <p class="mt-6 font-semibold">
-                            <span data-lang="en">The gap exists because cultural relevance was unmeasurable. Until now.</span>
-                            <span data-lang="es">La brecha existe porque la relevancia cultural era imposible de medir. Hasta ahora.</span>
-                        </p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-xl">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                            <span class="brain-gradient">
-                                <span data-lang="en">Cultural Intelligence</span>
-                                <span data-lang="es">Inteligencia Cultural</span>
-                            </span>
-                            <span data-lang="en"> Made Quantitative</span>
-                            <span data-lang="es"> Hecha Cuantitativa</span>
-                        </h2>
-                        <p class="text-lg text-gray-600 mb-6">
-                            <span data-lang="en">Cultural Brain introduces the first scientific framework for measuring cultural relevance at programmatic scale.</span>
-                            <span data-lang="es">Cultural Brain introduce el primer marco científico para medir la relevancia cultural a escala programática.</span>
-                        </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <div class="w-10 h-10 rounded-lg bg-blue-100 flex-shrink-0 flex items-center justify-center mr-4">
-                                    <i class="fas fa-bullseye feature-icon text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">
-                                        <span data-lang="en">Cultural Relevance Score (CRS)</span>
-                                        <span data-lang="es">Puntaje de Relevancia Cultural (CRS)</span>
-                                    </h4>
-                                    <p class="text-sm text-gray-600">
-                                        <span data-lang="en">A 0-100 measurement of cultural alignment. Know exactly how much content resonates.</span>
-                                        <span data-lang="es">Una medición de 0-100 de alineación cultural. Sabe exactamente cuánto resuena el contenido.</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-10 h-10 rounded-lg bg-purple-100 flex-shrink-0 flex items-center justify-center mr-4">
-                                    <i class="fas fa-users feature-icon text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">
-                                        <span data-lang="en">Cultural Affinity Index (CAI)</span>
-                                        <span data-lang="es">Índice de Afinidad Cultural (CAI)</span>
-                                    </h4>
-                                    <p class="text-sm text-gray-600">
-                                        <span data-lang="en">Dynamic measurement of message-audience cultural fit for campaign optimization.</span>
-                                        <span data-lang="es">Medición dinámica del ajuste cultural mensaje-audiencia para optimización de campañas.</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-10 h-10 rounded-lg bg-teal-100 flex-shrink-0 flex items-center justify-center mr-4">
-                                    <i class="fas fa-link feature-icon text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">
-                                        <span data-lang="en">Cultural Cohesion Score (CCS)</span>
-                                        <span data-lang="es">Puntaje de Cohesión Cultural (CCS)</span>
-                                    </h4>
-                                    <p class="text-sm text-gray-600">
-                                        <span data-lang="en">Identifies reliable long-term cultural partnerships by measuring temporal stability.</span>
-                                        <span data-lang="es">Identifica asociaciones culturales confiables a largo plazo midiendo la estabilidad temporal.</span>
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                <a href="/pricing.html" class="px-8 py-4 rounded-lg text-white btn-primary font-bold text-lg text-center">
+                    <span data-lang="en">Try 7 Days / 100 Credits</span>
+                    <span data-lang="es">Probar 7 Días / 100 Créditos</span>
+                </a>
+                <a href="#contact" class="px-8 py-4 rounded-lg btn-secondary font-bold text-lg text-center">
+                    <span data-lang="en">Book Demo</span>
+                    <span data-lang="es">Agendar Demo</span>
+                </a>
             </div>
-        </section>
 
-        <!-- Cultural Metrics Section -->
-        <section id="metrics" class="py-20">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                        <span data-lang="en">Auditable Cultural </span>
-                        <span data-lang="es">Métricas Culturales </span>
-                        <span class="brain-gradient">
-                            <span data-lang="en">Metrics</span>
-                            <span data-lang="es">Auditables</span>
-                        </span>
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        <span data-lang="en">Our proprietary metrics provide data-backed analysis with full explainability and traceability. All results anchored to verifiable data with documented methodology.</span>
-                        <span data-lang="es">Nuestras métricas propietarias brindan análisis respaldado por datos con completa explicabilidad y trazabilidad. Todos los resultados anclados a datos verificables con metodología documentada.</span>
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-xl p-8 card border-l-4 border-blue-600">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
-                                <i class="fas fa-bullseye text-2xl feature-icon"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold">CRS</h3>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-4">
-                            <span data-lang="en">Cultural Relevance Score</span>
-                            <span data-lang="es">Puntaje de Relevancia Cultural</span>
-                        </h4>
-                        <p class="text-gray-600 mb-6">
-                            <span data-lang="en">Measures the cultural density in a website's content through the presence of cultural markers like linguistic patterns, traditions, values, and cultural references.</span>
-                            <span data-lang="es">Mide la densidad cultural en el contenido de un sitio web a través de la presencia de marcadores culturales como patrones lingüísticos, tradiciones, valores y referencias culturales.</span>
-                        </p>
-                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-medium">
-                                    <span data-lang="en">Database Avg: 54%</span>
-                                    <span data-lang="es">Prom. Base: 54%</span>
-                                </span>
-                                <span class="text-sm font-medium">
-                                    <span data-lang="en">Elite Range: 75-100%</span>
-                                    <span data-lang="es">Rango Elite: 75-100%</span>
-                                </span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-blue-600 h-2 rounded-full" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <ul class="space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Language authenticity analysis</span>
-                                <span data-lang="es">Análisis de autenticidad del lenguaje</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Cultural markers validation</span>
-                                <span data-lang="es">Validación de marcadores culturales</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Regional specificity scoring</span>
-                                <span data-lang="es">Scoring de especificidad regional</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-xl p-8 card border-l-4 border-purple-600">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
-                                <i class="fas fa-users text-2xl feature-icon"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold">CAI</h3>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-4">
-                            <span data-lang="en">Cultural Affinity Index</span>
-                            <span data-lang="es">Índice de Afinidad Cultural</span>
-                        </h4>
-                        <p class="text-gray-600 mb-6">
-                            <span data-lang="en">Dynamic metric that evaluates how much affinity a specific target audience has toward a website's content based on their cultural profile and preferences.</span>
-                            <span data-lang="es">Métrica dinámica que evalúa cuánta afinidad tiene una audiencia objetivo específica hacia el contenido de un sitio web basándose en su perfil cultural y preferencias.</span>
-                        </p>
-                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-medium">
-                                    <span data-lang="en">Campaign Context</span>
-                                    <span data-lang="es">Contexto Campaña</span>
-                                </span>
-                                <span class="text-sm font-medium">
-                                    <span data-lang="en">Range: 0-1.0</span>
-                                    <span data-lang="es">Rango: 0-1.0</span>
-                                </span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-purple-600 h-2 rounded-full" style="width: 78%"></div>
-                            </div>
-                            <div class="text-center mt-2 text-sm">
-                                <span data-lang="en">Sample Campaign: 0.78</span>
-                                <span data-lang="es">Campaña Ejemplo: 0.78</span>
-                            </div>
-                        </div>
-                        <ul class="space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Value alignment scoring</span>
-                                <span data-lang="es">Scoring de alineación de valores</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Message-audience matching</span>
-                                <span data-lang="es">Matching mensaje-audiencia</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Generational preference weighting</span>
-                                <span data-lang="es">Ponderación preferencias generacionales</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-xl p-8 card border-l-4 border-blue-600">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4 shadow-lg">
-                                <i class="fas fa-chart-pie text-2xl feature-icon"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold">CCS</h3>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-4">
-                            <span data-lang="en">Cultural Cohesion Score</span>
-                            <span data-lang="es">Puntaje de Cohesión Cultural</span>
-                        </h4>
-                        <p class="text-gray-600 mb-6">
-                            <span data-lang="en">Evaluates the cultural consistency of a website over time, measuring how stable its cultural markers and messaging remain to identify reliable long-term partnerships.</span>
-                            <span data-lang="es">Evalúa la consistencia cultural de un sitio web a lo largo del tiempo, midiendo qué tan estables permanecen sus marcadores culturales y mensajes para identificar asociaciones confiables a largo plazo.</span>
-                        </p>
-                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-medium">
-                                    <span data-lang="en">Stability Factor</span>
-                                    <span data-lang="es">Factor Estabilidad</span>
-                                </span>
-                                <span class="text-sm font-medium">
-                                    <span data-lang="en">High: 94%</span>
-                                    <span data-lang="es">Alto: 94%</span>
-                                </span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-blue-600 h-2 rounded-full" style="width: 94%"></div>
-                            </div>
-                        </div>
-                        <ul class="space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Temporal consistency tracking</span>
-                                <span data-lang="es">Seguimiento consistencia temporal</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Partnership reliability assessment</span>
-                                <span data-lang="es">Evaluación confiabilidad asociación</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Cultural stability analysis</span>
-                                <span data-lang="es">Análisis estabilidad cultural</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Use Cases Section -->
-        <section id="use-cases" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                        <span data-lang="en">Complete Cultural Intelligence Workflow</span>
-                        <span data-lang="es">Flujo de Trabajo Completo de Inteligencia Cultural</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        <span data-lang="en">From strategic planning to post-campaign optimization, apply cultural intelligence throughout your media workflow.</span>
-                        <span data-lang="es">Desde planificación estratégica hasta optimización post-campaña, aplica inteligencia cultural en todo tu flujo de trabajo de medios.</span>
-                    </p>
-                </div>
-                <div class="max-w-4xl mx-auto">
-                    <div class="flex justify-center border-b border-gray-200 mb-8">
-                        <button data-tab="planning" class="use-case-tab py-4 px-6 active">
-                            <span data-lang="en">Planning</span>
-                            <span data-lang="es">Planificación</span>
-                        </button>
-                        <button data-tab="execution" class="use-case-tab py-4 px-6">
-                            <span data-lang="en">Execution</span>
-                            <span data-lang="es">Ejecución</span>
-                        </button>
-                        <button data-tab="analysis" class="use-case-tab py-4 px-6">
-                            <span data-lang="en">Analysis</span>
-                            <span data-lang="es">Análisis</span>
-                        </button>
-                    </div>
-                    <div id="planning-content" class="use-case-content active">
-                        <h3 class="text-2xl font-bold mb-4">
-                            <span data-lang="en">Cultural Media Planning & Inventory Curation</span>
-                            <span data-lang="es">Planificación Cultural de Medios y Curación de Inventario</span>
-                        </h3>
-                        <p class="mb-4">
-                            <strong>
-                                <span data-lang="en">Challenge:</span>
-                                <span data-lang="es">Desafío:</span>
-                            </strong>
-                            <span data-lang="en"> How do you identify culturally relevant inventory at scale without relying on imprecise demographic assumptions?</span>
-                            <span data-lang="es"> ¿Cómo identificar inventario culturalmente relevante a escala sin depender de suposiciones demográficas imprecisas?</span>
-                        </p>
-                        <p class="mb-4">
-                            <strong>
-                                <span data-lang="en">Solution:</span>
-                                <span data-lang="es">Solución:</span>
-                            </strong>
-                            <span data-lang="en"> Cultural Brain analyzes 698 IAB categories to discover culturally efficient inventory. Build curated site lists using CRS/CAI filters, compare lists for optimization, and export campaign-ready templates to your DSP or SSP.</span>
-                            <span data-lang="es"> Cultural Brain analiza 698 categorías IAB para descubrir inventario culturalmente eficiente. Construye listas de sitios curadas usando filtros CRS/CAI, compara listas para optimización y exporta plantillas listas para campaña a tu DSP o SSP.</span>
-                        </p>
-                        <p>
-                            <strong>
-                                <span data-lang="en">Tools:</span>
-                                <span data-lang="es">Herramientas:</span>
-                            </strong>
-                            <span data-lang="en"> Siteplanner for discovery, Sitelist Manager for curation, Campaign Management for planning, Audience Manager with Census validation.</span>
-                            <span data-lang="es"> Siteplanner para descubrimiento, Gestor de Listas para curación, Gestión de Campañas para planificación, Gestor de Audiencias con validación del Censo.</span>
-                        </p>
-                    </div>
-                    <div id="execution-content" class="use-case-content">
-                        <h3 class="text-2xl font-bold mb-4">
-                            <span data-lang="en">Programmatic Export & Campaign Launch</span>
-                            <span data-lang="es">Exportación Programática y Lanzamiento de Campaña</span>
-                        </h3>
-                        <p class="mb-4">
-                            <strong>
-                                <span data-lang="en">Challenge:</span>
-                                <span data-lang="es">Desafío:</span>
-                            </strong>
-                            <span data-lang="en"> How do you seamlessly transfer cultural intelligence from planning to execution across different programmatic platforms?</span>
-                            <span data-lang="es"> ¿Cómo transferir sin problemas la inteligencia cultural desde planificación hasta ejecución a través de diferentes plataformas programáticas?</span>
-                        </p>
-                        <p class="mb-4">
-                            <strong>
-                                <span data-lang="en">Solution:</span>
-                                <span data-lang="es">Solución:</span>
-                            </strong>
-                            <span data-lang="en"> Programmatic Bridge exports your culturally curated campaigns directly to DSPs (DV360) and SSPs (Equativ). Campaign templates include optimized site lists, audience parameters, and cultural targeting criteria ready for immediate activation.</span>
-                            <span data-lang="es"> El Puente Programático exporta tus campañas culturalmente curadas directamente a DSPs (DV360) y SSPs (Equativ). Las plantillas de campaña incluyen listas de sitios optimizadas, parámetros de audiencia y criterios de targeting cultural listos para activación inmediata.</span>
-                        </p>
-                        <p>
-                            <strong>
-                                <span data-lang="en">Capabilities:</span>
-                                <span data-lang="es">Capacidades:</span>
-                            </strong>
-                            <span data-lang="en"> Campaign template export, site list integration, deal creation assistance, and platform structure mapping.</span>
-                            <span data-lang="es"> Exportación de plantillas de campaña, integración de listas de sitios, asistencia en creación de deals y mapeo de estructura de plataforma.</span>
-                        </p>
-                    </div>
-                    <div id="analysis-content" class="use-case-content">
-                        <h3 class="text-2xl font-bold mb-4">
-                            <span data-lang="en">Post-Campaign Cultural Performance Analysis</span>
-                            <span data-lang="es">Análisis de Rendimiento Cultural Post-Campaña</span>
-                        </h3>
-                        <p class="mb-4">
-                            <strong>
-                                <span data-lang="en">Challenge:</span>
-                                <span data-lang="es">Desafío:</span>
-                            </strong>
-                            <span data-lang="en"> How do you measure if cultural objectives were achieved and optimize future campaigns based on actual cultural performance?</span>
-                            <span data-lang="es"> ¿Cómo medir si los objetivos culturales se lograron y optimizar futuras campañas basándose en rendimiento cultural real?</span>
-                        </p>
-                        <p class="mb-4">
-                            <strong>
-                                <span data-lang="en">Solution:</span>
-                                <span data-lang="es">Solución:</span>
-                            </strong>
-                            <span data-lang="en"> Import campaign delivery data to analyze which cultural environments actually received your impressions. Campaign Monitor integrates performance data with cultural metrics to reveal cultural delivery patterns, generation alignment, and optimization opportunities.</span>
-                            <span data-lang="es"> Importa datos de entrega de campaña para analizar qué entornos culturales realmente recibieron tus impresiones. Campaign Monitor integra datos de rendimiento con métricas culturales para revelar patrones de entrega cultural, alineación generacional y oportunidades de optimización.</span>
-                        </p>
-                        <p>
-                            <strong>
-                                <span data-lang="en">Analysis:</span>
-                                <span data-lang="es">Análisis:</span>
-                            </strong>
-                            <span data-lang="en"> Cultural objective achievement, delivery environment analysis, cultural marker distribution, generation targeting effectiveness, and optimization recommendations.</span>
-                            <span data-lang="es"> Logro de objetivos culturales, análisis de entorno de entrega, distribución de marcadores culturales, efectividad de targeting generacional y recomendaciones de optimización.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Platform Section -->
-        <section id="platform" class="py-20">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                        <span data-lang="en">Platform Modules </span>
-                        <span data-lang="es">Módulos de Plataforma </span>
-                        <span class="brain-gradient">
-                            <span data-lang="en">Operational</span>
-                            <span data-lang="es">Operativos</span>
-                        </span>
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        <span data-lang="en">From cultural analysis to programmatic export - all modules verified in production with documented capabilities</span>
-                        <span data-lang="es">Desde análisis cultural hasta exportación programática - todos los módulos verificados en producción con capacidades documentadas</span>
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg p-8 card">
-                        <div class="flex items-center mb-4">
-                            <div class="text-3xl feature-icon mr-4"><i class="fas fa-brain"></i></div>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
-                                <span data-lang="en">LIVE</span>
-                                <span data-lang="es">ACTIVO</span>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">
-                            <span data-lang="en">Cultural Analysis Engine</span>
-                            <span data-lang="es">Motor de Análisis Cultural</span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">HICE (Hispanic Intelligence Context Engine) analyzes websites for cultural relevance using validated markers and AI-powered classification across 698 IAB categories.</span>
-                            <span data-lang="es">HICE (Motor de Contexto e Inteligencia Hispana) analiza sitios web para relevancia cultural usando marcadores validados y clasificación impulsada por IA en 698 categorías IAB.</span>
-                        </p>
-                        <ul class="text-sm space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Individual & bulk URL analysis</span>
-                                <span data-lang="es">Análisis individual y masivo de URLs</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Cultural markers validation</span>
-                                <span data-lang="es">Validación marcadores culturales</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Generation & language profiling</span>
-                                <span data-lang="es">Perfilado generacional y lingüístico</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg p-8 card">
-                        <div class="flex items-center mb-4">
-                            <div class="text-3xl feature-icon mr-4"><i class="fas fa-sitemap"></i></div>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
-                                <span data-lang="en">LIVE</span>
-                                <span data-lang="es">ACTIVO</span>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">
-                            <span data-lang="en">Media Planning Suite</span>
-                            <span data-lang="es">Suite Planificación Medios</span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">Complete campaign planning workflow with cultural optimization, audience targeting with Census validation, and site list management for culturally efficient inventory curation.</span>
-                            <span data-lang="es">Flujo completo de planificación de campañas con optimización cultural, targeting de audiencias con validación del Censo y gestión de listas de sitios para curación de inventario culturalmente eficiente.</span>
-                        </p>
-                        <ul class="text-sm space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Siteplanner with cultural filters</span>
-                                <span data-lang="es">Siteplanner con filtros culturales</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Campaign & audience management</span>
-                                <span data-lang="es">Gestión campañas y audiencias</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Sitelist comparison & optimization</span>
-                                <span data-lang="es">Comparación y optimización listas</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg p-8 card">
-                        <div class="flex items-center mb-4">
-                            <div class="text-3xl feature-icon mr-4"><i class="fas fa-exchange-alt"></i></div>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
-                                <span data-lang="en">LIVE</span>
-                                <span data-lang="es">ACTIVO</span>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">
-                            <span data-lang="en">Programmatic Bridge</span>
-                            <span data-lang="es">Puente Programático</span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">Export culturally optimized campaigns to DV360 and Equativ. Bridge cultural planning with programmatic execution through campaign templates and optimized site lists.</span>
-                            <span data-lang="es">Exporta campañas culturalmente optimizadas a DV360 y Equativ. Conecta planificación cultural con ejecución programática a través de plantillas de campaña y listas de sitios optimizadas.</span>
-                        </p>
-                        <ul class="text-sm space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">DV360 & Equativ integration</span>
-                                <span data-lang="es">Integración DV360 y Equativ</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Campaign template export</span>
-                                <span data-lang="es">Exportación plantillas campaña</span>
-                            </li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                <span data-lang="en">Deal creation assistance</span>
-                                <span data-lang="es">Asistencia creación deals</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Proof Points Section -->
-        <section class="py-20 bg-gray-900 text-white">
-            <div class="container mx-auto px-6 md:px-12 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span data-lang="en">Built on the Industry's Largest Cultural Dataset</span>
-                    <span data-lang="es">Construido sobre el Dataset Cultural Más Grande de la Industria</span>
-                </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-                    <span data-lang="en">Our HICE engine has analyzed more Hispanic-relevant content than any platform in history. Every recommendation is backed by verified performance data.</span>
-                    <span data-lang="es">Nuestro motor HICE ha analizado más contenido relevante hispano que cualquier plataforma en la historia. Cada recomendación está respaldada por datos de rendimiento verificados.</span>
-                </p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <p class="text-3xl font-bold text-teal-400">41,745</p>
-                        <p class="mt-2">
-                            <span data-lang="en">Sites Analyzed</span>
-                            <span data-lang="es">Sitios Analizados</span>
-                        </p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <p class="text-3xl font-bold text-teal-400">96,334</p>
-                        <p class="mt-2">
-                            <span data-lang="en">Peak Efficiency Score</span>
-                            <span data-lang="es">Puntaje Máximo Eficiencia</span>
-                        </p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <p class="text-3xl font-bold text-teal-400">9.3%</p>
-                        <p class="mt-2">
-                            <span data-lang="en">Average Cost Advantage</span>
-                            <span data-lang="es">Ventaja Promedio Costo</span>
-                        </p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <p class="text-3xl font-bold text-teal-400">15,712</p>
-                        <p class="mt-2">
-                            <span data-lang="en">Underutilized Sites</span>
-                            <span data-lang="es">Sitios Subutilizados</span>
-                        </p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg">
-                        <p class="text-3xl font-bold text-teal-400">698</p>
-                        <p class="mt-2">
-                            <span data-lang="en">IAB Categories</span>
-                            <span data-lang="es">Categorías IAB</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research & Insights Section -->
-        <section id="research" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                        <span data-lang="en">Research That Built </span>
-                        <span data-lang="es">Investigación Que Construyó </span>
-                        <span class="brain-gradient">
-                            <span data-lang="en">Our Platform</span>
-                            <span data-lang="es">Nuestra Plataforma</span>
-                        </span>
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        <span data-lang="en">Before building Cultural Brain, we conducted deep research into Hispanic market dynamics, cultural measurement, and digital advertising efficiency. This research forms the foundation of our platform.</span>
-                        <span data-lang="es">Antes de construir Cultural Brain, realizamos investigación profunda sobre dinámicas del mercado hispano, medición cultural y eficiencia en publicidad digital. Esta investigación forma la base de nuestra plataforma.</span>
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-white rounded-xl shadow-lg p-8 card">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 shadow-lg">
-                                <i class="fas fa-chart-line text-2xl feature-icon"></i>
-                            </div>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
-                                <span data-lang="en">RESEARCH</span>
-                                <span data-lang="es">INVESTIGACIÓN</span>
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">
-                            <span data-lang="en">Cultural Arbitrage: The 9.3% Advantage</span>
-                            <span data-lang="es">Arbitraje Cultural: La Ventaja del 9.3%</span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">Our analysis of 41,745 sites revealed a fundamental market inefficiency: culturally relevant inventory costs 9.3% less than general market while delivering superior cultural engagement.</span>
-                            <span data-lang="es">Nuestro análisis de 41,745 sitios reveló una ineficiencia fundamental del mercado: el inventario culturalmente relevante cuesta 9.3% menos que el mercado general mientras entrega compromiso cultural superior.</span>
-                        </p>
-                        <a href="#research" class="text-blue-600 hover:text-blue-800 font-medium">
-                            <span data-lang="en">Read Research →</span>
-                            <span data-lang="es">Leer Investigación →</span>
-                        </a>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg p-8 card">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4 shadow-lg">
-                                <i class="fas fa-dollar-sign text-2xl feature-icon"></i>
-                            </div>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">
-                                <span data-lang="en">MARKET ANALYSIS</span>
-                                <span data-lang="es">ANÁLISIS MERCADO</span>
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">
-                            <span data-lang="en">The $120B Hispanic Investment Gap</span>
-                            <span data-lang="es">La Brecha de Inversión Hispana de $120B</span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">Hispanic consumers represent $3.2T in buying power but receive only 5.3% of advertising investment. This analysis quantifies the opportunity and explains why cultural data is key to unlocking it.</span>
-                            <span data-lang="es">Los consumidores hispanos representan $3.2T en poder adquisitivo pero reciben solo el 5.3% de la inversión publicitaria. Este análisis cuantifica la oportunidad y explica por qué los datos culturales son clave para desbloquearla.</span>
-                        </p>
-                        <a href="#research" class="text-purple-600 hover:text-purple-800 font-medium">
-                            <span data-lang="en">Read Analysis →</span>
-                            <span data-lang="es">Leer Análisis →</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section - MODIFICADO SEGÚN FEEDBACK -->
-        <section id="pricing" class="py-20">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                        <span data-lang="en">Start Your Cultural Intelligence Journey</span>
-                        <span data-lang="es">Inicia Tu Jornada de Inteligencia Cultural</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        <span data-lang="en">From free cultural audit to full platform access. All plans include our core CRS/CAI/CCS metrics with verified performance data.</span>
-                        <span data-lang="es">Desde auditoría cultural gratuita hasta acceso completo a plataforma. Todos los planes incluyen nuestras métricas centrales CRS/CAI/CCS con datos de performance verificados.</span>
-                    </p>
-                </div>
-                
-                <div class="grid lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-start">
-                    <!-- Free Plan -->
-                    <div class="bg-white rounded-xl shadow-lg p-6 card">
-                        <h3 class="text-xl font-bold mb-2">
-                            <span data-lang="en">Free</span>
-                            <span data-lang="es">Gratis</span>
-                        </h3>
-                        <div class="flex items-end mb-4">
-                            <span class="text-3xl font-bold">$0</span>
-                            <span class="text-gray-500 ml-2">
-                                <span data-lang="en">/month</span>
-                                <span data-lang="es">/mes</span>
-                            </span>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">Try cultural intelligence without commitment.</span>
-                            <span data-lang="es">Prueba inteligencia cultural sin compromiso.</span>
-                        </p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">1 cultural search per month</span>
-                                <span data-lang="es">1 búsqueda cultural por mes</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Up to 10 sites preview</span>
-                                <span data-lang="es">Hasta 10 sitios preview</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Basic cultural filters</span>
-                                <span data-lang="es">Filtros culturales básicos</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Email support</span>
-                                <span data-lang="es">Soporte email</span>
-                            </li>
-                        </ul>
-                        <a href="#demo" class="block w-full py-2 text-center rounded-lg btn-secondary font-semibold">
-                            <span data-lang="en">Start Free</span>
-                            <span data-lang="es">Comenzar Gratis</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Starter Plan -->
-                    <div class="bg-white rounded-xl shadow-xl p-6 card transform lg:scale-105 border-2 border-indigo-600 relative">
-                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                            <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold">
-                                <span data-lang="en">BEST VALUE</span>
-                                <span data-lang="es">MEJOR VALOR</span>
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 mt-2">
-                            <span data-lang="en">Starter</span>
-                            <span data-lang="es">Básico</span>
-                        </h3>
-                        <div class="flex items-end mb-4">
-                            <span class="text-3xl font-bold">$29</span>
-                            <span class="text-gray-500 ml-2">
-                                <span data-lang="en">/month</span>
-                                <span data-lang="es">/mes</span>
-                            </span>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">Your cultural intelligence assistant. Turn 15 hours into 15 minutes.</span>
-                            <span data-lang="es">Tu asistente de inteligencia cultural. Convierte 15 horas en 15 minutos.</span>
-                        </p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">5 cultural searches/month</span>
-                                <span data-lang="es">5 búsquedas culturales/mes</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">CSV export (up to 100 URLs)</span>
-                                <span data-lang="es">Export CSV (hasta 100 URLs)</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Basic cultural filters</span>
-                                <span data-lang="es">Filtros culturales básicos</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Email support</span>
-                                <span data-lang="es">Soporte email</span>
-                            </li>
-                        </ul>
-                        <a href="#demo" class="block w-full py-2 text-center rounded-lg text-white btn-primary font-semibold">
-                            <span data-lang="en">Start Today</span>
-                            <span data-lang="es">Empezar Hoy</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Pro Plan -->
-                    <div class="bg-white rounded-xl shadow-lg p-6 card">
-                        <h3 class="text-xl font-bold mb-2">
-                            <span data-lang="en">Pro</span>
-                            <span data-lang="es">Pro</span>
-                        </h3>
-                        <div class="flex items-end mb-4">
-                            <span class="text-3xl font-bold">$79</span>
-                            <span class="text-gray-500 ml-2">
-                                <span data-lang="en">/month</span>
-                                <span data-lang="es">/mes</span>
-                            </span>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            <span data-lang="en">Unlock the full power of cultural intelligence.</span>
-                            <span data-lang="es">Desbloquea el poder total de inteligencia cultural.</span>
-                        </p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Unlimited searches</span>
-                                <span data-lang="es">Búsquedas ilimitadas</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">500 URLs per list</span>
-                                <span data-lang="es">500 URLs por lista</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Advanced cultural filters</span>
-                                <span data-lang="es">Filtros culturales avanzados</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Negative lists automation</span>
-                                <span data-lang="es">Listas negativas automáticas</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                <span data-lang="en">Basic competitor analysis</span>
-                                <span data-lang="es">Análisis básico competencia</span>
-                            </li>
-                        </ul>
-                        <a href="#demo" class="block w-full py-2 text-center rounded-lg btn-secondary font-semibold">
-                            <span data-lang="en">Unlock Pro</span>
-                            <span data-lang="es">Desbloquear Pro</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Enterprise Teaser -->
-                    <div class="bg-gradient-main text-white rounded-xl shadow-lg p-6 card">
-                        <h3 class="text-xl font-bold mb-2">
-                            <span data-lang="en">Enterprise</span>
-                            <span data-lang="es">Empresarial</span>
-                        </h3>
-                        <div class="flex items-end mb-4">
-                            <span class="text-2xl font-bold">
-                                <span data-lang="en">Custom</span>
-                                <span data-lang="es">Personalizado</span>
-                            </span>
-                        </div>
-                        <p class="text-gray-200 mb-4">
-                            <span data-lang="en">Unlimited scale, custom integrations, dedicated success management.</span>
-                            <span data-lang="es">Escala ilimitada, integraciones personalizadas, gestión de éxito dedicada.</span>
-                        </p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
-                                <span data-lang="en">Unlimited cultural scoring</span>
-                                <span data-lang="es">Scoring cultural ilimitado</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
-                                <span data-lang="en">Programmatic Bridge (DV360)</span>
-                                <span data-lang="es">Puente Programático (DV360)</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
-                                <span data-lang="en">Custom cultural models</span>
-                                <span data-lang="es">Modelos culturales personalizados</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
-                                <span data-lang="en">API integration suite</span>
-                                <span data-lang="es">Suite integración API</span>
-                            </li>
-                            <li class="flex items-start text-sm">
-                                <i class="fas fa-check text-teal-300 mt-1 mr-2"></i>
-                                <span data-lang="en">Dedicated success manager</span>
-                                <span data-lang="es">Gerente éxito dedicado</span>
-                            </li>
-                        </ul>
-                        <a href="#demo" class="block w-full py-2 text-center rounded-lg bg-white text-indigo-900 font-semibold hover:bg-gray-100">
-                            <span data-lang="en">Contact Sales</span>
-                            <span data-lang="es">Contactar Ventas</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- View Complete Pricing Button -->
-                <div class="text-center mt-12">
-                    <a href="/pricing" class="inline-flex items-center px-8 py-3 rounded-lg btn-secondary font-semibold">
-                        <i class="fas fa-external-link-alt mr-2"></i>
-                        <span data-lang="en">View Complete Pricing Details</span>
-                        <span data-lang="es">Ver Detalles Completos de Precios</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Demo Section -->
-        <section id="demo" class="py-20 bg-gradient-main text-white">
-            <div class="container mx-auto px-6 md:px-12 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span data-lang="en">Ready to Measure Cultural Intelligence?</span>
-                    <span data-lang="es">¿Listo para Medir Inteligencia Cultural?</span>
-                </h2>
-                <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-10">
-                    <span data-lang="en">Get a free cultural analysis of your recent campaign performance, or book a live demo to see how the platform transforms cultural planning workflows.</span>
-                    <span data-lang="es">Obtén un análisis cultural gratuito del rendimiento de tu campaña reciente, o agenda una demo en vivo para ver cómo la plataforma transforma los flujos de trabajo de planificación cultural.</span>
-                </p>
-                <div class="max-w-lg mx-auto bg-white text-gray-800 p-8 rounded-xl shadow-2xl">
-                    <form class="space-y-4" id="demo-form">
-                        <input type="text" id="demo-name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        <input type="email" id="demo-email" placeholder="Work Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        <input type="text" id="demo-company" placeholder="Company Name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        <select id="demo-type" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                            <option value="cultural-audit">
-                                <span data-lang="en">Free Cultural Audit</span>
-                                <span data-lang="es">Auditoría Cultural Gratuita</span>
-                            </option>
-                            <option value="platform-demo">
-                                <span data-lang="en">Platform Demo</span>
-                                <span data-lang="es">Demo de Plataforma</span>
-                            </option>
-                            <option value="trial-access">
-                                <span data-lang="en">14-Day Trial Access</span>
-                                <span data-lang="es">Acceso Prueba 14 Días</span>
-                            </option>
-                        </select>
-                        <button type="submit" class="w-full py-3 rounded-lg text-white bg-gradient-main font-semibold">
-                            <span data-lang="en">Get Started</span>
-                            <span data-lang="es">Comenzar</span>
-                        </button>
-                    </form>
-                    <p class="text-xs text-gray-600 mt-4">
-                        <span data-lang="en">No credit card required. Cultural analysis delivered within 48 hours.</span>
-                        <span data-lang="es">No se requiere tarjeta de crédito. Análisis cultural entregado en 48 horas.</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <svg class="h-10 w-auto mb-6" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs><linearGradient id="footerBrainGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f14b74" /><stop offset="100%" stop-color="#1d41db" /></linearGradient></defs>
-                        <path d="M30 10C17.5 10 10 25 10 35C10 45 17.5 60 30 60C42.5 60 50 45 50 35C50 25 42.5 10 30 10Z" fill="url(#footerBrainGradient)" />
-                        <circle cx="45" cy="20" r="10" fill="#599cfc" /><path d="M30 10V60" stroke="white" stroke-width="2" />
-                        <text x="65" y="35" font-family="Space Grotesk" font-weight="600" font-size="20" fill="white">Cultural</text>
-                        <text x="65" y="55" font-family="Space Grotesk" font-weight="600" font-size="20" fill="white">Brain</text>
-                    </svg>
-                    <p class="text-sm text-gray-400 mb-4">
-                        <span data-lang="en">The first Cultural Intelligence Platform for Hispanic media planning. 41,745+ sites analyzed with verified performance data.</span>
-                        <span data-lang="es">La primera Plataforma de Inteligencia Cultural para planificación de medios hispanos. 41,745+ sitios analizados con datos de performance verificados.</span>
+                    <div class="text-4xl font-bold brain-gradient mb-2">42,000+</div>
+                    <div class="text-gray-600">
+                        <span data-lang="en">Sites Analyzed</span>
+                        <span data-lang="es">Sitios Analizados</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold brain-gradient mb-2">9.3%</div>
+                    <div class="text-gray-600">
+                        <span data-lang="en">Cost Advantage</span>
+                        <span data-lang="es">Ventaja de Costo</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold brain-gradient mb-2">~30</div>
+                    <div class="text-gray-600">
+                        <span data-lang="en">Columns Per Site</span>
+                        <span data-lang="es">Columnas Por Sitio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-we-work" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">How We Work</span>
+                    <span data-lang="es">Cómo Trabajamos</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl border-2 border-purple-200">
+                    <div class="text-4xl mb-4">👥</div>
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span data-lang="en">Audiences: From Definition to Insight</span>
+                        <span data-lang="es">Audiencias: De la Definición al Insight</span>
+                    </h3>
+                    
+                    <h4 class="font-bold text-purple-700 mb-2">
+                        <span data-lang="en">What it does:</span>
+                        <span data-lang="es">Qué hace:</span>
+                    </h4>
+                    <p class="text-gray-700 mb-4">
+                        <span data-lang="en">Allows you to outline audiences by combining geo, demo, lifestyle, media consumption, and cultural affinity.</span>
+                        <span data-lang="es">Permite delinear audiencias combinando geo, demo, estilo de vida, consumo de medios y afinidad cultural.</span>
                     </p>
-                    <p class="text-xs text-gray-500">
-                        <span data-lang="en">Data cut-off: Aug 12, 2025</span>
-                        <span data-lang="es">Corte de datos: 12 Ago 2025</span>
+
+                    <h4 class="font-bold text-purple-700 mb-2">
+                        <span data-lang="en">How it does it:</span>
+                        <span data-lang="es">Cómo lo hace:</span>
+                    </h4>
+                    <ul class="text-gray-700 mb-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-600 mt-1 mr-2"></i>
+                            <span data-lang="en">Uses census data (USA and LATAM) and our lifestyle and media consumption models to size the audience.</span>
+                            <span data-lang="es">Usa datos censales (USA y LATAM) y nuestros modelos de estilo de vida y consumo de medios para dimensionar el tamaño de la audiencia.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-600 mt-1 mr-2"></i>
+                            <span data-lang="en">The <strong>AOF</strong> (Audience Object Full) enriches each segment with cultural profile (values, traditions, references) and media consumption.</span>
+                            <span data-lang="es">El <strong>AOF</strong> (Audience Object Full) enriquece cada segmento con perfil cultural (valores, tradiciones, referencias) y consumo mediático.</span>
+                        </li>
+                    </ul>
+
+                    <h4 class="font-bold text-purple-700 mb-2">
+                        <span data-lang="en">What you get:</span>
+                        <span data-lang="es">Qué obtienes:</span>
+                    </h4>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2"></i>
+                            <span data-lang="en">Audience size and composition (cookieless)</span>
+                            <span data-lang="es">Tamaño y composición de la audiencia (cookieless)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2"></i>
+                            <span data-lang="en">Top media, apps, channels, and keywords by CAI</span>
+                            <span data-lang="es">Principales medios, apps, canales y keywords por CAI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2"></i>
+                            <span data-lang="en">Transparency: you know why each asset is recommended</span>
+                            <span data-lang="es">Transparencia: sabés por qué cada activo se recomienda</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-xl border-2 border-blue-200">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span data-lang="en">Assets: From Detection to Activation</span>
+                        <span data-lang="es">Vehículos: De la Detección a la Activación</span>
+                    </h3>
+                    
+                    <h4 class="font-bold text-blue-700 mb-2">
+                        <span data-lang="en">What it does:</span>
+                        <span data-lang="es">Qué hace:</span>
+                    </h4>
+                    <p class="text-gray-700 mb-4">
+                        <span data-lang="en">Analyzes and manages inventory (sites, apps, channels, keywords) to curate high-performance whitelists.</span>
+                        <span data-lang="es">Analiza y gestiona inventario (sitios, apps, canales, keywords) para curar whitelists de alto rendimiento.</span>
+                    </p>
+
+                    <h4 class="font-bold text-blue-700 mb-2">
+                        <span data-lang="en">How it does it:</span>
+                        <span data-lang="es">Cómo lo hace:</span>
+                    </h4>
+                    <ul class="text-gray-700 mb-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <span data-lang="en"><strong>Site Analysis</strong> calculates CRS and CCS, detects language and IAB, and generates ~30 columns per site.</span>
+                            <span data-lang="es">El <strong>Análisis de Sitios</strong> calcula CRS y CCS, detecta idioma e IAB y genera ~30 columnas por sitio.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <span data-lang="en"><strong>Media Discovery</strong> filters and recommends new assets based on cultural criteria.</span>
+                            <span data-lang="es"><strong>Media Discovery</strong> filtra y recomienda nuevos activos según criterios culturales.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <span data-lang="en"><strong>List Manager</strong> compares, deduplicates, and organizes lists into reusable buckets.</span>
+                            <span data-lang="es"><strong>List Manager</strong> compara, deduplica y organiza listas en buckets reutilizables.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <span data-lang="en"><strong>Campaign/IO Manager</strong> and <strong>Programmatic Export</strong> link audiences and lists, calculate budgets, and generate DSP/SSP templates.</span>
+                            <span data-lang="es"><strong>Campaign/IO Manager</strong> y <strong>Exportación Programática</strong> vinculan audiencias y listas, calculan budgets y generan plantillas para DSP/SSP.</span>
+                        </li>
+                    </ul>
+
+                    <h4 class="font-bold text-blue-700 mb-2">
+                        <span data-lang="en">What you get:</span>
+                        <span data-lang="es">Qué obtienes:</span>
+                    </h4>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                            <span data-lang="en">Curated inventory ready to activate</span>
+                            <span data-lang="es">Inventario curado y listo para activar</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                            <span data-lang="en">Hours saved compared to manual curation</span>
+                            <span data-lang="es">Ahorro de horas en comparación con la curación manual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                            <span data-lang="en">Contextual brand safety adapted to each audience</span>
+                            <span data-lang="es">Seguridad de marca contextual adaptada a cada audiencia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metrics" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">What We Measure</span>
+                    <span data-lang="es">Qué Medimos</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card bg-white p-8 rounded-xl">
+                    <div class="text-5xl font-bold brain-gradient mb-4">CRS</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Cultural Relevance</span>
+                        <span data-lang="es">Relevancia Cultural</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Density and authenticity of cultural markers (values, traditions, references, language) in an asset.</span>
+                        <span data-lang="es">Densidad y autenticidad de marcadores culturales (valores, tradiciones, referencias, lenguaje) en un activo.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-8 rounded-xl">
+                    <div class="text-5xl font-bold brain-gradient mb-4">CAI</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Cultural Affinity</span>
+                        <span data-lang="es">Afinidad Cultural</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Level of affinity between an asset and a specific audience.</span>
+                        <span data-lang="es">Nivel de afinidad entre un activo y una audiencia específica.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-8 rounded-xl">
+                    <div class="text-5xl font-bold brain-gradient mb-4">CCS</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Cultural Cohesion</span>
+                        <span data-lang="es">Cohesión Cultural</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Cultural consistency of the asset over time.</span>
+                        <span data-lang="es">Consistencia cultural del activo a lo largo del tiempo.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card bg-white p-8 rounded-xl max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6 text-center">
+                    <span data-lang="en">How We Measure</span>
+                    <span data-lang="es">Cómo Medimos</span>
+                </h3>
+
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                            <span class="text-purple-700 font-bold">1</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">
+                                <span data-lang="en">Contextual Extraction</span>
+                                <span data-lang="es">Extracción Contextual</span>
+                            </h4>
+                            <p class="text-gray-600">
+                                <span data-lang="en">We identify references, values, traditions, and linguistic patterns in each asset.</span>
+                                <span data-lang="es">Identificamos referencias, valores, tradiciones y patrones lingüísticos en cada activo.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                            <span class="text-purple-700 font-bold">2</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">
+                                <span data-lang="en">Validation and QA</span>
+                                <span data-lang="es">Validación y QA</span>
+                            </h4>
+                            <p class="text-gray-600">
+                                <span data-lang="en">We verify coherence and temporal stability of those markers.</span>
+                                <span data-lang="es">Verificamos coherencia y estabilidad temporal de esos marcadores.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                            <span class="text-purple-700 font-bold">3</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">
+                                <span data-lang="en">Auditable Scoring</span>
+                                <span data-lang="es">Scoring Auditable</span>
+                            </h4>
+                            <p class="text-gray-600">
+                                <span data-lang="en">We apply CRS, CAI, and CCS, integrating audience context to generate transparent recommendations.</span>
+                                <span data-lang="es">Aplicamos CRS, CAI y CCS, integrando el contexto de audiencia para generar recomendaciones transparentes.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center text-gray-600 italic mt-6">
+                    <span data-lang="en">High precision with multi-model validation and QA. No cookies, no opaque DMPs.</span>
+                    <span data-lang="es">Alta precisión con validación multi-modelo y QA. Sin cookies ni DMPs opacos.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="data" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Where The Data Comes From</span>
+                    <span data-lang="es">De Dónde Salen Los Datos</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span data-lang="en">Cultural Knowledge Base (RKB)</span>
+                        <span data-lang="es">Base de Conocimiento Cultural (RKB)</span>
+                    </h3>
+                    <p class="text-gray-700 mb-6">
+                        <span data-lang="en">Hierarchical identities (macro-regions → countries → intersections) and <strong>698+ IAB categories</strong> that power scoring and recommendations.</span>
+                        <span data-lang="es">Identidades jerárquicas (macro-regiones → países → intersecciones) y <strong>698+ categorías IAB</strong> que alimentan el scoring y las recomendaciones.</span>
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span data-lang="en">Lifestyle & Media Consumption</span>
+                        <span data-lang="es">Lifestyle y Consumo de Medios</span>
+                    </h3>
+                    <p class="text-gray-700 mb-6">
+                        <span data-lang="en">Modules that profile lifestyles and media consumption by audience, used to enrich the AOF and recommendations.</span>
+                        <span data-lang="es">Módulos que perfilan estilos de vida y consumos mediáticos por audiencia, usados para enriquecer el AOF y las recomendaciones.</span>
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span data-lang="en">Spanish Zoom-In</span>
+                        <span data-lang="es">Zoom del Español</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span data-lang="en">Detection of linguistic variations by country and by <strong>intersection</strong> (e.g., Mexicans in Florida, Colombians in New York) to refine cultural analysis.</span>
+                        <span data-lang="es">Detección de variaciones lingüísticas por país y por <strong>intersección</strong> (ej. mexicanos en Florida, colombianos en Nueva York) para afinar el análisis cultural.</span>
+                    </p>
+                </div>
+                
+                <div>
+                    <div class="space-y-2 mb-6">
+                        <div class="stat-box">
+                            <div class="font-bold text-purple-700">698+</div>
+                            <div class="text-sm text-gray-600">
+                                <span data-lang="en">IAB categories covered</span>
+                                <span data-lang="es">Categorías IAB cubiertas</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="font-bold text-purple-700">5,000+</div>
+                            <div class="text-sm text-gray-600">
+                                <span data-lang="en">Validated cultural markers</span>
+                                <span data-lang="es">Marcadores culturales validados</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="font-bold text-purple-700">4</div>
+                            <div class="text-sm text-gray-600">
+                                <span data-lang="en">AI providers (OpenAI, Anthropic, Google, DeepSeek)</span>
+                                <span data-lang="es">Proveedores de IA (OpenAI, Anthropic, Google, DeepSeek)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-50 p-6 rounded-xl border-2 border-purple-200">
+                        <h4 class="font-bold text-purple-800 mb-3">
+                            <span data-lang="en">🇺🇸 USA Intersections</span>
+                            <span data-lang="es">🇺🇸 Intersecciones USA</span>
+                        </h4>
+                        <p class="text-sm text-gray-700">
+                            <span data-lang="en">Our RKB and Spanish zoom-in allow us to work at the <strong>intersection level</strong> within the USA: Mexicans in Texas, Puerto Ricans in New York, Colombians in Florida, etc., providing greater precision for campaigns in the United States.</span>
+                            <span data-lang="es">Nuestro RKB y zoom del español permiten trabajar a nivel de <strong>intersección</strong> dentro de USA: mexicanos en Texas, puertorriqueños en Nueva York, colombianos en Florida, etc., dando mayor precisión en campañas dentro de Estados Unidos.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center">
+                    <span data-lang="en">Coverage & Official Sources</span>
+                    <span data-lang="es">Cobertura y Fuentes Oficiales</span>
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="country-card">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🇺🇸</span>
+                            <h4 class="font-bold text-lg">USA</h4>
+                        </div>
+                        <p class="text-sm text-gray-600"><strong>Census</strong> + <strong>ACS</strong> + <strong>PUMS</strong></p>
+                    </div>
+
+                    <div class="country-card">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🇲🇽</span>
+                            <h4 class="font-bold text-lg">
+                                <span data-lang="en">Mexico</span>
+                                <span data-lang="es">México</span>
+                            </h4>
+                        </div>
+                        <p class="text-sm text-gray-600"><strong>INEGI</strong> + <strong>PxWeb</strong></p>
+                    </div>
+
+                    <div class="country-card">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🇦🇷</span>
+                            <h4 class="font-bold text-lg">Argentina</h4>
+                        </div>
+                        <p class="text-sm text-gray-600"><strong>INDEC</strong></p>
+                    </div>
+
+                    <div class="country-card">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🇨🇴</span>
+                            <h4 class="font-bold text-lg">Colombia</h4>
+                        </div>
+                        <p class="text-sm text-gray-600"><strong>DANE</strong></p>
+                    </div>
+
+                    <div class="country-card">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🇨🇱</span>
+                            <h4 class="font-bold text-lg">Chile</h4>
+                        </div>
+                        <p class="text-sm text-gray-600"><strong>INE</strong> + <strong>CASEN</strong></p>
+                    </div>
+
+                    <div class="country-card">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🇵🇪</span>
+                            <h4 class="font-bold text-lg">
+                                <span data-lang="en">Peru</span>
+                                <span data-lang="es">Perú</span>
+                            </h4>
+                        </div>
+                        <p class="text-sm text-gray-600"><strong>INEI</strong></p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-6 bg-blue-50 rounded-xl border-2 border-blue-200 text-center">
+                    <h4 class="font-bold text-blue-800 mb-2">
+                        <span data-lang="en">Coming Soon</span>
+                        <span data-lang="es">Próximamente</span>
+                    </h4>
+                    <p class="text-blue-700">
+                        <span data-lang="en">🇧🇷 Brazil (IBGE) • 🇺🇾 Uruguay (INE) • 🇵🇾 Paraguay (DGEEC) • 🇪🇨 Ecuador (INEC)</span>
+                        <span data-lang="es">🇧🇷 Brasil (IBGE) • 🇺🇾 Uruguay (INE) • 🇵🇾 Paraguay (DGEEC) • 🇪🇨 Ecuador (INEC)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cultural-markers" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Cultural Markers</span>
+                    <span data-lang="es">Marcadores Culturales</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">The foundation of our analysis: three categories that define cultural identity</span>
+                    <span data-lang="es">La base de nuestro análisis: tres categorías que definen la identidad cultural</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white p-8 rounded-xl">
+                    <div class="text-5xl mb-4">💎</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Values</span>
+                        <span data-lang="es">Valores</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Beliefs and moral codes that influence preferences (e.g., collectivism vs. individualism, family orientation, community ties).</span>
+                        <span data-lang="es">Creencias y códigos morales que influyen en preferencias (p. ej., colectivismo vs. individualismo, orientación familiar, vínculos comunitarios).</span>
+                    </p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl">
+                    <div class="text-5xl mb-4">🎭</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Traditions</span>
+                        <span data-lang="es">Tradiciones</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Practices, holidays, and customs that define cultural identity (e.g., Día de Muertos, quinceañeras, specific celebrations).</span>
+                        <span data-lang="es">Prácticas, fiestas y costumbres que definen la identidad cultural (p. ej., Día de Muertos, quinceañeras, celebraciones específicas).</span>
+                    </p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">References</span>
+                        <span data-lang="es">Referencias</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Symbols, figures, memes, and brands rooted in the culture that resonate with the audience (e.g., iconic figures, local brands, cultural phenomena).</span>
+                        <span data-lang="es">Símbolos, figuras, memes y marcas arraigadas que resuenan con la audiencia (p. ej., figuras icónicas, marcas locales, fenómenos culturales).</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 card bg-white p-8 rounded-xl max-w-4xl mx-auto border-2 border-purple-200">
+                <p class="text-gray-700 text-center">
+                    <span data-lang="en">These markers are <strong>extracted</strong> by our analysis module, <strong>validated</strong> by the RKB, and used both to calculate <strong>CRS</strong> and to <strong>enrich audiences</strong>.</span>
+                    <span data-lang="es">Estos marcadores son <strong>extraídos</strong> por el módulo de análisis, <strong>validados</strong> por la RKB y se utilizan tanto para calcular el <strong>CRS</strong> como para <strong>enriquecer las audiencias</strong>.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="modules" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Operational Modules</span>
+                    <span data-lang="es">Módulos Operativos</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Site Analysis</span>
+                        <span data-lang="es">Análisis de Sitios</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Analyzes URLs with CRS/language/IAB, generating ~30 columns per site.</span>
+                        <span data-lang="es">Analiza URLs con CRS/idioma/IAB, generando ~30 columnas por sitio.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Audience Profile & Enrichment (AOF)</span>
+                        <span data-lang="es">Perfil & Enriquecimiento de Audiencias (AOF)</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Defines audiences and enriches with census, lifestyle, media and cultural consumption.</span>
+                        <span data-lang="es">Define audiencias y enriquece con datos censales, lifestyle, consumo de medios y cultural.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Cultural Knowledge Base (RKB)</span>
+                        <span data-lang="es">Base de Conocimiento Cultural (RKB)</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Identities, markers and relationships.</span>
+                        <span data-lang="es">Identidades, marcadores y relaciones.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Media Discovery</span>
+                        <span data-lang="es">Descubridor de Medios</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Finds sites, apps, channels and keywords relevant by CAI, CRS and IAB.</span>
+                        <span data-lang="es">Encuentra sitios, apps, canales y keywords relevantes según CAI, CRS e IAB.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">List Manager</span>
+                        <span data-lang="es">Gestor de Listas</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Curation, comparison and quality control of lists.</span>
+                        <span data-lang="es">Curación, comparación y control de calidad de listas.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Campaign & IO Manager</span>
+                        <span data-lang="es">Gestor de Campañas e IOs</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Loads clients, campaigns, IOs; links audiences and lists; generates activation templates.</span>
+                        <span data-lang="es">Carga clientes, campañas, IOs; vincula audiencias y listas; genera plantillas de activación.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Programmatic Export</span>
+                        <span data-lang="es">Exportación Programática</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Exports whitelists and parameters ready for DSP/SSP (DV360, Equativ, etc.).</span>
+                        <span data-lang="es">Exporta whitelists y parámetros listos para DSP/SSP (DV360, Equativ, etc.).</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Cultural Audit</span>
+                        <span data-lang="es">Auditoría Cultural</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Pre/post-campaign diagnosis; suggests maintain, optimize or discard assets.</span>
+                        <span data-lang="es">Diagnóstico pre/post-campaña; sugiere mantener, optimizar o descartar activos.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Research Center</h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Access to censuses, lifestyle surveys and proprietary studies.</span>
+                        <span data-lang="es">Acceso a censos, encuestas de estilo de vida y estudios propios.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">
+                        <span data-lang="en">Contextual Brand Protection</span>
+                        <span data-lang="es">Protección de Marca Contextual</span>
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Evaluates contextual risk by audience and asset, not just generic keywords.</span>
+                        <span data-lang="es">Evalúa riesgo contextual según audiencia y activo, no solo keywords genéricas.</span>
+                    </p>
+                </div>
+
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Lifestyle Intelligence</h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Lifestyle profiles by audience to refine messages and segmentations.</span>
+                        <span data-lang="es">Perfiles de estilo de vida por audiencia para afinar mensajes y segmentaciones.</span>
+                    </p>
+                </div>
+
+                <div class="card bg-white p-6 rounded-xl">
+                    <div class="feature-icon text-4xl mb-3">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Media Consumption Intelligence</h3>
+                    <p class="text-gray-600 text-sm">
+                        <span data-lang="en">Media consumption map: signals, intensity and suggested mix by audience.</span>
+                        <span data-lang="es">Mapa de consumo de medios: señales, intensidad y mix sugerido por audiencia.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Results and Benefits</span>
+                    <span data-lang="es">Resultados y Beneficios</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-8 rounded-xl text-center">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Minutes, Not Days</span>
+                        <span data-lang="es">Minutos, No Días</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Curated lists of 1,200 URLs in minutes.</span>
+                        <span data-lang="es">Listas de 1,200 URLs curadas en minutos.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-8 rounded-xl text-center">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">~30 Columns Per Site</span>
+                        <span data-lang="es">~30 Columnas Por Sitio</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">When processing each site from your campaign or Sitelist, Cultural Brain returns about 30 columns with data on language, generation, values, traditions, references, IAB category, audience signal, etc., so you can make informed decisions.</span>
+                        <span data-lang="es">Al procesar cada sitio de tu campaña o Sitelist, Cultural Brain devuelve cerca de 30 columnas con datos sobre idioma, generación, valores, tradiciones, referencias, categoría IAB, señal de audiencia, etc., para que puedas tomar decisiones informadas.</span>
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-8 rounded-xl text-center">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Transparent Recommendations</span>
+                        <span data-lang="es">Recomendaciones Transparentes</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">You'll know why a site or channel is ideal for your audience.</span>
+                        <span data-lang="es">Sabrás por qué un sitio o canal es idóneo para tu audiencia.</span>
+                    </p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl text-center">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">9.3% Cost Advantage</span>
+                        <span data-lang="es">9.3% Ventaja de Costo</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Cultural inventory with lower cost and better visibility.</span>
+                        <span data-lang="es">Inventario cultural con menor costo y mejor visibilidad.</span>
+                    </p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl text-center">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Cookieless</span>
+                        <span data-lang="es">Sin Cookies</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">Cookieless methodology with multi-model QA.</span>
+                        <span data-lang="es">Metodología cookieless con QA multi-modelo.</span>
+                    </p>
+                </div>
+
+                <div class="card bg-white p-8 rounded-xl text-center">
+                    <div class="text-5xl mb-4">🤖</div>
+                    <h3 class="text-xl font-bold mb-3">
+                        <span data-lang="en">Multi-Model AI</span>
+                        <span data-lang="es">IA Multi-Modelo</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span data-lang="en">4 AI providers for robust analysis.</span>
+                        <span data-lang="es">4 proveedores de IA para análisis robusto.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20 bg-gradient-main text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">
+                <span data-lang="en">Start Free With 7 Days / 100 Credits</span>
+                <span data-lang="es">Empezá Gratis Con 7 Días / 100 Créditos</span>
+            </h2>
+            <p class="text-xl mb-2 text-gray-100">
+                <span data-lang="en">Try a real list and measure the impact.</span>
+                <span data-lang="es">Probá una lista real y medí el impacto.</span>
+            </p>
+            <p class="text-lg mb-8 text-gray-200">
+                <span data-lang="en">No credit card required.</span>
+                <span data-lang="es">Sin tarjeta de crédito.</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/pricing.html" class="bg-white text-purple-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    <span data-lang="en">Try Now</span>
+                    <span data-lang="es">Probar Ahora</span>
+                </a>
+                <a href="#contact" class="border-2 border-white bg-transparent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:bg-opacity-10 transition">
+                    <span data-lang="en">Book Demo</span>
+                    <span data-lang="es">Agendar Demo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span data-lang="en">Get In Touch</span>
+                    <span data-lang="es">Contactanos</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    <span data-lang="en">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</span>
+                    <span data-lang="es">¿Tenés preguntas? Nos encantaría escucharte. Envianos un mensaje y te responderemos lo antes posible.</span>
+                </p>
+            </div>
+
+            <div class="card bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="form-label">
+                                <span data-lang="en">Name *</span>
+                                <span data-lang="es">Nombre *</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                class="form-input"
+                                data-placeholder-en="John Doe"
+                                data-placeholder-es="Juan Pérez"
+                                placeholder="John Doe"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="email" class="form-label">
+                                <span data-lang="en">Email *</span>
+                                <span data-lang="es">Email *</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                class="form-input"
+                                data-placeholder-en="john@company.com"
+                                data-placeholder-es="juan@empresa.com"
+                                placeholder="john@company.com"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="company" class="form-label">
+                                <span data-lang="en">Company</span>
+                                <span data-lang="es">Empresa</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="company" 
+                                name="company" 
+                                class="form-input"
+                                data-placeholder-en="Your Company"
+                                data-placeholder-es="Tu Empresa"
+                                placeholder="Your Company"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="phone" class="form-label">
+                                <span data-lang="en">Phone</span>
+                                <span data-lang="es">Teléfono</span>
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input"
+                                data-placeholder-en="+1 (555) 000-0000"
+                                data-placeholder-es="+54 11 0000-0000"
+                                placeholder="+1 (555) 000-0000"
+                            >
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="subject" class="form-label">
+                            <span data-lang="en">Subject *</span>
+                            <span data-lang="es">Asunto *</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required 
+                            class="form-input"
+                            data-placeholder-en="How can we help you?"
+                            data-placeholder-es="¿Cómo podemos ayudarte?"
+                            placeholder="How can we help you?"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="message" class="form-label">
+                            <span data-lang="en">Message *</span>
+                            <span data-lang="es">Mensaje *</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required 
+                            class="form-textarea"
+                            data-placeholder-en="Tell us more about your needs..."
+                            data-placeholder-es="Contanos más sobre tus necesidades..."
+                            placeholder="Tell us more about your needs..."
+                        ></textarea>
+                    </div>
+
+                    <div>
+                        <button 
+                            type="submit" 
+                            class="w-full btn-primary text-white px-8 py-4 rounded-lg font-bold text-lg"
+                        >
+                            <span data-lang="en">Send Message</span>
+                            <span data-lang="es">Enviar Mensaje</span>
+                        </button>
+                    </div>
+
+                    <p class="text-sm text-gray-500 text-center">
+                        <span data-lang="en">* Required fields</span>
+                        <span data-lang="es">* Campos requeridos</span>
+                    </p>
+                </form>
+
+                <div id="formSuccess" class="hidden mt-6 p-4 bg-green-50 border-2 border-green-200 rounded-lg">
+                    <p class="text-green-800 text-center font-semibold">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span data-lang="en">Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+                        <span data-lang="es">¡Gracias! Tu mensaje ha sido enviado exitosamente. Te responderemos pronto.</span>
+                    </p>
+                </div>
+
+                <div id="formError" class="hidden mt-6 p-4 bg-red-50 border-2 border-red-200 rounded-lg">
+                    <p class="text-red-800 text-center font-semibold">
+                        <i class="fas fa-exclamation-circle mr-2"></i>
+                        <span data-lang="en">There was an error sending your message. Please try again or email us directly at hello@hispan.io</span>
+                        <span data-lang="es">Hubo un error al enviar tu mensaje. Por favor intentá nuevamente o escribinos a hello@hispan.io</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl mb-3">📧</div>
+                    <h3 class="font-bold mb-2">Email</h3>
+                    <a href="mailto:hello@hispan.io" class="text-purple-600 hover:text-purple-800">hello@hispan.io</a>
+                </div>
+
+                <div class="p-6">
+                    <div class="text-4xl mb-3">💼</div>
+                    <h3 class="font-bold mb-2">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/showcase/cultural-brain/" class="text-purple-600 hover:text-purple-800">Cultural Brain</a>
+                </div>
+
+                <div class="p-6">
+                    <div class="text-4xl mb-3">🌐</div>
+                    <h3 class="font-bold mb-2">
+                        <span data-lang="en">Location</span>
+                        <span data-lang="es">Ubicación</span>
+                    </h3>
+                    <p class="text-gray-600">Buenos Aires, Argentina</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold brain-gradient mb-4">Cultural Brain</h3>
+                    <p class="text-gray-400">
+                        <span data-lang="en">The platform that unites research, planning, and execution with auditable cultural data.</span>
+                        <span data-lang="es">La plataforma que une research, planning y ejecución con datos culturales auditables.</span>
                     </p>
                 </div>
                 
@@ -1288,15 +1343,19 @@
                         <span data-lang="es">Plataforma</span>
                     </h4>
                     <ul class="space-y-2">
-                        <li><a href="#platform" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Features</span>
-                            <span data-lang="es">Características</span>
+                        <li><a href="#how-we-work" class="text-gray-400 hover:text-white transition-colors">
+                            <span data-lang="en">How We Work</span>
+                            <span data-lang="es">Cómo Trabajamos</span>
                         </a></li>
                         <li><a href="#metrics" class="text-gray-400 hover:text-white transition-colors">
                             <span data-lang="en">CRS/CAI/CCS Metrics</span>
                             <span data-lang="es">Métricas CRS/CAI/CCS</span>
                         </a></li>
-                        <li><a href="/pricing" class="text-gray-400 hover:text-white transition-colors">
+                        <li><a href="#modules" class="text-gray-400 hover:text-white transition-colors">
+                            <span data-lang="en">Modules</span>
+                            <span data-lang="es">Módulos</span>
+                        </a></li>
+                        <li><a href="/pricing.html" class="text-gray-400 hover:text-white transition-colors">
                             <span data-lang="en">Pricing</span>
                             <span data-lang="es">Precios</span>
                         </a></li>
@@ -1306,54 +1365,29 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">
                         <span data-lang="en">Company</span>
-                        <span data-lang="es">Empresa</span>
+                        <span data-lang="es">Compañía</span>
                     </h4>
                     <ul class="space-y-2">
-                        <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">About Us</span>
-                            <span data-lang="es">Nosotros</span>
-                        </a></li>
-                        <li><a href="#research" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Research & Insights</span>
-                            <span data-lang="es">Investigación e Insights</span>
-                        </a></li>
-                        <li><a href="/#demo" class="text-gray-400 hover:text-white transition-colors">
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">
                             <span data-lang="en">Contact</span>
                             <span data-lang="es">Contacto</span>
                         </a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span data-lang="en">Resources</span>
-                        <span data-lang="es">Recursos</span>
-                    </h4>
-                    <ul class="space-y-2">
-                        <li><a href="#demo" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Cultural Audit</span>
-                            <span data-lang="es">Auditoría Cultural</span>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span data-lang="en">Research & Insights</span>
+                            <span data-lang="es">Research & Insights</span>
                         </a></li>
-                        <li><a href="/resources" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Research Papers</span>
-                            <span data-lang="es">Documentos de Investigación</span>
-                        </a></li>
-                        <li><a href="/resources" class="text-gray-400 hover:text-white transition-colors">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">
                             <span data-lang="en">Cultural Intelligence Guide</span>
                             <span data-lang="es">Guía de Inteligencia Cultural</span>
-                        </a></li>
-                        <li><a href="mailto:support@hispan.io" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Support</span>
-                            <span data-lang="es">Soporte</span>
                         </a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
                 <p>
-                    <span data-lang="en">© 2025 Cultural Brain. All rights reserved. Part of the HISPAÑO ecosystem.</span>
-                    <span data-lang="es">© 2025 Cultural Brain. Todos los derechos reservados. Parte del ecosistema HISPAÑO.</span>
+                    <span data-lang="en">© 2025 Cultural Brain. Part of the HISPAÑO ecosystem.</span>
+                    <span data-lang="es">© 2025 Cultural Brain. Parte del ecosistema HISPAÑO.</span>
                 </p>
             </div>
         </div>
@@ -1361,30 +1395,17 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- Use Case Tabs ---
-            const tabs = document.querySelectorAll('.use-case-tab');
-            const contents = document.querySelectorAll('.use-case-content');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const target = tab.getAttribute('data-tab');
-                    
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    
-                    contents.forEach(content => {
-                        content.classList.remove('active');
-                        if (content.id === `${target}-content`) {
-                            content.classList.add('active');
-                        }
-                    });
-                });
-            });
-
-            // --- Language Switcher ---
             const currentLangBtn = document.getElementById('currentLangBtn');
             const currentLangFlag = document.getElementById('currentLangFlag');
             const currentLangText = document.getElementById('currentLangText');
+
+            function updatePlaceholders(lang) {
+                const inputs = document.querySelectorAll('[data-placeholder-en]');
+                inputs.forEach(input => {
+                    const placeholder = lang === 'es' ? input.dataset.placeholderEs : input.dataset.placeholderEn;
+                    input.placeholder = placeholder;
+                });
+            }
 
             window.changeLanguage = function(lang) {
                 document.body.className = lang === 'es' ? 'lang-es' : '';
@@ -1393,15 +1414,17 @@
                     currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
                     currentLangFlag.alt = 'ES';
                     currentLangText.textContent = 'ES';
-                    document.title = 'Cultural Brain - Plataforma de Inteligencia Cultural | Planificación Medios Hispanos';
-                    document.querySelector('meta[name="description"]').setAttribute("content", "Planifica y mide campañas de marketing hispano con precisión científica. 41,745+ sitios analizados. Métricas CRS, CAI, CCS. Inteligencia cultural para planificación de medios.");
+                    document.title = 'Cultural Brain - Inteligencia Cultural Accionable, Sin Cookies | US & LATAM';
+                    document.querySelector('meta[name="description"]').setAttribute("content", "Definí audiencias por geo, demo, estilo de vida y consumo de medios. Estimá tamaño con datos oficiales y activá listas de sitios/apps/canales/keywords en minutos. Métricas CRS/CAI/CCS auditables.");
                 } else {
                     currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
                     currentLangFlag.alt = 'EN';
                     currentLangText.textContent = 'EN';
-                    document.title = 'Cultural Brain - Cultural Intelligence Platform | Hispanic Media Planning';
-                    document.querySelector('meta[name="description"]').setAttribute("content", "Plan and measure Hispanic marketing campaigns with scientific precision. 41,745+ sites analyzed. CRS, CAI, CCS metrics. Cultural intelligence for media planning.");
+                    document.title = 'Cultural Brain - Actionable Cultural Intelligence, Cookieless | US & LATAM';
+                    document.querySelector('meta[name="description"]').setAttribute("content", "Define audiences by geo, demo, lifestyle and media consumption. Estimate size with official data and activate site/app/channel/keyword lists in minutes. CRS/CAI/CCS auditable metrics.");
                 }
+                
+                updatePlaceholders(lang);
                 
                 document.querySelectorAll('.language-option').forEach(option => {
                     option.classList.remove('active');
@@ -1417,7 +1440,6 @@
             const savedLang = localStorage.getItem('culturalbrain-lang') || 'en';
             changeLanguage(savedLang);
 
-            // --- Smooth Scrolling ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -1431,45 +1453,36 @@
                 });
             });
 
-            // --- Form Handling ---
-            const demoForm = document.getElementById('demo-form');
-            if (demoForm) {
-                demoForm.addEventListener('submit', function(e) {
+            // Contact form handling
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            const formError = document.getElementById('formError');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    const name = document.getElementById('demo-name').value.trim();
-                    const email = document.getElementById('demo-email').value.trim();
-                    const company = document.getElementById('demo-company').value.trim();
-                    const demoType = document.getElementById('demo-type').value;
+                    // Hide previous messages
+                    formSuccess.classList.add('hidden');
+                    formError.classList.add('hidden');
                     
-                    if (!name || !email || !company) {
-                        alert(savedLang === 'es' ? 'Por favor complete todos los campos' : 'Please complete all fields');
-                        return;
-                    }
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const data = Object.fromEntries(formData);
                     
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        alert(savedLang === 'es' ? 'Por favor ingrese un email válido' : 'Please enter a valid email');
-                        return;
-                    }
+                    // Here you would typically send the data to your backend
+                    // For now, we'll simulate a successful submission
+                    console.log('Form data:', data);
                     
-                    let successMessage = '';
-                    if (demoType === 'cultural-audit') {
-                        successMessage = savedLang === 'es' ? 
-                            '¡Gracias! Te contactaremos en 24 horas para obtener los datos de tu campaña y entregarte el análisis cultural en 48 horas.' : 
-                            'Thank you! We\'ll contact you within 24 hours to gather your campaign data and deliver the cultural analysis within 48 hours.';
-                    } else if (demoType === 'platform-demo') {
-                        successMessage = savedLang === 'es' ? 
-                            '¡Gracias! Te contactaremos en 24 horas para agendar tu demo personalizada de la plataforma.' : 
-                            'Thank you! We\'ll contact you within 24 hours to schedule your personalized platform demo.';
-                    } else {
-                        successMessage = savedLang === 'es' ? 
-                            '¡Gracias! Te enviaremos las credenciales de acceso para tu prueba de 14 días en las próximas horas.' : 
-                            'Thank you! We\'ll send you the access credentials for your 14-day trial within hours.';
-                    }
-                    
-                    alert(successMessage);
-                    demoForm.reset();
+                    // Simulate API call
+                    setTimeout(() => {
+                        // Show success message
+                        formSuccess.classList.remove('hidden');
+                        contactForm.reset();
+                        
+                        // Scroll to success message
+                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 500);
                 });
             }
         });
