@@ -1,15 +1,54 @@
 {
   "version": 2,
   "builds": [
-    { "src": "public/**", "use": "@vercel/static" }
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
-    { "src": "/favicon.png", "dest": "/public/favicon.png" },
-    { "src": "/favicon.ico", "dest": "/public/favicon.png" },
-    { "src": "^/$", "dest": "/public/cultural_brain_index.html" },
-    { "src": "^/about/?$", "dest": "/public/cultural_brain_nosotros.html" },
-    { "src": "^/pricing/?$", "dest": "/public/cultural_brain_precios.html" },
-    { "src": "^/resources/?$", "dest": "/public/cultural_brain_resources.html" },
-    { "src": "^/resources/(.*)$", "dest": "/public/resources/$1" }
+    {
+      "src": "^/sitemap\\.xml$",
+      "dest": "/public/sitemap.xml"
+    },
+    {
+      "src": "^/robots\\.txt$",
+      "dest": "/public/robots.txt"
+    },
+    {
+      "src": "/favicon.png",
+      "dest": "/public/favicon.png"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.png"
+    },
+    {
+      "src": "^/$",
+      "dest": "/public/cultural_brain_index.html"
+    },
+    {
+      "src": "^/about/?$",
+      "dest": "/public/cultural_brain_nosotros.html"
+    },
+    {
+      "src": "^/pricing\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/pricing"
+      }
+    },
+    {
+      "src": "^/pricing/?$",
+      "dest": "/public/cultural_brain_precios.html"
+    },
+    {
+      "src": "^/resources/?$",
+      "dest": "/public/cultural_brain_resources.html"
+    },
+    {
+      "src": "^/resources/(.*)$",
+      "dest": "/public/resources/$1"
+    }
   ]
 }
