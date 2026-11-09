@@ -257,6 +257,8 @@
             color: var(--text-dark);
         }
     </style>
+    <link rel="canonical" href="https://www.culturalbrain.net/">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://www.culturalbrain.net/#software","name":"Cultural Brain","url":"https://www.culturalbrain.net/","description":"Cultural intelligence and audience planning SaaS platform for digital advertising.","applicationCategory":"BusinessApplication","operatingSystem":"Web","creator":{"@type":"Organization","@id":"https://www.hispan.io/#organization","name":"Hispaño","url":"https://www.hispan.io/"}}</script>
 </head>
 <body>
     <nav class="bg-white shadow-sm sticky top-0 z-50">
@@ -1335,6 +1337,10 @@
                         <span data-lang="en">The platform that unites research, planning, and execution with auditable cultural data.</span>
                         <span data-lang="es">La plataforma que une research, planning y ejecución con datos culturales auditables.</span>
                     </p>
+                    <div class="mt-4 text-sm text-gray-400 leading-relaxed">
+                        <p><span data-lang="en">Developed by </span><span data-lang="es">Desarrollado por </span><a href="https://www.hispan.io" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-white underline">Hispaño</a>.</p>
+                        <p><span data-lang="en">Product creator: </span><span data-lang="es">Creador del producto: </span><a href="https://www.hispan.io/about.html#founder" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-white underline">Pablo Javier Peirone</a>.</p>
+                    </div>
                 </div>
                 
                 <div>
@@ -1459,30 +1465,32 @@
             const formError = document.getElementById('formError');
 
             if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
+                contactForm.addEventListener('submit', async function(e) {
                     e.preventDefault();
-                    
-                    // Hide previous messages
                     formSuccess.classList.add('hidden');
                     formError.classList.add('hidden');
-                    
-                    // Get form data
-                    const formData = new FormData(contactForm);
-                    const data = Object.fromEntries(formData);
-                    
-                    // Here you would typically send the data to your backend
-                    // For now, we'll simulate a successful submission
-                    console.log('Form data:', data);
-                    
-                    // Simulate API call
-                    setTimeout(() => {
-                        // Show success message
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    if (submitButton) submitButton.disabled = true;
+                    try {
+                        const payload = Object.fromEntries(new FormData(contactForm));
+                        payload.form_source = 'culturalbrain_landing';
+                        payload.page_url = window.location.href;
+                        payload.language = localStorage.getItem('culturalbrain-lang') || 'en';
+                        const response = await fetch('https://submit-form.com/X1HimpPDC', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                            body: JSON.stringify(payload)
+                        });
+                        if (!response.ok) throw new Error('Form submission rejected: ' + response.status);
                         formSuccess.classList.remove('hidden');
                         contactForm.reset();
-                        
-                        // Scroll to success message
-                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    }, 500);
+                        formSuccess.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+                    } catch (error) {
+                        formError.classList.remove('hidden');
+                        formError.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+                    } finally {
+                        if (submitButton) submitButton.disabled = false;
+                    }
                 });
             }
         });
