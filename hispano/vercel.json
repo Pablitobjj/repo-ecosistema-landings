@@ -103,6 +103,10 @@
       "dest": "/public/favicon.png"
     },
     {
+      "src": "^/images/og-hispano-authority\\.jpg$",
+      "dest": "/public/images/og-hispano-authority.jpg"
+    },
+    {
       "src": "^/.*$",
       "dest": "/public/hispano_404.html",
       "status": 404
