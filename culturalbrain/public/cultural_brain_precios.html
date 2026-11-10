@@ -1150,7 +1150,7 @@
                         alert(language === 'es' ? 'Por favor complete todos los campos' : 'Please complete all fields');
                         return;
                     }
-                    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
                         alert(language === 'es' ? 'Por favor ingrese un email válido' : 'Please enter a valid email');
                         return;
