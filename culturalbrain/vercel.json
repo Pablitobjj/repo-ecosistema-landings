@@ -24,6 +24,34 @@
       "dest": "/public/favicon.png"
     },
     {
+      "src": "^/index\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/"
+      }
+    },
+    {
+      "src": "^/(?:about|nosotros)\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/about"
+      }
+    },
+    {
+      "src": "^/(?:resources|recursos)\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/resources"
+      }
+    },
+    {
+      "src": "^/precios\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/pricing"
+      }
+    },
+    {
       "src": "^/$",
       "dest": "/public/cultural_brain_index.html"
     },
