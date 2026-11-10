@@ -1,0 +1,41 @@
+name: Build Open Graph asset (hotfix #2)
+on:
+  push:
+    branches:
+      - 'fix/hotfix2-hispano-og-2026-11-09'
+    paths:
+      - 'tools/seo/render_open_graph.py'
+      - '.github/workflows/og-hotfix2.yml'
+permissions:
+  contents: write
+jobs:
+  render-image:
+    if: github.ref == 'refs/heads/fix/hotfix2-hispano-og-2026-11-09'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout isolated hotfix branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: true
+      - name: Install deterministic image dependency
+        run: python3 -m pip install --user 'Pillow==11.3.0'
+      - name: Render social card
+        run: python3 tools/seo/render_open_graph.py --brand hispano --output 'hispano/public/images/og-hispano-authority.jpg'
+      - name: Assert raster metadata
+        run: |
+          python3 - <<'PY'
+          from PIL import Image
+          with Image.open('hispano/public/images/og-hispano-authority.jpg') as im:
+              assert im.format == 'JPEG', im.format
+              assert im.size == (1200,630), im.size
+              assert im.mode == 'RGB', im.mode
+          PY
+      - name: Commit only generated asset to hotfix branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 'hispano/public/images/og-hispano-authority.jpg'
+          if ! git diff --cached --quiet; then
+            git commit -m 'assets: generate 1200x630 Open Graph image [skip ci]'
+            git push origin HEAD:'fix/hotfix2-hispano-og-2026-11-09'
+          fi
