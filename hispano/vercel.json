@@ -107,6 +107,32 @@
       "dest": "/public/images/og-hispano-authority.jpg"
     },
     {
+      "src": "^/assets/(.*)$",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "src": "^/methodology/?$",
+      "dest": "/public/hispano_methodology.html"
+    },
+    {
+      "src": "^/methodology\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/methodology"
+      }
+    },
+    {
+      "src": "^/research/us-hispanic-cultural-intelligence/?$",
+      "dest": "/public/hispano_us_hispanic_cultural_intelligence.html"
+    },
+    {
+      "src": "^/research/us-hispanic-cultural-intelligence\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/research/us-hispanic-cultural-intelligence"
+      }
+    },
+    {
       "src": "^/.*$",
       "dest": "/public/hispano_404.html",
       "status": 404
