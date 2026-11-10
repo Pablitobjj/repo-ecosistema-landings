@@ -28,7 +28,7 @@ for name,url in [
 ]:
     test(name,url,lambda c,e,h,b:(c==200 and b[:2]==b"\xff\xd8" and "image/jpeg" in h.get("Content-Type","").lower(),"type="+h.get("Content-Type","")+" magic="+b[:2].hex()))
 root="https://www.operationcaracas.com"
-test("Caracas canonical",root+"/",text_ok('<link rel="canonical" href="'+root+'">'))
+test("Caracas canonical",root+"/",text_ok('<link rel="canonical" href="'+root+'/">'))
 c,e,h,b=fetch(root+"/")
 s=b.decode('utf-8','replace')
 for line in s.splitlines():
