@@ -123,6 +123,28 @@
       }
     },
     {
+      "src": "^/how-it-works/?$",
+      "dest": "/public/cb_how_it_works.html"
+    },
+    {
+      "src": "^/how-it-works\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/how-it-works"
+      }
+    },
+    {
+      "src": "^/demo/?$",
+      "dest": "/public/cb_demo.html"
+    },
+    {
+      "src": "^/demo\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/demo"
+      }
+    },
+    {
       "src": "^/resources/(.*)$",
       "dest": "/public/resources/$1"
     }
