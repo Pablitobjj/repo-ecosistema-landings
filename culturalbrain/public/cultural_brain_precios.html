@@ -943,13 +943,10 @@
                             <span data-lang="en">Interested in</span>
                             <span data-lang="es">Me interesa</span>
                         </label>
-                        <select class="w-full px-4 py-3 rounded-lg text-gray-900">
-                            <option data-lang="en">7-Day Free Trial</option>
-                            <option data-lang="es">Prueba Gratis 7 Días</option>
-                            <option data-lang="en">Free Cultural Audit (2-20 min)</option>
-                            <option data-lang="es">Auditoría Cultural Gratis (2-20 min)</option>
-                            <option data-lang="en">Enterprise Demo</option>
-                            <option data-lang="es">Demo Empresarial</option>
+                        <select class="w-full px-4 py-3 rounded-lg text-gray-900" aria-label="Interest">
+                            <option value="7-Day Free Trial">7-Day Free Trial</option>
+                            <option value="Free Cultural Audit (2-20 min)">Free Cultural Audit (2-20 min)</option>
+                            <option value="Enterprise Demo">Enterprise Demo</option>
                         </select>
                     </div>
                     
@@ -957,6 +954,7 @@
                         <span data-lang="en">Get Started Now</span>
                         <span data-lang="es">Comenzar Ahora</span>
                     </button>
+                    <div id="pricingFormStatus" class="hidden mt-4 rounded-lg p-4 text-sm font-semibold" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
                     
                     <p class="text-sm text-center text-gray-200">
                         <span data-lang="en">✓ No credit card required • ✓ Setup in minutes • ✓ 100 credits included</span>
@@ -1052,6 +1050,39 @@
             const companyInput = document.getElementById('company');
             const emailInput = document.getElementById('email');
 
+            const pricingFormStatus = document.getElementById('pricingFormStatus');
+            const pricingMessages = {
+                en: {
+                    success: "Thank you! Your request was sent successfully. We'll contact you soon.",
+                    error: "Your request could not be sent. Please retry or email hello@hispan.io.",
+                    missing: "Please complete all required fields.",
+                    invalidEmail: "Please enter a valid email address."
+                },
+                es: {
+                    success: "¡Gracias! Tu solicitud fue enviada correctamente. Te contactaremos pronto.",
+                    error: "No se pudo enviar tu solicitud. Intentá nuevamente o escribinos a hello@hispan.io.",
+                    missing: "Por favor, completá todos los campos obligatorios.",
+                    invalidEmail: "Por favor, ingresá un email válido."
+                }
+            };
+            function showPricingStatus(kind, lang) {
+                if (!pricingFormStatus) return;
+                const locale = lang === 'es' ? 'es' : 'en';
+                pricingFormStatus.dataset.kind = kind;
+                pricingFormStatus.className = kind === 'success'
+                    ? 'mt-4 rounded-lg p-4 text-sm font-semibold bg-green-50 text-green-900 border border-green-300'
+                    : 'mt-4 rounded-lg p-4 text-sm font-semibold bg-red-50 text-red-900 border border-red-300';
+                pricingFormStatus.setAttribute('role', kind === 'success' ? 'status' : 'alert');
+                pricingFormStatus.textContent = pricingMessages[locale][kind];
+                pricingFormStatus.focus();
+            }
+            function clearPricingStatus() {
+                if (!pricingFormStatus) return;
+                pricingFormStatus.className = 'hidden mt-4 rounded-lg p-4 text-sm font-semibold';
+                pricingFormStatus.textContent = '';
+                delete pricingFormStatus.dataset.kind;
+            }
+
             window.changeLanguage = function(lang) {
                 document.body.className = lang === 'es' ? 'lang-es' : '';
                 
@@ -1076,6 +1107,20 @@
                     document.querySelector('meta[name="description"]').setAttribute("content", "Scale your cultural marketing with flexible pricing. From individual users to global networks. Credit-based system, SLA-defined updates, auditable metrics, proven ROI.");
                 }
                 
+
+                // Keep the semantic option values stable while translating their visible labels.
+                const pricingInterest = document.querySelector('#contact select');
+                if (pricingInterest && pricingInterest.options.length === 3) {
+                    const labels = lang === 'es'
+                        ? ['Prueba Gratis 7 Días', 'Auditoría Cultural Gratis (2-20 min)', 'Demo Empresarial']
+                        : ['7-Day Free Trial', 'Free Cultural Audit (2-20 min)', 'Enterprise Demo'];
+                    Array.from(pricingInterest.options).forEach((option, i) => {
+                        option.textContent = labels[i];
+                    });
+                }
+                if (pricingFormStatus && pricingFormStatus.dataset.kind) {
+                    pricingFormStatus.textContent = pricingMessages[lang === 'es' ? 'es' : 'en'][pricingFormStatus.dataset.kind];
+                }
                 document.querySelectorAll('.language-option').forEach(option => {
                     option.classList.remove('active');
                     if (option.getAttribute('onclick') === `changeLanguage('${lang}')`) {
@@ -1145,14 +1190,15 @@
                     const company = document.getElementById('company').value.trim();
                     const email = document.getElementById('email').value.trim();
                     const language = localStorage.getItem('culturalbrain-lang') || 'en';
+                    clearPricingStatus();
 
                     if (!name || !company || !email) {
-                        alert(language === 'es' ? 'Por favor complete todos los campos' : 'Please complete all fields');
+                        showPricingStatus('missing', language);
                         return;
                     }
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
-                        alert(language === 'es' ? 'Por favor ingrese un email válido' : 'Please enter a valid email');
+                        showPricingStatus('invalidEmail', language);
                         return;
                     }
 
@@ -1176,15 +1222,11 @@
                         });
                         if (!response.ok) throw new Error('Form submission rejected: ' + response.status);
 
-                        alert(language === 'es'
-                            ? '¡Gracias! Tu solicitud fue enviada correctamente.'
-                            : 'Thank you! Your request was sent successfully.');
                         form.reset();
+                        showPricingStatus('success', language);
                     } catch (error) {
                         console.error('Pricing form submission failed:', error);
-                        alert(language === 'es'
-                            ? 'No se pudo enviar tu solicitud. Intentá nuevamente o escribinos a hello@hispan.io.'
-                            : 'Your request could not be sent. Please retry or email hello@hispan.io.');
+                        showPricingStatus('error', language);
                     } finally {
                         if (submitButton) submitButton.disabled = false;
                     }
