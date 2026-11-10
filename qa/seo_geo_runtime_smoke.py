@@ -29,6 +29,13 @@ for name,url in [
     test(name,url,lambda c,e,h,b:(c==200 and b[:2]==b"\xff\xd8" and "image/jpeg" in h.get("Content-Type","").lower(),"type="+h.get("Content-Type","")+" magic="+b[:2].hex()))
 root="https://www.operationcaracas.com"
 test("Caracas canonical",root+"/",text_ok('<link rel="canonical" href="'+root+'">'))
+c,e,h,b=fetch(root+"/")
+s=b.decode('utf-8','replace')
+for line in s.splitlines():
+    if 'canonical' in line.lower() or 'og:url' in line.lower():
+        print("CARACAS_META_LINE "+line.strip()[:500])
+print("CARACAS_LIVE_DEBUG "+json.dumps({"HTTP":c,"final":e,"bytes":len(b),"doctype":s[:100]}))
+
 test("Caracas robots",root+"/robots.txt",text_ok("Sitemap: "+root+"/sitemap.xml"))
 def sitemap(c,e,h,b):
     try:
