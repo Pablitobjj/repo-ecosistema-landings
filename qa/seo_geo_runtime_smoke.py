@@ -52,4 +52,18 @@ if os.getenv("RUN_FORMSPARK_TEST")=="1":
     c,e,h,b=fetch("https://submit-form.com/X1HimpPDC",json.dumps(payload).encode())
     results.append({"test":"Formspark synthetic Pricing POST","status":"PASS" if c and 200<=c<300 else "FAIL","http":c,"marker":MARK,"detail":"Inbox receipt must be checked independently"})
     print("QA_RESULT "+json.dumps(results[-1]))
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self,req,fp,code,msg,headers,newurl): return None
+for url in ["https://operationcaracas.com/","https://alinodo.xyz/"]:
+    op=urllib.request.build_opener(NoRedirect())
+    req=urllib.request.Request(url,headers={"User-Agent":UA})
+    try:
+        with op.open(req,timeout=15) as resp:
+            code=resp.status; location=resp.headers.get("Location","")
+    except urllib.error.HTTPError as err:
+        code=err.code;location=err.headers.get("Location","")
+    except Exception as err:
+        code=None;location=str(err)[:100]
+    print("REDIRECT_PROBE "+json.dumps({"url":url,"status":code,"location":location}))
 print("QA_SUMMARY "+json.dumps({"passed":sum(x["status"]=="PASS" for x in results),"failed":sum(x["status"]=="FAIL" for x in results),"total":len(results),"marker":MARK}))
