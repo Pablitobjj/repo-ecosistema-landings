@@ -1138,29 +1138,56 @@
 
             const form = document.querySelector('form');
             if (form) {
-                form.addEventListener('submit', function(e) {
+                form.addEventListener('submit', async function(e) {
                     e.preventDefault();
-                    
+
                     const name = document.getElementById('name').value.trim();
                     const company = document.getElementById('company').value.trim();
                     const email = document.getElementById('email').value.trim();
-                    
+                    const language = localStorage.getItem('culturalbrain-lang') || 'en';
+
                     if (!name || !company || !email) {
-                        alert(savedLang === 'es' ? 'Por favor complete todos los campos' : 'Please complete all fields');
+                        alert(language === 'es' ? 'Por favor complete todos los campos' : 'Please complete all fields');
                         return;
                     }
-                    
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
                     if (!emailRegex.test(email)) {
-                        alert(savedLang === 'es' ? 'Por favor ingrese un email válido' : 'Please enter a valid email');
+                        alert(language === 'es' ? 'Por favor ingrese un email válido' : 'Please enter a valid email');
                         return;
                     }
-                    
-                    alert(savedLang === 'es' ? 
-                        '¡Gracias! Te contactaremos pronto con tu Auditoría Cultural.' : 
-                        'Thank you! We\'ll contact you soon with your Cultural Audit.');
-                    
-                    form.reset();
+
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    if (submitButton) submitButton.disabled = true;
+                    try {
+                        const selection = form.querySelector('select');
+                        const payload = {
+                            name,
+                            company,
+                            email,
+                            interest: selection ? selection.value : '',
+                            form_source: 'culturalbrain_pricing',
+                            page_url: window.location.href,
+                            language
+                        };
+                        const response = await fetch('https://submit-form.com/X1HimpPDC', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                            body: JSON.stringify(payload)
+                        });
+                        if (!response.ok) throw new Error('Form submission rejected: ' + response.status);
+
+                        alert(language === 'es'
+                            ? '¡Gracias! Tu solicitud fue enviada correctamente.'
+                            : 'Thank you! Your request was sent successfully.');
+                        form.reset();
+                    } catch (error) {
+                        console.error('Pricing form submission failed:', error);
+                        alert(language === 'es'
+                            ? 'No se pudo enviar tu solicitud. Intentá nuevamente o escribinos a hello@hispan.io.'
+                            : 'Your request could not be sent. Please retry or email hello@hispan.io.');
+                    } finally {
+                        if (submitButton) submitButton.disabled = false;
+                    }
                 });
             }
         });
