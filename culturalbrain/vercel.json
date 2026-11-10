@@ -75,6 +75,54 @@
       "dest": "/public/cultural_brain_resources.html"
     },
     {
+      "src": "^/assets/(.*)$",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "src": "^/research-center/?$",
+      "dest": "/public/cb_research_center.html"
+    },
+    {
+      "src": "^/cerebro/?$",
+      "dest": "/public/cb_cerebro.html"
+    },
+    {
+      "src": "^/sofia/?$",
+      "dest": "/public/cb_sofia.html"
+    },
+    {
+      "src": "^/pulse/?$",
+      "dest": "/public/cb_pulse.html"
+    },
+    {
+      "src": "^/research-center\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/research-center"
+      }
+    },
+    {
+      "src": "^/cerebro\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/cerebro"
+      }
+    },
+    {
+      "src": "^/sofia\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/sofia"
+      }
+    },
+    {
+      "src": "^/pulse\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/pulse"
+      }
+    },
+    {
       "src": "^/resources/(.*)$",
       "dest": "/public/resources/$1"
     }
