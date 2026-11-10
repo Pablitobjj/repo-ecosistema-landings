@@ -147,6 +147,39 @@
     {
       "src": "^/resources/(.*)$",
       "dest": "/public/resources/$1"
+    },
+    {
+      "src": "^/platform/?$",
+      "dest": "/public/cb_platform.html"
+    },
+    {
+      "src": "^/platform\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/platform"
+      }
+    },
+    {
+      "src": "^/solutions/agencies/?$",
+      "dest": "/public/cb_solutions_agencies.html"
+    },
+    {
+      "src": "^/solutions/agencies\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/solutions/agencies"
+      }
+    },
+    {
+      "src": "^/solutions/brands/?$",
+      "dest": "/public/cb_solutions_brands.html"
+    },
+    {
+      "src": "^/solutions/brands\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/solutions/brands"
+      }
     }
   ]
 }
