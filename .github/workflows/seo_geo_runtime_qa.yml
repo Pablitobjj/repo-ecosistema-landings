@@ -1,0 +1,20 @@
+name: SEO GEO Runtime QA (temporary)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'qa/seo_geo_runtime_smoke.py'
+      - '.github/workflows/seo_geo_runtime_qa.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout QA-only branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Check public endpoints and one marked synthetic Formspark submission
+        env:
+          RUN_FORMSPARK_TEST: '1'
+        run: python3 qa/seo_geo_runtime_smoke.py
