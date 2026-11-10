@@ -1,0 +1,17 @@
+name: ELJAB 75 URL SEO GEO audit - read only
+on:
+  pull_request:
+    branches: [main]
+    paths: ['qa/eljab_75_readonly_audit.py','.github/workflows/eljab_75_audit.yml']
+permissions:
+  contents: read
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Crawl public sitemap and 75 URLs (read-only GET, max 5 workers)
+        run: python3 qa/eljab_75_readonly_audit.py
