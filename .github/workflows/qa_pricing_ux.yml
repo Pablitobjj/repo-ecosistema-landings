@@ -2,6 +2,9 @@ name: CB Pricing UX syntax QA - isolated
 on:
   push:
     branches: ['qa/pricing-ux-syntax-2026-11-10']
+  pull_request:
+    branches: [main]
+    paths: ['culturalbrain/public/cultural_brain_precios.html','.github/workflows/qa_pricing_ux.yml']
 permissions:
   contents: read
 jobs:
