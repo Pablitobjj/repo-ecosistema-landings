@@ -1,0 +1,37 @@
+name: CB Pricing UX syntax QA - isolated
+on:
+  push:
+    branches: ['qa/pricing-ux-syntax-2026-11-10']
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate form markup and extract inline JavaScript
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          s=Path('culturalbrain/public/cultural_brain_precios.html').read_text()
+          js=s.rsplit('<script>',1)[-1].split('</script>',1)[0]
+          assert len(js)>1000
+          Path('/tmp/seo_pricing_js_check.js').write_text(js)
+          form=s[s.index('<form class="space-y-6">'):s.index('</form>',s.index('<form class="space-y-6">'))]
+          assert form.count('<option value=')==3, form.count('<option value=')
+          assert form.count('id="pricingFormStatus"')==1
+          assert 'role="status"' in form and 'aria-live="polite"' in form
+          handler=js[js.index("const form = document.querySelector('form');"):]
+          assert "showPricingStatus('success', language)" in handler
+          assert "showPricingStatus('error', language)" in handler
+          assert "await fetch('https://submit-form.com/X1HimpPDC'" in handler
+          assert handler.index('if (!response.ok)') < handler.index('form.reset();') < handler.index("showPricingStatus('success'")
+          assert "interest: selection ? selection.value : ''" in handler
+          assert 'alert(' not in handler
+          assert "option.textContent = labels[i]" in js
+          print('PRICING_QA_PASS static contract: 3 options, one a11y live region, safe submit and no alerts')
+          PY
+      - name: Validate inline JS syntax
+        run: node --check /tmp/seo_pricing_js_check.js
