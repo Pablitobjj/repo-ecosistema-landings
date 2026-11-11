@@ -111,10 +111,6 @@
       "dest": "/public/images/og-hispano-authority.jpg"
     },
     {
-      "src": "^/assets/(.*)$",
-      "dest": "/public/assets/$1"
-    },
-    {
       "src": "^/methodology/?$",
       "dest": "/public/hispano_methodology.html"
     },
