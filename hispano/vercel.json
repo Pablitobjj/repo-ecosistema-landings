@@ -84,6 +84,10 @@
       "dest": "/public/hispano_thanks.html"
     },
     {
+      "src": "^/assets/(.*)$",
+      "dest": "/public/assets/$1"
+    },
+    {
       "src": "^/resources/(.*)$",
       "dest": "/public/resources/$1"
     },
