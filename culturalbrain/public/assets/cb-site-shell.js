@@ -11,6 +11,7 @@
    if(p==='/resources')return 'resources';
    if(p==='/how-it-works')return 'how';
    if(p.indexOf('/solutions/')===0)return 'solutions';
+   if(p==='/platform'&&location.hash==='#solutions')return 'solutions';
    if(p==='/platform'||p==='/cerebro'||p==='/sofia'||p==='/pulse')return 'platform';
    return '';
  }
@@ -44,8 +45,9 @@
    toggle=qs('[data-cb-menu-toggle]',header);
    if(!header||!nav||!toggle)return;
    document.body.classList.add('cb-site-unified');
-   var active=routeGroup();
-   header.querySelectorAll('[data-cb-nav-id]').forEach(function(a){if(a.dataset.cbNavId===active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+   function syncActive(){var active=routeGroup();header.querySelectorAll('[data-cb-nav-id]').forEach(function(a){if(a.dataset.cbNavId===active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
+   syncActive();
+   window.addEventListener('hashchange',syncActive);
    header.querySelectorAll('[data-cb-locale]').forEach(function(b){b.addEventListener('click',function(){setLanguage(b.getAttribute('data-cb-locale'));});});
    toggle.addEventListener('click',function(){var open=nav.classList.toggle('cb-site-open');toggle.setAttribute('aria-expanded',String(open));});
    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
