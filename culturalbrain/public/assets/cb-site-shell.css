@@ -60,3 +60,24 @@ body.cb-site-unified .hero .hero-visual{background:linear-gradient(145deg,#17336
  #cb-site-shell-footer .cb-site-footer-inner{grid-template-columns:1fr;gap:28px}
 }
 @media(prefers-reduced-motion:reduce){#cb-site-shell-header .cb-site-navigation a{transition:none}}
+
+
+/* Secondary contextual exploration strip: shared across Home, Research Center, CEREBRO, Sofía and Pulse. */
+#cb-site-explore,#cb-site-explore *{box-sizing:border-box}
+#cb-site-explore{position:relative;z-index:20;background:#f9fbff;border-bottom:1px solid #e0e7f2;color:#17336f;font-family:'Raleway',Arial,sans-serif}
+#cb-site-explore .cb-site-explore-inner{width:min(1230px,calc(100% - 40px));min-height:49px;margin:0 auto;display:flex;align-items:center;gap:22px}
+#cb-site-explore .cb-site-explore-label{flex-shrink:0;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#6d1b8f}
+#cb-site-explore .cb-site-explore-links{display:flex;align-items:center;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:thin;scrollbar-color:#c8d4e9 transparent;overscroll-behavior-x:contain}
+#cb-site-explore .cb-site-explore-links a{display:inline-flex;align-items:center;justify-content:center;min-height:35px;padding:7px 13px;border-radius:7px;color:#344b69;text-decoration:none;font-weight:700;font-size:12px;line-height:1.3;transition:background-color .15s,color .15s}
+#cb-site-explore .cb-site-explore-links a:hover{background:#ecf0fa;color:#6d1b8f}
+#cb-site-explore .cb-site-explore-links a[aria-current=page]{background:#eee6f7;color:#6d1b8f;box-shadow:inset 0 -2px 0 #6d1b8f}
+#cb-site-explore a:focus-visible{outline:3px solid #2dd4bf;outline-offset:1px}
+html[lang=en] #cb-site-explore [data-lang=es],html[lang=es] #cb-site-explore [data-lang=en]{display:none!important}
+html[lang=en] #cb-site-explore [data-lang=en],html[lang=es] #cb-site-explore [data-lang=es]{display:contents!important}
+@media(max-width:640px){
+ #cb-site-explore .cb-site-explore-inner{width:calc(100% - 28px);gap:10px;min-height:46px}
+ #cb-site-explore .cb-site-explore-label{font-size:10px;letter-spacing:.04em}
+ #cb-site-explore .cb-site-explore-links{gap:3px}
+ #cb-site-explore .cb-site-explore-links a{font-size:12px;padding:8px 10px}
+}
+@media(prefers-reduced-motion:reduce){#cb-site-explore .cb-site-explore-links a{transition:none}}
