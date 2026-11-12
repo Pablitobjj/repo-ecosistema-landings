@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Cultural Brain | Plans, Access &amp; Guided Demo" data-title-es="Cultural Brain | Modalidades de Acceso y Demostración">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultural Brain | Plans, Access & Guided Demo</title>
-    <meta name="description" content="Explore Cultural Brain for Teams, Agencies and Enterprise. Connect cultural research, planning, learning and Pulse. Request a guided demo and access proposal.">
+    <meta name="description" content="Explore Cultural Brain for Teams, Agencies and Enterprise. Connect cultural research, planning, learning and Pulse. Request a guided demo and access proposal." data-description-en="Explore Cultural Brain for Teams, Agencies and Enterprise. Connect cultural research, planning, learning and Pulse. Request a guided demo and access proposal." data-description-es="Explorá Cultural Brain para equipos, agencias y organizaciones enterprise. Investigación, planificación, aprendizaje y Pulse en un mismo espacio. Solicitá una demo.">
     
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
@@ -200,67 +200,39 @@
 @media(prefers-reduced-motion:reduce){.cbx-button{transition:none}.cbx-button:hover{transform:none}}
 </style>
 <link rel="canonical" href="https://www.culturalbrain.net/pricing">
+<link rel="stylesheet" href="/assets/cb-site-shell.css">
+<script defer src="/assets/cb-site-shell.js"></script>
 </head>
-<body>
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="/">
-                        <span class="text-2xl font-bold brain-gradient">Cultural Brain</span>
-                    </a>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/#modules" class="text-gray-700 hover:text-purple-600 transition-colors">
-                        <span data-lang="en">Platform</span>
-                        <span data-lang="es">Plataforma</span>
-                    </a>
-                    <a href="/#metrics" class="text-gray-700 hover:text-purple-600 transition-colors">
-                        <span data-lang="en">Metrics</span>
-                        <span data-lang="es">Métricas</span>
-                    </a>
-                    <a href="/#solutions" class="text-gray-700 hover:text-purple-600 transition-colors">
-                        <span data-lang="en">Use Cases</span>
-                        <span data-lang="es">Casos de Uso</span>
-                    </a>
-                    <a href="/pricing" class="text-purple-600 font-semibold">
-                        <span data-lang="en">Pricing</span>
-                        <span data-lang="es">Precios</span>
-                    </a>
-                    
-                    <div class="language-switcher">
-                        <button id="currentLangBtn" class="language-btn">
-                            <img id="currentLangFlag" src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag">
-                            <span id="currentLangText">EN</span>
-                            <i class="fas fa-chevron-down text-xs"></i>
-                        </button>
-                        <div class="language-dropdown">
-                            <div class="language-option" onclick="changeLanguage('en')">
-                                <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag">
-                                <span>English</span>
-                            </div>
-                            <div class="language-option" onclick="changeLanguage('es')">
-                                <img src="https://flagcdn.com/w20/es.png" alt="ES" class="language-flag">
-                                <span>Español</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
-                        <span data-lang="en">Book a Demo</span>
-                        <span data-lang="es">Solicitar demo</span>
-                    </a>
-                </div>
-                
-                <div class="md:hidden">
-                    <button class="text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+<body class="cb-site-unified">
+    <!-- CB_SITE_SHELL_HEADER_START -->
+<header id="cb-site-shell-header" class="cb-site-header" role="banner">
+  <div class="cb-site-inner">
+    <a class="cb-site-brand" href="/" aria-label="Cultural Brain — Home">
+      <img src="/favicon.png" width="36" height="36" alt="" decoding="async">
+      <span>Cultural Brain</span>
+    </a>
+    <nav id="cb-site-primary-nav" class="cb-site-navigation" aria-label="Main navigation / Navegación principal" data-cb-site-nav>
+      <a data-cb-nav-id="platform" href="/platform"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></a>
+      <a data-cb-nav-id="research" href="/research-center"><span data-lang="en">Research</span><span data-lang="es">Investigación</span></a>
+      <a data-cb-nav-id="how" href="/how-it-works"><span data-lang="en">How it works</span><span data-lang="es">Cómo funciona</span></a>
+      <a data-cb-nav-id="solutions" href="/platform#solutions"><span data-lang="en">Solutions</span><span data-lang="es">Soluciones</span></a>
+      <a data-cb-nav-id="resources" href="/resources"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+      <a data-cb-nav-id="plans" href="/pricing"><span data-lang="en">Plans</span><span data-lang="es">Planes</span></a>
+      <a href="/demo" class="cb-site-mobile-demo"><span data-lang="en">Request demo</span><span data-lang="es">Solicitar demo</span></a>
     </nav>
+    <div class="cb-site-controls">
+      <div class="cb-site-language" role="group" aria-label="Language / Idioma">
+        <button type="button" data-cb-locale="en" aria-pressed="true" aria-label="English">EN</button>
+        <button type="button" data-cb-locale="es" aria-pressed="false" aria-label="Español">ES</button>
+      </div>
+      <a href="/demo" class="cb-site-primary-cta"><span data-lang="en">Request demo</span><span data-lang="es">Solicitar demo</span></a>
+      <button class="cb-site-menu-toggle" type="button" data-cb-menu-toggle aria-controls="cb-site-primary-nav" aria-expanded="false" aria-label="Open navigation menu / Abrir menú">
+        <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<!-- CB_SITE_SHELL_HEADER_END -->
 
     <section class="cbx-hero"><div class="cbx-shell"><p class="cbx-kicker"><span data-lang="en">Cultural Brain · Access & Plans</span><span data-lang="es">Cultural Brain · Acceso y modalidades</span></p><h1><span data-lang="en">The right intelligence workspace <em>for the decisions your team makes.</em></span><span data-lang="es">El espacio de inteligencia adecuado <em>para las decisiones de tu equipo.</em></span></h1><p class="cbx-lead"><span data-lang="en">Cultural Brain brings together cultural research, brand knowledge, audience and media intelligence, strategy, planning, learning and Pulse. Let's find the right workspace and scope for your team.</span><span data-lang="es">Cultural Brain integra investigación cultural, conocimiento de marca, inteligencia de audiencias y medios, estrategia, planificación, aprendizaje y Pulse. Definamos el espacio de trabajo y el alcance adecuados para tu equipo.</span></p><div class="cbx-actions"><a class="cbx-button cbx-primary" href="#contact"><span data-lang="en">Book a guided demo</span><span data-lang="es">Solicitar una demo guiada</span> →</a><a class="cbx-button cbx-outline" href="#plans"><span data-lang="en">Explore ways to work with us</span><span data-lang="es">Conocer las modalidades</span></a></div></div></section><section class="cbx-section" id="plans"><div class="cbx-shell"><p class="cbx-kicker"><span data-lang="en">Built around your workflow</span><span data-lang="es">Pensado para tu trabajo</span></p><h2 class="cbx-title"><span data-lang="en">One platform. Different team needs.</span><span data-lang="es">Una plataforma. Necesidades distintas.</span></h2><p class="cbx-description"><span data-lang="en">Explore the proposed ways organizations can work with Cultural Brain. Final scope, access rights and commercial terms are defined in the proposal for each organization.</span><span data-lang="es">Conocé las modalidades propuestas para trabajar con Cultural Brain. El alcance definitivo, los permisos de acceso y las condiciones comerciales se establecen en la propuesta de cada organización.</span></p><div class="cbx-grid">
 <article class="cbx-plan"><span class="cbx-plan-label">TEAMS</span><h3>Cultural Brain for Teams</h3><p><span data-lang="en">For research, insights, media and marketing teams that need connected decisions.</span><span data-lang="es">Para equipos de research, insights, medios y marketing que necesitan decisiones conectadas.</span></p><ul><li><span data-lang="en">Cultural research and brand knowledge</span><span data-lang="es">Investigación cultural y conocimiento de marca</span></li><li><span data-lang="en">Audience and media intelligence</span><span data-lang="es">Inteligencia de audiencias y medios</span></li><li><span data-lang="en">Strategy and planning workspace</span><span data-lang="es">Espacio de estrategia y planificación</span></li><li><span data-lang="en">Learning Loop and Pulse</span><span data-lang="es">Learning Loop y Pulse</span></li></ul><a class="cbx-button cbx-outline" href="#contact"><span data-lang="en">Discuss this option</span><span data-lang="es">Consultar esta modalidad</span> →</a></article>
@@ -331,81 +303,26 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h3 class="text-2xl font-bold brain-gradient mb-4">Cultural Brain</h3>
-                    <p class="text-gray-400 mb-4">
-                        <span data-lang="en">Cultural Intelligence Platform for US & LATAM</span>
-                        <span data-lang="es">Plataforma de Inteligencia Cultural para US y LATAM</span>
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span data-lang="en">Platform</span>
-                        <span data-lang="es">Plataforma</span>
-                    </h4>
-                    <ul class="space-y-2">
-                        <li><a href="/#modules" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Modules</span>
-                            <span data-lang="es">Módulos</span>
-                        </a></li>
-                        <li><a href="/#metrics" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Metrics</span>
-                            <span data-lang="es">Métricas</span>
-                        </a></li>
-                        <li><a href="/pricing" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Pricing</span>
-                            <span data-lang="es">Precios</span>
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span data-lang="en">Company</span>
-                        <span data-lang="es">Empresa</span>
-                    </h4>
-                    <ul class="space-y-2">
-                        <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">About</span>
-                            <span data-lang="es">Nosotros</span>
-                        </a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Contact</span>
-                            <span data-lang="es">Contacto</span>
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span data-lang="en">Legal</span>
-                        <span data-lang="es">Legal</span>
-                    </h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Privacy Policy</span>
-                            <span data-lang="es">Política de Privacidad</span>
-                        </a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Terms of Service</span>
-                            <span data-lang="es">Términos de Servicio</span>
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>
-                    <span data-lang="en">© 2025 Cultural Brain. All rights reserved. Part of the HISPAÑO ecosystem.</span>
-                    <span data-lang="es">© 2025 Cultural Brain. Todos los derechos reservados. Parte del ecosistema HISPAÑO.</span>
-                </p>
-            </div>
-        </div>
-    </footer>
+    <!-- CB_SITE_SHELL_FOOTER_START -->
+<footer id="cb-site-shell-footer" class="cb-site-footer">
+  <div class="cb-site-footer-inner">
+    <div class="cb-site-footer-brand">
+      <a href="/" class="cb-site-footer-logo">Cultural Brain</a>
+      <p><span data-lang="en">Cultural intelligence for research, planning, activation handoffs, learning and ongoing review.</span><span data-lang="es">Inteligencia cultural para investigar, planificar, preparar activaciones, aprender y revisar continuamente.</span></p>
+      <small>© 2026 Cultural Brain · <span data-lang="en">A product by</span><span data-lang="es">Un producto de</span> <a href="https://www.hispan.io/">Hispaño</a>.</small>
+    </div>
+    <nav aria-label="Footer / Pie de página" class="cb-site-footer-nav">
+      <a href="/about"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+      <a href="/platform"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></a>
+      <a href="/research-center"><span data-lang="en">Research</span><span data-lang="es">Investigación</span></a>
+      <a href="/resources"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+      <a href="/pricing"><span data-lang="en">Plans</span><span data-lang="es">Planes</span></a>
+      <a href="/demo"><span data-lang="en">Request demo</span><span data-lang="es">Solicitar demo</span></a>
+      <a href="https://culturalbrain.app/"><span data-lang="en">Log in</span><span data-lang="es">Ingresar</span></a>
+    </nav>
+  </div>
+</footer>
+<!-- CB_SITE_SHELL_FOOTER_END -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -449,54 +366,7 @@
                 delete pricingFormStatus.dataset.kind;
             }
 
-            window.changeLanguage = function(lang) {
-                document.body.className = lang === 'es' ? 'lang-es' : '';
-                
-                if (lang === 'es') {
-                    currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
-                    currentLangFlag.alt = 'ES';
-                    currentLangText.textContent = 'ES';
-                    if(nameInput) nameInput.placeholder = 'Tu nombre';
-                    if(companyInput) companyInput.placeholder = 'Tu empresa';
-                    if(emailInput) emailInput.placeholder = 'Tu email';
-                    document.title = 'Cultural Brain | Modalidades de Acceso y Demostración';
-                    document.querySelector('meta[name="description"]').setAttribute("content", "Explorá Cultural Brain para equipos, agencias y organizaciones enterprise. Investigación, planificación, aprendizaje y Pulse en un mismo espacio. Solicitá una demo.");
-
-                } else {
-                    currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
-                    currentLangFlag.alt = 'EN';
-                    currentLangText.textContent = 'EN';
-                    if(nameInput) nameInput.placeholder = 'Your name';
-                    if(companyInput) companyInput.placeholder = 'Your company';
-                    if(emailInput) emailInput.placeholder = 'Your email';
-                    document.title = 'Cultural Brain | Plans, Access & Guided Demo';
-                    document.querySelector('meta[name="description"]').setAttribute("content", "Explore Cultural Brain for Teams, Agencies and Enterprise. Connect research, planning, learning and Pulse in one platform. Book a guided demo.");
-                }
-                
-
-                // Keep the semantic option values stable while translating their visible labels.
-                const pricingInterest = document.querySelector('#contact select');
-                if (pricingInterest && pricingInterest.options.length === 4) {
-                    const labels = lang === 'es'
-                        ? ['Demo guiada de producto', 'Cultural Brain para equipos', 'Cultural Brain para agencias', 'Cultural Brain Enterprise']
-                        : ['Guided Product Demo', 'Cultural Brain for Teams', 'Cultural Brain for Agencies', 'Cultural Brain Enterprise'];
-                    Array.from(pricingInterest.options).forEach((option, i) => {
-                        option.textContent = labels[i];
-                    });
-                }
-                if (pricingFormStatus && pricingFormStatus.dataset.kind) {
-                    pricingFormStatus.textContent = pricingMessages[lang === 'es' ? 'es' : 'en'][pricingFormStatus.dataset.kind];
-                }
-                document.querySelectorAll('.language-option').forEach(option => {
-                    option.classList.remove('active');
-                    if (option.getAttribute('onclick') === `changeLanguage('${lang}')`) {
-                        option.classList.add('active');
-                    }
-                });
-                
-                localStorage.setItem('culturalbrain-lang', lang);
-                document.documentElement.lang = lang;
-            }
+            window.changeLanguage = function(lang) { if (window.CBSiteShell) window.CBSiteShell.setLanguage(lang); };
             
             const savedLang = localStorage.getItem('culturalbrain-lang') || 'en';
             changeLanguage(savedLang);
