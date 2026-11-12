@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Cultural Brain | Cultural Intelligence Platform for Marketing" data-title-es="Cultural Brain | Plataforma de Inteligencia Cultural para Marketing">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultural Brain | Cultural Intelligence Platform for Marketing</title>
-    <meta name="description" content="Cultural Brain connects cultural research, brand knowledge, audience intelligence, planning, campaign learning and Pulse in one marketing intelligence workspace.">
+    <meta name="description" content="Cultural Brain connects cultural research, brand knowledge, audience intelligence, planning, campaign learning and Pulse in one marketing intelligence workspace." data-description-en="Cultural Brain connects cultural research, brand knowledge, audience intelligence, planning, campaign learning and Pulse in one marketing intelligence workspace." data-description-es="Cultural Brain conecta investigación cultural, conocimiento de marca, audiencias, planificación, aprendizaje de campañas y Pulse en un solo espacio de inteligencia para marketing.">
     
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
@@ -324,74 +324,39 @@
 </style>
     <link rel="canonical" href="https://www.culturalbrain.net/">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://www.culturalbrain.net/#software","name":"Cultural Brain","url":"https://www.culturalbrain.net/","description":"Cultural intelligence and audience planning SaaS platform for digital advertising.","applicationCategory":"BusinessApplication","operatingSystem":"Web","creator":{"@type":"Organization","@id":"https://www.hispan.io/#organization","name":"Hispaño","url":"https://www.hispan.io/"}}</script>
+<link rel="stylesheet" href="/assets/cb-site-shell.css">
+<script defer src="/assets/cb-site-shell.js"></script>
 </head>
-<body>
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-3">
-                    <div class="text-2xl font-bold brain-gradient">🧠 Cultural Brain</div>
-                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-semibold">US + LATAM</span>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#how-we-work" class="text-gray-700 hover:text-purple-600 transition-colors">
-                        <span data-lang="en">How We Work</span>
-                        <span data-lang="es">Cómo Trabajamos</span>
-                    </a>
-                    <a href="/research-center" class="text-gray-700 hover:text-purple-600 transition-colors"><span data-lang="en">Research</span><span data-lang="es">Investigación</span></a>
-                    <a href="#modules" class="text-gray-700 hover:text-purple-600 transition-colors"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></a>
-                    <a href="/pricing" class="text-gray-700 hover:text-purple-600 transition-colors">
-                        <span data-lang="en">Pricing</span>
-                        <span data-lang="es">Precios</span>
-                    </a>
-                    
-                    <div class="language-switcher">
-                        <button id="currentLangBtn" class="language-btn">
-                            <img id="currentLangFlag" src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag">
-                            <span id="currentLangText">EN</span>
-                            <i class="fas fa-chevron-down text-xs"></i>
-                        </button>
-                        <div class="language-dropdown">
-                            <div class="language-option" onclick="changeLanguage('en')">
-                                <img src="https://flagcdn.com/w20/us.png" alt="EN" class="language-flag">
-                                <span>English</span>
-                            </div>
-                            <div class="language-option" onclick="changeLanguage('es')">
-                                <img src="https://flagcdn.com/w20/es.png" alt="ES" class="language-flag">
-                                <span>Español</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#demo" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
-                        <span data-lang="en">Book a Demo</span>
-                        <span data-lang="es">Solicitar Demo</span>
-                    </a>
-                </div>
-                
-                <div class="md:hidden">
-                    <button class="text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="border-t border-gray-100 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-4 text-sm">
-                <span class="status-badge">
-                    <span class="status-dot"></span>
-                    <span data-lang="en">Cultural Decision Intelligence</span>
-                    <span data-lang="es">Inteligencia cultural para decisiones</span>
-                </span>
-                <span class="text-gray-600">
-                    <span data-lang="en">Research • Planning • Activation • Learning • Pulse</span>
-                    <span data-lang="es">Investigación • Planificación • Activación • Aprendizaje • Pulse</span>
-                </span>
-            </div>
-        </div>
-    </nav><div class="border-b border-indigo-100 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex gap-5 items-center overflow-x-auto whitespace-nowrap text-sm" aria-label="Explore Cultural Brain product capabilities">
+<body class="cb-site-unified">
+    <!-- CB_SITE_SHELL_HEADER_START -->
+<header id="cb-site-shell-header" class="cb-site-header" role="banner">
+  <div class="cb-site-inner">
+    <a class="cb-site-brand" href="/" aria-label="Cultural Brain — Home">
+      <img src="/favicon.png" width="36" height="36" alt="" decoding="async">
+      <span>Cultural Brain</span>
+    </a>
+    <nav id="cb-site-primary-nav" class="cb-site-navigation" aria-label="Main navigation / Navegación principal" data-cb-site-nav>
+      <a data-cb-nav-id="platform" href="/platform"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></a>
+      <a data-cb-nav-id="research" href="/research-center"><span data-lang="en">Research</span><span data-lang="es">Investigación</span></a>
+      <a data-cb-nav-id="how" href="/how-it-works"><span data-lang="en">How it works</span><span data-lang="es">Cómo funciona</span></a>
+      <a data-cb-nav-id="solutions" href="/platform#solutions"><span data-lang="en">Solutions</span><span data-lang="es">Soluciones</span></a>
+      <a data-cb-nav-id="resources" href="/resources"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+      <a data-cb-nav-id="plans" href="/pricing"><span data-lang="en">Plans</span><span data-lang="es">Planes</span></a>
+      <a href="/demo" class="cb-site-mobile-demo"><span data-lang="en">Request demo</span><span data-lang="es">Solicitar demo</span></a>
+    </nav>
+    <div class="cb-site-controls">
+      <div class="cb-site-language" role="group" aria-label="Language / Idioma">
+        <button type="button" data-cb-locale="en" aria-pressed="true" aria-label="English">EN</button>
+        <button type="button" data-cb-locale="es" aria-pressed="false" aria-label="Español">ES</button>
+      </div>
+      <a href="/demo" class="cb-site-primary-cta"><span data-lang="en">Request demo</span><span data-lang="es">Solicitar demo</span></a>
+      <button class="cb-site-menu-toggle" type="button" data-cb-menu-toggle aria-controls="cb-site-primary-nav" aria-expanded="false" aria-label="Open navigation menu / Abrir menú">
+        <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<!-- CB_SITE_SHELL_HEADER_END --><div class="border-b border-indigo-100 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex gap-5 items-center overflow-x-auto whitespace-nowrap text-sm" aria-label="Explore Cultural Brain product capabilities">
 <span class="text-xs text-purple-700 font-bold uppercase tracking-wider"><span data-lang="en">Explore</span><span data-lang="es">Explorá</span></span>
 <a href="/research-center" class="text-indigo-900 hover:text-purple-700 font-semibold">Research Center</a>
 <a href="/cerebro" class="text-indigo-900 hover:text-purple-700 font-semibold">CEREBRO</a>
@@ -611,80 +576,26 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h3 class="text-2xl font-bold brain-gradient mb-4">Cultural Brain</h3>
-                    <p class="text-gray-400">
-                        <span data-lang="en">Cultural intelligence for research, planning, activation, learning and continuous monitoring.</span>
-                        <span data-lang="es">Inteligencia cultural para investigar, planificar, activar, aprender y monitorear cambios.</span>
-                    </p>
-                    <div class="mt-4 text-sm text-gray-400 leading-relaxed">
-                        <p><span data-lang="en">Developed by </span><span data-lang="es">Desarrollado por </span><a href="https://www.hispan.io" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-white underline">Hispaño</a>.</p>
-                        <p><span data-lang="en">Product creator: </span><span data-lang="es">Creador del producto: </span><a href="https://www.hispan.io/about.html#founder" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-white underline">Pablo Javier Peirone</a>.</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span data-lang="en">Platform</span>
-                        <span data-lang="es">Plataforma</span>
-                    </h4>
-                    <ul class="space-y-2">
-                        <li><a href="#how-we-work" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">How We Work</span>
-                            <span data-lang="es">Cómo Trabajamos</span>
-                        </a></li>
-                        <li><a href="#metrics" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">CRS/CAI/CCS Metrics</span>
-                            <span data-lang="es">Métricas CRS/CAI/CCS</span>
-                        </a></li>
-                        <li><a href="#modules" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Modules</span>
-                            <span data-lang="es">Módulos</span>
-                        </a></li>
-                        <li><a href="/pricing" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Pricing</span>
-                            <span data-lang="es">Precios</span>
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span data-lang="en">Company</span>
-                        <span data-lang="es">Compañía</span>
-                    </h4>
-                    <ul class="space-y-2">
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Contact</span>
-                            <span data-lang="es">Contacto</span>
-                        </a></li>
-                        <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">About Us</span>
-                            <span data-lang="es">Nosotros</span>
-                        </a></li>
-                        <li><a href="/resources" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Research & Insights</span>
-                            <span data-lang="es">Research & Insights</span>
-                        </a></li>
-                        <li><a href="/resources" class="text-gray-400 hover:text-white transition-colors">
-                            <span data-lang="en">Cultural Intelligence Guide</span>
-                            <span data-lang="es">Guía de Inteligencia Cultural</span>
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>
-                    <span data-lang="en">© 2025 Cultural Brain. Part of the HISPAÑO ecosystem.</span>
-                    <span data-lang="es">© 2025 Cultural Brain. Parte del ecosistema HISPAÑO.</span>
-                </p>
-            </div>
-        </div>
-    </footer>
+    <!-- CB_SITE_SHELL_FOOTER_START -->
+<footer id="cb-site-shell-footer" class="cb-site-footer">
+  <div class="cb-site-footer-inner">
+    <div class="cb-site-footer-brand">
+      <a href="/" class="cb-site-footer-logo">Cultural Brain</a>
+      <p><span data-lang="en">Cultural intelligence for research, planning, activation handoffs, learning and ongoing review.</span><span data-lang="es">Inteligencia cultural para investigar, planificar, preparar activaciones, aprender y revisar continuamente.</span></p>
+      <small>© 2026 Cultural Brain · <span data-lang="en">A product by</span><span data-lang="es">Un producto de</span> <a href="https://www.hispan.io/">Hispaño</a>.</small>
+    </div>
+    <nav aria-label="Footer / Pie de página" class="cb-site-footer-nav">
+      <a href="/about"><span data-lang="en">About</span><span data-lang="es">Nosotros</span></a>
+      <a href="/platform"><span data-lang="en">Platform</span><span data-lang="es">Plataforma</span></a>
+      <a href="/research-center"><span data-lang="en">Research</span><span data-lang="es">Investigación</span></a>
+      <a href="/resources"><span data-lang="en">Resources</span><span data-lang="es">Recursos</span></a>
+      <a href="/pricing"><span data-lang="en">Plans</span><span data-lang="es">Planes</span></a>
+      <a href="/demo"><span data-lang="en">Request demo</span><span data-lang="es">Solicitar demo</span></a>
+      <a href="https://culturalbrain.app/"><span data-lang="en">Log in</span><span data-lang="es">Ingresar</span></a>
+    </nav>
+  </div>
+</footer>
+<!-- CB_SITE_SHELL_FOOTER_END -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -700,35 +611,7 @@
                 });
             }
 
-            window.changeLanguage = function(lang) {
-                document.body.className = lang === 'es' ? 'lang-es' : '';
-                
-                if (lang === 'es') {
-                    currentLangFlag.src = 'https://flagcdn.com/w20/es.png';
-                    currentLangFlag.alt = 'ES';
-                    currentLangText.textContent = 'ES';
-                    document.title = 'Cultural Brain | Plataforma de Inteligencia Cultural para Marketing';
-                    document.querySelector('meta[name="description"]').setAttribute("content", "Cultural Brain conecta investigación cultural, conocimiento de marca, audiencias, planificación, aprendizaje de campañas y Pulse en un solo espacio de inteligencia para marketing.");
-                } else {
-                    currentLangFlag.src = 'https://flagcdn.com/w20/us.png';
-                    currentLangFlag.alt = 'EN';
-                    currentLangText.textContent = 'EN';
-                    document.title = 'Cultural Brain | Cultural Intelligence Platform for Marketing';
-                    document.querySelector('meta[name="description"]').setAttribute("content", "Cultural Brain connects cultural research, brand knowledge, audience intelligence, planning, campaign learning and Pulse in one marketing intelligence workspace.");
-                }
-                
-                updatePlaceholders(lang);
-                
-                document.querySelectorAll('.language-option').forEach(option => {
-                    option.classList.remove('active');
-                    if (option.getAttribute('onclick') === `changeLanguage('${lang}')`) {
-                        option.classList.add('active');
-                    }
-                });
-                
-                localStorage.setItem('culturalbrain-lang', lang);
-                document.documentElement.lang = lang;
-            }
+            window.changeLanguage = function(lang) { if (window.CBSiteShell) window.CBSiteShell.setLanguage(lang); };
             
             const savedLang = localStorage.getItem('culturalbrain-lang') || 'en';
             changeLanguage(savedLang);
