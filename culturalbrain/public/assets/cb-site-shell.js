@@ -48,6 +48,14 @@
    function syncActive(){var active=routeGroup();header.querySelectorAll('[data-cb-nav-id]').forEach(function(a){if(a.dataset.cbNavId===active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
    syncActive();
    window.addEventListener('hashchange',syncActive);
+   var explore=qs('#cb-site-explore');
+   if(explore){
+     var path=location.pathname.replace(/\/+$/,'')||'/';
+     explore.querySelectorAll('[data-cb-explore-route]').forEach(function(link){
+       if(link.getAttribute('data-cb-explore-route')===path)link.setAttribute('aria-current','page');
+       else link.removeAttribute('aria-current');
+     });
+   }
    header.querySelectorAll('[data-cb-locale]').forEach(function(b){b.addEventListener('click',function(){setLanguage(b.getAttribute('data-cb-locale'));});});
    toggle.addEventListener('click',function(){var open=nav.classList.toggle('cb-site-open');toggle.setAttribute('aria-expanded',String(open));});
    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
