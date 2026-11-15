@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "^/190452569a5d48c6b02f4fe479208a58\\.txt$",
+      "dest": "/public/190452569a5d48c6b02f4fe479208a58.txt"
+    },
+    {
       "src": "^/sitemap\\.xml$",
       "dest": "/public/sitemap.xml"
     },
