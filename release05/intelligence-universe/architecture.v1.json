@@ -1,0 +1,591 @@
+{
+  "version": "0.1.0-report-derived",
+  "source_cutoff": "2026-11-20",
+  "visual_metaphors": {
+    "universe": {
+      "purpose": "breadth_depth",
+      "root": "knowledge",
+      "render": "interactive_orbital_explorer",
+      "modes": [
+        "Knowledge",
+        "Relationships",
+        "Operations",
+        "Decisions",
+        "Learning",
+        "Extensions"
+      ],
+      "fallback": "semantic_html_indexable"
+    },
+    "loop": {
+      "purpose": "cumulative_intelligence",
+      "steps": [
+        "Understand",
+        "Recommend",
+        "Decide",
+        "Execute",
+        "Measure",
+        "Learn"
+      ],
+      "return_to": "Understand",
+      "render": "accessible_svg_animated_with_reduced_motion"
+    }
+  },
+  "operations": [
+    {
+      "id": "ingest",
+      "label": {
+        "es": "Incorporar",
+        "en": "Ingest"
+      },
+      "owner": "core_ingest",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "classify",
+      "label": {
+        "es": "Clasificar",
+        "en": "Classify"
+      },
+      "owner": "conocimiento",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "extract",
+      "label": {
+        "es": "Extraer",
+        "en": "Extract"
+      },
+      "owner": "conocimiento",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "normalize",
+      "label": {
+        "es": "Normalizar",
+        "en": "Normalize"
+      },
+      "owner": "conocimiento",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "validate",
+      "label": {
+        "es": "Validar",
+        "en": "Validate"
+      },
+      "owner": "conocimiento",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "compare",
+      "label": {
+        "es": "Comparar",
+        "en": "Compare"
+      },
+      "owner": "conocimiento",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "relate",
+      "label": {
+        "es": "Relacionar",
+        "en": "Relate"
+      },
+      "owner": "conocimiento",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "select_evidence",
+      "label": {
+        "es": "Seleccionar evidencia",
+        "en": "Select evidence"
+      },
+      "owner": "conocimiento",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "apply_restrictions",
+      "label": {
+        "es": "Aplicar restricciones",
+        "en": "Apply restrictions"
+      },
+      "owner": "motor_owner",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "reason",
+      "label": {
+        "es": "Razonar",
+        "en": "Reason"
+      },
+      "owner": "cerebro",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "recommend",
+      "label": {
+        "es": "Recomendar",
+        "en": "Recommend"
+      },
+      "owner": "cerebro",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "human_decision",
+      "label": {
+        "es": "Registrar decisión humana",
+        "en": "Record human decision"
+      },
+      "owner": "cerebro_event_ledger",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "plan_version",
+      "label": {
+        "es": "Versionar plan",
+        "en": "Version plan"
+      },
+      "owner": "planner",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "evidence_execution",
+      "label": {
+        "es": "Acreditar ejecución",
+        "en": "Attest execution"
+      },
+      "owner": "activation_owner",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "evaluate",
+      "label": {
+        "es": "Evaluar hipótesis",
+        "en": "Evaluate hypothesis"
+      },
+      "owner": "closure",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "seal_verdict",
+      "label": {
+        "es": "Sellar veredicto",
+        "en": "Seal verdict"
+      },
+      "owner": "closure",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "harvest",
+      "label": {
+        "es": "Cosechar aprendizaje",
+        "en": "Harvest learning"
+      },
+      "owner": "closure",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    },
+    {
+      "id": "reuse",
+      "label": {
+        "es": "Reutilizar aprendizaje",
+        "en": "Reuse learning"
+      },
+      "owner": "strategy_planner",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L24-L31,L147-L160",
+      "presentation_status": "product_target",
+      "not_all_universal": true
+    }
+  ],
+  "relations": [
+    {
+      "from": "core_ingest",
+      "to": "knowledge",
+      "relationship_label": "inputs and scoped reading",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "knowledge",
+      "to": "cerebro",
+      "relationship_label": "selected evidence",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "knowledge",
+      "to": "strategy",
+      "relationship_label": "premises and restrictions",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "knowledge",
+      "to": "planner",
+      "relationship_label": "benchmarks and restrictions",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "research",
+      "to": "knowledge",
+      "relationship_label": "sourced findings",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "specialized_engines",
+      "to": "cerebro",
+      "relationship_label": "owner outputs",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "cerebro",
+      "to": "human_decision",
+      "relationship_label": "versioned recommendations",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "human_decision",
+      "to": "executed_plan",
+      "relationship_label": "application and execution evidenced",
+      "evidence_class": "target_promise",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "executed_plan",
+      "to": "closure",
+      "relationship_label": "attributed result/official verdict",
+      "evidence_class": "target_promise",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "closure",
+      "to": "knowledge",
+      "relationship_label": "validated learnings",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "closure",
+      "to": "planner",
+      "relationship_label": "bounded learning effects",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "closure",
+      "to": "cerebro",
+      "relationship_label": "recommendation successor lineage",
+      "evidence_class": "target_promise",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "pulse",
+      "to": "research_validity",
+      "relationship_label": "review changing context",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    },
+    {
+      "from": "sofia",
+      "to": "cerebro_packages",
+      "relationship_label": "read with flags and scope",
+      "evidence_class": "source",
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L7-L31,L147-L160; CB_CIERRE_GAP_ANALYSIS_20261120.md#L13-L28"
+    }
+  ],
+  "page_map": [
+    {
+      "site": "cb",
+      "url": "/",
+      "current_file": "culturalbrain/public/cultural_brain_index.html",
+      "desired_sections": [
+        "hero_loop",
+        "intelligence_universe_teaser",
+        "cerebro_anatomy",
+        "learning_teaser"
+      ],
+      "assets": [
+        "V01",
+        "V02-compact",
+        "V03-compact",
+        "V04-compact"
+      ],
+      "implementation_run": "R05-04",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/platform",
+      "current_file": "culturalbrain/public/cb_platform.html",
+      "desired_sections": [
+        "intelligence_universe",
+        "knowledge_types",
+        "operations",
+        "extensible_intelligence"
+      ],
+      "assets": [
+        "V02",
+        "V05"
+      ],
+      "implementation_run": "R05-04",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/how-it-works",
+      "current_file": "culturalbrain/public/cb_how_it_works.html",
+      "desired_sections": [
+        "storyboard_two_campaigns"
+      ],
+      "assets": [
+        "V01",
+        "V04"
+      ],
+      "implementation_run": "R05-05",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/cerebro",
+      "current_file": "culturalbrain/public/cb_cerebro.html",
+      "desired_sections": [
+        "decision_anatomy",
+        "five_domains",
+        "ten_recommendations"
+      ],
+      "assets": [
+        "V03"
+      ],
+      "implementation_run": "R05-05",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/learning-loop",
+      "current_file": null,
+      "desired_sections": [
+        "hypotheses",
+        "five_outcomes",
+        "before_after",
+        "institutional_learning"
+      ],
+      "assets": [
+        "V04"
+      ],
+      "implementation_run": "R05-05",
+      "expected_new_route": true
+    },
+    {
+      "site": "cb",
+      "url": "/research-center",
+      "current_file": "culturalbrain/public/cb_research_center.html",
+      "desired_sections": [
+        "provenance_to_knowledge"
+      ],
+      "assets": [
+        "Screenshot-Research"
+      ],
+      "implementation_run": "R05-06",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/sofia",
+      "current_file": "culturalbrain/public/cb_sofia.html",
+      "desired_sections": [
+        "contextual_dialogue"
+      ],
+      "assets": [
+        "Screenshot-Sofia"
+      ],
+      "implementation_run": "R05-06",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/pulse",
+      "current_file": "culturalbrain/public/cb_pulse.html",
+      "desired_sections": [
+        "signals_and_validity"
+      ],
+      "assets": [
+        "Screenshot-Pulse"
+      ],
+      "implementation_run": "R05-06",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/solutions/agencies",
+      "current_file": "culturalbrain/public/cb_solutions_agencies.html",
+      "desired_sections": [
+        "agency_workflow"
+      ],
+      "assets": [
+        "Screenshot-SitePlanner"
+      ],
+      "implementation_run": "R05-06",
+      "expected_new_route": false
+    },
+    {
+      "site": "cb",
+      "url": "/solutions/brands",
+      "current_file": "culturalbrain/public/cb_solutions_brands.html",
+      "desired_sections": [
+        "brand_memory",
+        "enterprise_extensions"
+      ],
+      "assets": [
+        "V05",
+        "Screenshot-Learning"
+      ],
+      "implementation_run": "R05-06",
+      "expected_new_route": false
+    },
+    {
+      "site": "hispano",
+      "url": "/",
+      "current_file": "hispano/public/hispano_index.html",
+      "desired_sections": [
+        "cultural-brain"
+      ],
+      "assets": [
+        "V01-compact"
+      ],
+      "implementation_run": "R05-07",
+      "expected_new_route": false
+    },
+    {
+      "site": "hispano",
+      "url": "/platform",
+      "current_file": "hispano/public/hispano_platform.html",
+      "desired_sections": [
+        "workflow"
+      ],
+      "assets": [
+        "V01-compact"
+      ],
+      "implementation_run": "R05-07",
+      "expected_new_route": false
+    },
+    {
+      "site": "hispano",
+      "url": "/methodology",
+      "current_file": "hispano/public/hispano_methodology.html",
+      "desired_sections": [
+        "standards",
+        "application"
+      ],
+      "assets": [
+        "methodology-diagram"
+      ],
+      "implementation_run": "R05-07",
+      "expected_new_route": false
+    },
+    {
+      "site": "hispano",
+      "url": "/research/us-hispanic-cultural-intelligence",
+      "current_file": "hispano/public/hispano_us_hispanic_cultural_intelligence.html",
+      "desired_sections": [
+        "decision-framework-2026"
+      ],
+      "assets": [],
+      "implementation_run": "R05-07",
+      "expected_new_route": false
+    }
+  ],
+  "asset_map": [
+    {
+      "id": "V01",
+      "name": "Living Intelligence Loop",
+      "primary": "CB Home",
+      "reuse": [
+        "/how-it-works",
+        "Hispaño"
+      ],
+      "run": "R05-02"
+    },
+    {
+      "id": "V02",
+      "name": "Intelligence Universe",
+      "primary": "CB /platform",
+      "reuse": [
+        "CB Home preview"
+      ],
+      "run": "R05-03"
+    },
+    {
+      "id": "V03",
+      "name": "Anatomy of a Decision",
+      "primary": "CB /cerebro",
+      "reuse": [
+        "CB Home"
+      ],
+      "run": "R05-05"
+    },
+    {
+      "id": "V04",
+      "name": "Learning Spiral",
+      "primary": "CB /learning-loop",
+      "reuse": [
+        "/how-it-works",
+        "CB Home"
+      ],
+      "run": "R05-05"
+    },
+    {
+      "id": "V05",
+      "name": "Extensible Intelligence",
+      "primary": "CB /platform",
+      "reuse": [
+        "/solutions/brands"
+      ],
+      "run": "R05-03"
+    }
+  ],
+  "guardrails": {
+    "no_fake_relations": true,
+    "no_false_product_screenshots": true,
+    "owner_of_calculation_not_cerebro": true,
+    "allow_business_custom_models": "product_target",
+    "custom_workflows_require_contracts": true,
+    "preserve_seo_and_bilingual": true
+  }
+}

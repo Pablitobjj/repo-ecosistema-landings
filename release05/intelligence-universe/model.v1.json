@@ -1,0 +1,1390 @@
+{
+  "id": "cultural-brain-intelligence-universe",
+  "version": "0.1.0-report-derived",
+  "source_cutoff": "2026-11-20",
+  "product_target": "release05_target_promise",
+  "verification": {
+    "status": "partial_audited_report",
+    "missing_authoritative_sources": [
+      "services/conocimiento/catalogo.json (latest app code)",
+      "services/cerebro/contracts.py (latest app code)",
+      "services/cerebro/verticales.py (latest app code)"
+    ],
+    "warning": "Display IDs (Fxx/NN) are presentation locators, never code keys; canonical IDs are intentionally null until authoritative app catalog is available.",
+    "repository_checked": "Pablitobjj/cultural-brain@main,staging 2026-11-21: required 2026 code absent. Repo landings is presentation-only.",
+    "source_documents": [
+      "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+      "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+      "CB_CIERRE_ROADMAP_20261120.md",
+      "CB_CIERRE_QA_E2E_20261120.md",
+      "CB_HANDOFF_LANDING_CULTURALBRAIN_NET_PROMESA_DIFERENCIAL_20261120.md"
+    ]
+  },
+  "counts": {
+    "domains": 5,
+    "families": 19,
+    "typed_semantic_keys": 54,
+    "knowledge_types": 11,
+    "selection_profiles": 20,
+    "cerebro_decision_domains": 5,
+    "recommendation_types": 10
+  },
+  "domains": [
+    {
+      "id": "brand_business_market",
+      "label": {
+        "es": "Marca, negocio y mercado",
+        "en": "Brand, business & market"
+      },
+      "family_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06"
+      ]
+    },
+    {
+      "id": "audience_culture",
+      "label": {
+        "es": "Audiencias y cultura",
+        "en": "Audience & culture"
+      },
+      "family_ids": [
+        "F07",
+        "F08",
+        "F09",
+        "F10"
+      ]
+    },
+    {
+      "id": "media_context",
+      "label": {
+        "es": "Medios y contexto",
+        "en": "Media & context"
+      },
+      "family_ids": [
+        "F11",
+        "F12",
+        "F13",
+        "F14"
+      ]
+    },
+    {
+      "id": "strategy_performance",
+      "label": {
+        "es": "Estrategia y performance",
+        "en": "Strategy & performance"
+      },
+      "family_ids": [
+        "F15",
+        "F16",
+        "F17"
+      ]
+    },
+    {
+      "id": "learning_decisions",
+      "label": {
+        "es": "Aprendizaje y decisiones",
+        "en": "Learning & decisions"
+      },
+      "family_ids": [
+        "F18",
+        "F19"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "id": "F01",
+      "label": {
+        "es": "Marca e identidad",
+        "en": "Brand & identity"
+      },
+      "domain": "brand_business_market",
+      "typed_key_count": 1,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F01/01",
+          "label": {
+            "es": "Descripción de marca"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "label": {
+        "es": "Negocio y productos",
+        "en": "Business & products"
+      },
+      "domain": "brand_business_market",
+      "typed_key_count": 1,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F02/01",
+          "label": {
+            "es": "Ticket promedio de marca"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "label": {
+        "es": "Objetivos y restricciones",
+        "en": "Goals & constraints"
+      },
+      "domain": "brand_business_market",
+      "typed_key_count": 9,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F03/01",
+          "label": {
+            "es": "Presupuesto mensual"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/02",
+          "label": {
+            "es": "Presupuesto total"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/03",
+          "label": {
+            "es": "Objetivo principal"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/04",
+          "label": {
+            "es": "Exclusión de canal"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/05",
+          "label": {
+            "es": "Exclusión de plataforma"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/06",
+          "label": {
+            "es": "Exclusión de sitio"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/07",
+          "label": {
+            "es": "Exclusión de segmento"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/08",
+          "label": {
+            "es": "Tema a evitar"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F03/09",
+          "label": {
+            "es": "Restricción creativa"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "label": {
+        "es": "Mercado y categoría",
+        "en": "Market & category"
+      },
+      "domain": "brand_business_market",
+      "typed_key_count": 4,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F04/01",
+          "label": {
+            "es": "Precio de referencia"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F04/02",
+          "label": {
+            "es": "Barrera de mercado"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F04/03",
+          "label": {
+            "es": "Tamaño de mercado"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F04/04",
+          "label": {
+            "es": "Tendencia de mercado"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "label": {
+        "es": "Competencia",
+        "en": "Competition"
+      },
+      "domain": "brand_business_market",
+      "typed_key_count": 1,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F05/01",
+          "label": {
+            "es": "Nombre de competidor"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "label": {
+        "es": "Geografía",
+        "en": "Geography"
+      },
+      "domain": "brand_business_market",
+      "typed_key_count": 1,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F06/01",
+          "label": {
+            "es": "Universo de población local"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "label": {
+        "es": "Audiencia estructural",
+        "en": "Audience structure"
+      },
+      "domain": "audience_culture",
+      "typed_key_count": 0,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "El catálogo unificado admite hallazgo libre; los atributos específicos permanecen en módulos dueños.",
+      "keys": []
+    },
+    {
+      "id": "F08",
+      "label": {
+        "es": "Necesidades y comportamiento",
+        "en": "Needs & behavior"
+      },
+      "domain": "audience_culture",
+      "typed_key_count": 0,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "El catálogo unificado admite hallazgo libre; los atributos específicos permanecen en módulos dueños.",
+      "keys": []
+    },
+    {
+      "id": "F09",
+      "label": {
+        "es": "Estilo de vida",
+        "en": "Lifestyle"
+      },
+      "domain": "audience_culture",
+      "typed_key_count": 0,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "El catálogo unificado admite hallazgo libre; los atributos específicos permanecen en módulos dueños.",
+      "keys": []
+    },
+    {
+      "id": "F10",
+      "label": {
+        "es": "Cultura",
+        "en": "Culture"
+      },
+      "domain": "audience_culture",
+      "typed_key_count": 0,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "El catálogo unificado admite hallazgo libre; los atributos específicos permanecen en módulos dueños.",
+      "keys": []
+    },
+    {
+      "id": "F11",
+      "label": {
+        "es": "Medios",
+        "en": "Media"
+      },
+      "domain": "media_context",
+      "typed_key_count": 0,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "El catálogo unificado admite hallazgo libre; los atributos específicos permanecen en módulos dueños.",
+      "keys": []
+    },
+    {
+      "id": "F12",
+      "label": {
+        "es": "Contenido y semántica",
+        "en": "Content & semantics"
+      },
+      "domain": "media_context",
+      "typed_key_count": 0,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "El catálogo unificado admite hallazgo libre; los atributos específicos permanecen en módulos dueños.",
+      "keys": []
+    },
+    {
+      "id": "F13",
+      "label": {
+        "es": "Presencia y conversación",
+        "en": "Presence & conversation"
+      },
+      "domain": "media_context",
+      "typed_key_count": 1,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F13/01",
+          "label": {
+            "es": "Perfil o presencia"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F14",
+      "label": {
+        "es": "Assets e inventario",
+        "en": "Assets & inventory"
+      },
+      "domain": "media_context",
+      "typed_key_count": 0,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "El catálogo unificado admite hallazgo libre; los atributos específicos permanecen en módulos dueños.",
+      "keys": []
+    },
+    {
+      "id": "F15",
+      "label": {
+        "es": "Estrategia y planificación",
+        "en": "Strategy & planning"
+      },
+      "domain": "strategy_performance",
+      "typed_key_count": 2,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F15/01",
+          "label": {
+            "es": "Benchmark propio"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F15/02",
+          "label": {
+            "es": "Presupuesto ejecutable"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F16",
+      "label": {
+        "es": "Campaña y creatividad",
+        "en": "Campaign & creative"
+      },
+      "domain": "strategy_performance",
+      "typed_key_count": 7,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F16/01",
+          "label": {
+            "es": "Oferta de campaña"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F16/02",
+          "label": {
+            "es": "Mensaje de campaña"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F16/03",
+          "label": {
+            "es": "Pieza creativa"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F16/04",
+          "label": {
+            "es": "CTA"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F16/05",
+          "label": {
+            "es": "Tono"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F16/06",
+          "label": {
+            "es": "Etapa de campaña"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F16/07",
+          "label": {
+            "es": "Destino del brief"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F17",
+      "label": {
+        "es": "Resultados",
+        "en": "Results"
+      },
+      "domain": "strategy_performance",
+      "typed_key_count": 22,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F17/01",
+          "label": {
+            "es": "Impresiones"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/02",
+          "label": {
+            "es": "Clics"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/03",
+          "label": {
+            "es": "Costo"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/04",
+          "label": {
+            "es": "CTR"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/05",
+          "label": {
+            "es": "CPM"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/06",
+          "label": {
+            "es": "Alcance único"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/07",
+          "label": {
+            "es": "Frecuencia media"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/08",
+          "label": {
+            "es": "Leads"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/09",
+          "label": {
+            "es": "Leads calificados"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/10",
+          "label": {
+            "es": "Pedidos"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/11",
+          "label": {
+            "es": "Visitas"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/12",
+          "label": {
+            "es": "Visitas atribuibles"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/13",
+          "label": {
+            "es": "Acciones en ficha"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/14",
+          "label": {
+            "es": "Ingresos"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/15",
+          "label": {
+            "es": "LTV de cohorte"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/16",
+          "label": {
+            "es": "CAC de cohorte"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/17",
+          "label": {
+            "es": "Visitantes únicos"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/18",
+          "label": {
+            "es": "Costo por lead"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/19",
+          "label": {
+            "es": "ROAS"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/20",
+          "label": {
+            "es": "LTV/CAC"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/21",
+          "label": {
+            "es": "Visitas por dólar"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F17/22",
+          "label": {
+            "es": "Ratio de visitas entre piezas"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F18",
+      "label": {
+        "es": "Hipótesis y aprendizajes",
+        "en": "Hypotheses & learnings"
+      },
+      "domain": "learning_decisions",
+      "typed_key_count": 3,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F18/01",
+          "label": {
+            "es": "Predicción"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F18/02",
+          "label": {
+            "es": "Veredicto"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F18/03",
+          "label": {
+            "es": "Aprendizaje interpretado"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    },
+    {
+      "id": "F19",
+      "label": {
+        "es": "Decisiones",
+        "en": "Decisions"
+      },
+      "domain": "learning_decisions",
+      "typed_key_count": 2,
+      "free_form_finding_supported": true,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "50-76"
+      },
+      "implementation_note": "Las claves corresponden al catálogo unificado; algunos datos adicionales usan contratos especializados.",
+      "keys": [
+        {
+          "display_id": "F19/01",
+          "label": {
+            "es": "Estrategia recomendada"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        },
+        {
+          "display_id": "F19/02",
+          "label": {
+            "es": "Audiencia recomendada"
+          },
+          "canonical_key_id": null,
+          "canonical_id_status": "pending_catalogo_json",
+          "record_type": "typed_key_report_label",
+          "source_status": "audited_report_not_source_catalog"
+        }
+      ]
+    }
+  ],
+  "knowledge_types": [
+    {
+      "ordinal": 1,
+      "label": {
+        "es": "dato declarado"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 2,
+      "label": {
+        "es": "observación"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 3,
+      "label": {
+        "es": "estimación"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 4,
+      "label": {
+        "es": "métrica derivada"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 5,
+      "label": {
+        "es": "hallazgo cualitativo"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 6,
+      "label": {
+        "es": "restricción"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 7,
+      "label": {
+        "es": "hipótesis"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 8,
+      "label": {
+        "es": "interpretación"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 9,
+      "label": {
+        "es": "aprendizaje"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 10,
+      "label": {
+        "es": "recomendación"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    },
+    {
+      "ordinal": 11,
+      "label": {
+        "es": "decisión"
+      },
+      "canonical_id": null,
+      "source": {
+        "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
+        "lines": "35-48"
+      }
+    }
+  ],
+  "selection_profiles": [
+    {
+      "id": "estrategia.proponer",
+      "integration_evidence_20261120": "integrated_path_evidenced",
+      "owner_group": "strategy",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "plan.recomendar",
+      "integration_evidence_20261120": "integrated_path_evidenced",
+      "owner_group": "planner",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "activacion.brief",
+      "integration_evidence_20261120": "integrated_path_evidenced",
+      "owner_group": "activation",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "activacion.armado",
+      "integration_evidence_20261120": "integrated_path_evidenced",
+      "owner_group": "activation",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "inventario.recomendar",
+      "integration_evidence_20261120": "integrated_path_evidenced",
+      "owner_group": "inventory",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "cierre.interpretar",
+      "integration_evidence_20261120": "integrated_path_evidenced",
+      "owner_group": "closure",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "tar.recomendar_audiencia",
+      "integration_evidence_20261120": "specific_path_or_declared",
+      "owner_group": "audience",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "persona.generar",
+      "integration_evidence_20261120": "specific_path_or_declared",
+      "owner_group": "persona",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "rc.definir_pregunta",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "research",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "rc.prelaunch",
+      "integration_evidence_20261120": "specific_path_or_declared",
+      "owner_group": "research",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "auditoria.compra",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "audit",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "sofia.consultar",
+      "integration_evidence_20261120": "specific_path_or_declared",
+      "owner_group": "sofia",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.brand_research",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.audience_report",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.campaign_summary",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.media_list_report",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.media_plan_pack",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.activation_guides",
+      "integration_evidence_20261120": "declared_profile",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.performance_learning",
+      "integration_evidence_20261120": "specific_path_or_declared",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    },
+    {
+      "id": "ci.master_cultural_insight",
+      "integration_evidence_20261120": "specific_path_or_declared",
+      "owner_group": "cultural_insights",
+      "source": {
+        "document": "CB_CIERRE_GAP_ANALYSIS_20261120.md",
+        "lines": "40-65"
+      }
+    }
+  ],
+  "cerebro_decision_domains": [
+    {
+      "presentation_id": "brand_strategy",
+      "label": {
+        "es": "Estrategia de marca",
+        "en": "Brand strategy"
+      },
+      "canonical_domain_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
+    },
+    {
+      "presentation_id": "audience_recommendation",
+      "label": {
+        "es": "Recomendación de audiencia",
+        "en": "Audience recommendation"
+      },
+      "canonical_domain_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
+    },
+    {
+      "presentation_id": "campaign_preflight",
+      "label": {
+        "es": "Revisión previa de campaña",
+        "en": "Campaign preflight"
+      },
+      "canonical_domain_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
+    },
+    {
+      "presentation_id": "campaign_learning",
+      "label": {
+        "es": "Aprendizaje de campaña",
+        "en": "Campaign learning"
+      },
+      "canonical_domain_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
+    },
+    {
+      "presentation_id": "brand_panorama",
+      "label": {
+        "es": "Panorama de marca",
+        "en": "Brand panorama"
+      },
+      "canonical_domain_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
+    }
+  ],
+  "recommendation_types": [
+    {
+      "presentation_id": "priority",
+      "label": {
+        "es": "Prioridad estratégica"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "channel_role",
+      "label": {
+        "es": "Rol de canal"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "campaign_blueprint",
+      "label": {
+        "es": "Blueprint de campaña"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "defer",
+      "label": {
+        "es": "Postergación"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "research",
+      "label": {
+        "es": "Investigación"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "presence",
+      "label": {
+        "es": "Presencia"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "measurement",
+      "label": {
+        "es": "Medición"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "audience",
+      "label": {
+        "es": "Audiencia"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "ai_reading",
+      "label": {
+        "es": "Lectura IA"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    },
+    {
+      "presentation_id": "learning_proposal",
+      "label": {
+        "es": "Propuesta de aprendizaje"
+      },
+      "canonical_type_id": null,
+      "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
+    }
+  ]
+}
