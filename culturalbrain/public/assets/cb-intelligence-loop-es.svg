@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-labelledby="cb-loop-title cb-loop-desc" lang="es">
+ <title id="cb-loop-title">Cultural Brain — Ciclo continuo de inteligencia</title>
+ <desc id="cb-loop-desc">Seis etapas conectadas forman un ciclo continuo en sentido horario: Conocer, Recomendar, Decidir, Ejecutar, Medir y Aprender. El aprendizaje validado regresa a la base de conocimiento.</desc>
+ <defs>
+   <linearGradient id="cb-ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A98BE4"/><stop offset=".31" stop-color="#55BFC9"/><stop offset=".65" stop-color="#E4A779"/><stop offset="1" stop-color="#7D76D1"/></linearGradient>
+   <radialGradient id="cb-core" cx=".45" cy=".35" r=".72"><stop offset="0" stop-color="#263E76"/><stop offset=".55" stop-color="#17284D"/><stop offset="1" stop-color="#101A37"/></radialGradient>
+   <radialGradient id="cb-glow"><stop offset="0" stop-color="#6E4AA7" stop-opacity=".34"/><stop offset="1" stop-color="#6E4AA7" stop-opacity="0"/></radialGradient>
+   <filter id="cb-blur"><feGaussianBlur stdDeviation="22"/></filter>
+   <filter id="cb-light"><feGaussianBlur stdDeviation="4"/></filter>
+ </defs>
+ <style>
+ svg{font-family:Raleway,Arial,sans-serif;background:transparent;overflow:visible}
+ .cb-ring-orbit{stroke-dasharray:4 10;animation:cb-dash 34s linear infinite}
+ .cb-spinner{transform-origin:600px 373px;animation:cb-orbit 30s linear infinite}
+ .cb-breathe{transform-origin:600px 373px;animation:cb-breathe 7s ease-in-out infinite}
+ .cb-core-pulse{transform-origin:600px 373px;animation:cb-breathe 7s ease-in-out infinite}
+ .stage-halo{animation:cb-node-pulse 7s ease-in-out infinite}
+ .stage:nth-of-type(2) .stage-halo{animation-delay:-1s}
+ .stage:nth-of-type(3) .stage-halo{animation-delay:-2s}
+ .stage:nth-of-type(4) .stage-halo{animation-delay:-3s}
+ .stage:nth-of-type(5) .stage-halo{animation-delay:-4s}
+ .stage:nth-of-type(6) .stage-halo{animation-delay:-5s}
+ svg.is-paused *,svg.is-paused *::before,svg.is-paused *::after{animation-play-state:paused!important}
+ @keyframes cb-orbit{to{transform:rotate(360deg)}}
+ @keyframes cb-dash{to{stroke-dashoffset:-350}}
+ @keyframes cb-breathe{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.028);opacity:1}}
+ @keyframes cb-node-pulse{0%,100%{stroke-opacity:.6}50%{stroke-opacity:1}}
+ @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+ </style>
+ <rect x="1" y="1" width="1198" height="778" rx="40" fill="#0D1934" stroke="#3D4974" stroke-opacity=".55"/>
+ <circle cx="600" cy="373" r="359" fill="url(#cb-glow)" opacity=".8" filter="url(#cb-blur)"/>
+ <circle cx="600" cy="373" r="308" stroke="#6984A9" stroke-width="1" stroke-opacity=".12" fill="none" stroke-dasharray="2 10"/>
+ <circle cx="600" cy="373" r="250" stroke="#627399" stroke-width="18" stroke-opacity=".06" fill="none"/>
+ <circle class="cb-ring-orbit" cx="600" cy="373" r="250" stroke="url(#cb-ring)" stroke-width="1.6" stroke-opacity=".54" fill="none"/>
+ <circle cx="600" cy="373" r="228" stroke="#7388AE" stroke-width=".75" stroke-opacity=".18" fill="none"/>
+ <g><circle cx="811.0" cy="373.0" r="2.2" fill="#9982D7" opacity=".48"/><circle cx="809.8" cy="395.1" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="806.4" cy="416.9" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="800.7" cy="438.2" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="792.8" cy="458.8" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="782.7" cy="478.5" r="2.2" fill="#87A4D5" opacity=".48"/><circle cx="770.7" cy="497.0" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="756.8" cy="514.2" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="741.2" cy="529.8" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="724.0" cy="543.7" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="705.5" cy="555.7" r="2.2" fill="#9982D7" opacity=".48"/><circle cx="685.8" cy="565.8" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="665.2" cy="573.7" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="643.9" cy="579.4" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="622.1" cy="582.8" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="600.0" cy="584.0" r="2.2" fill="#87A4D5" opacity=".48"/><circle cx="577.9" cy="582.8" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="556.1" cy="579.4" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="534.8" cy="573.7" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="514.2" cy="565.8" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="494.5" cy="555.7" r="2.2" fill="#9982D7" opacity=".48"/><circle cx="476.0" cy="543.7" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="458.8" cy="529.8" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="443.2" cy="514.2" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="429.3" cy="497.0" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="417.3" cy="478.5" r="2.2" fill="#87A4D5" opacity=".48"/><circle cx="407.2" cy="458.8" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="399.3" cy="438.2" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="393.6" cy="416.9" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="390.2" cy="395.1" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="389.0" cy="373.0" r="2.2" fill="#9982D7" opacity=".48"/><circle cx="390.2" cy="350.9" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="393.6" cy="329.1" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="399.3" cy="307.8" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="407.2" cy="287.2" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="417.3" cy="267.5" r="2.2" fill="#87A4D5" opacity=".48"/><circle cx="429.3" cy="249.0" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="443.2" cy="231.8" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="458.8" cy="216.2" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="476.0" cy="202.3" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="494.5" cy="190.3" r="2.2" fill="#9982D7" opacity=".48"/><circle cx="514.2" cy="180.2" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="534.8" cy="172.3" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="556.1" cy="166.6" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="577.9" cy="163.2" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="600.0" cy="162.0" r="2.2" fill="#87A4D5" opacity=".48"/><circle cx="622.1" cy="163.2" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="643.9" cy="166.6" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="665.2" cy="172.3" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="685.8" cy="180.2" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="705.5" cy="190.3" r="2.2" fill="#9982D7" opacity=".48"/><circle cx="724.0" cy="202.3" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="741.2" cy="216.2" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="756.8" cy="231.8" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="770.7" cy="249.0" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="782.7" cy="267.5" r="2.2" fill="#87A4D5" opacity=".48"/><circle cx="792.8" cy="287.2" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="800.7" cy="307.8" r="1.2" fill="#87A4D5" opacity=".20"/><circle cx="806.4" cy="329.1" r="1.2" fill="#9982D7" opacity=".20"/><circle cx="809.8" cy="350.9" r="1.2" fill="#87A4D5" opacity=".20"/></g>
+ <circle class="cb-breathe" cx="600" cy="373" r="168" fill="url(#cb-glow)" opacity=".34"/>
+ <circle cx="600" cy="373" r="130" fill="url(#cb-core)" stroke="#A991F0" stroke-width="1.2" stroke-opacity=".56"/>
+ <circle cx="600" cy="373" r="118" stroke="#C1CBFC" stroke-width=".9" opacity=".18" fill="none"/>
+ <g opacity=".5">
+  <path d="M 550 340 Q 600 277 652 342" stroke="#A3A0ED" stroke-width="1.2" fill="none"/>
+  <path d="M 545 407 Q 600 463 655 405" stroke="#61D6CA" stroke-width="1.2" fill="none"/>
+  <circle cx="556" cy="342" r="3" fill="#BDABFA"/>
+  <circle cx="649" cy="339" r="3" fill="#63D5CC"/>
+  <circle cx="652" cy="407" r="3" fill="#E6AF88"/>
+ </g>
+ <text x="600" y="361" text-anchor="middle" fill="#D5CCF9" font-size="13" font-weight="700" letter-spacing=".27em">CULTURAL</text>
+ <text x="600" y="392" text-anchor="middle" fill="#FFFFFF" font-size="32" font-weight="700" letter-spacing="-.04em">BRAIN</text>
+ <text x="600" y="413" text-anchor="middle" fill="#8FB6C9" font-size="10" letter-spacing=".18em">CICLO DE INTELIGENCIA</text>
+ <g class="cb-spinner" aria-hidden="true">
+   <circle cx="600" cy="123" r="11" fill="#61E1D0" opacity=".6" filter="url(#cb-light)"/>
+   <circle cx="600" cy="123" r="5.5" fill="#DBFFF8"/>
+ </g>
+ <g class="stage stage-1" aria-label="Conocer">
+ <circle cx="600.0" cy="123.0" r="37" fill="#BDB2FF" opacity=".07"/>
+ <circle class="stage-halo" cx="600.0" cy="123.0" r="29" fill="#121F3E" stroke="#BDB2FF" stroke-opacity=".84" stroke-width="1.6"/>
+ <text x="600.0" y="127.0" text-anchor="middle" font-size="13" fill="#BDB2FF" font-weight="700">01</text>
+ <text class="stage-label" x="600.0" y="43.0" text-anchor="middle" fill="#F5F6FF" font-size="18" font-weight="700" letter-spacing=".1em"><tspan data-en="KNOW" data-es="CONOCER">CONOCER</tspan></text></g>
+<g class="stage stage-2" aria-label="Recomendar">
+ <circle cx="816.5" cy="248.0" r="37" fill="#A68DFF" opacity=".07"/>
+ <circle class="stage-halo" cx="816.5" cy="248.0" r="29" fill="#121F3E" stroke="#A68DFF" stroke-opacity=".84" stroke-width="1.6"/>
+ <text x="816.5" y="252.0" text-anchor="middle" font-size="13" fill="#A68DFF" font-weight="700">02</text>
+ <text class="stage-label" x="889.3" y="210.0" text-anchor="start" fill="#F5F6FF" font-size="18" font-weight="700" letter-spacing=".1em"><tspan data-en="RECOMMEND" data-es="RECOMENDAR">RECOMENDAR</tspan></text></g>
+<g class="stage stage-3" aria-label="Decidir">
+ <circle cx="816.5" cy="498.0" r="37" fill="#7FDCF0" opacity=".07"/>
+ <circle class="stage-halo" cx="816.5" cy="498.0" r="29" fill="#121F3E" stroke="#7FDCF0" stroke-opacity=".84" stroke-width="1.6"/>
+ <text x="816.5" y="502.0" text-anchor="middle" font-size="13" fill="#7FDCF0" font-weight="700">03</text>
+ <text class="stage-label" x="889.3" y="544.0" text-anchor="start" fill="#F5F6FF" font-size="18" font-weight="700" letter-spacing=".1em"><tspan data-en="DECIDE" data-es="DECIDIR">DECIDIR</tspan></text></g>
+<g class="stage stage-4" aria-label="Ejecutar">
+ <circle cx="600.0" cy="623.0" r="37" fill="#48D6BD" opacity=".07"/>
+ <circle class="stage-halo" cx="600.0" cy="623.0" r="29" fill="#121F3E" stroke="#48D6BD" stroke-opacity=".84" stroke-width="1.6"/>
+ <text x="600.0" y="627.0" text-anchor="middle" font-size="13" fill="#48D6BD" font-weight="700">04</text>
+ <text class="stage-label" x="600.0" y="711.0" text-anchor="middle" fill="#F5F6FF" font-size="18" font-weight="700" letter-spacing=".1em"><tspan data-en="EXECUTE" data-es="EJECUTAR">EJECUTAR</tspan></text></g>
+<g class="stage stage-5" aria-label="Medir">
+ <circle cx="383.5" cy="498.0" r="37" fill="#E3AD7D" opacity=".07"/>
+ <circle class="stage-halo" cx="383.5" cy="498.0" r="29" fill="#121F3E" stroke="#E3AD7D" stroke-opacity=".84" stroke-width="1.6"/>
+ <text x="383.5" y="502.0" text-anchor="middle" font-size="13" fill="#E3AD7D" font-weight="700">05</text>
+ <text class="stage-label" x="310.7" y="544.0" text-anchor="end" fill="#F5F6FF" font-size="18" font-weight="700" letter-spacing=".1em"><tspan data-en="MEASURE" data-es="MEDIR">MEDIR</tspan></text></g>
+<g class="stage stage-6" aria-label="Aprender">
+ <circle cx="383.5" cy="248.0" r="37" fill="#C7A4ED" opacity=".07"/>
+ <circle class="stage-halo" cx="383.5" cy="248.0" r="29" fill="#121F3E" stroke="#C7A4ED" stroke-opacity=".84" stroke-width="1.6"/>
+ <text x="383.5" y="252.0" text-anchor="middle" font-size="13" fill="#C7A4ED" font-weight="700">06</text>
+ <text class="stage-label" x="310.7" y="210.0" text-anchor="end" fill="#F5F6FF" font-size="18" font-weight="700" letter-spacing=".1em"><tspan data-en="LEARN" data-es="APRENDER">APRENDER</tspan></text></g>
+ <g aria-hidden="true" opacity=".58">
+  <path d="M 448 499 C 380 443,354 368,376 294" stroke="#6CCFBF" stroke-width="1" stroke-dasharray="3 7" fill="none"/>
+  <circle cx="376" cy="294" r="3.5" fill="#7BDACB"/>
+ </g>
+ <text x="600" y="735" text-anchor="middle" fill="#8EA5C7" font-size="13" letter-spacing=".18em">EVIDENCIA  ·  DECISIÓN  ·  APRENDIZAJE  ·  RETORNO</text>
+ </svg>
