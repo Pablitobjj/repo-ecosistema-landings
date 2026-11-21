@@ -15,9 +15,9 @@ Brand-derived colors: #1E3A8A (blue), #6D1B8F (purple), #2DD4BF (teal), #F27044 
 ## Motion and accessibility
 Orbital particle: 30s continuous linear clockwise motion, no sound. Main dashed ring: slow dash evolution. Core glow and station halos gently breathe. `prefers-reduced-motion:reduce` removes animations. Every SVG contains `title` and `desc`; content and all six stage labels must also appear as semantic HTML when integrated. On dark sections use the SVG directly; on white sections consider a dark framed inset.
 
-The SVG root supports `.is-paused` class to pause animations. Product integration should expose a keyboard-operable Pause/Play control that toggles this class on the inline SVG (or contentDocument of same-origin object); when the SVG is used as a pure image, the class cannot be toggled by parent CSS, so render a static alternative if pause control is a requirement. Prototype demonstrates the intended control.
+There are four renderable variants: EN/ES × desktop/mobile. Each embeds localized SVG title, description, stage labels and alt semantics. The SVG root supports `.is-paused` class to pause animations. Product integration should expose a keyboard-operable Pause/Play control that toggles this class on the inline SVG (or contentDocument of same-origin object); when the SVG is used as a pure image, the class cannot be toggled by parent CSS, so render a static alternative if pause control is a requirement. Prototype demonstrates the intended control.
 
-Localization: the SVG currently carries EN labels; integration is expected to replace the SVG text nodes with localized EN/ES labels or generate a distinct ES asset before public release. Do **not** ship EN SVG as sole content in ES locale. The prototype includes EN/ES explanatory text; production must fully localize.
+Localization: standalone EN and ES variants exist for desktop and mobile. The prototype can switch via the `data-en` and `data-es` attributes; public integration must serve the correct language according to page locale. Do **not** ship EN SVG as sole content in ES locale. The prototype includes EN/ES explanatory text; production must fully localize.
 
 ## 35-second motion-film storyboard — OPTIONAL R05-09
 00–05: cultural research, briefs, evidence, media and results form an initial field of knowledge. Overlay 'Knowledge, connected.'
