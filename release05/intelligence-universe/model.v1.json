@@ -18,7 +18,8 @@
       "CB_CIERRE_ROADMAP_20261120.md",
       "CB_CIERRE_QA_E2E_20261120.md",
       "CB_HANDOFF_LANDING_CULTURALBRAIN_NET_PROMESA_DIFERENCIAL_20261120.md"
-    ]
+    ],
+    "translation_status": "Editorial EN labels added for visualization from audited ES descriptions; not source-code canonical IDs."
   },
   "counts": {
     "domains": 5,
@@ -114,7 +115,8 @@
         {
           "display_id": "F01/01",
           "label": {
-            "es": "Descripción de marca"
+            "es": "Descripción de marca",
+            "en": "Brand description"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -141,7 +143,8 @@
         {
           "display_id": "F02/01",
           "label": {
-            "es": "Ticket promedio de marca"
+            "es": "Ticket promedio de marca",
+            "en": "Average brand order value"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -168,7 +171,8 @@
         {
           "display_id": "F03/01",
           "label": {
-            "es": "Presupuesto mensual"
+            "es": "Presupuesto mensual",
+            "en": "Monthly budget"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -178,7 +182,8 @@
         {
           "display_id": "F03/02",
           "label": {
-            "es": "Presupuesto total"
+            "es": "Presupuesto total",
+            "en": "Total budget"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -188,7 +193,8 @@
         {
           "display_id": "F03/03",
           "label": {
-            "es": "Objetivo principal"
+            "es": "Objetivo principal",
+            "en": "Primary objective"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -198,7 +204,8 @@
         {
           "display_id": "F03/04",
           "label": {
-            "es": "Exclusión de canal"
+            "es": "Exclusión de canal",
+            "en": "Channel exclusion"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -208,7 +215,8 @@
         {
           "display_id": "F03/05",
           "label": {
-            "es": "Exclusión de plataforma"
+            "es": "Exclusión de plataforma",
+            "en": "Platform exclusion"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -218,7 +226,8 @@
         {
           "display_id": "F03/06",
           "label": {
-            "es": "Exclusión de sitio"
+            "es": "Exclusión de sitio",
+            "en": "Site exclusion"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -228,7 +237,8 @@
         {
           "display_id": "F03/07",
           "label": {
-            "es": "Exclusión de segmento"
+            "es": "Exclusión de segmento",
+            "en": "Segment exclusion"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -238,7 +248,8 @@
         {
           "display_id": "F03/08",
           "label": {
-            "es": "Tema a evitar"
+            "es": "Tema a evitar",
+            "en": "Topic to avoid"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -248,7 +259,8 @@
         {
           "display_id": "F03/09",
           "label": {
-            "es": "Restricción creativa"
+            "es": "Restricción creativa",
+            "en": "Creative restriction"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -275,7 +287,8 @@
         {
           "display_id": "F04/01",
           "label": {
-            "es": "Precio de referencia"
+            "es": "Precio de referencia",
+            "en": "Reference price"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -285,7 +298,8 @@
         {
           "display_id": "F04/02",
           "label": {
-            "es": "Barrera de mercado"
+            "es": "Barrera de mercado",
+            "en": "Market barrier"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -295,7 +309,8 @@
         {
           "display_id": "F04/03",
           "label": {
-            "es": "Tamaño de mercado"
+            "es": "Tamaño de mercado",
+            "en": "Market size"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -305,7 +320,8 @@
         {
           "display_id": "F04/04",
           "label": {
-            "es": "Tendencia de mercado"
+            "es": "Tendencia de mercado",
+            "en": "Market trend"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -332,7 +348,8 @@
         {
           "display_id": "F05/01",
           "label": {
-            "es": "Nombre de competidor"
+            "es": "Nombre de competidor",
+            "en": "Competitor name"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -359,7 +376,8 @@
         {
           "display_id": "F06/01",
           "label": {
-            "es": "Universo de población local"
+            "es": "Universo de población local",
+            "en": "Local population universe"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -482,7 +500,8 @@
         {
           "display_id": "F13/01",
           "label": {
-            "es": "Perfil o presencia"
+            "es": "Perfil o presencia",
+            "en": "Presence / profile"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -525,7 +544,8 @@
         {
           "display_id": "F15/01",
           "label": {
-            "es": "Benchmark propio"
+            "es": "Benchmark propio",
+            "en": "Own benchmark"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -535,7 +555,8 @@
         {
           "display_id": "F15/02",
           "label": {
-            "es": "Presupuesto ejecutable"
+            "es": "Presupuesto ejecutable",
+            "en": "Executable budget"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -562,7 +583,8 @@
         {
           "display_id": "F16/01",
           "label": {
-            "es": "Oferta de campaña"
+            "es": "Oferta de campaña",
+            "en": "Offer"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -572,7 +594,8 @@
         {
           "display_id": "F16/02",
           "label": {
-            "es": "Mensaje de campaña"
+            "es": "Mensaje de campaña",
+            "en": "Message"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -582,7 +605,8 @@
         {
           "display_id": "F16/03",
           "label": {
-            "es": "Pieza creativa"
+            "es": "Pieza creativa",
+            "en": "Creative asset"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -592,7 +616,8 @@
         {
           "display_id": "F16/04",
           "label": {
-            "es": "CTA"
+            "es": "CTA",
+            "en": "Call to action"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -602,7 +627,8 @@
         {
           "display_id": "F16/05",
           "label": {
-            "es": "Tono"
+            "es": "Tono",
+            "en": "Tone"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -612,7 +638,8 @@
         {
           "display_id": "F16/06",
           "label": {
-            "es": "Etapa de campaña"
+            "es": "Etapa de campaña",
+            "en": "Campaign stage"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -622,7 +649,8 @@
         {
           "display_id": "F16/07",
           "label": {
-            "es": "Destino del brief"
+            "es": "Destino del brief",
+            "en": "Brief destination"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -649,7 +677,8 @@
         {
           "display_id": "F17/01",
           "label": {
-            "es": "Impresiones"
+            "es": "Impresiones",
+            "en": "Impressions"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -659,7 +688,8 @@
         {
           "display_id": "F17/02",
           "label": {
-            "es": "Clics"
+            "es": "Clics",
+            "en": "Clicks"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -669,7 +699,8 @@
         {
           "display_id": "F17/03",
           "label": {
-            "es": "Costo"
+            "es": "Costo",
+            "en": "Cost"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -679,7 +710,8 @@
         {
           "display_id": "F17/04",
           "label": {
-            "es": "CTR"
+            "es": "CTR",
+            "en": "CTR"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -689,7 +721,8 @@
         {
           "display_id": "F17/05",
           "label": {
-            "es": "CPM"
+            "es": "CPM",
+            "en": "CPM"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -699,7 +732,8 @@
         {
           "display_id": "F17/06",
           "label": {
-            "es": "Alcance único"
+            "es": "Alcance único",
+            "en": "Unique reach"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -709,7 +743,8 @@
         {
           "display_id": "F17/07",
           "label": {
-            "es": "Frecuencia media"
+            "es": "Frecuencia media",
+            "en": "Average frequency"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -719,7 +754,8 @@
         {
           "display_id": "F17/08",
           "label": {
-            "es": "Leads"
+            "es": "Leads",
+            "en": "Leads"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -729,7 +765,8 @@
         {
           "display_id": "F17/09",
           "label": {
-            "es": "Leads calificados"
+            "es": "Leads calificados",
+            "en": "Qualified leads"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -739,7 +776,8 @@
         {
           "display_id": "F17/10",
           "label": {
-            "es": "Pedidos"
+            "es": "Pedidos",
+            "en": "Orders"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -749,7 +787,8 @@
         {
           "display_id": "F17/11",
           "label": {
-            "es": "Visitas"
+            "es": "Visitas",
+            "en": "Visits"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -759,7 +798,8 @@
         {
           "display_id": "F17/12",
           "label": {
-            "es": "Visitas atribuibles"
+            "es": "Visitas atribuibles",
+            "en": "Attributed visits"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -769,7 +809,8 @@
         {
           "display_id": "F17/13",
           "label": {
-            "es": "Acciones en ficha"
+            "es": "Acciones en ficha",
+            "en": "Listing actions"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -779,7 +820,8 @@
         {
           "display_id": "F17/14",
           "label": {
-            "es": "Ingresos"
+            "es": "Ingresos",
+            "en": "Revenue"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -789,7 +831,8 @@
         {
           "display_id": "F17/15",
           "label": {
-            "es": "LTV de cohorte"
+            "es": "LTV de cohorte",
+            "en": "Cohort LTV"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -799,7 +842,8 @@
         {
           "display_id": "F17/16",
           "label": {
-            "es": "CAC de cohorte"
+            "es": "CAC de cohorte",
+            "en": "Cohort CAC"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -809,7 +853,8 @@
         {
           "display_id": "F17/17",
           "label": {
-            "es": "Visitantes únicos"
+            "es": "Visitantes únicos",
+            "en": "Unique visitors"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -819,7 +864,8 @@
         {
           "display_id": "F17/18",
           "label": {
-            "es": "Costo por lead"
+            "es": "Costo por lead",
+            "en": "Cost per lead"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -829,7 +875,8 @@
         {
           "display_id": "F17/19",
           "label": {
-            "es": "ROAS"
+            "es": "ROAS",
+            "en": "ROAS"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -839,7 +886,8 @@
         {
           "display_id": "F17/20",
           "label": {
-            "es": "LTV/CAC"
+            "es": "LTV/CAC",
+            "en": "LTV / CAC"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -849,7 +897,8 @@
         {
           "display_id": "F17/21",
           "label": {
-            "es": "Visitas por dólar"
+            "es": "Visitas por dólar",
+            "en": "Visits per dollar"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -859,7 +908,8 @@
         {
           "display_id": "F17/22",
           "label": {
-            "es": "Ratio de visitas entre piezas"
+            "es": "Ratio de visitas entre piezas",
+            "en": "Visit ratio between creative assets"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -886,7 +936,8 @@
         {
           "display_id": "F18/01",
           "label": {
-            "es": "Predicción"
+            "es": "Predicción",
+            "en": "Prediction"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -896,7 +947,8 @@
         {
           "display_id": "F18/02",
           "label": {
-            "es": "Veredicto"
+            "es": "Veredicto",
+            "en": "Verdict"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -906,7 +958,8 @@
         {
           "display_id": "F18/03",
           "label": {
-            "es": "Aprendizaje interpretado"
+            "es": "Aprendizaje interpretado",
+            "en": "Interpreted learning"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -933,7 +986,8 @@
         {
           "display_id": "F19/01",
           "label": {
-            "es": "Estrategia recomendada"
+            "es": "Estrategia recomendada",
+            "en": "Recommended strategy"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -943,7 +997,8 @@
         {
           "display_id": "F19/02",
           "label": {
-            "es": "Audiencia recomendada"
+            "es": "Audiencia recomendada",
+            "en": "Recommended audience"
           },
           "canonical_key_id": null,
           "canonical_id_status": "pending_catalogo_json",
@@ -957,7 +1012,8 @@
     {
       "ordinal": 1,
       "label": {
-        "es": "dato declarado"
+        "es": "dato declarado",
+        "en": "Declared fact"
       },
       "canonical_id": null,
       "source": {
@@ -968,7 +1024,8 @@
     {
       "ordinal": 2,
       "label": {
-        "es": "observación"
+        "es": "observación",
+        "en": "Observation"
       },
       "canonical_id": null,
       "source": {
@@ -979,7 +1036,8 @@
     {
       "ordinal": 3,
       "label": {
-        "es": "estimación"
+        "es": "estimación",
+        "en": "Estimate"
       },
       "canonical_id": null,
       "source": {
@@ -990,7 +1048,8 @@
     {
       "ordinal": 4,
       "label": {
-        "es": "métrica derivada"
+        "es": "métrica derivada",
+        "en": "Derived metric"
       },
       "canonical_id": null,
       "source": {
@@ -1001,7 +1060,8 @@
     {
       "ordinal": 5,
       "label": {
-        "es": "hallazgo cualitativo"
+        "es": "hallazgo cualitativo",
+        "en": "Qualitative finding"
       },
       "canonical_id": null,
       "source": {
@@ -1012,7 +1072,8 @@
     {
       "ordinal": 6,
       "label": {
-        "es": "restricción"
+        "es": "restricción",
+        "en": "Constraint"
       },
       "canonical_id": null,
       "source": {
@@ -1023,7 +1084,8 @@
     {
       "ordinal": 7,
       "label": {
-        "es": "hipótesis"
+        "es": "hipótesis",
+        "en": "Hypothesis"
       },
       "canonical_id": null,
       "source": {
@@ -1034,7 +1096,8 @@
     {
       "ordinal": 8,
       "label": {
-        "es": "interpretación"
+        "es": "interpretación",
+        "en": "Interpretation"
       },
       "canonical_id": null,
       "source": {
@@ -1045,7 +1108,8 @@
     {
       "ordinal": 9,
       "label": {
-        "es": "aprendizaje"
+        "es": "aprendizaje",
+        "en": "Learning"
       },
       "canonical_id": null,
       "source": {
@@ -1056,7 +1120,8 @@
     {
       "ordinal": 10,
       "label": {
-        "es": "recomendación"
+        "es": "recomendación",
+        "en": "Recommendation"
       },
       "canonical_id": null,
       "source": {
@@ -1067,7 +1132,8 @@
     {
       "ordinal": 11,
       "label": {
-        "es": "decisión"
+        "es": "decisión",
+        "en": "Decision"
       },
       "canonical_id": null,
       "source": {
@@ -1309,7 +1375,8 @@
     {
       "presentation_id": "priority",
       "label": {
-        "es": "Prioridad estratégica"
+        "es": "Prioridad estratégica",
+        "en": "Strategic priority"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1317,7 +1384,8 @@
     {
       "presentation_id": "channel_role",
       "label": {
-        "es": "Rol de canal"
+        "es": "Rol de canal",
+        "en": "Channel role"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1325,7 +1393,8 @@
     {
       "presentation_id": "campaign_blueprint",
       "label": {
-        "es": "Blueprint de campaña"
+        "es": "Blueprint de campaña",
+        "en": "Campaign blueprint"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1333,7 +1402,8 @@
     {
       "presentation_id": "defer",
       "label": {
-        "es": "Postergación"
+        "es": "Postergación",
+        "en": "Deferment"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1341,7 +1411,8 @@
     {
       "presentation_id": "research",
       "label": {
-        "es": "Investigación"
+        "es": "Investigación",
+        "en": "Research"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1349,7 +1420,8 @@
     {
       "presentation_id": "presence",
       "label": {
-        "es": "Presencia"
+        "es": "Presencia",
+        "en": "Presence"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1357,7 +1429,8 @@
     {
       "presentation_id": "measurement",
       "label": {
-        "es": "Medición"
+        "es": "Medición",
+        "en": "Measurement"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1365,7 +1438,8 @@
     {
       "presentation_id": "audience",
       "label": {
-        "es": "Audiencia"
+        "es": "Audiencia",
+        "en": "Audience"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1373,7 +1447,8 @@
     {
       "presentation_id": "ai_reading",
       "label": {
-        "es": "Lectura IA"
+        "es": "Lectura IA",
+        "en": "AI reading"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
@@ -1381,7 +1456,8 @@
     {
       "presentation_id": "learning_proposal",
       "label": {
-        "es": "Propuesta de aprendizaje"
+        "es": "Propuesta de aprendizaje",
+        "en": "Learning proposal"
       },
       "canonical_type_id": null,
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
