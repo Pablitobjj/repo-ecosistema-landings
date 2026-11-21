@@ -26,6 +26,7 @@
    var meta=qs('meta[name="description"]');
    if(meta&&meta.getAttribute('data-description-'+l))meta.setAttribute('content',meta.getAttribute('data-description-'+l));
    document.querySelectorAll('[data-placeholder-en]').forEach(function(el){var v=el.getAttribute('data-placeholder-'+l);if(v!==null)el.setAttribute('placeholder',v);});
+   document.querySelectorAll('[data-alt-en][data-alt-es]').forEach(function(img){img.setAttribute('alt',img.getAttribute('data-alt-'+l));});
    if(location.pathname==='/pricing'){
      [['name','Your name','Tu nombre'],['company','Your company','Tu empresa'],['email','Your email','Tu email']].forEach(function(a){var el=document.getElementById(a[0]);if(el)el.placeholder=l==='es'?a[2]:a[1];});
      var select=qs('#contact select');
