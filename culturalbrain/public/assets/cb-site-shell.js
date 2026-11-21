@@ -49,6 +49,14 @@
    syncActive();
    window.addEventListener('hashchange',syncActive);
    var explore=qs('#cb-site-explore');
+   if(!explore){
+     explore=document.createElement('nav');
+     explore.id='cb-site-explore';
+     explore.className='cb-site-explore';
+     explore.setAttribute('aria-label','Explore Cultural Brain capabilities / Explorar capacidades de Cultural Brain');
+     explore.innerHTML='<div class="cb-site-explore-inner"><span class="cb-site-explore-label"><span data-lang="en">Explore</span><span data-lang="es">Explorá</span></span><div class="cb-site-explore-links"><a href="/research-center" data-cb-explore-route="/research-center">Research Center</a><a href="/cerebro" data-cb-explore-route="/cerebro">CEREBRO</a><a href="/sofia" data-cb-explore-route="/sofia">Sofía</a><a href="/pulse" data-cb-explore-route="/pulse">Pulse</a><a href="/learning-loop" data-cb-explore-route="/learning-loop">Learning Loop</a></div></div>';
+     header.insertAdjacentElement('afterend',explore);
+   }
    if(explore){
      var path=location.pathname.replace(/\/+$/,'')||'/';
      var links=qs('.cb-site-explore-links',explore);
