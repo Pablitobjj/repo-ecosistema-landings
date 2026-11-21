@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "release": "R05-06",
+  "max_screenshots": 6,
+  "created_at": "2026-11-21",
+  "approved_direction": "Proof of product, not a module-by-module screenshot gallery",
+  "status": "awaiting_authentic_app_access",
+  "assets": [
+    {
+      "id": "CB-01",
+      "module": "Knowledge + CEREBRO",
+      "page": "/cerebro",
+      "section_selector": "#decision-anatomy",
+      "description": "Evidence-backed CEREBRO recommendation",
+      "asset_path": "culturalbrain/public/assets/screenshots/cb-01.webp",
+      "source_app": "https://culturalbrain.app/",
+      "source_screen": null,
+      "source_git_sha": null,
+      "verified_capture": false,
+      "privacy_review": false,
+      "responsive_crop_review": false,
+      "alt": {
+        "en": "Knowledge sources, constraints, hypothesis and recommendation in one real screen",
+        "es": "Fuentes, restricciones, hipótesis y recomendación fundamentada"
+      },
+      "recommended_size": {
+        "width": 1600,
+        "height": 1000
+      },
+      "status": "pending_authenticated_real_capture",
+      "notes": "Do not add img element or claim this exists until an authentic image is provided and validated."
+    },
+    {
+      "id": "CB-02",
+      "module": "Learning Loop",
+      "page": "/learning-loop",
+      "section_selector": "#learning-case-a",
+      "description": "Learning comparison",
+      "asset_path": "culturalbrain/public/assets/screenshots/cb-02.webp",
+      "source_app": "https://culturalbrain.app/",
+      "source_screen": null,
+      "source_git_sha": null,
+      "verified_capture": false,
+      "privacy_review": false,
+      "responsive_crop_review": false,
+      "alt": {
+        "en": "Campaign P1 outcome and P2 recommendation comparison with verified lineage",
+        "es": "Comparación entre resultados P1 y recomendación P2, con trazabilidad"
+      },
+      "recommended_size": {
+        "width": 1600,
+        "height": 1000
+      },
+      "status": "pending_authenticated_real_capture",
+      "notes": "Do not add img element or claim this exists until an authentic image is provided and validated."
+    },
+    {
+      "id": "CB-03",
+      "module": "SitePlanner / Cultural Site Analysis",
+      "page": "/solutions/agencies",
+      "section_selector": "#agency-intelligence-memory",
+      "description": "Media cultural analysis",
+      "asset_path": "culturalbrain/public/assets/screenshots/cb-03.webp",
+      "source_app": "https://culturalbrain.app/",
+      "source_screen": null,
+      "source_git_sha": null,
+      "verified_capture": false,
+      "privacy_review": false,
+      "responsive_crop_review": false,
+      "alt": {
+        "en": "A culturally scored media/site decision with CRS, CAI and CCS when present",
+        "es": "Decisión de sitio o medio con indicadores culturales disponibles"
+      },
+      "recommended_size": {
+        "width": 1600,
+        "height": 1000
+      },
+      "status": "pending_authenticated_real_capture",
+      "notes": "Do not add img element or claim this exists until an authentic image is provided and validated."
+    },
+    {
+      "id": "CB-04",
+      "module": "Research Center",
+      "page": "/research-center",
+      "section_selector": "#knowledge-continuity",
+      "description": "Sourced research study",
+      "asset_path": "culturalbrain/public/assets/screenshots/cb-04.webp",
+      "source_app": "https://culturalbrain.app/",
+      "source_screen": null,
+      "source_git_sha": null,
+      "verified_capture": false,
+      "privacy_review": false,
+      "responsive_crop_review": false,
+      "alt": {
+        "en": "A structured research study with sources, scope and results visible",
+        "es": "Estudio de investigación con fuentes, alcance y resultados"
+      },
+      "recommended_size": {
+        "width": 1600,
+        "height": 1000
+      },
+      "status": "pending_authenticated_real_capture",
+      "notes": "Do not add img element or claim this exists until an authentic image is provided and validated."
+    },
+    {
+      "id": "CB-05",
+      "module": "Sofía",
+      "page": "/sofia",
+      "section_selector": "#contextual-strategic-conversation",
+      "description": "Strategic conversation",
+      "asset_path": "culturalbrain/public/assets/screenshots/cb-05.webp",
+      "source_app": "https://culturalbrain.app/",
+      "source_screen": null,
+      "source_git_sha": null,
+      "verified_capture": false,
+      "privacy_review": false,
+      "responsive_crop_review": false,
+      "alt": {
+        "en": "A real account-context conversation returning an actionable work product",
+        "es": "Conversación contextual con un entregable estratégico accionable"
+      },
+      "recommended_size": {
+        "width": 1600,
+        "height": 1000
+      },
+      "status": "pending_authenticated_real_capture",
+      "notes": "Do not add img element or claim this exists until an authentic image is provided and validated."
+    },
+    {
+      "id": "CB-06",
+      "module": "Pulse",
+      "page": "/pulse",
+      "section_selector": "#intelligence-validity",
+      "description": "Signal monitoring",
+      "asset_path": "culturalbrain/public/assets/screenshots/cb-06.webp",
+      "source_app": "https://culturalbrain.app/",
+      "source_screen": null,
+      "source_git_sha": null,
+      "verified_capture": false,
+      "privacy_review": false,
+      "responsive_crop_review": false,
+      "alt": {
+        "en": "A detected signal linked to affected evidence and a review recommendation",
+        "es": "Señal detectada conectada a evidencia afectada y revisión recomendada"
+      },
+      "recommended_size": {
+        "width": 1600,
+        "height": 1000
+      },
+      "status": "pending_authenticated_real_capture",
+      "notes": "Do not add img element or claim this exists until an authentic image is provided and validated."
+    }
+  ],
+  "governance": {
+    "strictly_no_synthetic_ui": true,
+    "demo_data_only": true,
+    "no_real_client_data": true,
+    "no_identifying_users_or_credentials": true,
+    "verify_product_design": true,
+    "alt_text_en_es": true,
+    "do_not_autopublish": true
+  }
+}

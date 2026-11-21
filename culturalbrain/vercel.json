@@ -127,6 +127,17 @@
       }
     },
     {
+      "src": "^/learning-loop/?$",
+      "dest": "/public/cb_learning_loop.html"
+    },
+    {
+      "src": "^/learning-loop\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/learning-loop"
+      }
+    },
+    {
       "src": "^/how-it-works/?$",
       "dest": "/public/cb_how_it_works.html"
     },

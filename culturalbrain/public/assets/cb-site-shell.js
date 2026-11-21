@@ -12,7 +12,7 @@
    if(p==='/how-it-works')return 'how';
    if(p.indexOf('/solutions/')===0)return 'solutions';
    if(p==='/platform'&&location.hash==='#solutions')return 'solutions';
-   if(p==='/platform'||p==='/cerebro'||p==='/sofia'||p==='/pulse')return 'platform';
+   if(p==='/platform'||p==='/cerebro'||p==='/sofia'||p==='/pulse'||p==='/learning-loop')return 'platform';
    return '';
  }
  function setLanguage(locale){
@@ -26,6 +26,7 @@
    var meta=qs('meta[name="description"]');
    if(meta&&meta.getAttribute('data-description-'+l))meta.setAttribute('content',meta.getAttribute('data-description-'+l));
    document.querySelectorAll('[data-placeholder-en]').forEach(function(el){var v=el.getAttribute('data-placeholder-'+l);if(v!==null)el.setAttribute('placeholder',v);});
+   document.querySelectorAll('[data-alt-en][data-alt-es]').forEach(function(img){img.setAttribute('alt',img.getAttribute('data-alt-'+l));});
    if(location.pathname==='/pricing'){
      [['name','Your name','Tu nombre'],['company','Your company','Tu empresa'],['email','Your email','Tu email']].forEach(function(a){var el=document.getElementById(a[0]);if(el)el.placeholder=l==='es'?a[2]:a[1];});
      var select=qs('#contact select');
@@ -49,8 +50,18 @@
    syncActive();
    window.addEventListener('hashchange',syncActive);
    var explore=qs('#cb-site-explore');
+   if(!explore){
+     explore=document.createElement('nav');
+     explore.id='cb-site-explore';
+     explore.className='cb-site-explore';
+     explore.setAttribute('aria-label','Explore Cultural Brain capabilities / Explorar capacidades de Cultural Brain');
+     explore.innerHTML='<div class="cb-site-explore-inner"><span class="cb-site-explore-label"><span data-lang="en">Explore</span><span data-lang="es">Explorá</span></span><div class="cb-site-explore-links"><a href="/research-center" data-cb-explore-route="/research-center">Research Center</a><a href="/cerebro" data-cb-explore-route="/cerebro">CEREBRO</a><a href="/sofia" data-cb-explore-route="/sofia">Sofía</a><a href="/pulse" data-cb-explore-route="/pulse">Pulse</a><a href="/learning-loop" data-cb-explore-route="/learning-loop">Learning Loop</a></div></div>';
+     header.insertAdjacentElement('afterend',explore);
+   }
    if(explore){
      var path=location.pathname.replace(/\/+$/,'')||'/';
+     var links=qs('.cb-site-explore-links',explore);
+     if(links&&!links.querySelector('[data-cb-explore-route="/learning-loop"]')){var learn=document.createElement('a');learn.href='/learning-loop';learn.setAttribute('data-cb-explore-route','/learning-loop');learn.textContent='Learning Loop';links.appendChild(learn);}
      explore.querySelectorAll('[data-cb-explore-route]').forEach(function(link){
        if(link.getAttribute('data-cb-explore-route')===path)link.setAttribute('aria-current','page');
        else link.removeAttribute('aria-current');
