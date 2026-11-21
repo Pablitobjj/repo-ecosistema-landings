@@ -52,3 +52,5 @@
 @media(prefers-reduced-motion:reduce){.cb-u-node{transition:none!important}}
 
 .cb-u-mobile-picker{display:none}.cb-u-mobile-picker select{width:100%;min-height:44px;border-radius:12px;border:1px solid #bfcce0;background:#fff;padding:10px 12px;color:#17336f;font:700 13px/1.2 Raleway,sans-serif}.cb-u-mobile-picker select:focus-visible{outline:3px solid #2dd4bf;outline-offset:3px}@media(max-width:620px){.cb-u-mobile-picker{display:block;width:100%}}
+
+.cb-u-zoom-controls{position:absolute;top:17px;right:18px;z-index:3;display:flex;gap:5px}.cb-u-zoom-controls button{min-width:34px;min-height:34px;border-radius:9px;border:1px solid #4B638A;background:#182C52;color:#EBF0FA;cursor:pointer;font:700 13px/1 Raleway,Arial,sans-serif}.cb-u-zoom-controls button:focus-visible{outline:3px solid #2dd4bf;outline-offset:3px}.cb-u-orbits{transition:transform .22s ease-out}.cb-u-outer-orbit{transform-origin:50% 50%;animation:cb-u-spin 70s linear infinite}@keyframes cb-u-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.cb-u-orbits{transition:none}.cb-u-outer-orbit{animation:none}}
