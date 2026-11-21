@@ -12,7 +12,7 @@
    if(p==='/how-it-works')return 'how';
    if(p.indexOf('/solutions/')===0)return 'solutions';
    if(p==='/platform'&&location.hash==='#solutions')return 'solutions';
-   if(p==='/platform'||p==='/cerebro'||p==='/sofia'||p==='/pulse')return 'platform';
+   if(p==='/platform'||p==='/cerebro'||p==='/sofia'||p==='/pulse'||p==='/learning-loop')return 'platform';
    return '';
  }
  function setLanguage(locale){
@@ -51,6 +51,8 @@
    var explore=qs('#cb-site-explore');
    if(explore){
      var path=location.pathname.replace(/\/+$/,'')||'/';
+     var links=qs('.cb-site-explore-links',explore);
+     if(links&&!links.querySelector('[data-cb-explore-route="/learning-loop"]')){var learn=document.createElement('a');learn.href='/learning-loop';learn.setAttribute('data-cb-explore-route','/learning-loop');learn.textContent='Learning Loop';links.appendChild(learn);}
      explore.querySelectorAll('[data-cb-explore-route]').forEach(function(link){
        if(link.getAttribute('data-cb-explore-route')===path)link.setAttribute('aria-current','page');
        else link.removeAttribute('aria-current');
