@@ -1,0 +1,14 @@
+/* Release 05: authentic product evidence. No changes to screenshots' content. */
+.cb-r05-proof{position:relative}
+.cb-r05-proof .cb-r05-proof-kicker{font:700 11px/1.5 'Space Grotesk',Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#6d1b8f;margin:0 0 12px}
+.cb-r05-proof .cb-r05-proof-title{font:700 clamp(27px,3.2vw,43px)/1.16 'Space Grotesk',Arial,sans-serif;letter-spacing:-.035em;color:#183767;max-width:940px;margin:0 0 16px}
+.cb-r05-proof .cb-r05-proof-intro{font:400 clamp(14px,1.5vw,17px)/1.75 Raleway,Arial,sans-serif;color:#506784;max-width:930px;margin:0}
+.cb-r05-shot-figure{border:1px solid #d7e2f0;background:#fff;border-radius:20px;box-shadow:0 25px 62px rgba(15,36,76,.1);overflow:hidden;margin:28px 0 0}
+.cb-r05-shot-link{display:block;text-decoration:none;outline-offset:-4px;cursor:zoom-in}
+.cb-r05-shot-link:focus-visible,.cb-r05-shot-figure figcaption a:focus-visible{outline:3px solid #33c8bb;outline-offset:3px}
+.cb-r05-shot-scroll{overflow-x:auto;max-width:100%;background:#f6f8fc;scrollbar-color:#a6b6d4 #eff2f7}
+.cb-r05-shot-scroll img{display:block;width:100%;height:auto;max-width:none}
+.cb-r05-shot-figure figcaption{display:flex;gap:12px;justify-content:space-between;align-items:center;padding:13px 18px;font:500 12px/1.5 Raleway,Arial,sans-serif;color:#586d88;border-top:1px solid #e2e8f2;background:#f8faff}
+.cb-r05-shot-figure figcaption a{white-space:nowrap;color:#193d83;font-weight:700}
+.cb-r05-proof .cb-r05-proof-note{margin-top:11px;font:400 12px/1.6 Raleway,Arial,sans-serif;color:#6f7f94}
+@media(max-width:700px){.cb-r05-shot-figure{border-radius:14px}.cb-r05-shot-scroll img{width:740px;max-width:none}.cb-r05-shot-figure figcaption{display:block;padding:13px 14px}.cb-r05-shot-figure figcaption a{display:block;margin-top:8px}.cb-r05-proof .cb-r05-proof-note{font-size:11px}}
