@@ -1,17 +1,13 @@
 {
   "id": "cultural-brain-intelligence-universe",
-  "version": "0.1.0-report-derived",
+  "version": "0.2.0-canonical-bound-local",
   "source_cutoff": "2026-11-20",
   "product_target": "release05_target_promise",
   "verification": {
-    "status": "partial_audited_report",
-    "missing_authoritative_sources": [
-      "services/conocimiento/catalogo.json (latest app code)",
-      "services/cerebro/contracts.py (latest app code)",
-      "services/cerebro/verticales.py (latest app code)"
-    ],
-    "warning": "Display IDs (Fxx/NN) are presentation locators, never code keys; canonical IDs are intentionally null until authoritative app catalog is available.",
-    "repository_checked": "Pablitobjj/cultural-brain@main,staging 2026-11-21: required 2026 code absent. Repo landings is presentation-only.",
+    "status": "local_source_registry_reconciled_not_deployment_certified",
+    "missing_authoritative_sources": [],
+    "warning": "Exact IDs verified locally; not current production or general E2E certification. F01-F19 exist canonically; Fxx/NN are presentation locators.",
+    "repository_checked": "Local Cultural Brain app working tree, 2026-11-23 (files listed in code_registries, hashed). Not the PythonAnywhere deployment and not a commit-pinned release. Repo landings is presentation-only.",
     "source_documents": [
       "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
       "CB_CIERRE_GAP_ANALYSIS_20261120.md",
@@ -19,7 +15,42 @@
       "CB_CIERRE_QA_E2E_20261120.md",
       "CB_HANDOFF_LANDING_CULTURALBRAIN_NET_PROMESA_DIFERENCIAL_20261120.md"
     ],
-    "translation_status": "Editorial EN labels added for visualization from audited ES descriptions; not source-code canonical IDs."
+    "translation_status": "Editorial EN labels added for visualization from audited ES descriptions; not source-code canonical IDs.",
+    "source_catalog_path": "services/conocimiento/catalogo.json",
+    "source_catalog_sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0",
+    "verified_at": "2026-11-23",
+    "count_semantics": "Counts are entries in local code registries (catalog keys, type tuples, decision and recommendation kinds). They are not a certification of the PythonAnywhere deployment and not a count of complete end-to-end processes.",
+    "id_separation": "Editorial identifiers (families[].id Fxx, keys[].display_id Fxx/NN, presentation_id, ordinal) are presentation locators. Technical identifiers live only in canonical_* fields. They are never interchangeable; presentation_id 'defer' maps to canonical 'postpone'.",
+    "code_registries": {
+      "typed_semantic_keys": {
+        "path": "services/conocimiento/catalogo.json",
+        "field": "claves",
+        "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+      },
+      "selection_profiles": {
+        "path": "services/conocimiento/catalogo.json",
+        "field": "decisiones",
+        "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+      },
+      "knowledge_types": {
+        "path": "services/conocimiento/unidad.py",
+        "symbol": "TIPOS",
+        "line": 20,
+        "sha256": "2e25a323bdc4cee22327efb36b462c6b43f8fa57d48b1f01f63864a0b2d2eb52"
+      },
+      "cerebro_decision_domains": {
+        "path": "services/cerebro/contracts.py",
+        "symbol": "DECISION_KINDS",
+        "line": 40,
+        "sha256": "792868eece28371031f64cb7e1eca677aa36a6d468b1eee1d1ac865c9891744e"
+      },
+      "recommendation_types": {
+        "path": "services/cerebro/contracts.py",
+        "symbol": "REC_KINDS",
+        "line": 138,
+        "sha256": "792868eece28371031f64cb7e1eca677aa36a6d468b1eee1d1ac865c9891744e"
+      }
+    }
   },
   "counts": {
     "domains": 5,
@@ -118,10 +149,15 @@
             "es": "Descripción de marca",
             "en": "Brand description"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "marca.descripcion",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 71,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -146,10 +182,15 @@
             "es": "Ticket promedio de marca",
             "en": "Average brand order value"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "negocio.ticket_promedio",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 51,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -174,10 +215,15 @@
             "es": "Presupuesto mensual",
             "en": "Monthly budget"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "presupuesto.mensual",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 6,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/02",
@@ -185,10 +231,15 @@
             "es": "Presupuesto total",
             "en": "Total budget"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "presupuesto.total",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 20,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/03",
@@ -196,10 +247,15 @@
             "es": "Objetivo principal",
             "en": "Primary objective"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "objetivo.principal",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 291,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/04",
@@ -207,10 +263,15 @@
             "es": "Exclusión de canal",
             "en": "Channel exclusion"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "restriccion.canal_excluido",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 34,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/05",
@@ -218,10 +279,15 @@
             "es": "Exclusión de plataforma",
             "en": "Platform exclusion"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "restriccion.plataforma_excluida",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 256,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/06",
@@ -229,10 +295,15 @@
             "es": "Exclusión de sitio",
             "en": "Site exclusion"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "restriccion.sitio_excluido",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 265,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/07",
@@ -240,10 +311,15 @@
             "es": "Exclusión de segmento",
             "en": "Segment exclusion"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "restriccion.segmento_excluido",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 274,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/08",
@@ -251,10 +327,15 @@
             "es": "Tema a evitar",
             "en": "Topic to avoid"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "restriccion.tema_a_evitar",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 43,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F03/09",
@@ -262,10 +343,15 @@
             "es": "Restricción creativa",
             "en": "Creative restriction"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "restriccion.creativa",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 283,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -290,10 +376,15 @@
             "es": "Precio de referencia",
             "en": "Reference price"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "mercado.precio_referencia",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 79,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F04/02",
@@ -301,10 +392,15 @@
             "es": "Barrera de mercado",
             "en": "Market barrier"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "mercado.barrera",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 91,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F04/03",
@@ -312,10 +408,15 @@
             "es": "Tamaño de mercado",
             "en": "Market size"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "mercado.tamano",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 100,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F04/04",
@@ -323,10 +424,15 @@
             "es": "Tendencia de mercado",
             "en": "Market trend"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "mercado.tendencia",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 110,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -351,10 +457,15 @@
             "es": "Nombre de competidor",
             "en": "Competitor name"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "competidor.nombre",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 63,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -379,10 +490,15 @@
             "es": "Universo de población local",
             "en": "Local population universe"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "universo.poblacion_local",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 119,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -503,10 +619,15 @@
             "es": "Perfil o presencia",
             "en": "Presence / profile"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "presencia.perfil",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 136,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -547,10 +668,15 @@
             "es": "Benchmark propio",
             "en": "Own benchmark"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "benchmark.propio",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 243,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F15/02",
@@ -558,10 +684,15 @@
             "es": "Presupuesto ejecutable",
             "en": "Executable budget"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "presupuesto.ejecutable",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 300,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -586,10 +717,15 @@
             "es": "Oferta de campaña",
             "en": "Offer"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "creativo.oferta",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 311,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F16/02",
@@ -597,10 +733,15 @@
             "es": "Mensaje de campaña",
             "en": "Message"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "creativo.mensaje",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 319,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F16/03",
@@ -608,10 +749,15 @@
             "es": "Pieza creativa",
             "en": "Creative asset"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "creativo.pieza",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 327,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F16/04",
@@ -619,10 +765,15 @@
             "es": "CTA",
             "en": "Call to action"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "creativo.cta",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 335,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F16/05",
@@ -630,10 +781,15 @@
             "es": "Tono",
             "en": "Tone"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "creativo.tono",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 343,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F16/06",
@@ -641,10 +797,15 @@
             "es": "Etapa de campaña",
             "en": "Campaign stage"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "creativo.etapa",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 351,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F16/07",
@@ -652,10 +813,15 @@
             "es": "Destino del brief",
             "en": "Brief destination"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "creativo.destino",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 359,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -680,10 +846,15 @@
             "es": "Impresiones",
             "en": "Impressions"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.impresiones",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 161,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/02",
@@ -691,10 +862,15 @@
             "es": "Clics",
             "en": "Clicks"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.clicks",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 169,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/03",
@@ -702,10 +878,15 @@
             "es": "Costo",
             "en": "Cost"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.costo",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 177,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/04",
@@ -713,10 +894,15 @@
             "es": "CTR",
             "en": "CTR"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.ctr",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 186,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/05",
@@ -724,10 +910,15 @@
             "es": "CPM",
             "en": "CPM"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.cpm",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 194,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/06",
@@ -735,10 +926,15 @@
             "es": "Alcance único",
             "en": "Unique reach"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.alcance_unico",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 203,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/07",
@@ -746,10 +942,15 @@
             "es": "Frecuencia media",
             "en": "Average frequency"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.frecuencia_media",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 214,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/08",
@@ -757,10 +958,15 @@
             "es": "Leads",
             "en": "Leads"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.leads",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 393,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/09",
@@ -768,10 +974,15 @@
             "es": "Leads calificados",
             "en": "Qualified leads"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.calificados",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 403,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/10",
@@ -779,10 +990,15 @@
             "es": "Pedidos",
             "en": "Orders"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.pedidos",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 413,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/11",
@@ -790,10 +1006,15 @@
             "es": "Visitas",
             "en": "Visits"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.visitas",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 423,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/12",
@@ -801,10 +1022,15 @@
             "es": "Visitas atribuibles",
             "en": "Attributed visits"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.visitas_atribuibles",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 433,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/13",
@@ -812,10 +1038,15 @@
             "es": "Acciones en ficha",
             "en": "Listing actions"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.acciones_en_ficha",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 443,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/14",
@@ -823,10 +1054,15 @@
             "es": "Ingresos",
             "en": "Revenue"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.ingresos",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 453,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/15",
@@ -834,10 +1070,15 @@
             "es": "LTV de cohorte",
             "en": "Cohort LTV"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.ltv_cohorte",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 464,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/16",
@@ -845,10 +1086,15 @@
             "es": "CAC de cohorte",
             "en": "Cohort CAC"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.cac_cohorte",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 475,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/17",
@@ -856,10 +1102,15 @@
             "es": "Visitantes únicos",
             "en": "Unique visitors"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.visitantes_unicos",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 486,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/18",
@@ -867,10 +1118,15 @@
             "es": "Costo por lead",
             "en": "Cost per lead"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.cost_per_lead",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 496,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/19",
@@ -878,10 +1134,15 @@
             "es": "ROAS",
             "en": "ROAS"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.roas",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 507,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/20",
@@ -889,10 +1150,15 @@
             "es": "LTV/CAC",
             "en": "LTV / CAC"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.ltv_sobre_cac",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 517,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/21",
@@ -900,10 +1166,15 @@
             "es": "Visitas por dólar",
             "en": "Visits per dollar"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.visitas_por_dolar",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 527,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F17/22",
@@ -911,10 +1182,15 @@
             "es": "Ratio de visitas entre piezas",
             "en": "Visit ratio between creative assets"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "resultado.ratio_visitas_entre_piezas",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 538,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -939,10 +1215,15 @@
             "es": "Predicción",
             "en": "Prediction"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "hipotesis.prediccion",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 147,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F18/02",
@@ -950,10 +1231,15 @@
             "es": "Veredicto",
             "en": "Verdict"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "aprendizaje.veredicto",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 225,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F18/03",
@@ -961,10 +1247,15 @@
             "es": "Aprendizaje interpretado",
             "en": "Interpreted learning"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "aprendizaje.interpretado",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 236,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     },
@@ -989,10 +1280,15 @@
             "es": "Estrategia recomendada",
             "en": "Recommended strategy"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "decision.estrategia",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 367,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         },
         {
           "display_id": "F19/02",
@@ -1000,10 +1296,15 @@
             "es": "Audiencia recomendada",
             "en": "Recommended audience"
           },
-          "canonical_key_id": null,
-          "canonical_id_status": "pending_catalogo_json",
+          "canonical_key_id": "decision.audiencia_recomendada",
+          "canonical_id_status": "verified_local_source_registry",
           "record_type": "typed_key_report_label",
-          "source_status": "audited_report_not_source_catalog"
+          "source_status": "source_code_verified_local",
+          "source_evidence": {
+            "path": "services/conocimiento/catalogo.json",
+            "line": 380,
+            "sha256": "caa2fa06c8cc25923494bf3ddb0c1bf0bec240b5aa82c2927f4c3e44d8c2a2b0"
+          }
         }
       ]
     }
@@ -1015,7 +1316,7 @@
         "es": "dato declarado",
         "en": "Declared fact"
       },
-      "canonical_id": null,
+      "canonical_id": "dato_declarado",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1027,7 +1328,7 @@
         "es": "observación",
         "en": "Observation"
       },
-      "canonical_id": null,
+      "canonical_id": "observacion",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1039,7 +1340,7 @@
         "es": "estimación",
         "en": "Estimate"
       },
-      "canonical_id": null,
+      "canonical_id": "estimacion",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1051,7 +1352,7 @@
         "es": "métrica derivada",
         "en": "Derived metric"
       },
-      "canonical_id": null,
+      "canonical_id": "metrica_derivada",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1063,7 +1364,7 @@
         "es": "hallazgo cualitativo",
         "en": "Qualitative finding"
       },
-      "canonical_id": null,
+      "canonical_id": "hallazgo_cualitativo",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1075,7 +1376,7 @@
         "es": "restricción",
         "en": "Constraint"
       },
-      "canonical_id": null,
+      "canonical_id": "restriccion",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1087,7 +1388,7 @@
         "es": "hipótesis",
         "en": "Hypothesis"
       },
-      "canonical_id": null,
+      "canonical_id": "hipotesis",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1099,7 +1400,7 @@
         "es": "interpretación",
         "en": "Interpretation"
       },
-      "canonical_id": null,
+      "canonical_id": "interpretacion",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1111,7 +1412,7 @@
         "es": "aprendizaje",
         "en": "Learning"
       },
-      "canonical_id": null,
+      "canonical_id": "aprendizaje",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1123,7 +1424,7 @@
         "es": "recomendación",
         "en": "Recommendation"
       },
-      "canonical_id": null,
+      "canonical_id": "recomendacion",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1135,7 +1436,7 @@
         "es": "decisión",
         "en": "Decision"
       },
-      "canonical_id": null,
+      "canonical_id": "decision",
       "source": {
         "document": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md",
         "lines": "35-48"
@@ -1331,7 +1632,7 @@
         "es": "Estrategia de marca",
         "en": "Brand strategy"
       },
-      "canonical_domain_id": null,
+      "canonical_domain_id": "brand_strategy",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
     },
     {
@@ -1340,7 +1641,7 @@
         "es": "Recomendación de audiencia",
         "en": "Audience recommendation"
       },
-      "canonical_domain_id": null,
+      "canonical_domain_id": "audience_recommendation",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
     },
     {
@@ -1349,7 +1650,7 @@
         "es": "Revisión previa de campaña",
         "en": "Campaign preflight"
       },
-      "canonical_domain_id": null,
+      "canonical_domain_id": "campaign_preflight",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
     },
     {
@@ -1358,7 +1659,7 @@
         "es": "Aprendizaje de campaña",
         "en": "Campaign learning"
       },
-      "canonical_domain_id": null,
+      "canonical_domain_id": "campaign_learning",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
     },
     {
@@ -1367,7 +1668,7 @@
         "es": "Panorama de marca",
         "en": "Brand panorama"
       },
-      "canonical_domain_id": null,
+      "canonical_domain_id": "brand_panorama",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L97-L109"
     }
   ],
@@ -1378,7 +1679,7 @@
         "es": "Prioridad estratégica",
         "en": "Strategic priority"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "priority",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1387,7 +1688,7 @@
         "es": "Rol de canal",
         "en": "Channel role"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "channel_role",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1396,7 +1697,7 @@
         "es": "Blueprint de campaña",
         "en": "Campaign blueprint"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "campaign_blueprint",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1405,7 +1706,7 @@
         "es": "Postergación",
         "en": "Deferment"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "postpone",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1414,7 +1715,7 @@
         "es": "Investigación",
         "en": "Research"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "research",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1423,7 +1724,7 @@
         "es": "Presencia",
         "en": "Presence"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "presence",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1432,7 +1733,7 @@
         "es": "Medición",
         "en": "Measurement"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "measurement",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1441,7 +1742,7 @@
         "es": "Audiencia",
         "en": "Audience"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "audience",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1450,7 +1751,7 @@
         "es": "Lectura IA",
         "en": "AI reading"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "ai_reading",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     },
     {
@@ -1459,7 +1760,7 @@
         "es": "Propuesta de aprendizaje",
         "en": "Learning proposal"
       },
-      "canonical_type_id": null,
+      "canonical_type_id": "learning_proposal",
       "source": "CB_MAPA_PRODUCTO_CONOCIMIENTO_CEREBRO_LEARNING_20261120.md#L111-L126"
     }
   ]
