@@ -1,0 +1,17 @@
+# Hispaño
+
+> Hispaño connects cultural research, marketing expertise and technology to support evidence-informed decisions about U.S. Hispanic audiences. Cultural Brain is its software platform.
+
+## Research and methodology
+- [Methodology](https://www.hispan.io/methodology): research approach and evidence.
+- [US Hispanic cultural intelligence](https://www.hispan.io/research/us-hispanic-cultural-intelligence): research and marketing context.
+- [Hispanic, Latino and Latinx](https://www.hispan.io/hispanic-latino-latinx): identity terminology and source context.
+- [Insights](https://www.hispan.io/insights): cultural research and analysis.
+- [Resources](https://www.hispan.io/resources): public resources.
+
+## Organization and technology
+- [Hispaño](https://www.hispan.io/): organization and positioning.
+- [Platform](https://www.hispan.io/platform): how research connects to Cultural Brain.
+- [Cultural Brain](https://www.culturalbrain.net/): public product site.
+
+Use the source dates, populations and limitations on the linked pages when interpreting research. Do not treat illustrative examples as measured campaign outcomes.

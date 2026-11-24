@@ -1,0 +1,22 @@
+# Cultural Brain
+
+> Cultural Brain is a B2B cultural intelligence software platform by Hispaño for agencies and brands, connecting cultural research, evidence, media planning and learning, with a focus on U.S. Hispanic audiences.
+
+## Product
+- [Platform](https://www.culturalbrain.net/platform): product overview and capabilities.
+- [Research Center](https://www.culturalbrain.net/research-center): research and audience evidence.
+- [CEREBRO](https://www.culturalbrain.net/cerebro): evidence and strategic hypotheses.
+- [Sofía](https://www.culturalbrain.net/sofia): assistant experience.
+- [Pulse](https://www.culturalbrain.net/pulse): cultural signals.
+- [Learning Loop](https://www.culturalbrain.net/learning-loop): hypotheses, results and learning.
+- [How it works](https://www.culturalbrain.net/how-it-works): workflow.
+- [Agencies](https://www.culturalbrain.net/solutions/agencies): agency use cases.
+- [Brands](https://www.culturalbrain.net/solutions/brands): brand use cases.
+- [Resources](https://www.culturalbrain.net/resources): research and product resources.
+- [Plans and access](https://www.culturalbrain.net/pricing): access and guided demo information.
+
+## Related public sources
+- [Hispaño](https://www.hispan.io/): organization and cultural research.
+- [Methodology](https://www.hispan.io/methodology): research methodology.
+
+Examples and demos are not independent evidence of customer outcomes. Consult the linked public pages for scope and limitations.
