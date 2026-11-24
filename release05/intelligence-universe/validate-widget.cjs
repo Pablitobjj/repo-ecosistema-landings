@@ -9,7 +9,11 @@ const browserArch=JSON.parse(rd('culturalbrain/public/assets/data/cb-universe-ar
 assert.deepEqual(serving,model,'Browser model must match editable source');
 assert.deepEqual(browserArch,arch,'Browser architecture must match editable source');
 assert.equal(model.families.length,19);assert.equal(model.families.flatMap(x=>x.keys).length,54);
-assert(model.families.flatMap(x=>x.keys).every(k=>k.label.es&&k.label.en&&k.canonical_key_id===null));
+assert(model.families.flatMap(x=>x.keys).every(k=>k.label.es&&k.label.en&&typeof k.canonical_key_id==='string'&&k.canonical_key_id!==k.display_id&&!/^F\d{2}/.test(k.canonical_key_id)),'every key bound to a canonical ID distinct from its editorial locator');
+assert.equal(model.verification.status,'local_source_registry_reconciled_not_deployment_certified','browser model must not claim deployment certification');
+assert.equal(model.recommendation_types.find(r=>r.presentation_id==='defer').canonical_type_id,'postpone','defer (editorial) maps to postpone (canonical)');
+assert(!js_uses_canonical_as_label(),'widget must not render canonical IDs as display labels');
+function js_uses_canonical_as_label(){return /canonical_(key|type|domain)_id|canonical_id/.test(rd('culturalbrain/public/assets/cb-intelligence-universe.js'))}
 assert.equal(model.knowledge_types.length,11);assert.equal(model.selection_profiles.length,20);
 assert.equal(model.cerebro_decision_domains.length,5);assert.equal(model.recommendation_types.length,10);
 assert.equal(arch.operations.length,18);assert.equal(arch.page_map.length,14);
@@ -20,4 +24,4 @@ assert(js.includes("fetch(modelUrl)")&&js.includes("renderSvg(model,state)"));
 assert(js.includes('data-u-family-select'),'Mobile native picker required');
 assert(css.includes('prefers-reduced-motion'));
 assert(demo.includes('20 selection profiles')&&demo.includes('10 recommendation types'));
-console.log('R05-03 STATIC CONTRACT PASS; source catalog canonical IDs remain unverified');
+console.log('R05-03 STATIC CONTRACT PASS; browser JSON in sync with source; canonical IDs bound from local app source registries (not a PythonAnywhere deployment certification)');
