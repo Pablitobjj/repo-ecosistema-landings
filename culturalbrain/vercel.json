@@ -8,6 +8,13 @@
   ],
   "routes": [
     {
+      "src": "^/llms\\.txt$",
+      "dest": "/public/llms.txt",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
       "src": "^/190452569a5d48c6b02f4fe479208a58\\.txt$",
       "dest": "/public/190452569a5d48c6b02f4fe479208a58.txt"
     },
